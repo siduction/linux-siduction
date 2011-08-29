@@ -1,6 +1,34 @@
 # upstream updates
 upstream/patch-3.0.3
+upstream/patch-3.0.4-rc1
 upstream/revert-extraversion.diff
+upstream/kernel-printk-do-not-turn-off-bootconsole-in-printk_late_init-if-keep_bootcon.patch
+upstream/rapidio-fix-use-of-non-compatible-registers.patch
+upstream/arch-powerpc-sysdev-fsl_rio.c-correct-iecsr-register-clear.patch
+upstream/sfi-table-irq-0xff-means-no-interrupt.patch
+upstream/asoc-soc-jack-fix-checking-return-value-of-request_any_context_irq.patch
+upstream/asoc-ad193x-fix-registers-definition.patch
+upstream/asoc-ad193x-fix-dac-word-len-setting.patch
+upstream/omap-serial-allow-ixon-and-ixoff-to-be-disabled.patch
+upstream/serial-8250_pnp-add-intermec-cv60-touchscreen-device.patch
+upstream/8250_pci-add-support-for-rosewill-rc-305-4x-serial-port.patch
+upstream/8250-fix-race-condition-in-serial8250_backup_timeout.patch
+upstream/tty-add-spi-prefix-for-spi-modalias.patch
+upstream/tty-pty-fix-pty-counting.patch
+upstream/usb-ftdi_sio-add-calao-reference-board-support.patch
+upstream/usb-s5p-ehci-fix-a-null-pointer-deference.patch
+upstream/usb-option-driver-add-pid-of-huawei-vodafone-k3806.patch
+upstream/usb-option-driver-add-pid-of-huawei-vodafone-k4605.patch
+upstream/usb-option-add-yuga-device-id-to-driver.patch
+upstream/usb-option-driver-k3765-k4505-avoid-cdc_data-interface.patch
+upstream/usb-musb-cppi-fix-build-errors-due-to-dbg-and-missing.patch
+upstream/usb-ehci-do-not-rely-on-port_suspend-to-stop-usb-resuming-in-ehci_bus_resume.patch
+upstream/xhci-fix-port-u3-status-check-condition.patch
+upstream/xhci-report-usb2-port-in-resuming-as-suspend.patch
+upstream/xhci-fix-memory-leak-during-failed-enqueue.patch
+upstream/xhci-fix-failed-enqueue-in-the-middle-of-isoch-td.patch
+upstream/xhci-remove-tds-from-td-lists-when-urbs-are-canceled.patch
+upstream/xhci-handle-zero-length-isochronous-packets.patch
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
@@ -23,7 +51,7 @@ features/drm_add-a-driver-for-kvm-emulated-Cirrus.patch
 # patches from aufs repository, with s/EXPORT_SYMBOL/&_GPL/
 features/aufs/aufs3-base.patch
 features/aufs/aufs3-standalone.patch
-features/aufs/aufs3-2011-08-15.patch
+features/aufs/aufs3-2011-08-22.patch
 features/aufs/aufs3-kbuild.patch
 
 features/acerhk/01_acerhk-0.5.35.patch
@@ -54,10 +82,13 @@ features/linux/rt2x00/0014-rt2x00-Reduce-window-of-a-queue-s-tx-lock.patch
 features/linux/rt2x00/0016-rt2x00-Properly-identify-rt2800usb-devices.patch
 features/linux/rt2x00/0017-rt2x00-Implement-tx_frames_pending-mac80211-callback.patch
 features/linux/rt2x00/0018-rt2800usb-Add-new-device-ID-for-Belkin.patch
-
-candidate/rt2x00_fix-crash-in-rt2800usb_write_tx_desc.patch
-candidate/rt2x00_fix-order-of-entry-flags-modification.patch
-candidate/rt2x00_fix-crash-in-rt2800usb_get_txwi.patch
+#features/linux/rt2x00/0019-rt2x00-rt2800-fix-zeroing-skb-structure.patch
+features/linux/rt2x00/0020-rt2x00-Fix-compilation-without-CONFIG_RT2X00_LIB_CRY.patch
+#features/linux/rt2x00/0021-rt2x00-fix-usage-of-NULL-queue.patch
+features/linux/rt2x00/0022-rt2x00-Add-new-rt73-buffalo-USB-id.patch
+features/linux/rt2x00/0023-rt2x00-Add-rt2870-device-id-for-Dvico-usb-key.patch
+features/linux/rt2x00/0024-rt2x00-fix-crash-in-rt2800usb_write_tx_desc.patch
+#features/linux/rt2x00/0025-rt2x00-fix-order-of-entry-flags-modification.patch
+features/linux/rt2x00/0026-rt2x00-fix-crash-in-rt2800usb_get_txwi.patch
 
 features/rtl8192cu_add-USB-ID-for-Belkin-n300-Micro-USB-wireless-adapter.patch
-features/patch-3.0.0-ck1

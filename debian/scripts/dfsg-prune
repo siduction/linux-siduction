@@ -36,9 +36,9 @@ pushd "${TMP_DIR}"
 		wget -Nc "http://www.kernel.org/pub/linux/kernel/v${K_VERSION}.${K_PATCHLEVEL}/${UP_TARBALL}"
 
 		if [ -n "${K_SUBLEVEL}" ]; then
-			ORIG_TARBALL="linux-aptosid_${K_VERSION}.${K_PATCHLEVEL}.${K_SUBLEVEL}.orig.tar.bz2"
+			ORIG_TARBALL="linux-siduction_${K_VERSION}.${K_PATCHLEVEL}.${K_SUBLEVEL}.orig.tar.bz2"
 		else
-			ORIG_TARBALL="linux-aptosid_${K_VERSION}.${K_PATCHLEVEL}.orig.tar.bz2"
+			ORIG_TARBALL="linux-siduction_${K_VERSION}.${K_PATCHLEVEL}.orig.tar.bz2"
 		fi
 	else
 		# rc kernel
@@ -46,9 +46,9 @@ pushd "${TMP_DIR}"
 		wget -Nc "http://www.kernel.org/pub/linux/kernel/v${K_VERSION}.${K_PATCHLEVEL}/testing/${UP_TARBALL}"
 
 		if [ -n "${K_SUBLEVEL}" ]; then
-			ORIG_TARBALL="linux-aptosid_${K_VERSION}.${K_PATCHLEVEL}.${K_SUBLEVEL}~${RC_VER}.orig.tar.bz2"
+			ORIG_TARBALL="linux-siduction_${K_VERSION}.${K_PATCHLEVEL}.${K_SUBLEVEL}~${RC_VER}.orig.tar.bz2"
 		else
-			ORIG_TARBALL="linux-aptosid_${K_VERSION}.${K_PATCHLEVEL}~${RC_VER}.orig.tar.bz2"
+			ORIG_TARBALL="linux-siduction_${K_VERSION}.${K_PATCHLEVEL}~${RC_VER}.orig.tar.bz2"
 		fi
 	fi
 popd >/dev/null 2>&1
