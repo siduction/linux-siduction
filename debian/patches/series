@@ -1,0 +1,39 @@
+# upstream updates
+upstream/revert-extraversion.diff
+
+# dfsg-ify the binaries
+dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
+dfsg/sound-pci-cs46xx-request_firmware.patch
+
+# stable candidate
+
+# bugfixes
+
+# debian specific patches.
+debian/version.patch
+debian/kernelvariables.patch
+debian/doc-build-parallel.patch
+
+# features
+features/defaults-fat-utf8.patch
+features/ath_override-eeprom-countrycode.patch
+
+# patches from aufs repository, with s/EXPORT_SYMBOL/&_GPL/
+features/aufs/aufs3-base.patch
+features/aufs/aufs3-standalone.patch
+features/aufs/aufs3-2011-10-10.patch
+features/aufs/aufs3-kbuild.patch
+
+features/acerhk/01_acerhk-0.5.35.patch
+features/acerhk/02_64bits_support_for_aspire5100.patch
+features/acerhk/03_Add_Medion_MD97600_support.patch
+features/acerhk/04_3rd-acerhk-proc_dir_entry-owner.patch
+features/acerhk/05_kbuild.patch
+features/acerhk/06_lindent.patch
+features/acerhk/07_remove-ifdefs-for-ancient-kernels.patch
+features/acerhk/08_remove-ifdefs-for-ACERDEBUG.patch
+features/acerhk/09_kcompat-2.6.36.patch
+features/acerhk/10_kcompat-2.6.38.patch
+
+features/linux-next/multitouch/0001-HID-hid-multitouch-Add-LG-Display-Multitouch-device.patch
+features/linux-next/multitouch/0002-HID-hid-multitouch-add-support-for-the-IDEACOM-6650-.patch
