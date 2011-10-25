@@ -196,7 +196,7 @@ class Gencontrol(Base):
             build_modules = False
         else:
         """
-        if True: #aptosid
+        if True: #siduction
             build_modules = True
             image = self.templates["control.image.type-%s" % config_entry_image['type']]
 

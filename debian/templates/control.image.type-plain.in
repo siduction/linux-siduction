@@ -11,15 +11,15 @@ Package: linux-image@localversion@
 Priority: extra
 Depends: linux-image-@upstreamversion@@abiname@@localversion@ (= ${binary:Version}), ${misc:Depends}
 Recommends: linux-headers@localversion@ (= ${binary:Version})
-Description: Linux image for aptosid on @class@
+Description: Linux image for siduction on @class@
  This metapackage depends on the latest binary image for Linux kernel on
- @longclass@ machines for aptosid.
+ @longclass@ machines for siduction.
 
 Package: linux-headers@localversion@
 Priority: extra
 Depends: linux-headers-@upstreamversion@@abiname@@localversion@ (= ${binary:Version}), ${misc:Depends}
-Description: Linux image for aptosid on @class@
+Description: Linux image for siduction on @class@
  This metapackage depends on the latest binary image for Linux kernel on
- @longclass@ machines for aptosid.
+ @longclass@ machines for siduction.
 
 

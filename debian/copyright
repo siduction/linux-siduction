@@ -1,4 +1,4 @@
-This is the aptosid prepackaged version of the Linux kernel.
+This is the siduction prepackaged version of the Linux kernel.
 It was downloaded from http://ftp.kernel.org/pub/linux/kernel/.
 
 Copyright:
@@ -30,11 +30,11 @@ Debian Kernel Team <debian-kernel@lists.debian.org>
     © 2006-2007 Steve Langasek <vorlon@debian.org>
     © 2011 Torsten Wohlfarth <towo@siduction.org>
 
-This package was forked as "linux-aptosid" to build kernel packages for
-aptosid in february 2008 by Stefan Lippers-Hollmann <s.l-h@gmx.de> and is
+This package was forked as "linux-siduction" to build kernel packages for
+siduction in february 2008 by Stefan Lippers-Hollmann <s.l-h@gmx.de> and is
 intended to closely track packaging changes made in debian's (upstream)
 "linux-2.6".
-Decisions on kernel configurations and applied patches are made by the aptosid
+Decisions on kernel configurations and applied patches are made by the siduction
 project.
     © 2008-2010 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
