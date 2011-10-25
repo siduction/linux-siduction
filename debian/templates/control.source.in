@@ -5,5 +5,5 @@ XBSC-Original-Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 Standards-Version: 3.9.2
 Build-Depends: debhelper (>= 8), cpio, module-init-tools (>= 3.16), python, dpkg-dev (>= 1.10.23)
 Homepage: http://kernel.org/
-Vcs-git: git3@git.siduction.org:packages/siduction-repository/linux-siduction.git
+Vcs-git: git://git.siduction.org:packages/siduction-repository/linux-siduction.git
 Vcs-Browser: http://git.siduction.org/?p=packages/siduction-repository/linux-siduction.git;a=summary
