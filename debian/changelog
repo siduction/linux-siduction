@@ -1,6 +1,8 @@
 linux-siduction (3.1-2) UNRELEASED; urgency=low
 
+  * NOT RELEASED YET
   * set ABI to 0.towo.2
+  * add aufs3-2011-10-24.patch
 
  -- Torsten Wohlfarth <towo@siduction.org>  Tue, 25 Oct 2011 20:42:09 +0200
 
