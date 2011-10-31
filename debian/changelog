@@ -1,10 +1,12 @@
-linux-siduction (3.1-2) UNRELEASED; urgency=low
+linux-siduction (3.1-2) unstable; urgency=low
 
-  * NOT RELEASED YET
   * set ABI to 0.towo.2
+  * add patches from the stable queue:
+    - cifs-fix-incorrect-max-rfc1002-write-size-value.patch
+    - cifs-fix-dfs-handling-in-cifs_get_file_info.patch
   * add aufs3-2011-10-24.patch
 
- -- Torsten Wohlfarth <towo@siduction.org>  Tue, 25 Oct 2011 20:42:09 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 31 Oct 2011 13:23:09 +0100
 
 linux-siduction (3.1-1) unstable; urgency=low
 

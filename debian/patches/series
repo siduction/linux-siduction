@@ -6,6 +6,8 @@ dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
 dfsg/sound-pci-cs46xx-request_firmware.patch
 
 # stable candidate
+candidate/cifs-fix-incorrect-max-rfc1002-write-size-value.patch
+candidate/cifs-fix-dfs-handling-in-cifs_get_file_info.patch
 
 # bugfixes
 
