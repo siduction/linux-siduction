@@ -7,8 +7,10 @@
 #
 DEB_HOST_ARCH     := $(shell dpkg-architecture -a'$(ARCH)' -qDEB_HOST_ARCH)
 DEB_HOST_GNU_TYPE := $(shell dpkg-architecture -a'$(ARCH)' -qDEB_HOST_GNU_TYPE)
+DEB_HOST_MULTIARCH:= $(shell dpkg-architecture -a'$(ARCH)' -qDEB_HOST_MULTIARCH)
 DEB_BUILD_ARCH    := $(shell dpkg-architecture -a'$(ARCH)' -qDEB_BUILD_ARCH)
 UPLOADER          := $(shell dpkg-parsechangelog | sed -ne 's,^Maintainer: .[^<]*<\([^>]*\)>,\1,p')
+DISTRIBUTION      := $(shell dpkg-parsechangelog | sed -ne 's,^Distribution: ,,p')
 
 export PYTHONPATH = $(CURDIR)/debian/lib/python
 export DH_OPTIONS
@@ -18,14 +20,7 @@ include debian/rules.defs
 
 stamp = [ -d $(dir $@) ] || mkdir $(dir $@); touch $@
 
-ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-  DEBIAN_KERNEL_JOBS := $(subst parallel=,,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-endif
-ifdef DEBIAN_KERNEL_JOBS
-  JOBS_ARG = -j$(DEBIAN_KERNEL_JOBS)
-endif
-
-setup_env := env -u ABINAME -u ARCH -u FEATURESET -u FLAVOUR -u VERSION -u LOCALVERSION
+setup_env := env -u ABINAME -u ABINAME_PART -u ARCH -u FEATURESET -u FLAVOUR -u VERSION -u LOCALVERSION
 setup_env += DISTRIBUTION_OFFICIAL_BUILD=1 DISTRIBUTION_UPLOADER=$(UPLOADER) DISTRIBUTION_VERSION="$(SOURCEVERSION)"
 
 MAKE_CLEAN = $(setup_env) $(MAKE)
@@ -40,9 +35,11 @@ ifeq ($(DEBUG),True)
   binary-arch-flavour: install-image-dbg_$(ARCH)_$(FEATURESET)_$(FLAVOUR)
 endif
 binary-arch-flavour: install-image-meta_$(ARCH)_$(FEATURESET)_$(FLAVOUR)
+binary-arch-flavour: install-image-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR)
 ifeq ($(MODULES),True)
   binary-arch-flavour: install-headers_$(ARCH)_$(FEATURESET)_$(FLAVOUR)
   binary-arch-flavour: install-headers-meta_$(ARCH)_$(FEATURESET)_$(FLAVOUR)
+  binary-arch-flavour: install-headers-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR)
 endif
 
 binary-indep:
@@ -81,8 +78,8 @@ $(STAMPS_DIR)/setup_$(ARCH)_$(FEATURESET)_$(FLAVOUR): $(STAMPS_DIR)/source_$(ARC
 	rm -rf '$(DIR)'
 	mkdir '$(DIR)'
 	cp '$(CONFIG)' '$(DIR)/.config'
-	echo '$(ABINAME)$(LOCALVERSION_IMAGE)' > '$(DIR)/localversion'
 	echo 'override ARCH = $(KERNEL_ARCH)' >> '$(DIR)/.kernelvariables'
+	echo 'override KERNELRELEASE = $(ABINAME)$(LOCALVERSION_IMAGE)' >> '$(DIR)/.kernelvariables'
 	echo 'CCACHE = ccache' >> '$(DIR)/.kernelvariables'
 	echo 'CC = $$(if $$(DEBIAN_KERNEL_USE_CCACHE),$$(CCACHE)) $$(CROSS_COMPILE)$(COMPILER)' >> '$(DIR)/.kernelvariables'
 # TODO: Should we set CROSS_COMPILE always?
@@ -98,14 +95,14 @@ ifdef CFLAGS_KERNEL
 endif
 	+$(MAKE_CLEAN) -C '$(SOURCE_DIR)' O='$(CURDIR)/$(DIR)' V=1 listnewconfig
 	+yes "" | $(MAKE_CLEAN) -C '$(SOURCE_DIR)' O='$(CURDIR)/$(DIR)' oldconfig >/dev/null
-	+$(MAKE_CLEAN) -C '$(SOURCE_DIR)' O='$(CURDIR)/$(DIR)' $(JOBS_ARG) prepare
+	+$(MAKE_CLEAN) -C '$(SOURCE_DIR)' O='$(CURDIR)/$(DIR)' prepare
 	@$(stamp)
 
 $(STAMPS_DIR)/build_$(ARCH)_$(FEATURESET)_$(FLAVOUR)_$(TYPE): DIR=$(BUILD_DIR)/build_$(ARCH)_$(FEATURESET)_$(FLAVOUR)
 $(STAMPS_DIR)/build_$(ARCH)_$(FEATURESET)_$(FLAVOUR)_$(TYPE): $(STAMPS_DIR)/setup_$(ARCH)_$(FEATURESET)_$(FLAVOUR)
 
 $(STAMPS_DIR)/build_$(ARCH)_$(FEATURESET)_$(FLAVOUR)_plain:
-	+$(MAKE_CLEAN) -C '$(DIR)' $(JOBS_ARG) $(BUILD_TARGET)
+	+$(MAKE_CLEAN) -C '$(DIR)' $(BUILD_TARGET)
 	@$(stamp)
 
 install-base:
@@ -126,7 +123,7 @@ install-dummy:
 	dh_prep
 	+$(MAKE_SELF) install-base
 
-install-headers_$(ARCH)_$(FEATURESET)_$(FLAVOUR): REAL_VERSION = $(UPSTREAMVERSION)$(ABINAME)$(LOCALVERSION)
+install-headers_$(ARCH)_$(FEATURESET)_$(FLAVOUR): REAL_VERSION = $(ABINAME)$(LOCALVERSION)
 install-headers_$(ARCH)_$(FEATURESET)_$(FLAVOUR): PACKAGE_NAME = linux-headers-$(REAL_VERSION)
 install-headers_$(ARCH)_$(FEATURESET)_$(FLAVOUR): DH_OPTIONS = -p$(PACKAGE_NAME)
 install-headers_$(ARCH)_$(FEATURESET)_$(FLAVOUR): BASE_DIR = /usr/src/$(PACKAGE_NAME)
@@ -143,7 +140,6 @@ install-headers_$(ARCH)_$(FEATURESET)_$(FLAVOUR): $(STAMPS_DIR)/build_$(ARCH)_$(
 	mkdir -p $(DIR)/arch/$(KERNEL_ARCH)/kernel
 	mkdir -p $(DIR)/include
 	cp -a $(IMAGE_BUILD_DIR)/.config $(DIR)
-	cp -a $(IMAGE_BUILD_DIR)/localversion $(DIR)
 	cp -a $(IMAGE_BUILD_DIR)/.kernel* $(DIR)
 	cp -a $(IMAGE_BUILD_DIR)/Module.symvers $(DIR)
 
@@ -230,7 +226,25 @@ install-headers-meta_$(ARCH)_$(FEATURESET)_$(FLAVOUR):
 	dh_prep
 	+$(MAKE_SELF) install-base
 
-install-image_$(ARCH)_$(FEATURESET)_$(FLAVOUR)_$(TYPE): REAL_VERSION = $(UPSTREAMVERSION)$(ABINAME)$(LOCALVERSION)
+install-image-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR): PACKAGE_NAME = linux-image-2.6-$(FLAVOUR)
+install-image-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR): DH_OPTIONS = -p$(PACKAGE_NAME)
+install-image-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR): PACKAGE_DIR = debian/$(PACKAGE_NAME)
+install-image-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR):
+	dh_testdir
+	dh_testroot
+	dh_prep
+	+$(MAKE_SELF) install-base
+
+install-headers-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR): PACKAGE_NAME = linux-headers-2.6-$(FLAVOUR)
+install-headers-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR): DH_OPTIONS = -p$(PACKAGE_NAME)
+install-headers-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR): PACKAGE_DIR = debian/$(PACKAGE_NAME)
+install-headers-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR):
+	dh_testdir
+	dh_testroot
+	dh_prep
+	+$(MAKE_SELF) install-base
+
+install-image_$(ARCH)_$(FEATURESET)_$(FLAVOUR)_$(TYPE): REAL_VERSION = $(ABINAME)$(LOCALVERSION)
 install-image_$(ARCH)_$(FEATURESET)_$(FLAVOUR)_$(TYPE): PACKAGE_NAME = linux-image-$(REAL_VERSION)
 install-image_$(ARCH)_$(FEATURESET)_$(FLAVOUR)_$(TYPE): PACKAGE_DIR = debian/$(PACKAGE_NAME)
 install-image_$(ARCH)_$(FEATURESET)_$(FLAVOUR)_$(TYPE): INSTALL_DIR = $(PACKAGE_DIR)/boot
@@ -302,7 +316,7 @@ install-image_$(ARCH)_$(FEATURESET)_$(FLAVOUR)_plain_bug:
 	chmod 755 $(PACKAGE_DIR)/usr/share/bug/$(PACKAGE_NAME)/script
 	echo "RELEASE='$(REAL_VERSION)'" > $(PACKAGE_DIR)/usr/share/bug/$(PACKAGE_NAME)/info
 
-install-image-dbg_$(ARCH)_$(FEATURESET)_$(FLAVOUR): REAL_VERSION = $(UPSTREAMVERSION)$(ABINAME)$(LOCALVERSION)
+install-image-dbg_$(ARCH)_$(FEATURESET)_$(FLAVOUR): REAL_VERSION = $(ABINAME)$(LOCALVERSION)
 install-image-dbg_$(ARCH)_$(FEATURESET)_$(FLAVOUR): PACKAGE_NAME = linux-image-$(REAL_VERSION)-dbg
 install-image-dbg_$(ARCH)_$(FEATURESET)_$(FLAVOUR): PACKAGE_DIR = debian/$(PACKAGE_NAME)
 install-image-dbg_$(ARCH)_$(FEATURESET)_$(FLAVOUR): DEBUG_DIR = $(PACKAGE_DIR)/usr/lib/debug
@@ -322,6 +336,6 @@ ifeq ($(MODULES),True)
 	find $(DEBUG_DIR)/lib/modules/$(REAL_VERSION)/ -mindepth 1 -maxdepth 1 \! -name kernel -exec rm {} \+
 	rm $(DEBUG_DIR)/lib/firmware -rf
 endif
-	+$(MAKE_SELF) install-base BUILDDEB_ARGS="-Zbzip2"
+	+$(MAKE_SELF) install-base BUILDDEB_ARGS="-Zxz"
 
 # vim: filetype=make

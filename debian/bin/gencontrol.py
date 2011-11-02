@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 
-import os, sys
+import os, os.path, subprocess, sys
 sys.path.append("debian/lib/python")
 
 from debian_linux.config import ConfigCoreHierarchy
 from debian_linux.debian import *
 from debian_linux.gencontrol import Gencontrol as Base
-from debian_linux.utils import Templates
+from debian_linux.utils import Templates, read_control
 
 class Gencontrol(Base):
     def __init__(self, config_dirs = ["debian/config"], template_dirs = ["debian/templates"]):
@@ -25,6 +25,7 @@ class Gencontrol(Base):
             'VERSION': self.version.linux_version,
             'UPSTREAMVERSION': self.version.linux_upstream,
             'ABINAME': self.abiname,
+            'ABINAME_PART': self.abiname_part,
             'SOURCEVERSION': self.version.complete,
         })
 
@@ -73,6 +74,33 @@ class Gencontrol(Base):
                      ['source_%s_real' % arch],
                      ["$(MAKE) -f debian/rules.real install-libc-dev_%s %s" %
                       (arch, makeflags)])
+
+        # Add udebs using kernel-wedge
+        installer_dir = 'debian/installer/' + arch
+        if os.path.isdir(installer_dir):
+            kw_env = os.environ.copy()
+            kw_env['KW_CONFIG_DIR'] = installer_dir
+            kw_proc = subprocess.Popen(
+                ['kernel-wedge', 'gen-control',
+                 self.abiname],
+                stdout=subprocess.PIPE,
+                env=kw_env)
+            udeb_packages = read_control(kw_proc.stdout)
+            kw_proc.wait()
+            if kw_proc.returncode != 0:
+                raise RuntimeError('kernel-wedge exited with code %d' %
+                                   kw_proc.returncode)
+
+            self.merge_packages(packages, udeb_packages, arch)
+
+            # These packages must be built after the per-flavour/
+            # per-featureset packages.
+            makefile.add(
+                'binary-arch_%s' % arch,
+                cmds = ["$(MAKE) -f debian/rules.real install-udeb_%s %s "
+                        "PACKAGE_NAMES='%s'" %
+                        (arch, makeflags,
+                         ' '.join(p['Package'] for p in udeb_packages))])
         """
 
     def do_featureset_setup(self, vars, makeflags, arch, featureset, extra):
@@ -196,7 +224,7 @@ class Gencontrol(Base):
             build_modules = False
         else:
         """
-        if True: #siduction
+        if True: #aptosid
             build_modules = True
             image = self.templates["control.image.type-%s" % config_entry_image['type']]
 
@@ -333,9 +361,18 @@ class Gencontrol(Base):
         self.versions = versions
         version = self.version = self.changelog[0].version
         if self.version.linux_modifier is not None:
-            self.abiname = ''
+            self.abiname = self.version.linux_upstream
+            self.abiname_part = ''
         else:
-            self.abiname = '-%s' % self.config['abi',]['abiname']
+            self.abiname_part = '-%s' % self.config['abi',]['abiname']
+            """
+            # XXX: We need to add another part before Wheezy
+            if self.version.linux_upstream in ('3.0', '3.1'):
+                self.abiname = self.version.linux_upstream + '.0' + self.abiname_part
+            else:
+            """
+            if True: #aptosid
+                self.abiname = self.version.linux_upstream + self.abiname_part
         self.vars = {
             'upstreamversion': self.version.linux_upstream,
             'version': self.version.linux_version,
