@@ -1,7 +1,5 @@
 # upstream updates
 upstream/revert-extraversion.diff
-upstream/features/linux-next/multitouch/0001-HID-hid-multitouch-Add-LG-Display-Multitouch-device.patch
-upstream/features/linux-next/multitouch/0002-HID-hid-multitouch-add-support-for-the-IDEACOM-6650-.patch
 upstream/cifs-fix-incorrect-max-rfc1002-write-size-value.patch
 upstream/cifs-fix-dfs-handling-in-cifs_get_file_info.patch
 upstream/tty-drop-driver-reference-in-tty_open-fail-path.patch
@@ -187,7 +185,7 @@ upstream/powerpc-gup_hugepte-support-thp-based-tail-recounting.patch
 upstream/powerpc-gup_huge_pmd-return-0-if-pte-changes.patch
 upstream/s390-gup_huge_pmd-support-thp-tail-recounting.patch
 upstream/s390-gup_huge_pmd-return-0-if-pte-changes.patch
-sparc-gup_pte_range-support-thp-based-tail-recounting.patch
+upstream/sparc-gup_pte_range-support-thp-based-tail-recounting.patch
 upstream/thp-share-get_huge_page_tail.patch
 upstream/net-unlock-sock-before-calling-sk_free.patch
 
@@ -205,6 +203,8 @@ debian/kernelvariables.patch
 debian/doc-build-parallel.patch
 
 # features
+features/linux-next/multitouch/0001-HID-hid-multitouch-Add-LG-Display-Multitouch-device.patch
+features/linux-next/multitouch/0002-HID-hid-multitouch-add-support-for-the-IDEACOM-6650-.patch
 features/defaults-fat-utf8.patch
 features/ath_override-eeprom-countrycode.patch
 
