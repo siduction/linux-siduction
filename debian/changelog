@@ -1,3 +1,43 @@
+linux-siduction (3.1-5) unstable; urgency=low
+
+  * set ABI to 0.towo.5
+  * add patches from the stable queue:
+    - alsa-hda-add-missing-static-adc-tables-for-alc269-quirks.patch
+    - binfmt_elf-fix-pie-execution-with-randomization-disabled.patch
+    - drivers-net-rionet.c-fix-ethernet-address-macros-for-le-platforms.patch
+    - drivers-power-ds2780_battery.c-add-a-nolock-function-to-w1-interface.patch
+    - drivers-power-ds2780_battery.c-create-central-point-for-calling-w1-interface.patch
+    - drivers-power-ds2780_battery.c-fix-deadlock-upon-insertion-and-removal.patch
+    - ext2-ext3-ext4-don-t-inherit-append_fl-or-immutable_fl-for-new-inodes.patch
+    - ext4-call-ext4_handle_dirty_metadata-with-correct-inode-in-ext4_dx_add_entry.patch
+    - ext4-ext4_mkdir-should-dirty-dir_block-with-newly-created-directory-inode.patch
+    - ext4-ext4_rename-should-dirty-dir_bh-with-the-correct-directory.patch
+    - xt4-fix-race-in-xattr-block-allocation-path.patch
+    - ext4-let-ext4_page_mkwrite-stop-started-handle-in-failure.patch
+    - hwspinlock-core-use-a-mutex-to-protect-the-radix-tree.patch
+    - ipv4-fix-ipsec-forward-performance-regression.patch
+    - ipv6-fix-route-error-binding-peer-in-func-icmp6_dst_alloc.patch
+    - mm-thp-tail-page-refcounting-fix.patch
+    - net-unlock-sock-before-calling-sk_free.patch
+    - powerpc-get_hugepte-don-t-put_page-the-wrong-page.patch
+    - powerpc-gup_huge_pmd-return-0-if-pte-changes.patch
+    - powerpc-gup_hugepte-avoid-freeing-the-head-page-too-many-times.patch
+    - powerpc-gup_hugepte-support-thp-based-tail-recounting.patch
+    - powerpc-remove-superfluous-pagetail-checks-on-the-pte-gup_fast.patch
+    - proc-fix-races-against-execve-of-proc-pid-fd.patch
+    - s390-gup_huge_pmd-return-0-if-pte-changes.patch
+    - s390-gup_huge_pmd-support-thp-tail-recounting.patch
+    - sparc-gup_pte_range-support-thp-based-tail-recounting.patch
+    - tg3-fix-tigon3_dma_hwbug_workaround.patch
+    - thp-share-get_huge_page_tail.patch
+    - usb_storage-don-t-freeze-in-usb-stor-scan.patch
+    - xhci-clear-plc-for-usb2-root-hub-ports.patch
+    - xhci-if-no-endpoints-changed-don-t-issue-bw-command.patch
+    - xhci-test-and-clear-rwc-bit.patch
+    revert drm-i915-fix-ilk-infoframe-support.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 07 Nov 2011 07:51:33 +0100
+
 linux-siduction (3.1-4) unstable; urgency=low
 
   * set ABI to 0.towo.4
