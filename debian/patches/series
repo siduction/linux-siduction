@@ -188,6 +188,27 @@ upstream/s390-gup_huge_pmd-return-0-if-pte-changes.patch
 upstream/sparc-gup_pte_range-support-thp-based-tail-recounting.patch
 upstream/thp-share-get_huge_page_tail.patch
 upstream/net-unlock-sock-before-calling-sk_free.patch
+upstream/alsa-ua101-fix-crash-when-unplugging.patch
+upstream/alsa-hda-disable-power-widget-control-for-idt-92hd83-93.patch
+upstream/alsa-hda-add-support-for-92hd65-92hd66-family-of-codecs.patch
+upstream/alsa-hda-realtek-don-t-create-alt-stream-for-capture-when-unnecessary.patch
+upstream/alsa-hda-realtek-skip-invalid-digital-out-pins.patch
+upstream/alsa-hda-fix-silent-output-regression-with-alc861.patch
+upstream/alsa-hda-fix-a-regression-for-dma-position-check-with-ca0110.patch
+upstream/drm-radeon-avoid-bouncing-connector-status-btw-disconnected-unknown.patch
+upstream/drm-radeon-kms-split-msi-check-into-a-separate-function.patch
+upstream/drm-radeon-kms-add-msi-quirk-for-hp-rs690.patch
+upstream/drm-radeon-set-hpd-polarity-at-init-time-so-hotplug-detect-works.patch
+upstream/drm-radeon-kms-properly-set-panel-mode-for-edp.patch
+upstream/drm-radeon-kms-add-msi-quirk-for-dell-rs690.patch
+upstream/drm-radeon-kms-add-msi-module-parameter.patch
+upstream/drm-radeon-kms-set-hpd-polarity-in-hpd_init.patch
+upstream/kbuild-fix-help-text-not-displayed-in-choice-option.patch
+upstream/usb-update-last_busy-time-after-autosuspend-fails.patch
+upstream/cciss-add-small-delay-when-using-pci-power-management-to-reset-for-kump.patch
+upstream/hwmon-coretemp-fix-for-non-smp-builds.patch
+upstream/hwmon-w83627ehf-properly-report-peci-and-amd-si-sensor-types.patch
+upstream/hwmon-w83627ehf-fix-broken-driver-init.patch
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch

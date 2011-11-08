@@ -1,3 +1,31 @@
+linux-siduction (3.1-6) unstable; urgency=low
+
+  * set ABI to 0.towo.6
+  * add patches from the stable queue:
+    - alsa-hda-add-support-for-92hd65-92hd66-family-of-codecs.patch
+    - alsa-hda-disable-power-widget-control-for-idt-92hd83-93.patch
+    - alsa-hda-fix-a-regression-for-dma-position-check-with-ca0110.patch
+    - alsa-hda-fix-silent-output-regression-with-alc861.patch
+    - alsa-hda-realtek-don-t-create-alt-stream-for-capture-when-unnecessary.patch
+    - alsa-hda-realtek-skip-invalid-digital-out-pins.patch
+    - alsa-ua101-fix-crash-when-unplugging.patch
+    - cciss-add-small-delay-when-using-pci-power-management-to-reset-for-kump.patch
+    - drm-radeon-avoid-bouncing-connector-status-btw-disconnected-unknown.patch
+    - drm-radeon-kms-add-msi-module-parameter.patch
+    - drm-radeon-kms-add-msi-quirk-for-dell-rs690.patch
+    - drm-radeon-kms-add-msi-quirk-for-hp-rs690.patch
+    - drm-radeon-kms-properly-set-panel-mode-for-edp.patch
+    - drm-radeon-kms-set-hpd-polarity-in-hpd_init.patch
+    - drm-radeon-kms-split-msi-check-into-a-separate-function.patch
+    - drm-radeon-set-hpd-polarity-at-init-time-so-hotplug-detect-works.patch
+    - hwmon-coretemp-fix-for-non-smp-builds.patch
+    - hwmon-w83627ehf-fix-broken-driver-init.patch
+    - hwmon-w83627ehf-properly-report-peci-and-amd-si-sensor-types.patch
+    - kbuild-fix-help-text-not-displayed-in-choice-option.patch
+    - usb-update-last_busy-time-after-autosuspend-fails.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 08 Nov 2011 19:42:46 +0100
+
 linux-siduction (3.1-5) unstable; urgency=low
 
   * set ABI to 0.towo.5
