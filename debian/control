@@ -9,9 +9,9 @@ Vcs-git: git://git.siduction.org:packages/siduction-repository/linux-siduction.g
 Vcs-Browser: http://git.siduction.org/?p=packages/siduction-repository/linux-siduction.git;a=summary
 Homepage: http://kernel.org/
 
-Package: linux-image-3.1-2.towo.1-siduction-amd64
+Package: linux-image-3.1-2.towo.2-siduction-amd64
 Architecture: amd64
-Provides: linux-image, linux-modules-3.1-2.towo.1-siduction-amd64
+Provides: linux-image, linux-modules-3.1-2.towo.2-siduction-amd64
 Pre-Depends: debconf | debconf-2.0
 Depends: module-init-tools (>= 3.16), ${shlibs:Depends}, ${misc:Depends}, initramfs-tools (>= 0.99~) [amd64] | linux-initramfs-tool [amd64]
 Recommends: firmware-linux-free (>= 3~)
@@ -24,7 +24,7 @@ Description: Linux 3.1 for 64-bit PCs
 Package: linux-image-siduction-amd64
 Architecture: amd64
 Priority: extra
-Depends: linux-image-3.1-2.towo.1-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-image-3.1-2.towo.2-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
 Recommends: linux-headers-siduction-amd64 (= ${binary:Version})
 Description: Linux image for siduction on 64-bit PCs
  This metapackage depends on the latest binary image for Linux kernel on
@@ -33,26 +33,26 @@ Description: Linux image for siduction on 64-bit PCs
 Package: linux-headers-siduction-amd64
 Architecture: amd64
 Priority: extra
-Depends: linux-headers-3.1-2.towo.1-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-headers-3.1-2.towo.2-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
 Description: Linux header for siduction on 64-bit PCs
  This metapackage depends on the latest binary image for Linux kernel on
  PCs with AMD64 or Intel 64 processors machines for siduction.
 
-Package: linux-headers-3.1-2.towo.1-siduction-amd64
+Package: linux-headers-3.1-2.towo.2-siduction-amd64
 Architecture: amd64
 Provides: linux-headers
 Depends: ${shlibs:Depends}, ${misc:Depends}, gcc-4.6
-Description: Header files for Linux 3.1-2.towo.1-siduction-amd64
+Description: Header files for Linux 3.1-2.towo.2-siduction-amd64
  This package provides the architecture-specific kernel header files for
- Linux kernel 3.1-2.towo.1-siduction-amd64, generally used for building
+ Linux kernel 3.1-2.towo.2-siduction-amd64, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-3.1-2.towo.1-siduction-amd64, and can be used for
+ /usr/src/linux-headers-3.1-2.towo.2-siduction-amd64, and can be used for
  building modules that load into the kernel provided by the
- linux-image-3.1-2.towo.1-siduction-amd64 package.
+ linux-image-3.1-2.towo.2-siduction-amd64 package.
 
-Package: linux-image-3.1-2.towo.1-siduction-686
+Package: linux-image-3.1-2.towo.2-siduction-686
 Architecture: i386
-Provides: linux-image, linux-modules-3.1-2.towo.1-siduction-686
+Provides: linux-image, linux-modules-3.1-2.towo.2-siduction-686
 Pre-Depends: debconf | debconf-2.0
 Depends: module-init-tools (>= 3.16), ${shlibs:Depends}, ${misc:Depends}, initramfs-tools (>= 0.99~) [i386] | linux-initramfs-tool [i386]
 Recommends: firmware-linux-free (>= 3~), libc6-i686 [i386]
@@ -67,7 +67,7 @@ Description: Linux 3.1 for modern PCs
 Package: linux-image-siduction-686
 Architecture: i386
 Priority: extra
-Depends: linux-image-3.1-2.towo.1-siduction-686 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-image-3.1-2.towo.2-siduction-686 (= ${binary:Version}), ${misc:Depends}
 Recommends: linux-headers-siduction-686 (= ${binary:Version})
 Description: Linux image for siduction on modern PCs
  This metapackage depends on the latest binary image for Linux kernel on
@@ -79,7 +79,7 @@ Description: Linux image for siduction on modern PCs
 Package: linux-headers-siduction-686
 Architecture: i386
 Priority: extra
-Depends: linux-headers-3.1-2.towo.1-siduction-686 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-headers-3.1-2.towo.2-siduction-686 (= ${binary:Version}), ${misc:Depends}
 Description: Linux header for siduction on modern PCs
  This metapackage depends on the latest binary image for Linux kernel on
  PCs with Intel Pentium Pro/II/III/4/4M/D/M, Xeon, Celeron, Core or Atom;
@@ -87,15 +87,15 @@ Description: Linux header for siduction on modern PCs
  Transmeta Efficeon; VIA C3 "Nehemiah" or C7 processors machines for
  siduction.
 
-Package: linux-headers-3.1-2.towo.1-siduction-686
+Package: linux-headers-3.1-2.towo.2-siduction-686
 Architecture: i386
 Provides: linux-headers
 Depends: ${shlibs:Depends}, ${misc:Depends}, gcc-4.6
-Description: Header files for Linux 3.1-2.towo.1-siduction-686
+Description: Header files for Linux 3.1-2.towo.2-siduction-686
  This package provides the architecture-specific kernel header files for
- Linux kernel 3.1-2.towo.1-siduction-686, generally used for building
+ Linux kernel 3.1-2.towo.2-siduction-686, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-3.1-2.towo.1-siduction-686, and can be used for
+ /usr/src/linux-headers-3.1-2.towo.2-siduction-686, and can be used for
  building modules that load into the kernel provided by the
- linux-image-3.1-2.towo.1-siduction-686 package.
+ linux-image-3.1-2.towo.2-siduction-686 package.
 
