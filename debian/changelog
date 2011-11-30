@@ -1,3 +1,25 @@
+linux-siduction (3.1-11) unstable; urgency=low
+
+  * set ABI to 4.towo.1
+  * import patch 3.1.4
+  * add patches from the stable queue:
+    - drm-radeon-kms-fix-up-gpio-i2c-mask-bits-for-r4xx
+    - viafb-correct-sync-polarity-for-olpc-dcon
+    - ecryptfs-prevent-file-create-race-condition
+    - ecryptfs-flush-file-in-vma-close
+    - i2c-algo-bit-generate-correct-i2c-address-sequence-for-10-bit-target
+    - ecryptfs-extend-array-bounds-for-all-filename-chars
+    - crypto-mv_cesa-fix-hashing-of-chunks-1920-bytes
+    - drm-integer-overflow-in-drm_mode_dirtyfb_ioctl
+    - drm-radeon-kms-fix-up-gpio-i2c-mask-bits-for-r4xx-for-real
+    - drm-i915-ivybridge-still-has-fences
+    - drm-i915-turn-on-a-required-3d-clock-gating-bit-on-sandybridge
+    - drm-i915-turn-on-another-required-clock-gating-bit-on-gen6
+    - drm-i915-fix-inconsistent-backlight-level-during-disabled
+    - pci-hotplug-shpchp-don-t-blindly-claim-non-amd-0x7450-device-ids
+                                                                                                                                               
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 30 Nov 2011 21:40:33 +0100
+
 linux-siduction (3.1-9) unstable; urgency=low
 
   * set ABI to 2.towo.2
