@@ -1,3 +1,41 @@
+linux-siduction (3.1-12) unstable; urgency=low
+
+  * set ABI to 4.towo.2
+  * add patches from the stable queue:
+    - alsa-hda-fix-jack-detection-control-of-vt1708.patch
+    - alsa-hda-fix-s3-s4-problem-on-machines-with-vref-pin-mute-led.patch
+    - alsa-hda-realtek-fix-missing-inits-of-item-indices-for-auto-mic.patch
+    - alsa-lx6464es-fix-device-communication-via-command-bus.patch
+    - drm-radeon-kms-add-some-loop-timeouts-in-pageflip-code.patch
+    - drm-radeon-kms-add-some-new-pci-ids.patch
+    - ehci-fix-a-regression-in-the-iso-scheduler.patch
+    - ext4-fix-racy-use-after-free-in-ext4_end_io_dio.patch
+    - genirq-fix-race-condition-when-stopping-the-irq-thread.patch
+    - genirq-fix-regression-in-irqfixup-irqpoll.patch
+    - hid-correct-general-touch-pid.patch
+    - hugetlb-release-pages-in-the-error-path-of-hugetlb_cow.patch
+    - ib-fix-rcu-lockdep-splats.patch
+    - perf-fix-parsing-of-__print_flags-in-tp_printk.patch
+    - perf-x86-fix-pebs-instruction-unwind.patch
+    - sch_red-fix-red_calc_qavg_from_idle_time.patch
+    - sch_red-fix-red_change.patch
+    - sch_teql-fix-lockdep-splat.patch
+    - sched-x86-avoid-unnecessary-overflow-in-sched_clock.patch
+    - scsi-silencing-killing-requests-for-dead-queue.patch
+    - slab-lockdep-fix-silly-bug.patch
+    - usb-ehci-fix-hub-tt-scheduling-issue-with-iso-transfer.patch
+    - usb-ftdi_sio-add-pid-for-propox-ispcable-iii.patch
+    - usb-musb-pm-fix-context-save-restore-in-suspend-resume-path.patch
+    - usb-option-add-huawei-e353-controlling-interfaces.patch
+    - usb-option-add-simcom-sim5218.patch
+    - usb-usb-storage-unusual_devs-entry-for-kingston-dt-101-g2.patch
+    - usb-whci-hcd-fix-endian-conversion-in-qset_clear.patch
+    - x86-fix-acer-aspire-1-reboot-hang.patch
+    - x86-paravirt-pte-updates-in-k-un-map_atomic-need-to-be-synchronous-regardless-of-lazy_mmu-mode.patch
+    - xhci-fix-bug-in-xhci_clear_command_ring.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 08 Dec 2011 11:06:17 +0100
+
 linux-siduction (3.1-11) unstable; urgency=low
 
   * set ABI to 4.towo.1
@@ -17,7 +55,7 @@ linux-siduction (3.1-11) unstable; urgency=low
     - drm-i915-turn-on-another-required-clock-gating-bit-on-gen6
     - drm-i915-fix-inconsistent-backlight-level-during-disabled
     - pci-hotplug-shpchp-don-t-blindly-claim-non-amd-0x7450-device-ids
-                                                                                                                                               
+
  -- Torsten Wohlfarth <towo@siduction.org>  Wed, 30 Nov 2011 21:40:33 +0100
 
 linux-siduction (3.1-9) unstable; urgency=low
