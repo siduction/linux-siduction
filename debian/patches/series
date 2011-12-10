@@ -1,6 +1,28 @@
 # upstream updates
 upstream/patch-3.1.5
 upstream/revert-extraversion.diff
+upstream/alsa-sis7019-give-slow-codecs-more-time-to-reset.patch
+upstream/alsa-hda-realtek-fix-oops-in-alc_mux_select.patch
+upstream/alsa-hda-fix-gpio-led-setup-for-idt-92hd75-codecs.patch
+upstream/alarmtimers-fix-time-comparison.patch
+upstream/asoc-provide-a-more-complete-dma-driver-stub.patch
+upstream/drivers-rtc-rtc-s3c.c-fix-driver-clock-enable-disable-balance-issues.patch
+upstream/fs-proc-meminfo.c-fix-compilation-error.patch
+upstream/thp-add-compound-tail-page-_mapcount-when-mapped.patch
+upstream/thp-set-compound-tail-page-_count-to-zero.patch
+upstream/lockdep-kmemcheck-annotate-lock-in-lockdep_init_map.patch
+upstream/ptp-fix-clock_getres-implementation.patch
+upstream/mm-ensure-that-pfn_valid-is-called-once-per-pageblock-when-reserving-pageblocks.patch
+upstream/mm-vmalloc-check-for-page-allocation-failure-before-vmlist-insertion.patch
+upstream/fix-apparmor-dereferencing-potentially-freed-dentry-sanitize-__d_path-api.patch
+upstream/tomoyo-fix-pathname-handling-of-disconnected-paths.patch
+upstream/target-reject-scsi-data-overflow-for-fabrics-using-transport_generic_map_mem_to_cmd.patch
+upstream/iscsi-target-fix-residual-count-hanlding-remove-iscsi_cmd-residual_count.patch
+upstream/target-handle-0-correctly-in-transport_get_sectors_6.patch
+upstream/target-fix-page-length-in-emulated-inquiry-vpd-page-86h.patch
+upstream/iscsi-target-add-missing-f_bit-for-iscsi_tm_rsp.patch
+upstream/target-file-walk-properly-over-sg-list.patch
+upstream/percpu-fix-chunk-range-calculation.patch
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch

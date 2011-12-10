@@ -2,6 +2,29 @@ linux-siduction (3.1-13) unstable; urgency=low
 
   * set ABI to 5.towo.1
   * import patch-3.1.5
+  * Add patches from the stable queue:
+    - alsa-sis7019-give-slow-codecs-more-time-to-reset.patch
+    - alsa-hda-realtek-fix-oops-in-alc_mux_select.patch
+    - alsa-hda-fix-gpio-led-setup-for-idt-92hd75-codecs.patch
+    - alarmtimers-fix-time-comparison.patch
+    - asoc-provide-a-more-complete-dma-driver-stub.patch
+    - drivers-rtc-rtc-s3c.c-fix-driver-clock-enable-disable-balance-issues.patch
+    - fs-proc-meminfo.c-fix-compilation-error.patch
+    - thp-add-compound-tail-page-_mapcount-when-mapped.patch
+    - thp-set-compound-tail-page-_count-to-zero.patch
+    - lockdep-kmemcheck-annotate-lock-in-lockdep_init_map.patch
+    - ptp-fix-clock_getres-implementation.patch
+    - mm-ensure-that-pfn_valid-is-called-once-per-pageblock-when-reserving-pageblocks.patch
+    - mm-vmalloc-check-for-page-allocation-failure-before-vmlist-insertion.patch
+    - fix-apparmor-dereferencing-potentially-freed-dentry-sanitize-__d_path-api.patch
+    - tomoyo-fix-pathname-handling-of-disconnected-paths.patch
+    - target-reject-scsi-data-overflow-for-fabrics-using-transport_generic_map_mem_to_cmd.patch
+    - iscsi-target-fix-residual-count-hanlding-remove-iscsi_cmd-residual_count.patch
+    - target-handle-0-correctly-in-transport_get_sectors_6.patch
+    - target-fix-page-length-in-emulated-inquiry-vpd-page-86h.patch
+    - iscsi-target-add-missing-f_bit-for-iscsi_tm_rsp.patch
+    - target-file-walk-properly-over-sg-list.patch
+    - percpu-fix-chunk-range-calculation.patch
 
  -- Torsten Wohlfarth <towo@siduction.org>  Sat, 10 Dec 2011 17:44:11 +0100
 
