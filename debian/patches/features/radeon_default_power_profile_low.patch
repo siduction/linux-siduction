@@ -1,5 +1,5 @@
---- drivers/gpu/drm/radeon/radeon_pm.c  2011-10-24 09:10:05.000000000 +0200
-+++ drivers/gpu/drm/radeon/radeon_pm.c2 2011-12-12 21:28:13.446675955 +0100
+--- a/drivers/gpu/drm/radeon/radeon_pm.c  2011-10-24 09:10:05.000000000 +0200
++++ b/drivers/gpu/drm/radeon/radeon_pm.c  2011-12-12 21:28:13.446675955 +0100
 @@ -571,7 +571,8 @@
  
         /* default to profile method */
