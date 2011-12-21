@@ -1,3 +1,10 @@
+linux-siduction (3.1-15) unstable; urgency=low
+
+  * set ABI to 5.towo.3
+  * Add patch iwl-agn.patch ref https://bugzilla.redhat.com/show_bug.cgi?id=767173
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 21 Dec 2011 15:59:54 +0100
+
 linux-siduction (3.1-14) unstable; urgency=low
 
   * set ABI to 5.towo.2
