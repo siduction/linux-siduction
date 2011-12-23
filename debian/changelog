@@ -1,3 +1,33 @@
+linux-siduction (3.1-17) unstable; urgency=low
+
+  * set ABI to 6.towo.2
+  * Add patches from the stable queue:
+    - alsa-hda-set-position-fix-to-lpib-for-an-atom-poulsbo-based-device.patch
+    - ath9k-fix-max-phy-rate-at-rate-control-init.patch
+    - binary_sysctl-fix-memory-leak.patch
+    - cfq-iosched-fix-cfq_cic_link-race-confition.patch
+    - cfq-iosched-free-cic_index-if-blkio_alloc_blkg_stats-fails.patch
+    - cgroups-fix-a-css_set-not-found-bug-in-cgroup_attach_proc.patch
+    - drm-i915-prevent-division-by-zero-when-asking-for-chipset-power.patch
+    - drm-i915-set-the-right-sdvo-transcoder-for-cpt.patch
+    - input-synaptics-fix-touchpad-not-working-after-s2r-on-vostro-v13.patch
+    - iwl-agn.patch
+    - iwlwifi-do-not-set-the-sequence-control-bit-is-not-needed.patch
+    - mac80211-fix-another-race-in-aggregation-start.patch
+    - nfs-fix-a-regression-in-nfs_file_llseek.patch
+    - nfsv4.1-ensure-that-we-handle-_all_-sequence-status-bits.patch
+    - percpu-fix-per_cpu_ptr_to_phys-handling-of-non-page-aligned-addresses.patch
+    - rtc-expire-alarms-after-the-time-is-set.patch
+    - rtc-m41t80-workaround-broken-alarm-functionality.patch
+    - rtl8192-ce-cu-de-se-avoid-problems-because-of-possible-erfoff-erfsleep-transition.patch
+    - scsi-fcoe-fix-preempt-count-leak-in-fcoe_filter_frames.patch
+    - scsi-mpt2sas-_scsih_smart_predicted_fault-uses-gfp_kernel-in-interrupt-context.patch
+    - scsi-zfcp-return-early-from-slave_destroy-if-slave_alloc-returned-early.patch
+    - ssb-fix-init-regression-with-socs.patch
+    - vfs-__read_cache_page-should-use-gfp-argument-rather-than-gfp_kernel.patch
+ 
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 23 Dec 2011 21:44:51 +0100
+
 linux-siduction (3.1-16) unstable; urgency=low
 
   * set ABI to 6.towo.1

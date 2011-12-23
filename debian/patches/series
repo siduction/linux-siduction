@@ -9,6 +9,28 @@ dfsg/sound-pci-cs46xx-request_firmware.patch
 # stable candidate
 
 # bugfixes
+bugfix/rtc-expire-alarms-after-the-time-is-set.patch
+bugfix/rtc-m41t80-workaround-broken-alarm-functionality.patch
+bugfix/alsa-hda-set-position-fix-to-lpib-for-an-atom-poulsbo-based-device.patch
+bugfix/drm-i915-set-the-right-sdvo-transcoder-for-cpt.patch
+bugfix/drm-i915-prevent-division-by-zero-when-asking-for-chipset-power.patch
+bugfix/cfq-iosched-free-cic_index-if-blkio_alloc_blkg_stats-fails.patch
+bugfix/cfq-iosched-fix-cfq_cic_link-race-confition.patch
+bugfix/scsi-zfcp-return-early-from-slave_destroy-if-slave_alloc-returned-early.patch
+bugfix/scsi-mpt2sas-_scsih_smart_predicted_fault-uses-gfp_kernel-in-interrupt-context.patch
+bugfix/scsi-fcoe-fix-preempt-count-leak-in-fcoe_filter_frames.patch
+bugfix/mac80211-fix-another-race-in-aggregation-start.patch
+bugfix/ssb-fix-init-regression-with-socs.patch
+bugfix/rtl8192-ce-cu-de-se-avoid-problems-because-of-possible-erfoff-erfsleep-transition.patch
+bugfix/input-synaptics-fix-touchpad-not-working-after-s2r-on-vostro-v13.patch
+bugfix/percpu-fix-per_cpu_ptr_to_phys-handling-of-non-page-aligned-addresses.patch
+bugfix/binary_sysctl-fix-memory-leak.patch
+bugfix/nfs-fix-a-regression-in-nfs_file_llseek.patch
+bugfix/nfsv4.1-ensure-that-we-handle-_all_-sequence-status-bits.patch
+bugfix/cgroups-fix-a-css_set-not-found-bug-in-cgroup_attach_proc.patch
+bugfix/vfs-__read_cache_page-should-use-gfp-argument-rather-than-gfp_kernel.patch
+bugfix/ath9k-fix-max-phy-rate-at-rate-control-init.patch
+bugfix/iwlwifi-do-not-set-the-sequence-control-bit-is-not-needed.patch
 bugfix/iwl-agn.patch
 
 # debian specific patches.
