@@ -1,3 +1,10 @@
+linux-siduction (3.1-18) unstable; urgency=low
+
+  * set ABI to 6.towo.3
+  * add bugfix/fix_resume_from_suspend.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 01 Jan 2012 18:29:35 +0100
+
 linux-siduction (3.1-17) unstable; urgency=low
 
   * set ABI to 6.towo.2

@@ -32,6 +32,7 @@ bugfix/vfs-__read_cache_page-should-use-gfp-argument-rather-than-gfp_kernel.patc
 bugfix/ath9k-fix-max-phy-rate-at-rate-control-init.patch
 bugfix/iwlwifi-do-not-set-the-sequence-control-bit-is-not-needed.patch
 bugfix/iwl-agn.patch
+bugfix/fix_resume_from_suspend.patch
 
 # debian specific patches.
 debian/version.patch

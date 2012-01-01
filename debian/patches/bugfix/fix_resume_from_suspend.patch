@@ -1,0 +1,10 @@
+--- a/kernel/time/clockevents.c		2011-12-23 21:51:15.000000000 +0100
++++ b/kernel/time/clockevents.c		2012-01-01 18:25:23.000000000 +0100
+@@ -286,7 +286,6 @@
+ 	 * released list and do a notify add later.
+ 	 */
+ 	if (old) {
+-		old->event_handler = clockevents_handle_noop;
+ 		clockevents_set_mode(old, CLOCK_EVT_MODE_UNUSED);
+ 		list_del(&old->list);
+ 		list_add(&old->list, &clockevents_released);
