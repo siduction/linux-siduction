@@ -1,3 +1,9 @@
+linux-siduction (3.2.0-3) unstable; urgency=low
+
+  * # CONFIG_BCMA is not set
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 05 Jan 2012 19:13:48 +0100
+
 linux-siduction (3.2.0-2) unstable; urgency=low
 
   * set ABI to 0.towo.2
