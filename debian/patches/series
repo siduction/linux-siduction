@@ -1,5 +1,4 @@
 # upstream updates
-upstream/patch-3.1.6
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
@@ -9,30 +8,14 @@ dfsg/sound-pci-cs46xx-request_firmware.patch
 # stable candidate
 
 # bugfixes
-bugfix/rtc-expire-alarms-after-the-time-is-set.patch
-bugfix/rtc-m41t80-workaround-broken-alarm-functionality.patch
-bugfix/alsa-hda-set-position-fix-to-lpib-for-an-atom-poulsbo-based-device.patch
-bugfix/drm-i915-set-the-right-sdvo-transcoder-for-cpt.patch
-bugfix/drm-i915-prevent-division-by-zero-when-asking-for-chipset-power.patch
-bugfix/cfq-iosched-free-cic_index-if-blkio_alloc_blkg_stats-fails.patch
-bugfix/cfq-iosched-fix-cfq_cic_link-race-confition.patch
-bugfix/scsi-zfcp-return-early-from-slave_destroy-if-slave_alloc-returned-early.patch
-bugfix/scsi-mpt2sas-_scsih_smart_predicted_fault-uses-gfp_kernel-in-interrupt-context.patch
-bugfix/scsi-fcoe-fix-preempt-count-leak-in-fcoe_filter_frames.patch
-bugfix/mac80211-fix-another-race-in-aggregation-start.patch
-bugfix/ssb-fix-init-regression-with-socs.patch
-bugfix/rtl8192-ce-cu-de-se-avoid-problems-because-of-possible-erfoff-erfsleep-transition.patch
-bugfix/input-synaptics-fix-touchpad-not-working-after-s2r-on-vostro-v13.patch
-bugfix/percpu-fix-per_cpu_ptr_to_phys-handling-of-non-page-aligned-addresses.patch
-bugfix/binary_sysctl-fix-memory-leak.patch
-bugfix/nfs-fix-a-regression-in-nfs_file_llseek.patch
-bugfix/nfsv4.1-ensure-that-we-handle-_all_-sequence-status-bits.patch
-bugfix/cgroups-fix-a-css_set-not-found-bug-in-cgroup_attach_proc.patch
-bugfix/vfs-__read_cache_page-should-use-gfp-argument-rather-than-gfp_kernel.patch
-bugfix/ath9k-fix-max-phy-rate-at-rate-control-init.patch
-bugfix/iwlwifi-do-not-set-the-sequence-control-bit-is-not-needed.patch
-bugfix/iwl-agn.patch
-bugfix/fix_resume_from_suspend.patch
+bugfix/Skip-looking-for-ioapic-overrides-when-ioapics-are-not-present.patch
+bugfix/dm-Deal-with-merge_bvec_fn-in-component-devices-bett.patch
+bugfix/rt2800-disable-powersaving-as-default.patch
+bugfix/0001-media-staging-lirc_serial-Fix-init-exit-order.patch
+bugfix/0002-media-staging-lirc_serial-Free-resources-on-failure-.patch
+bugfix/0003-media-staging-lirc_serial-Fix-deadlock-on-resume-fai.patch
+bugfix/0004-media-staging-lirc_serial-Fix-bogus-error-codes.patch
+bugfix/0005-media-staging-lirc_serial-Do-not-assume-error-codes-.patch
 
 # debian specific patches.
 debian/version.patch
@@ -46,7 +29,10 @@ features/ath_override-eeprom-countrycode.patch
 # patches from aufs repository, with s/EXPORT_SYMBOL/&_GPL/
 features/aufs/aufs3-base.patch
 features/aufs/aufs3-standalone.patch
-features/aufs/aufs3-2011-11-14.patch
+features/aufs/aufs3-2011-12-05.patch
+features/aufs/aufs3-loopback.patch
+features/aufs/aufs3-proc_map.patch
+features/aufs/aufs3-fix-export-__devcgroup_inode_permission.patch
 features/aufs/aufs3-kbuild.patch
 
 features/acerhk/01_acerhk-0.5.35.patch
@@ -60,5 +46,4 @@ features/acerhk/08_remove-ifdefs-for-ACERDEBUG.patch
 features/acerhk/09_kcompat-2.6.36.patch
 features/acerhk/10_kcompat-2.6.38.patch
 
-features/linux/dm-table-propagate-non-rotational-flag.patch
 features/radeon_default_power_profile_low.patch

@@ -6,9 +6,11 @@ Based on work by Kalle Olavi Niemitalo <kon@iki.fi>.
 Tested by Antonio Ospite <ospite@studenti.unina.it>.
 Unfortunately we cannot currently distribute the firmware.
 
+diff --git a/sound/pci/Kconfig b/sound/pci/Kconfig
+index 17e03b9..124b3a0 100644
 --- a/sound/pci/Kconfig
 +++ b/sound/pci/Kconfig
-@@ -257,7 +257,7 @@ config SND_CS4281
+@@ -229,7 +229,7 @@ config SND_CS4281
  
  config SND_CS46XX
  	tristate "Cirrus Logic (Sound Fusion) CS4280/CS461x/CS462x/CS463x"
@@ -17,7 +19,7 @@ Unfortunately we cannot currently distribute the firmware.
  	select SND_RAWMIDI
  	select SND_AC97_CODEC
  	help
-@@ -269,6 +269,7 @@ config SND_CS46XX
+@@ -241,6 +241,7 @@ config SND_CS46XX
  
  config SND_CS46XX_NEW_DSP
  	bool "Cirrus Logic (Sound Fusion) New DSP support"
@@ -25,17 +27,20 @@ Unfortunately we cannot currently distribute the firmware.
  	depends on SND_CS46XX
  	default y
  	help
+diff --git a/sound/pci/cs46xx/cs46xx_lib.c b/sound/pci/cs46xx/cs46xx_lib.c
+index 1be96ea..b12b930 100644
 --- a/sound/pci/cs46xx/cs46xx_lib.c
 +++ b/sound/pci/cs46xx/cs46xx_lib.c
-@@ -53,6 +53,7 @@
- #include <linux/slab.h>
+@@ -54,6 +54,8 @@
  #include <linux/gameport.h>
  #include <linux/mutex.h>
+ #include <linux/export.h>
 +#include <linux/firmware.h>
++#include <linux/module.h>
  
  
  #include <sound/core.h>
-@@ -308,7 +309,7 @@ static void snd_cs46xx_ac97_write(struct
+@@ -308,7 +309,7 @@ static void snd_cs46xx_ac97_write(struct snd_ac97 *ac97,
   */
  
  int snd_cs46xx_download(struct snd_cs46xx *chip,
@@ -44,7 +49,7 @@ Unfortunately we cannot currently distribute the firmware.
                          unsigned long offset,
                          unsigned long len)
  {
-@@ -321,9 +322,9 @@ int snd_cs46xx_download(struct snd_cs46x
+@@ -321,9 +322,9 @@ int snd_cs46xx_download(struct snd_cs46xx *chip,
  	dst = chip->region.idx[bank+1].remap_addr + offset;
  	len /= sizeof(u32);
  
@@ -56,7 +61,7 @@ Unfortunately we cannot currently distribute the firmware.
  		dst += sizeof(u32);
  	}
  	return 0;
-@@ -360,23 +361,77 @@ int snd_cs46xx_clear_BA1(struct snd_cs46
+@@ -360,23 +361,77 @@ int snd_cs46xx_clear_BA1(struct snd_cs46xx *chip,
  
  #else /* old DSP image */
  
@@ -145,15 +150,17 @@ Unfortunately we cannot currently distribute the firmware.
  #endif /* CONFIG_SND_CS46XX_NEW_DSP */
  
  /*
-@@ -3879,3 +3934,5 @@ int __devinit snd_cs46xx_create(struct s
+@@ -3874,3 +3929,5 @@ int __devinit snd_cs46xx_create(struct snd_card *card,
  	*rchip = chip;
  	return 0;
  }
 +
 +MODULE_FIRMWARE("cs46xx/cs46xx-old.fw");
+diff --git a/sound/pci/cs46xx/cs46xx_lib.h b/sound/pci/cs46xx/cs46xx_lib.h
+index 4eb55aa..85babb5 100644
 --- a/sound/pci/cs46xx/cs46xx_lib.h
 +++ b/sound/pci/cs46xx/cs46xx_lib.h
-@@ -103,8 +103,8 @@ int cs46xx_dsp_proc_done (struct snd_cs4
+@@ -103,8 +103,8 @@ int cs46xx_dsp_proc_done (struct snd_cs46xx *chip);
  #define cs46xx_dsp_proc_done(chip)
  #endif
  int cs46xx_dsp_scb_and_task_init (struct snd_cs46xx *chip);

@@ -1,3 +1,20 @@
+linux-siduction (3.2.0-1) unstable; urgency=low
+
+  * set ABI to 0.towo.1
+  * linux 3.2.0
+  * applied patches
+    - Skip-looking-for-ioapic-overrides-when-ioapics-are-not-present.patch
+    - dm-Deal-with-merge_bvec_fn-in-component-devices-bett.patch
+    - rt2800-disable-powersaving-as-default.patch
+    - 0001-media-staging-lirc_serial-Fix-init-exit-order.patch
+    - 0002-media-staging-lirc_serial-Free-resources-on-failure-.patch
+    - 0003-media-staging-lirc_serial-Fix-deadlock-on-resume-fai.patch
+    - 0004-media-staging-lirc_serial-Fix-bogus-error-codes.patch
+    - 0005-media-staging-lirc_serial-Do-not-assume-error-codes-.patch
+    - aufs3-2011-12-05.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 05 Jan 2012 10:18:15 +0100
+
 linux-siduction (3.1-18) unstable; urgency=low
 
   * set ABI to 6.towo.3
