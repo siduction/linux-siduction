@@ -1,3 +1,10 @@
+linux-siduction (3.2.0-2) unstable; urgency=low
+
+  * set ABI to 0.towo.2
+  * fixed .config for B43
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 05 Jan 2012 16:18:23 +0100
+
 linux-siduction (3.2.0-1) unstable; urgency=low
 
   * set ABI to 0.towo.1
