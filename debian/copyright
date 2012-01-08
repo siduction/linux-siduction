@@ -28,15 +28,14 @@ Debian Kernel Team <debian-kernel@lists.debian.org>
     © 2007-2008 Gordon Farquharson <gordonfarquharson@gmail.com>
     © 2006-2007 Rod Whitby <rod@whitby.id.au>
     © 2006-2007 Steve Langasek <vorlon@debian.org>
-    © 2011 Torsten Wohlfarth <towo@siduction.org>
 
 This package was forked as "linux-siduction" to build kernel packages for
-siduction in february 2008 by Stefan Lippers-Hollmann <s.l-h@gmx.de> and is
+siduction in october 2011 by Torsten Wohlfarth <t.wohlfarthgmx.de> and is
 intended to closely track packaging changes made in debian's (upstream)
 "linux-2.6".
 Decisions on kernel configurations and applied patches are made by the siduction
 project.
-    © 2008-2010 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+    © 2011 Torsten Wohlfarth <t.wohlfarth@gmx.de>
 
 License:
 
