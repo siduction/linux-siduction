@@ -47,3 +47,5 @@ features/acerhk/09_kcompat-2.6.36.patch
 features/acerhk/10_kcompat-2.6.38.patch
 
 features/radeon_default_power_profile_low.patch
+features/3.2-sched-bfs-416.patch
+bugfix/bcma-Do-not-claim-PCI-device-IDs-also-claimed-by-brc.patch
