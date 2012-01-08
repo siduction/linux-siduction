@@ -35,6 +35,7 @@ intended to closely track packaging changes made in debian's (upstream)
 "linux-2.6".
 Decisions on kernel configurations and applied patches are made by the siduction
 project.
+    © 2008-2010 Stefan Lippers-Hollmann <s.l-h@gmx.de>
     © 2011 Torsten Wohlfarth <t.wohlfarth@gmx.de>
 
 License:
