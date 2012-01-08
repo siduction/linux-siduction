@@ -29,14 +29,14 @@ Debian Kernel Team <debian-kernel@lists.debian.org>
     © 2006-2007 Rod Whitby <rod@whitby.id.au>
     © 2006-2007 Steve Langasek <vorlon@debian.org>
 
-This package was forked as "linux-siduction" to build kernel packages for
-siduction in october 2011 by Torsten Wohlfarth <t.wohlfarthgmx.de> and is
+This package was forked as "linux-siduction" from "linux-aptosid" to build kernel packages for
+siduction in october 2011 by Torsten Wohlfarth <t.wohlfarth@gmx.de> and is
 intended to closely track packaging changes made in debian's (upstream)
 "linux-2.6".
 Decisions on kernel configurations and applied patches are made by the siduction
 project.
-    © 2008-2010 Stefan Lippers-Hollmann <s.l-h@gmx.de>
-    © 2011 Torsten Wohlfarth <t.wohlfarth@gmx.de>
+    linux-aptosid © 2008-2010 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+    linux-siduction © 2011 Torsten Wohlfarth <t.wohlfarth@gmx.de>
 
 License:
 
