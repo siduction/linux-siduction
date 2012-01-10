@@ -1,8 +1,29 @@
 linux-siduction (3.2.0-5) unstable; urgency=low
 
   * Fixed debian/copyright
+  * set ABI to 0.towo.5
+  * Add patches from the stable queue:
+    - firmware-fix-an-oops-on-reading-fw_priv-fw-in-sysfs-loading-file.patch
+    - rt2800usb-move-id-out-of-unknown.patch
+    - libertas-clean-up-scan-thread-handling.patch
+    - bcma-support-for-suspend-and-resume.patch
+    - wl12xx-validate-fem-index-from-ini-file-and-fw.patch
+    - wl12xx-check-buffer-bound-when-processing-nvs-data.patch
+    - wl12xx-restore-testmode-abi.patch
+    - iwlagn-fix-tid-use-bug.patch
+    - iwlagn-fix-remove-use-of-page_size.patch
+    - perf-fix-parsing-of-__print_flags-in-tp_printk.patch
+    - reiserfs-fix-quota-mount-option-parsing.patch
+    - reiserfs-force-inode-evictions-before-umount-to-avoid-crash.patch
+    - ext3-don-t-warn-from-writepage-when-readonly-inode-is-spotted-after-error.patch
+    - usb-update-documentation-for-usbmon.patch
+    - usbfs-fix-oops-related-to-user-namespace-conversion.patch
+    - cgroup-fix-to-allow-mounting-a-hierarchy-by-name.patch
+    - udf-fix-deadlock-when-converting-file-from-in-icb-one-to-normal-one.patch
+    - drivers-usb-class-cdc-acm.c-clear-dangling-pointer.patch
+    - usb-isight-fix-kernel-bug-when-loading-firmware.patch
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sun, 08 Jan 2012 16:57:05 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 10 Jan 2012 12:57:05 +0100
 
 linux-siduction (3.2.0-4) unstable; urgency=low
 
