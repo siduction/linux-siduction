@@ -1,4 +1,5 @@
 # upstream updates
+upstream/patch-3.2.1-rc1
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
@@ -46,26 +47,6 @@ features/acerhk/07_remove-ifdefs-for-ancient-kernels.patch
 features/acerhk/08_remove-ifdefs-for-ACERDEBUG.patch
 features/acerhk/09_kcompat-2.6.36.patch
 features/acerhk/10_kcompat-2.6.38.patch
-
-queue/firmware-fix-an-oops-on-reading-fw_priv-fw-in-sysfs-loading-file.patch
-queue/rt2800usb-move-id-out-of-unknown.patch
-queue/libertas-clean-up-scan-thread-handling.patch
-queue/bcma-support-for-suspend-and-resume.patch
-queue/wl12xx-validate-fem-index-from-ini-file-and-fw.patch
-queue/wl12xx-check-buffer-bound-when-processing-nvs-data.patch
-queue/wl12xx-restore-testmode-abi.patch
-queue/iwlagn-fix-tid-use-bug.patch
-queue/iwlagn-fix-remove-use-of-page_size.patch
-queue/perf-fix-parsing-of-__print_flags-in-tp_printk.patch
-queue/reiserfs-fix-quota-mount-option-parsing.patch
-queue/reiserfs-force-inode-evictions-before-umount-to-avoid-crash.patch
-queue/ext3-don-t-warn-from-writepage-when-readonly-inode-is-spotted-after-error.patch
-queue/usb-update-documentation-for-usbmon.patch
-queue/usbfs-fix-oops-related-to-user-namespace-conversion.patch
-queue/cgroup-fix-to-allow-mounting-a-hierarchy-by-name.patch
-queue/udf-fix-deadlock-when-converting-file-from-in-icb-one-to-normal-one.patch
-queue/drivers-usb-class-cdc-acm.c-clear-dangling-pointer.patch
-queue/usb-isight-fix-kernel-bug-when-loading-firmware.patch
 
 features/radeon_default_power_profile_low.patch
 features/3.2-sched-bfs-416.patch
