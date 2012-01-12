@@ -1,3 +1,11 @@
+linux-siduction (3.2.0-7) unstable; urgency=low
+
+  * set ABI to 1.towo.2
+  * Add aufs3-2012-01-09.patch
+  * import patch-3.2.1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 12 Jan 2012 23:19:23 +0100
+
 linux-siduction (3.2.0-6) unstable; urgency=low
 
   * set ABI to 1.towo.1
