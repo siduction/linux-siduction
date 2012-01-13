@@ -1,3 +1,53 @@
+linux-siduction (3.2.0-8) unstable; urgency=low
+
+  * set ABI to 1.towo.3
+  * Add patches from the stable queue:
+    - mtdoops-fix-the-oops_page_used-array-size.patch
+    - mtd-mtdoops-skip-reading-initially-bad-blocks.patch
+    - mtd-mtd_blkdevs-don-t-increase-open-count-on-error-path.patch
+    - mtd-tests-stresstest-bail-out-if-device-has-not-enough-eraseblocks.patch
+    - drivers-rtc-interface.c-fix-alarm-rollover-when-day-or-month-is-out-of-range.patch
+    - ext4-add-missing-ext4_resize_end-on-error-paths.patch
+    - ext4-fix-undefined-behavior-in-ext4_fill_flex_info.patch
+    - alsa-snd-usb-us122l-delete-calls-to-preempt_disable.patch
+    - alsa-hda-fix-master-control-for-cirrus-logic-421x.patch
+    - alsa-hda-fix-automute-for-cirrus-logic-421x.patch
+    - alsa-ice1724-check-for-ac97-to-avoid-kernel-oops.patch
+    - alsa-usb-audio-avoid-flood-of-frame-active-debug-messages.patch
+    - alsa-hda-use-auto-parser-for-hp-laptops-with-cx20459-codec.patch
+    - alsa-hda-return-the-error-from-get_wcaps_type-for-invalid-nids.patch
+    - alsa-hda-fix-the-detection-of-loopback-mixing-control-for-via-codecs.patch
+    - alsa-hda-fix-the-lost-power-setup-of-seconary-pins-after-pm-resume.patch
+    - drm-radeon-kms-workaround-invalid-avi-infoframe-checksum-issue.patch
+    - drm-radeon-kms-disable-writeback-on-pre-r300-asics.patch
+    - radeon-fix-disabling-pci-bus-mastering-on-big-endian-hosts.patch
+    - pnfs-obj-pnfs-errors-are-communicated-on-iodata-pnfs_error.patch
+    - pnfs-obj-must-return-layout-on-io-error.patch
+    - nfs-retry-mounting-nfsroot.patch
+    - nfsv4.1-fix-backchannel-slotid-off-by-one-bug.patch
+    - nfs-fix-recent-breakage-to-nfs-error-handling.patch
+    - nfsv4-include-bitmap-in-nfsv4-get-acl-data.patch
+    - nfs-fix-regression-in-handling-of-context-option-in-nfsv4.patch
+    - hid-bump-maximum-global-item-tag-report-size-to-96-bytes.patch
+    - hid-wiimote-select-input_ff_memless.patch
+    - ubi-fix-missing-scrub-when-there-is-a-bit-flip.patch
+    - ubi-fix-use-after-free-on-error-path.patch
+    - pci-fix-pci_exp_type_rc_ec-value.patch
+    - pci-msi-disable-msi-interrupts-when-we-initialize-a-pci-device.patch
+    - x86-pci-ignore-cpu-non-addressable-_crs-reserved-memory-resources.patch
+    - x86-pci-amd-factor-out-mmconfig-discovery.patch
+    - x86-pci-build-amd_bus.o-only-when-config_amd_nb-y.patch
+    - scsi-mpt2sas-release-spinlock-for-the-raid-device-list-before-blocking-it.patch
+    - scsi-mpt2sas-fix-for-memory-allocation-error-for-large-host-credits.patch
+    - xen-xenbus-reject-replies-with-payload-xenstore_payload_max.patch
+    - md-raid1-perform-bad-block-tests-for-writemostly-devices-too.patch
+    - ima-free-duplicate-measurement-memory.patch
+    - ima-fix-invalid-memory-reference.patch
+    - slub-fix-a-possible-memleak-in-__slab_alloc.patch
+    - pnp-work-around-dell-1536-1546-bios-mmconfig-bug-that-breaks-usb.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 13 Jan 2012 12:00:29 +0100
+
 linux-siduction (3.2.0-7) unstable; urgency=low
 
   * set ABI to 1.towo.2
