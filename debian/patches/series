@@ -1,5 +1,5 @@
 # upstream updates
-upstream/patch-3.2.2
+upstream/patch-3.2.3
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
@@ -47,4 +47,8 @@ features/acerhk/10_kcompat-2.6.38.patch
 
 features/radeon_default_power_profile_low.patch
 features/3.2-sched-bfs-416.patch
+features/0001-block-prepare-I-O-context-code-for-BFQ-v3r2-for-3.2.patch
+features/0002-block-cgroups-kconfig-build-bits-for-BFQ-v3r2-3.2.patch
+features/0003-block-introduce-the-BFQ-v3r2-I-O-sched-for-3.2.patch
+
 
