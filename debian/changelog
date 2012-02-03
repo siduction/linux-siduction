@@ -1,3 +1,11 @@
+linux-siduction (3.2.0-13) unstable; urgency=low
+
+  * set ABI to 3.towo.1
+  * import patch-3.2.3
+  * set bfq as default io-scheduler
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 03 Feb 2012 21:04:29 +0100
+
 linux-siduction (3.2.0-11) unstable; urgency=low
 
   * set ABI to 2.towo.1
