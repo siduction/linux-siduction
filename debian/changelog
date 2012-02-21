@@ -1,3 +1,12 @@
+linux-siduction (3.2.0-18) unstable; urgency=low
+
+  * set ABI to 7.towo.1
+  * import patch 3.2.7
+  * add neuter-drm_i915_fix-ILK+-infoframe-support.
+  * add block_avoid-false-positive-warnings-on-ioctl-to-partition
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 21 Feb 2012 07:31:46 +0100
+
 linux-siduction (3.2.0-17) unstable; urgency=low
 
   * set ABI to 6.towo.1

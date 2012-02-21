@@ -1,10 +1,11 @@
 # upstream updates
-upstream/patch-3.2.6
+upstream/patch-3.2.7
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
 dfsg/sound-pci-cs46xx-request_firmware.patch
+dfsg/r8192e-remove-firmware-again.patch
 
 # stable candidate
 
@@ -16,6 +17,9 @@ bugfix/0004-media-staging-lirc_serial-Fix-bogus-error-codes.patch
 bugfix/0005-media-staging-lirc_serial-Do-not-assume-error-codes-.patch
 bugfix/bcma-Do-not-claim-PCI-device-IDs-also-claimed-by-brc.patch
 bugfix/kvm_intel_enabled-nested-on-default.patch
+bugfix/block_avoid-false-positive-warnings-on-ioctl-to-partition.patch
+bugfix/neuter-drm_i915_fix-ILK+-infoframe-support.patch
+bugfix/ath9k-fix-a-wep-crypto-related-regression.patch
 
 # debian specific patches.
 debian/version.patch
@@ -45,6 +49,7 @@ features/acerhk/08_remove-ifdefs-for-ACERDEBUG.patch
 features/acerhk/09_kcompat-2.6.36.patch
 features/acerhk/10_kcompat-2.6.38.patch
 
+features/bcma-Do-not-claim-PCI-device-IDs-also-claimed-by-brc.patch
 features/radeon_default_power_profile_low.patch
 features/3.2-sched-bfs-416.patch
 features/0001-block-prepare-I-O-context-code-for-BFQ-v3r2-for-3.2.patch
