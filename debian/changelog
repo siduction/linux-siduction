@@ -1,3 +1,10 @@
+linux-siduction (3.2.0-21) unstable; urgency=low
+
+  * set ABI to 9.towo.2
+  * fix missing modules.buildin
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 05 Mar 2012 16:48:45 +0100
+
 linux-siduction (3.2.0-20) unstable; urgency=low
 
   * set ABI to 9.towo.1

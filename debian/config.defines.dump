@@ -1,70 +1,253 @@
-[('abi',)]
-abiname: '8.towo.1'
-
-[('base',)]
-arches: ['amd64', 'i386']
-featuresets: ['none']
-compiler: 'gcc-4.6'
-
-[('base', 'amd64')]
-kernel-arch: 'x86'
-featuresets: ['none']
-
-[('base', 'amd64', 'none')]
-implicit-flavour: True
-flavours: ['siduction-amd64']
-
-[('base', 'i386')]
-kernel-arch: 'x86'
-featuresets: ['none']
-
-[('base', 'i386', 'none')]
-implicit-flavour: True
-flavours: ['siduction-686']
-
-[('description', 'amd64', None, 'siduction-amd64')]
-hardware: '64-bit PCs'
-hardware-long: 'PCs with AMD64 or Intel 64 processors'
-
-[('description', 'i386', None, 'siduction-686')]
-hardware: 'modern PCs'
-hardware-long: 'PCs with Intel Pentium Pro/II/III/4/4M/D/M, Xeon, Celeron, Core or Atom; AMD Geode LX/NX, Athlon (K7), Duron, Opteron, Sempron, Turion or Phenom; Transmeta Efficeon; VIA C3 "Nehemiah" or C7 processors'
-
-[('image',)]
-initramfs-generators: ['initramfs-tools', 'initramfs-fallback']
-type: 'plain'
-
-[('image', 'amd64')]
-suggests: 'crda'
-configs: ['kernelarch-x86/config']
-bootloaders: ['grub-pc', 'extlinux', 'grub-efi-amd64']
-
-[('image', 'amd64', None, 'siduction-amd64')]
-configs: ['kernelarch-x86/config-arch-64']
-
-[('image', 'i386')]
-suggests: 'crda'
-configs: ['kernelarch-x86/config']
-bootloaders: ['grub-pc', 'extlinux']
-
-[('image', 'i386', None, 'siduction-686')]
-configs: ['kernelarch-x86/config-arch-32']
-recommends: 'libc6-i686'
-
-[('image-dbg', 'i386', None, 'siduction-686')]
-enabled: False
-
-[('relations',)]
-initramfs-fallback: 'linux-initramfs-tool'
-lilo: 'lilo (>= 22.8-8.2~)'
-initramfs-tools: 'initramfs-tools (>= 0.99~)'
-gcc-4.6: 'gcc-4.6'
-elilo: 'elilo (>= 3.12-3.1~)'
-
-[('siduction-amd64-dbg', 'amd64')]
-enabled: 'false'
-
-[('version',)]
-abiname: '3.2-8.towo.1'
-source: '3.2.0-19'
-
+ccopy_reg
+_reconstructor
+p1
+(cdebian_linux.config
+ConfigCore
+p2
+c__builtin__
+dict
+p3
+(dp4
+(S'image'
+S'i386'
+p5
+NS'siduction-686'
+tp6
+(dp7
+S'configs'
+p8
+(lp9
+S'kernelarch-x86/config-arch-32'
+p10
+asS'recommends'
+p11
+S'libc6-i686'
+p12
+ss(S'image'
+S'amd64'
+p13
+tp14
+(dp15
+S'suggests'
+p16
+S'crda'
+p17
+sS'configs'
+p18
+(lp19
+S'kernelarch-x86/config'
+p20
+asS'bootloaders'
+p21
+(lp22
+S'grub-pc'
+p23
+aS'extlinux'
+p24
+aS'grub-efi-amd64'
+p25
+ass(S'siduction-686_image-dbg'
+p26
+g5
+tp27
+(dp28
+S'enabled'
+p29
+S'false'
+p30
+ss(S'base'
+p31
+g13
+S'none'
+p32
+tp33
+(dp34
+S'implicit-flavour'
+p35
+I01
+sS'flavours'
+p36
+(lp37
+S'siduction-amd64'
+p38
+ass(S'base'
+g13
+tp39
+(dp40
+S'kernel-arch'
+p41
+S'x86'
+p42
+sS'featuresets'
+p43
+(lp44
+g32
+ass(S'image'
+p45
+tp46
+(dp47
+S'initramfs-generators'
+p48
+(lp49
+S'initramfs-tools'
+p50
+aS'initramfs-fallback'
+p51
+asS'type'
+p52
+S'plain'
+p53
+ss(S'version'
+p54
+tp55
+(dp56
+S'abiname'
+p57
+S'3.2-9.towo.2'
+p58
+sS'source'
+p59
+V3.2.0-21
+p60
+ss(S'relations'
+p61
+tp62
+(dp63
+S'initramfs-fallback'
+p64
+S'linux-initramfs-tool'
+p65
+sS'lilo'
+p66
+S'lilo (>= 22.8-8.2~)'
+p67
+sS'initramfs-tools'
+p68
+S'initramfs-tools (>= 0.99~)'
+p69
+sS'gcc-4.6'
+p70
+S'gcc-4.6'
+p71
+sS'elilo'
+p72
+S'elilo (>= 3.12-3.1~)'
+p73
+ss(S'base'
+p74
+g5
+tp75
+(dp76
+S'kernel-arch'
+p77
+S'x86'
+p78
+sg43
+(lp79
+g32
+ass(S'base'
+p80
+tp81
+(dp82
+S'arches'
+p83
+(lp84
+S'amd64'
+p85
+aS'i386'
+p86
+asS'featuresets'
+p87
+(lp88
+S'none'
+p89
+asS'compiler'
+p90
+S'gcc-4.6'
+p91
+ss(S'siduction-amd64-dbg'
+g13
+tp92
+(dp93
+S'enabled'
+p94
+S'false'
+p95
+ss(S'abi'
+p96
+tp97
+(dp98
+S'abiname'
+p99
+S'9.towo.2'
+p100
+ss(S'image'
+p101
+g5
+tp102
+(dp103
+S'suggests'
+p104
+S'crda'
+p105
+sS'configs'
+p106
+(lp107
+S'kernelarch-x86/config'
+p108
+asS'bootloaders'
+p109
+(lp110
+S'grub-pc'
+p111
+aS'extlinux'
+p112
+ass(g31
+g5
+g32
+tp113
+(dp114
+g35
+I01
+sg36
+(lp115
+S'siduction-686'
+p116
+ass(S'image'
+g13
+NS'siduction-amd64'
+tp117
+(dp118
+S'configs'
+p119
+(lp120
+S'kernelarch-x86/config-arch-64'
+p121
+ass(S'description'
+g5
+NS'siduction-686'
+tp122
+(dp123
+S'hardware'
+p124
+S'modern PCs'
+p125
+sS'hardware-long'
+p126
+S'PCs with Intel Pentium Pro/II/III/4/4M/D/M, Xeon, Celeron, Core or Atom; AMD Geode LX/NX, Athlon (K7), Duron, Opteron, Sempron, Turion or Phenom; Transmeta Efficeon; VIA C3 "Nehemiah" or C7 processors'
+p127
+ss(S'description'
+g13
+NS'siduction-amd64'
+tp128
+(dp129
+S'hardware'
+p130
+S'64-bit PCs'
+p131
+sS'hardware-long'
+p132
+S'PCs with AMD64 or Intel 64 processors'
+p133
+sstRp134
+.
