@@ -35,9 +35,11 @@ ifeq ($(DEBUG),True)
   binary-arch-flavour: install-image-dbg_$(ARCH)_$(FEATURESET)_$(FLAVOUR)
 endif
 binary-arch-flavour: install-image-meta_$(ARCH)_$(FEATURESET)_$(FLAVOUR)
+binary-arch-flavour: install-image-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR)
 ifeq ($(MODULES),True)
   binary-arch-flavour: install-headers_$(ARCH)_$(FEATURESET)_$(FLAVOUR)
   binary-arch-flavour: install-headers-meta_$(ARCH)_$(FEATURESET)_$(FLAVOUR)
+  binary-arch-flavour: install-headers-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR)
 endif
 
 binary-indep:
@@ -58,8 +60,6 @@ $(STAMPS_DIR)/source:
 	rm -rf '$(DIR)'
 	mkdir -p '$(DIR)'
 	cp -al $(SOURCE_FILES) '$(DIR)'
-	# Suppress trailing '+' in utsrelease
-	touch '$(DIR)/.scmversion'
 	@$(stamp)
 
 $(STAMPS_DIR)/source_$(ARCH)_$(FEATURESET): SOURCE_DIR=$(BUILD_DIR)/source
@@ -89,7 +89,8 @@ else
 	echo 'endif' >> '$(DIR)/.kernelvariables'
 endif
 ifdef CFLAGS_KERNEL
-	echo 'CFLAGS += $(CFLAGS_KERNEL)'  >> '$(DIR)/.kernelvariables'
+	echo 'CFLAGS_KERNEL += $(CFLAGS_KERNEL)' >> '$(DIR)/.kernelvariables'
+	echo 'CFLAGS_MODULE += $(CFLAGS_KERNEL)' >> '$(DIR)/.kernelvariables'
 endif
 	+$(MAKE_CLEAN) -C '$(SOURCE_DIR)' O='$(CURDIR)/$(DIR)' V=1 listnewconfig
 	+yes "" | $(MAKE_CLEAN) -C '$(SOURCE_DIR)' O='$(CURDIR)/$(DIR)' oldconfig >/dev/null
@@ -103,7 +104,10 @@ $(STAMPS_DIR)/build_$(ARCH)_$(FEATURESET)_$(FLAVOUR)_plain:
 	+$(MAKE_CLEAN) -C '$(DIR)' $(BUILD_TARGET)
 	@$(stamp)
 
-install-base:
+install-dummy:
+	dh_testdir
+	dh_testroot
+	dh_prep
 	dh_installchangelogs
 	dh_installdocs
 	dh_strip
@@ -113,13 +117,7 @@ install-base:
 	dh_shlibdeps
 	dh_gencontrol -- $(GENCONTROL_ARGS)
 	dh_md5sums
-	dh_builddeb -- $(BUILDDEB_ARGS)
-
-install-dummy:
-	dh_testdir
-	dh_testroot
-	dh_prep
-	+$(MAKE_SELF) install-base
+	dh_builddeb -- -Zxz $(BUILDDEB_ARGS)
 
 install-headers_$(ARCH)_$(FEATURESET)_$(FLAVOUR): REAL_VERSION = $(ABINAME)$(LOCALVERSION)
 install-headers_$(ARCH)_$(FEATURESET)_$(FLAVOUR): PACKAGE_NAME = linux-headers-$(REAL_VERSION)
@@ -203,8 +201,16 @@ install-headers_$(ARCH)_$(FEATURESET)_$(FLAVOUR): $(STAMPS_DIR)/build_$(ARCH)_$(
 	  debian/templates/temp.headers.plain/postinst \
 	  > $(PACKAGE_DIR)/DEBIAN/postinst
 	chmod 755 $(PACKAGE_DIR)/DEBIAN/postinst
-
-	+$(MAKE_SELF) install-base
+	dh_installchangelogs
+	dh_installdocs
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol -- $(GENCONTROL_ARGS)
+	dh_md5sums
+	dh_builddeb -- -Zxz $(BUILDDEB_ARGS)
 
 install-image-meta_$(ARCH)_$(FEATURESET)_$(FLAVOUR): PACKAGE_NAME = linux-image-$(FLAVOUR)
 install-image-meta_$(ARCH)_$(FEATURESET)_$(FLAVOUR): DH_OPTIONS = -p$(PACKAGE_NAME)
@@ -213,7 +219,16 @@ install-image-meta_$(ARCH)_$(FEATURESET)_$(FLAVOUR):
 	dh_testdir
 	dh_testroot
 	dh_prep
-	+$(MAKE_SELF) install-base
+	dh_installchangelogs
+	dh_installdocs
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol -- $(GENCONTROL_ARGS)
+	dh_md5sums
+	dh_builddeb -- -Zxz $(BUILDDEB_ARGS)
 
 install-headers-meta_$(ARCH)_$(FEATURESET)_$(FLAVOUR): PACKAGE_NAME = linux-headers-$(FLAVOUR)
 install-headers-meta_$(ARCH)_$(FEATURESET)_$(FLAVOUR): DH_OPTIONS = -p$(PACKAGE_NAME)
@@ -222,7 +237,52 @@ install-headers-meta_$(ARCH)_$(FEATURESET)_$(FLAVOUR):
 	dh_testdir
 	dh_testroot
 	dh_prep
-	+$(MAKE_SELF) install-base
+	dh_installchangelogs
+	dh_installdocs
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol -- $(GENCONTROL_ARGS)
+	dh_md5sums
+	dh_builddeb -- -Zxz $(BUILDDEB_ARGS)
+
+install-image-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR): PACKAGE_NAME = linux-image-2.6-$(FLAVOUR)
+install-image-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR): DH_OPTIONS = -p$(PACKAGE_NAME)
+install-image-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR): PACKAGE_DIR = debian/$(PACKAGE_NAME)
+install-image-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR):
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installchangelogs
+	dh_installdocs
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol -- $(GENCONTROL_ARGS)
+	dh_md5sums
+	dh_builddeb -- -Zxz $(BUILDDEB_ARGS)
+
+install-headers-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR): PACKAGE_NAME = linux-headers-2.6-$(FLAVOUR)
+install-headers-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR): DH_OPTIONS = -p$(PACKAGE_NAME)
+install-headers-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR): PACKAGE_DIR = debian/$(PACKAGE_NAME)
+install-headers-oldmeta_$(ARCH)_$(FEATURESET)_$(FLAVOUR):
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installchangelogs
+	dh_installdocs
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol -- $(GENCONTROL_ARGS)
+	dh_md5sums
+	dh_builddeb -- -Zxz $(BUILDDEB_ARGS)
 
 install-image_$(ARCH)_$(FEATURESET)_$(FLAVOUR)_$(TYPE): REAL_VERSION = $(ABINAME)$(LOCALVERSION)
 install-image_$(ARCH)_$(FEATURESET)_$(FLAVOUR)_$(TYPE): PACKAGE_NAME = linux-image-$(REAL_VERSION)
@@ -241,7 +301,8 @@ install-image_$(ARCH)_$(FEATURESET)_$(FLAVOUR)_plain:
 	  install-image_$(ARCH)_$(FEATURESET)_$(FLAVOUR)_plain_image \
 	  DIR='$(DIR)' PACKAGE_DIR='$(PACKAGE_DIR)' INSTALL_DIR='$(INSTALL_DIR)' REAL_VERSION='$(REAL_VERSION)'
 ifeq ($(MODULES),True)
-	+$(MAKE_CLEAN) -C $(DIR) modules_install INSTALL_MOD_PATH='$(CURDIR)'/$(PACKAGE_DIR) INSTALL_MOD_STRIP=1
+	chmod a+x $(CURDIR)/debian/bin/no-depmod
+	+$(MAKE_CLEAN) -C $(DIR) modules_install DEPMOD='$(CURDIR)/debian/bin/no-depmod' INSTALL_MOD_PATH='$(CURDIR)'/$(PACKAGE_DIR) INSTALL_MOD_STRIP=1
 ifeq ($(DEBUG),True)
 	find $(PACKAGE_DIR) -name '*.ko' | sed 's|$(PACKAGE_DIR)/lib/modules/$(REAL_VERSION)/kernel/||' | while read module ; do \
 	  objcopy --add-gnu-debuglink=$(DIR)/$$module $(PACKAGE_DIR)/lib/modules/$(REAL_VERSION)/kernel/$$module || exit; \
@@ -249,7 +310,8 @@ ifeq ($(DEBUG),True)
 endif
 	cp $(DIR)/.config $(PACKAGE_DIR)/boot/config-$(REAL_VERSION)
 	cp $(DIR)/System.map $(PACKAGE_DIR)/boot/System.map-$(REAL_VERSION)
-	find $(PACKAGE_DIR)/lib/modules/$(REAL_VERSION)/ -mindepth 1 -maxdepth 1 \! -name kernel \! -name modules.order -exec rm {} \+
+	rm -f $(PACKAGE_DIR)/lib/modules/$(REAL_VERSION)/build
+	rm -f $(PACKAGE_DIR)/lib/modules/$(REAL_VERSION)/source
 	rm $(PACKAGE_DIR)/lib/firmware -rf
 endif
 	+$(MAKE_SELF) \
@@ -258,7 +320,16 @@ endif
 	+$(MAKE_SELF) \
 	  install-image_$(ARCH)_$(FEATURESET)_$(FLAVOUR)_plain_bug \
 	  PACKAGE_DIR='$(PACKAGE_DIR)' PACKAGE_NAME='$(PACKAGE_NAME)' REAL_VERSION='$(REAL_VERSION)'
-	+$(MAKE_SELF) install-base
+	dh_installchangelogs
+	dh_installdocs
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol -- $(GENCONTROL_ARGS)
+	dh_md5sums
+	dh_builddeb -- -Zxz $(BUILDDEB_ARGS)
 
 install-image_amd64_$(FEATURESET)_$(FLAVOUR)_plain_image \
 install-image_i386_$(FEATURESET)_$(FLAVOUR)_plain_image:
@@ -316,6 +387,15 @@ ifeq ($(MODULES),True)
 	find $(DEBUG_DIR)/lib/modules/$(REAL_VERSION)/ -mindepth 1 -maxdepth 1 \! -name kernel -exec rm {} \+
 	rm $(DEBUG_DIR)/lib/firmware -rf
 endif
-	+$(MAKE_SELF) install-base BUILDDEB_ARGS="-Zxz"
+	dh_installchangelogs
+	dh_installdocs
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol -- $(GENCONTROL_ARGS)
+	dh_md5sums
+	dh_builddeb -- -Zxz $(BUILDDEB_ARGS)
 
 # vim: filetype=make
