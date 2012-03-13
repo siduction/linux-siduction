@@ -256,7 +256,7 @@ class Gencontrol(Base):
             image = self.templates["control.image.type-standalone"]
         else:
         """
-        if True: #siduction
+        if True: #aptosid
             image = self.templates["control.image.type-%s" % config_entry_image['type']]
 
         config_entry_xen = self.config.merge('xen', arch, featureset, flavour)
@@ -402,7 +402,7 @@ class Gencontrol(Base):
                                self.version.linux_upstream)
                         + self.abiname_part)
         """
-        self.abiname = self.version.linux_upstream + self.abiname_part #siduction
+        self.abiname = self.version.linux_upstream + self.abiname_part #aptosid
         self.vars = {
             'upstreamversion': self.version.linux_upstream,
             'version': self.version.linux_version,
