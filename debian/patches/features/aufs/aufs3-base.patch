@@ -60,3 +60,4 @@ aufs3.2 base patch
 +			 struct pipe_inode_info *pipe, size_t len,
 +			 unsigned int flags);
  #endif
+dif

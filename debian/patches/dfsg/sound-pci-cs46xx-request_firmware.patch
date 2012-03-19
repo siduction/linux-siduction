@@ -6,11 +6,9 @@ Based on work by Kalle Olavi Niemitalo <kon@iki.fi>.
 Tested by Antonio Ospite <ospite@studenti.unina.it>.
 Unfortunately we cannot currently distribute the firmware.
 
-diff --git a/sound/pci/Kconfig b/sound/pci/Kconfig
-index 17e03b9..124b3a0 100644
 --- a/sound/pci/Kconfig
 +++ b/sound/pci/Kconfig
-@@ -229,7 +229,7 @@ config SND_CS4281
+@@ -257,7 +257,7 @@ config SND_CS4281
  
  config SND_CS46XX
  	tristate "Cirrus Logic (Sound Fusion) CS4280/CS461x/CS462x/CS463x"
@@ -19,7 +17,7 @@ index 17e03b9..124b3a0 100644
  	select SND_RAWMIDI
  	select SND_AC97_CODEC
  	help
-@@ -241,6 +241,7 @@ config SND_CS46XX
+@@ -269,6 +269,7 @@ config SND_CS46XX
  
  config SND_CS46XX_NEW_DSP
  	bool "Cirrus Logic (Sound Fusion) New DSP support"
@@ -27,8 +25,6 @@ index 17e03b9..124b3a0 100644
  	depends on SND_CS46XX
  	default y
  	help
-diff --git a/sound/pci/cs46xx/cs46xx_lib.c b/sound/pci/cs46xx/cs46xx_lib.c
-index 1be96ea..b12b930 100644
 --- a/sound/pci/cs46xx/cs46xx_lib.c
 +++ b/sound/pci/cs46xx/cs46xx_lib.c
 @@ -54,6 +54,8 @@
@@ -40,7 +36,7 @@ index 1be96ea..b12b930 100644
  
  
  #include <sound/core.h>
-@@ -308,7 +309,7 @@ static void snd_cs46xx_ac97_write(struct snd_ac97 *ac97,
+@@ -309,7 +311,7 @@ static void snd_cs46xx_ac97_write(struct
   */
  
  int snd_cs46xx_download(struct snd_cs46xx *chip,
@@ -49,7 +45,7 @@ index 1be96ea..b12b930 100644
                          unsigned long offset,
                          unsigned long len)
  {
-@@ -321,9 +322,9 @@ int snd_cs46xx_download(struct snd_cs46xx *chip,
+@@ -322,9 +324,9 @@ int snd_cs46xx_download(struct snd_cs46x
  	dst = chip->region.idx[bank+1].remap_addr + offset;
  	len /= sizeof(u32);
  
@@ -61,7 +57,7 @@ index 1be96ea..b12b930 100644
  		dst += sizeof(u32);
  	}
  	return 0;
-@@ -360,23 +361,77 @@ int snd_cs46xx_clear_BA1(struct snd_cs46xx *chip,
+@@ -361,23 +363,77 @@ int snd_cs46xx_clear_BA1(struct snd_cs46
  
  #else /* old DSP image */
  
@@ -150,17 +146,15 @@ index 1be96ea..b12b930 100644
  #endif /* CONFIG_SND_CS46XX_NEW_DSP */
  
  /*
-@@ -3874,3 +3929,5 @@ int __devinit snd_cs46xx_create(struct snd_card *card,
+@@ -3880,3 +3936,5 @@ int __devinit snd_cs46xx_create(struct s
  	*rchip = chip;
  	return 0;
  }
 +
 +MODULE_FIRMWARE("cs46xx/cs46xx-old.fw");
-diff --git a/sound/pci/cs46xx/cs46xx_lib.h b/sound/pci/cs46xx/cs46xx_lib.h
-index 4eb55aa..85babb5 100644
 --- a/sound/pci/cs46xx/cs46xx_lib.h
 +++ b/sound/pci/cs46xx/cs46xx_lib.h
-@@ -103,8 +103,8 @@ int cs46xx_dsp_proc_done (struct snd_cs46xx *chip);
+@@ -103,8 +103,8 @@ int cs46xx_dsp_proc_done (struct snd_cs4
  #define cs46xx_dsp_proc_done(chip)
  #endif
  int cs46xx_dsp_scb_and_task_init (struct snd_cs46xx *chip);

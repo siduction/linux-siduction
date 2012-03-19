@@ -1,3 +1,12 @@
+linux-siduction (3.3-1) unstable; urgency=low
+
+  * set ABI to 1.towo.1
+  * import linux-3.3
+  * sync with debian packaging
+  * sync patches with linux-aptosid 3.3-2 
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Mar 2012 12:49:16 +0100
+
 linux-siduction (3.2.0-22) unstable; urgency=low
 
   * set ABI to 10.towo.1

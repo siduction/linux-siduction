@@ -27,3 +27,4 @@ aufs3.2 kbuild patch
  header-y += auto_fs.h
  header-y += auto_fs4.h
  header-y += auxvec.h
+c.h

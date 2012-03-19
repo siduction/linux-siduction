@@ -187,3 +187,4 @@ aufs3.2 proc_map patch
  	if (vma->vm_flags & VM_EXECUTABLE)
  		removed_exe_file_vma(vma->vm_mm);
  	kmem_cache_free(vm_area_cachep, vma);
+a);
