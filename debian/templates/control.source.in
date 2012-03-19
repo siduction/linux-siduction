@@ -1,8 +1,9 @@
 Section: kernel
 Priority: optional
-Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+Maintainer: Torsten Wohlfarth <towo@siduction.org>
+XBMC-Original-Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 Standards-Version: 3.9.3
 Build-Depends: debhelper (>= 9.20120115), cpio, python
 Homepage: http://kernel.org/
-Vcs-Svn: svn://svn.berlios.de/fullstory/linux-aptosid/trunk
-Vcs-Browser: http://svn.berlios.de/wsvn/fullstory/linux-aptosid/trunk/
+Vcs-Svn: git://git.siduction.org:packages/siduction-repository/linux-siduction.git
+Vcs-Browser: http://git.siduction.org/?p=packages/siduction-repository/linux-siduction.git

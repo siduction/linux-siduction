@@ -1,27 +1,30 @@
 Source: linux-siduction
 Section: kernel
 Priority: optional
-Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+Maintainer: Torsten Wohlfarth <towo@siduction.org>
 Standards-Version: 3.9.3
 Build-Depends: debhelper (>= 9.20120115), cpio, python, gcc-4.6 [amd64 i386]
-Vcs-Svn: svn://svn.berlios.de/fullstory/linux-aptosid/trunk
-Vcs-Browser: http://svn.berlios.de/wsvn/fullstory/linux-aptosid/trunk/
+XBMC-Original-Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+Vcs-Svn: git://git.siduction.org:packages/siduction-repository/linux-siduction.git
+Vcs-Browser: http://git.siduction.org/?p=packages/siduction-repository/linux-siduction.git
 Homepage: http://kernel.org/
 
 Package: linux-image-3.3-0.towo.1-siduction-amd64
 Architecture: amd64
 Provides: linux-image, linux-modules-3.3-0.towo.1-siduction-amd64
 Pre-Depends: debconf | debconf-2.0
-Depends: module-init-tools (>= 3.16), ${shlibs:Depends}, ${misc:Depends}, initramfs-tools (>= 0.99~) [amd64] | linux-initramfs-tool [amd64]
+Depends: kmod | module-init-tools (>= 3.16), ${misc:Depends}, initramfs-tools (>= 0.99~) [amd64] | linux-initramfs-tool [amd64]
 Recommends: firmware-linux-free (>= 3~)
 Suggests: linux-doc-3.3, crda [amd64], grub-pc [amd64] | extlinux [amd64] | grub-efi-amd64 [amd64]
 Breaks: initramfs-tools (<< 0.99~)
+Conflicts: r8168-dkms
 Description: Linux 3.3 for 64-bit PCs
  The Linux kernel 3.3 and modules for use on PCs with AMD64 or Intel 64
  processors.
 
 Package: linux-image-siduction-amd64
 Architecture: amd64
+Section: metapackages
 Priority: extra
 Depends: linux-image-3.3-0.towo.1-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
 Recommends: linux-headers-siduction-amd64 (= ${binary:Version})
@@ -31,6 +34,7 @@ Description: Linux image for siduction on 64-bit PCs
 
 Package: linux-headers-siduction-amd64
 Architecture: amd64
+Section: metapackages
 Priority: extra
 Depends: linux-headers-3.3-0.towo.1-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
 Description: Linux header for siduction on 64-bit PCs
@@ -40,7 +44,8 @@ Description: Linux header for siduction on 64-bit PCs
 Package: linux-headers-3.3-0.towo.1-siduction-amd64
 Architecture: amd64
 Provides: linux-headers
-Depends: ${shlibs:Depends}, ${misc:Depends}, gcc-4.6
+Depends: ${misc:Depends}, gcc-4.6
+Conflicts: r8168-dkm
 Description: Header files for Linux 3.3-0.towo.1-siduction-amd64
  This package provides the architecture-specific kernel header files for
  Linux kernel 3.3-0.towo.1-siduction-amd64, generally used for building
@@ -53,10 +58,11 @@ Package: linux-image-3.3-0.towo.1-siduction-686
 Architecture: i386
 Provides: linux-image, linux-modules-3.3-0.towo.1-siduction-686
 Pre-Depends: debconf | debconf-2.0
-Depends: module-init-tools (>= 3.16), ${shlibs:Depends}, ${misc:Depends}, initramfs-tools (>= 0.99~) [i386] | linux-initramfs-tool [i386]
+Depends: kmod | module-init-tools (>= 3.16), ${misc:Depends}, initramfs-tools (>= 0.99~) [i386] | linux-initramfs-tool [i386]
 Recommends: firmware-linux-free (>= 3~), libc6-i686 [i386]
 Suggests: linux-doc-3.3, crda [i386], grub-pc [i386] | extlinux [i386]
 Breaks: initramfs-tools (<< 0.99~)
+Conflicts: r8168-dkms
 Description: Linux 3.3 for modern PCs
  The Linux kernel 3.3 and modules for use on PCs with Intel Pentium
  Pro/II/III/4/4M/D/M, Xeon, Celeron, Core or Atom; AMD Geode LX/NX, Athlon
@@ -65,6 +71,7 @@ Description: Linux 3.3 for modern PCs
 
 Package: linux-image-siduction-686
 Architecture: i386
+Section: metapackages
 Priority: extra
 Depends: linux-image-3.3-0.towo.1-siduction-686 (= ${binary:Version}), ${misc:Depends}
 Recommends: linux-headers-siduction-686 (= ${binary:Version})
@@ -77,6 +84,7 @@ Description: Linux image for siduction on modern PCs
 
 Package: linux-headers-siduction-686
 Architecture: i386
+Section: metapackages
 Priority: extra
 Depends: linux-headers-3.3-0.towo.1-siduction-686 (= ${binary:Version}), ${misc:Depends}
 Description: Linux header for siduction on modern PCs
@@ -89,7 +97,8 @@ Description: Linux header for siduction on modern PCs
 Package: linux-headers-3.3-0.towo.1-siduction-686
 Architecture: i386
 Provides: linux-headers
-Depends: ${shlibs:Depends}, ${misc:Depends}, gcc-4.6
+Depends: ${misc:Depends}, gcc-4.6
+Conflicts: r8168-dkm
 Description: Header files for Linux 3.3-0.towo.1-siduction-686
  This package provides the architecture-specific kernel header files for
  Linux kernel 3.3-0.towo.1-siduction-686, generally used for building
