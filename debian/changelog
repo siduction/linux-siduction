@@ -1,6 +1,13 @@
+linux-siduction (3.3-2) unstable; urgency=low
+
+  * set ABI to 0.towo.1
+  * add v4l-dvb_fix-DVB-S-regression-caused-by-a-missing-initializat.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 22 Mar 2012 11:17:22 +0100
+
 linux-siduction (3.3-1) unstable; urgency=low
 
-  * set ABI to 1.towo.1
+  * set ABI to 0.towo.1
   * import linux-3.3
   * sync with debian packaging
   * sync patches with linux-aptosid 3.3-2 
