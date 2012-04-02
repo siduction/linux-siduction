@@ -1,3 +1,11 @@
+linux-siduction (3.3-3) unstable; urgency=low
+
+  * set ABI to 1.towo.1
+  * add patch-3.3.1
+  * update aufs
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 02 Apr 2012 20:26:34 +0200
+
 linux-siduction (3.3-2) unstable; urgency=low
 
   * set ABI to 0.towo.1
