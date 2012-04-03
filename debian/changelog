@@ -1,3 +1,13 @@
+linux-siduction (3.3-4) unstable; urgency=low
+
+  * set ABI to 1.towo.2
+  * revert patch ath9k-fix-going-to-full-sleep-on-ps-idle.patch
+    [ Bastian Blank ]
+    - debian/lib/python/debian_linux/config.py: correctly handle base
+      featureset sections.
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 03 Apr 2012 13:57:47 +0200
+
 linux-siduction (3.3-3) unstable; urgency=low
 
   * set ABI to 1.towo.1

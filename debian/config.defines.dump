@@ -112,11 +112,11 @@ tp59
 (dp60
 S'abiname'
 p61
-S'3.3-1.towo.1'
+S'3.3-1.towo.2'
 p62
 sS'source'
 p63
-V3.3-3
+V3.3-4
 p64
 ss(S'description'
 g5
@@ -157,7 +157,7 @@ tp82
 (dp83
 S'abiname'
 p84
-S'1.towo.1'
+S'1.towo.2'
 p85
 ss(S'image'
 p86
