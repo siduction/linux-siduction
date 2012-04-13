@@ -1,5 +1,5 @@
 # upstream updates
-upstream/patch-3.3.1
+upstream/patch-3.3.2
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
@@ -15,12 +15,6 @@ bugfix/rt2800_add-documentation-on-MCU-requests.patch
 bugfix/rt2800pci_fix-Error-MCU-request-failed-during-initialization.patch
 bugfix/block_avoid-false-positive-warnings-on-ioctl-to-partition.patch
 bugfix/v4l-dvb_fix-DVB-S-regression-caused-by-a-missing-initializat.patch
-bugfix/revert-ath9k-fix-going-to-full-sleep-on-ps-idle.patch
-bugfix/cifs-fix-vfs-lock-usage-for-oplocked-files.patch
-bugfix/usb-ohci-at91-fix-vbus_pin_active_low-handling.patch
-bugfix/mmc-sdio-use-empty-system-suspend-resume-callbacks-at-the-bus-level.patch
-bugfix/mmc-sdhci-dove-fix-compile-error-by-including-module.h.patch
-bugfix/mmc-atmel-mci-correct-data-timeout-computation.patch
 
 # debian specific patches.
 debian/version.patch
@@ -57,5 +51,3 @@ features/acerhk/14_kill-TM_new.patch
 features/acerhk/15_only-support-TM_dritek.patch
 
 features/radeon_default_power_profile_low.patch
-
-
