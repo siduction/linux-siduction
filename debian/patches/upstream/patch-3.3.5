@@ -19510,29 +19510,6 @@ index 0000000..c99d45a
 +}
 +
 +#endif /* _TOOLS_LE_BYTESHIFT_H */
-diff --git a/tools/perf/util/hist.c b/tools/perf/util/hist.c
-index e11e482..1794b92 100644
---- a/tools/perf/util/hist.c
-+++ b/tools/perf/util/hist.c
-@@ -230,6 +230,18 @@ struct hist_entry *__hists__add_entry(struct hists *hists,
- 		if (!cmp) {
- 			he->period += period;
- 			++he->nr_events;
-+
-+			/* If the map of an existing hist_entry has
-+			 * become out-of-date due to an exec() or
-+			 * similar, update it.  Otherwise we will
-+			 * mis-adjust symbol addresses when computing
-+			 * the history counter to increment.
-+			 */
-+			if (he->ms.map != entry.ms.map) {
-+				he->ms.map = entry.ms.map;
-+				if (he->ms.map)
-+					he->ms.map->referenced = true;
-+			}
- 			goto out;
- 		}
- 
 diff --git a/virt/kvm/iommu.c b/virt/kvm/iommu.c
 index a457d21..fec1723 100644
 --- a/virt/kvm/iommu.c
