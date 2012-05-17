@@ -52,4 +52,4 @@ features/acerhk/13_kill-TM_old.patch
 features/acerhk/14_kill-TM_new.patch
 features/acerhk/15_only-support-TM_dritek.patch
 
-features/radeon_default_power_profile_low.patch
+#features/radeon_default_power_profile_low.patch
