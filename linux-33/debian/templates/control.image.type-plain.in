@@ -1,4 +1,4 @@
-Package: linux-image-@abiname@@localversion@
+Package: linux-22-image-@abiname@@localversion@
 Provides: linux-33-image, linux-33-modules-@abiname@@localversion@
 Pre-Depends: debconf | debconf-2.0
 Depends: kmod | module-init-tools (>= 3.16), ${misc:Depends}
