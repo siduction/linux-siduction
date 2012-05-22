@@ -321,7 +321,7 @@ install-image_$(ARCH)_$(FEATURESET)_$(FLAVOUR)_plain_templates:
 
 install-image_$(ARCH)_$(FEATURESET)_$(FLAVOUR)_plain_bug:
 	dh_installdirs usr/share/bug/$(PACKAGE_NAME)
-	cp -a $CURDIR)/debian/templates/image.plain.bug/* usr/share/bug/$(PACKAGE_NAME)
+	dh_install debian/templates/image.plain.bug/* usr/share/bug/$(PACKAGE_NAME)
 	chmod 755 $(PACKAGE_DIR)/usr/share/bug/$(PACKAGE_NAME)/script
 	echo "RELEASE='$(REAL_VERSION)'" > $(PACKAGE_DIR)/usr/share/bug/$(PACKAGE_NAME)/info
 
