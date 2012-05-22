@@ -1,4 +1,4 @@
-linux-33-siduction (3.3-13) unstable; urgency=low
+linux-33-siduction (3.3.0-1) unstable; urgency=low
 
   * set ABI to 7.towo.1
   * import patch-3.3.7
