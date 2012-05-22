@@ -55,8 +55,8 @@ pushd "${TMP_DIR}"
 	fi
 popd >/dev/null 2>&1
 
-mkdir "${TMP_DIR}/linux-33-${VERSION}"
-pushd "${TMP_DIR}/linux-33-${VERSION}" >/dev/null 2>&1
+mkdir "${TMP_DIR}/linux-${VERSION}"
+pushd "${TMP_DIR}/linux-${VERSION}" >/dev/null 2>&1
 	tar --strip 1 -xjf "${TMP_DIR}/${UP_TARBALL}"
 	rm "${TMP_DIR}/${UP_TARBALL}"
 
@@ -101,7 +101,7 @@ pushd "${TMP_DIR}" >/dev/null 2>&1
 		--owner=0 \
 		--group=0 \
 		-cjf "${TMP_DIR}/${ORIG_TARBALL}" \
-			"linux-33-${VERSION}"
+			"linux-${VERSION}"
 
 	rm -rf ${TMP_DIR}/linux-${VERSION}
 popd >/dev/null 2>&1
