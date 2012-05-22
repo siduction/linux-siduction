@@ -9,7 +9,7 @@ Vcs-Svn: git://git.siduction.org:packages/siduction-repository/linux-siduction.g
 Vcs-Browser: http://git.siduction.org/?p=packages/siduction-repository/linux-siduction.git
 Homepage: http://kernel.org/
 
-Package: linux-22-image-3.3-7.towo.1-siduction-amd64
+Package: linux-33-image-3.3-7.towo.1-siduction-amd64
 Architecture: amd64
 Provides: linux-33-image, linux-33-modules-3.3-7.towo.1-siduction-amd64
 Pre-Depends: debconf | debconf-2.0
@@ -54,7 +54,7 @@ Description: Header files for Linux 3.3-7.towo.1-siduction-amd64
  for building modules that load into the kernel provided by the
  linux-33-image-3.3-7.towo.1-siduction-amd64 package.
 
-Package: linux-22-image-3.3-7.towo.1-siduction-686
+Package: linux-33-image-3.3-7.towo.1-siduction-686
 Architecture: i386
 Provides: linux-33-image, linux-33-modules-3.3-7.towo.1-siduction-686
 Pre-Depends: debconf | debconf-2.0
