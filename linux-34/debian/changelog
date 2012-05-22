@@ -1,3 +1,9 @@
+linux-siduction (3.4-2) unstable; urgency=low
+
+  * CONFIG_NETFILTER_XT_TARGET_LOG=m, copy paste error with the change from 3.4-rc ==> 3.4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 22 May 2012 15:10:23 +0200
+
 linux-siduction (3.4-1) unstable; urgency=low
 
   * set ABI to 0.towo.1
