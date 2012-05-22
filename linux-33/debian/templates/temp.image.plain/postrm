@@ -26,7 +26,7 @@ my $initrd            = "=I";     # initrd kernel
 my $postrm_hook       = '';       #Normally we do not
 my $kernel_arch       = "=B";
 my $ramdisk           = "=MK";  # List of tools to create initial ram fs.
-my $package_name    = "linux-image-$version";
+my $package_name    = "linux-33-image-$version";
 
 #known variables
 my $image_dest      = "/";

@@ -24,7 +24,7 @@ my $minimal_swap      = '';          # Do not swap symlinks
 my $ignore_depmod_err = '';          # normally we do not
 my $kernel_arch       = "=B";
 my $ramdisk           = '';
-my $package_name      = "linux-image-$version";
+my $package_name      = "linux-33-image-$version";
 
 #known variables
 my $image_dest      = "/";

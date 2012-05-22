@@ -12,7 +12,7 @@ my $version         = "=V";
 my $kimage          = "=K";
 my $prerm_hook      = '';       #Normally we do not
 my $kernel_arch       = "=B";
-my $package_name    = "linux-image-$version";
+my $package_name    = "linux-33-image-$version";
 
 #known variables
 my $realimageloc    = "/boot/";

@@ -1,26 +1,26 @@
 Package: linux-image-@abiname@@localversion@
-Provides: linux-image, linux-modules-@abiname@@localversion@
+Provides: linux-33-image, linux-33-modules-@abiname@@localversion@
 Pre-Depends: debconf | debconf-2.0
 Depends: kmod | module-init-tools (>= 3.16), ${misc:Depends}
 Conflicts: r8168-dkms
-Recommends: firmware-linux-free (>= 3~)
-Suggests: linux-doc-@version@
+Recommends: firmware-linux-33-free (>= 3~)
+Suggests: linux-33-doc-@version@
 Description: Linux @upstreamversion@ for @class@
  The Linux kernel @upstreamversion@ and modules for use on @longclass@.
 
-Package: linux-image@localversion@
+Package: linux-33-image@localversion@
 Section: metapackages
 Priority: extra
-Depends: linux-image-@abiname@@localversion@ (= ${binary:Version}), ${misc:Depends}
-Recommends: linux-headers@localversion@ (= ${binary:Version})
+Depends: linux-33-image-@abiname@@localversion@ (= ${binary:Version}), ${misc:Depends}
+Recommends: linux-33-headers@localversion@ (= ${binary:Version})
 Description: Linux image for siduction on @class@
  This metapackage depends on the latest binary image for Linux kernel on
  @longclass@ machines for siduction.
 
-Package: linux-headers@localversion@
+Package: linux-33-headers@localversion@
 Section: metapackages
 Priority: extra
-Depends: linux-headers-@abiname@@localversion@ (= ${binary:Version}), ${misc:Depends}
+Depends: linux-33-headers-@abiname@@localversion@ (= ${binary:Version}), ${misc:Depends}
 Description: Linux header for siduction on @class@
  This metapackage depends on the latest binary image for Linux kernel on
  @longclass@ machines for siduction.
