@@ -1,6 +1,11 @@
+From 7ed85b65ab611ba841d508ae4ff8c45fa0c48c80 Mon Sep 17 00:00:00 2001
 From: Stanislav Yakovlev <stas.yakovlev@gmail.com>
-Subject: [PATCH] net/wireless: ipw2200: Fix WARN_ON occurring in wiphy_register called by ipw_pci_probe
 Date: Mon, 16 Apr 2012 06:38:30 -0400
+Subject: net/wireless: ipw2200: Fix WARN_ON occurring in wiphy_register called by ipw_pci_probe
+
+From: Stanislav Yakovlev <stas.yakovlev@gmail.com>
+
+commit 7ed85b65ab611ba841d508ae4ff8c45fa0c48c80 upstream.
 
 The problem was found by Stefan Lippers-Hollmann
 http://marc.info/?l=linux-wireless&m=132720334512946&w=2
@@ -50,19 +55,18 @@ to avoid the problem.
 
 After that Ben Hutchings' fix can be applied to fix the bug.
 
-Cc: stable@kernel.org
 Signed-off-by: Stanislav Yakovlev <stas.yakovlev@gmail.com>
+Tested-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+Signed-off-by: John W. Linville <linville@tuxdriver.com>
+Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
 
----
-
-Stefan, can you test it once again?
 ---
  drivers/net/wireless/ipw2x00/ipw2200.c |   21 ++++++---------------
- 1 files changed, 6 insertions(+), 15 deletions(-)
+ 1 file changed, 6 insertions(+), 15 deletions(-)
 
 --- a/drivers/net/wireless/ipw2x00/ipw2200.c
 +++ b/drivers/net/wireless/ipw2x00/ipw2200.c
-@@ -11444,20 +11444,6 @@ static void ipw_bg_down(struct work_stru
+@@ -11443,20 +11443,6 @@ static void ipw_bg_down(struct work_stru
  	mutex_unlock(&priv->mutex);
  }
  
@@ -83,7 +87,7 @@ Stefan, can you test it once again?
  static int ipw_wdev_init(struct net_device *dev)
  {
  	int i, rc = 0;
-@@ -11726,7 +11712,6 @@ static void ipw_prom_free(struct ipw_pri
+@@ -11722,7 +11708,6 @@ static void ipw_prom_free(struct ipw_pri
  #endif
  
  static const struct net_device_ops ipw_netdev_ops = {
@@ -91,7 +95,7 @@ Stefan, can you test it once again?
  	.ndo_open		= ipw_net_open,
  	.ndo_stop		= ipw_net_stop,
  	.ndo_set_rx_mode	= ipw_net_set_multicast_list,
-@@ -11853,6 +11838,12 @@ static int __devinit ipw_pci_probe(struc
+@@ -11849,6 +11834,12 @@ static int __devinit ipw_pci_probe(struc
  		goto out_release_irq;
  	}
  

@@ -57,7 +57,7 @@ popd >/dev/null 2>&1
 
 mkdir "${TMP_DIR}/linux-${VERSION}"
 pushd "${TMP_DIR}/linux-${VERSION}" >/dev/null 2>&1
-	tar --strip 1 -xJf "${TMP_DIR}/${UP_TARBALL}"
+	tar --strip 1 -xjf "${TMP_DIR}/${UP_TARBALL}"
 	rm "${TMP_DIR}/${UP_TARBALL}"
 
 	# prune useless stuff from tools/
@@ -106,7 +106,7 @@ pushd "${TMP_DIR}" >/dev/null 2>&1
 		--numeric-owner \
 		--owner=0 \
 		--group=0 \
-		-cJf "${TMP_DIR}/${ORIG_TARBALL}" \
+		-cjf "${TMP_DIR}/${ORIG_TARBALL}" \
 			"linux-${VERSION}"
 
 	rm -rf ${TMP_DIR}/linux-${VERSION}
