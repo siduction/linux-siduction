@@ -1,3 +1,12 @@
+linux-siduction (3.4-4) unstable; urgency=low
+
+  * set abi to 0.towo.4
+  * import patch-3.5.1-rc1
+  * update kernel-config
+    - enabled line6-usb
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 27 May 2012 22:03:11 +0200
+
 linux-siduction (3.4-3) unstable; urgency=low
 
   * set ABI to 0.towo.3
