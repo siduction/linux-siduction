@@ -12,6 +12,7 @@ dfsg/r8192e-remove-firmware-again.patch
 # bugfixes
 bugfix/neuter-drm_i915_fix-ILK+-infoframe-support.patch
 bugfix/block_avoid-false-positive-warnings-on-ioctl-to-partition.patch
+bugfix/bad_rss_counter_state.patch
 
 # debian specific patches.
 debian/version.patch

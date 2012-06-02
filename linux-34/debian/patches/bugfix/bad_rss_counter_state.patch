@@ -1,0 +1,45 @@
+--- a/kernel/tsacct.c
++++ b/kernel/tsacct.c
+@@ -91,6 +91,7 @@ void xacct_add_tsk(struct taskstats *sta
+ 	stats->virtmem = p->acct_vm_mem1 * PAGE_SIZE / MB;
+ 	mm = get_task_mm(p);
+ 	if (mm) {
++		sync_mm_rss(mm);
+ 		/* adjust to KB unit */
+ 		stats->hiwater_rss   = get_mm_hiwater_rss(mm) * PAGE_SIZE / KB;
+ 		stats->hiwater_vm    = get_mm_hiwater_vm(mm)  * PAGE_SIZE / KB;
+--- a/kernel/exit.c
++++ b/kernel/exit.c
+@@ -643,6 +643,8 @@ static void exit_mm(struct task_struct *
+ 	mm_release(tsk, mm);
+ 	if (!mm)
+ 		return;
++
++	sync_mm_rss(mm);
+ 	/*
+ 	 * Serialize with any possible pending coredump.
+ 	 * We must hold mmap_sem around checking core_state
+@@ -960,9 +962,6 @@ void do_exit(long code)
+ 				preempt_count());
+
+ 	acct_update_integrals(tsk);
+-	/* sync mm's RSS info before statistics gathering */
+-	if (tsk->mm)
+-		sync_mm_rss(tsk->mm);
+ 	group_dead = atomic_dec_and_test(&tsk->signal->live);
+ 	if (group_dead) {
+ 		hrtimer_cancel(&tsk->signal->real_timer);
+--- a/fs/exec.c
++++ b/fs/exec.c
+@@ -823,10 +823,10 @@ static int exec_mmap(struct mm_struct *m
+ 	/* Notify parent that we're no longer interested in the old VM */
+ 	tsk = current;
+ 	old_mm = current->mm;
+-	sync_mm_rss(old_mm);
+ 	mm_release(tsk, old_mm);
+
+ 	if (old_mm) {
++		sync_mm_rss(old_mm);
+ 		/*
+ 		 * Make sure that if there is a core dump in progress
+ 		 * for the old mm, we get out and die instead of going

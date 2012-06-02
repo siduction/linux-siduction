@@ -1,3 +1,10 @@
+linux-siduction (3.4-5) unstable; urgency=low
+
+  * set abi to 0.towo.5
+  * add patch to prevent the Bad rss-counter state errors.
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 02 Jun 2012 19:45:30 +0200
+
 linux-siduction (3.4-4) unstable; urgency=low
 
   * set abi to 0.towo.4
