@@ -1,14 +1,22 @@
+linux-siduction (3.4-6) unstable; urgency=low
+
+  * set ABI to 0.towo.6 
+  * fixed the typo in changelog from 3.4-4 (import 3.4.1-rc1, not 3.5.1-rc1)
+  * no other changes
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 03 Jun 2012 09:10:41 +0200
+
 linux-siduction (3.4-5) unstable; urgency=low
 
-  * set abi to 0.towo.5
+  * set ABI to 0.towo.5
   * add patch to prevent the Bad rss-counter state errors.
 
  -- Torsten Wohlfarth <towo@siduction.org>  Sat, 02 Jun 2012 19:45:30 +0200
 
 linux-siduction (3.4-4) unstable; urgency=low
 
-  * set abi to 0.towo.4
-  * import patch-3.5.1-rc1
+  * set ABI to 0.towo.4
+  * import patch-3.4.1-rc1
   * update kernel-config
     - enabled line6-usb
 
