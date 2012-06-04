@@ -1,3 +1,10 @@
+linux-siduction (3.4-8) unstable; urgency=low
+
+  * set ABI to 1.towo.2
+  * revert bugfix/xhci-timeout.patch, it seems it helps nothing
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 04 Jun 2012 21:51:22 +0200
+
 linux-siduction (3.4-7) unstable; urgency=low
 
   * set ABI to 1.towo.1
