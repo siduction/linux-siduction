@@ -1,5 +1,5 @@
 # upstream updates
-upstream/patch-3.4.1-rc1
+upstream/patch-3.4.1
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
@@ -13,6 +13,7 @@ dfsg/r8192e-remove-firmware-again.patch
 bugfix/neuter-drm_i915_fix-ILK+-infoframe-support.patch
 bugfix/block_avoid-false-positive-warnings-on-ioctl-to-partition.patch
 bugfix/bad_rss_counter_state.patch
+bugfix/xhci-timeout.patch
 
 # debian specific patches.
 debian/version.patch

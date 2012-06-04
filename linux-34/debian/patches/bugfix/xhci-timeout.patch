@@ -1,0 +1,38 @@
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ linux-siduction (3.4-6.1) unstable; urgency=low
+ .
+   * Non-maintainer upload.
+   * set ABI to 0.towo.6.1
+   * add patch xhci-timeout.patch http://siduction.org/index.php?name=PNphpBB2&file=viewtopic&p=20850#20850
+Author: siduction builders <packaging@siduction.org>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- a/drivers/usb/host/xhci.c
++++ b/drivers/usb/host/xhci.c
+@@ -795,7 +795,7 @@ int xhci_suspend(struct xhci_hcd *xhci)
+ 	command = xhci_readl(xhci, &xhci->op_regs->command);
+ 	command |= CMD_CSS;
+ 	xhci_writel(xhci, command, &xhci->op_regs->command);
+-	if (handshake(xhci, &xhci->op_regs->status, STS_SAVE, 0, 10*100)) {
++	if (handshake(xhci, &xhci->op_regs->status, STS_SAVE, 0, 100*100)) {
+ 		xhci_warn(xhci, "WARN: xHC CMD_CSS timeout\n");
+ 		spin_unlock_irq(&xhci->lock);
+ 		return -ETIMEDOUT;

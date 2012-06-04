@@ -1,3 +1,11 @@
+linux-siduction (3.4-7) unstable; urgency=low
+
+  * set ABI to 1.towo.1
+  * import patch-3.4.1
+  * add bugfix/xhci-timeout.patch http://siduction.org/index.php?name=PNphpBB2&file=viewtopic&p=20850#20850
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 04 Jun 2012 20:46:35 +0200
+
 linux-siduction (3.4-6) unstable; urgency=low
 
   * set ABI to 0.towo.6 
