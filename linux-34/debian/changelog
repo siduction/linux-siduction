@@ -1,3 +1,10 @@
+linux-siduction (3.4-11) UNRELEASED; urgency=low
+
+  * set ABI to 2.towo.2
+  * add fix_wrong_usb_detection.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 14 Jun 2012 22:35:43 +0200
+
 linux-siduction (3.4-10) unstable; urgency=low
 
   * set ABI to 2.towo.1
