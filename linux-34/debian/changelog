@@ -1,3 +1,10 @@
+linux-siduction (3.4-12) unstable; urgency=low
+
+  * set ABI to 3.towo.2
+  * Add fix_usb_read_capacity.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 18 Jun 2012 11:37:01 +0200
+
 linux-siduction (3.4-11) unstable; urgency=low
 
   * set ABI to 3.towo.1

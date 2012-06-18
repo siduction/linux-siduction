@@ -15,7 +15,7 @@ bugfix/block_avoid-false-positive-warnings-on-ioctl-to-partition.patch
 bugfix/r8169_avoid-clearing-the-end-of-Tx-descriptor-ring-m.patch
 bugfix/r8169_TxPoll-hack-rework.patch
 bugfix/bad_rss_counter_state.patch
-bugfix/fix_wrong_usb_detection.patch
+bugfix/fix_usb_read_capacity.patch
 
 # debian specific patches.
 debian/version.patch
