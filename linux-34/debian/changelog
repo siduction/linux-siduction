@@ -1,3 +1,47 @@
+linux-siduction (3.4-13) unstable; urgency=low
+
+  * set ABI to 3.towo.3
+  * add pae flavour
+  * add patches from the stable queue
+    - revert-drm-i915-dp-use-auxch-precharge-value-of-5-everywhere.patch
+    - drm-radeon-add-some-additional-6xx-7xx-eg-register-init.patch
+    - drm-via-initialize-object_idr.patch
+    - drm-udl-only-bind-to-the-video-devices-on-the-hub.patch
+    - drm-sis-initialize-object_idr.patch
+    - nfsv4.1-fix-a-request-leak-on-the-back-channel.patch
+    - nfsv4-fix-unnecessary-delegation-returns-in-nfs4_do_open.patch
+    - nfsd4-bug_on-is_spin_locked-no-good-on-up-kernels.patch
+    - tracing-have-tracing_off-actually-turn-tracing-off.patch
+    - rpc_pipefs-allow-rpc_purge_list-to-take-a-null-waitq-pointer.patch
+    - scsi-mpt2sas-fix-unsafe-using-smp_processor_id-in-preemptible.patch
+    - swap-fix-shmem-swapping-when-more-than-8-areas.patch
+    - usb-option-add-vodafone-huawei-k5005-support.patch
+    - usb-option-updated-huawei-k4605-has-better-id.patch
+    - usb-option-add-more-yuga-device-ids.patch
+    - usb-option-fix-memory-leak.patch
+    - usb-option-fix-port-data-abuse.patch
+    - kdump-execute-kmsg_dump-kmsg_dump_panic-after-smp_send_stop.patch
+    - make-hard_irq_disable-actually-hard-disable-interrupts.patch
+    - xhci-fix-invalid-loop-check-in-xhci_free_tt_info.patch
+    - xhci-don-t-free-endpoints-in-xhci_mem_cleanup.patch
+    - xhci-increase-the-timeout-for-controller-save-restore-state-operation.patch
+    - usb-mos7840-fix-compilation-of-usb-serial-driver.patch
+    - usb-qcserial-add-sierra-wireless-device-ids.patch
+    - usb-mct_u232-fix-incorrect-tiocmset-return.patch
+    - usb-musb-davinci-fix-build-breakage.patch
+    - usb-musb_gadget-fix-crash-caused-by-dangling-pointer.patch
+    - usb-fix-ps3-ehci-systems.patch
+    - usb-serial-cp210x-add-optris-ms-pro-usb-id.patch
+    - usb-ftdi-sio-add-support-for-rt-systems-usb-rts01-serial.patch
+    - usb-add-no_d3_during_sleep-flag-and-revert-151b61284776be2.patch
+    - usb-cdc-wdm-add-vodafone-huawei-k5005-support.patch
+    - usb-cdc-acm-fix-devices-not-unthrottled-on-open.patch
+    - usb-serial-sierra-add-support-for-sierra-wireless-aircard-320u-modem.patch
+    - usb-serial-enforce-usb-driver-and-usb-serial-driver-match.patch
+    - usb-fix-gathering-of-interface-associations.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 19 Jun 2012 17:01:38 +0200
+
 linux-siduction (3.4-12) unstable; urgency=low
 
   * set ABI to 3.towo.2

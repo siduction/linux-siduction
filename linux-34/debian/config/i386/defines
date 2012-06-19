@@ -1,6 +1,6 @@
 [base]
-flavours:
- siduction-686
+featuresets:
+ none
 kernel-arch: x86
 
 [image]
