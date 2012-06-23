@@ -1,42 +1,6 @@
 # upstream updates
-upstream/patch-3.4.3
+upstream/patch-3.4.4
 upstream/revert-extraversion.diff
-candidate/revert-drm-i915-dp-use-auxch-precharge-value-of-5-everywhere.patch
-candidate/drm-radeon-add-some-additional-6xx-7xx-eg-register-init.patch
-candidate/drm-via-initialize-object_idr.patch
-candidate/drm-udl-only-bind-to-the-video-devices-on-the-hub.patch
-candidate/drm-sis-initialize-object_idr.patch
-candidate/nfsv4.1-fix-a-request-leak-on-the-back-channel.patch
-candidate/nfsv4-fix-unnecessary-delegation-returns-in-nfs4_do_open.patch
-candidate/nfsd4-bug_on-is_spin_locked-no-good-on-up-kernels.patch
-candidate/tracing-have-tracing_off-actually-turn-tracing-off.patch
-candidate/rpc_pipefs-allow-rpc_purge_list-to-take-a-null-waitq-pointer.patch
-candidate/scsi-mpt2sas-fix-unsafe-using-smp_processor_id-in-preemptible.patch
-candidate/swap-fix-shmem-swapping-when-more-than-8-areas.patch
-candidate/usb-option-add-vodafone-huawei-k5005-support.patch
-candidate/usb-option-updated-huawei-k4605-has-better-id.patch
-candidate/usb-option-add-more-yuga-device-ids.patch
-candidate/usb-option-fix-memory-leak.patch
-candidate/usb-option-fix-port-data-abuse.patch
-candidate/kdump-execute-kmsg_dump-kmsg_dump_panic-after-smp_send_stop.patch
-candidate/make-hard_irq_disable-actually-hard-disable-interrupts.patch
-candidate/xhci-fix-invalid-loop-check-in-xhci_free_tt_info.patch
-candidate/xhci-don-t-free-endpoints-in-xhci_mem_cleanup.patch
-candidate/xhci-increase-the-timeout-for-controller-save-restore-state-operation.patch
-candidate/usb-mos7840-fix-compilation-of-usb-serial-driver.patch
-candidate/usb-qcserial-add-sierra-wireless-device-ids.patch
-candidate/usb-mct_u232-fix-incorrect-tiocmset-return.patch
-candidate/usb-musb-davinci-fix-build-breakage.patch
-candidate/usb-musb_gadget-fix-crash-caused-by-dangling-pointer.patch
-candidate/usb-fix-ps3-ehci-systems.patch
-candidate/usb-serial-cp210x-add-optris-ms-pro-usb-id.patch
-candidate/usb-ftdi-sio-add-support-for-rt-systems-usb-rts01-serial.patch
-candidate/usb-add-no_d3_during_sleep-flag-and-revert-151b61284776be2.patch
-candidate/usb-cdc-wdm-add-vodafone-huawei-k5005-support.patch
-candidate/usb-cdc-acm-fix-devices-not-unthrottled-on-open.patch
-candidate/usb-serial-sierra-add-support-for-sierra-wireless-aircard-320u-modem.patch
-candidate/usb-serial-enforce-usb-driver-and-usb-serial-driver-match.patch
-candidate/usb-fix-gathering-of-interface-associations.patch
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
