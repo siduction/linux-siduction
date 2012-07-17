@@ -1,5 +1,5 @@
 # upstream updates
-upstream/patch-3.4.4
+upstream/patch-3.4.5
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
@@ -12,10 +12,8 @@ dfsg/r8192e-remove-firmware-again.patch
 # bugfixes
 bugfix/neuter-drm_i915_fix-ILK+-infoframe-support.patch
 bugfix/block_avoid-false-positive-warnings-on-ioctl-to-partition.patch
-bugfix/r8169_avoid-clearing-the-end-of-Tx-descriptor-ring-m.patch
-bugfix/r8169_TxPoll-hack-rework.patch
+bugfix/revert-r8169-add-byte-queue-limit-support.patch
 bugfix/bad_rss_counter_state.patch
-bugfix/fix_usb_read_capacity.patch
 
 # debian specific patches.
 debian/version.patch
@@ -26,7 +24,6 @@ debian/doc-build-parallel.patch
 features/defaults-fat-utf8.patch
 features/ath_override-eeprom-countrycode.patch
 features/kvm_intel_enabled-nested-on-default.patch
-features/ipw2x00_add-supported-cipher-suites-to-wiphy-initialization.patch
 features/ipw2200_fix-WARN_ON-occurring-in-wiphy_register-called-by-ipw_pci_probe.patch
 features/ipw2200_fix-order-of-device-registration.patch
 

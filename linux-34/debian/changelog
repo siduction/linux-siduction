@@ -1,7 +1,15 @@
+linux-siduction (3.4-15) unstable; urgency=low
+
+  * Import linux-3.4.5
+  * set ABI to 5.towo
+  * removed the patches, which are upstream now
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 17 Jul 2012 08:11:56 +0200
+
 linux-siduction (3.4-14) unstable; urgency=low
 
   * import linux-3.4.4
-  * set ABO to 4.towo.1
+  * set ABI to 4.towo
 
  -- Torsten Wohlfarth <towo@siduction.org>  Sat, 23 Jun 2012 13:33:44 +0200
 
