@@ -1,3 +1,10 @@
+linux-siduction (3.5-2) unstable; urgency=low
+
+  * update kernel config
+  * removed bugfix/revert-r8169-add-byte-queue-limit-support.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 30 Jul 2012 17:49:43 +0200
+
 linux-siduction (3.5-1) unstable; urgency=low
 
   * Set ABI to 0.towo
