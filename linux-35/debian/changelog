@@ -1,3 +1,20 @@
+linux-siduction (3.5-5) unstable; urgency=low
+
+  * Add patches from the stable queue
+    - nouveau-fixup-scanout-enable-in-nvc0_pm.patch
+    - drm-mgag200-fix-g200er-pll-picking-algorithm.patch
+    - dma-imx-dma-fix-kernel-crash-due-to-missing-clock-conversion.patch
+    - fuse-verify-all-ioctl-retry-iov-elements.patch
+    - drm-i915-prefer-wide-slow-to-fast-narrow-in-dp-configs.patch
+    - drm-nvd0-disp-mask-off-high-16-bit-of-negative-cursor-x-coordinate.patch
+    - drm-i915-correctly-order-the-ring-init-sequence.patch
+    - drm-i915-ignore-edp-bpc-settings-from-vbt.patch
+    - drm-i915-reorder-edp-disabling-to-fix-ivb-macbook-air.patch
+    - drm-radeon-properly-handle-crtc-powergating.patch
+    - drm-radeon-do-not-reenable-crtc-after-moving-vram-start-address.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 17 Aug 2012 18:35:40 +0200
+
 linux-siduction (3.5-4) unstable; urgency=low
 
   * Set ABI to 2.towo

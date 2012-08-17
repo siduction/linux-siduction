@@ -9,6 +9,18 @@ dfsg/r8192e-remove-firmware-again.patch
 
 # stable candidate
 
+nouveau-fixup-scanout-enable-in-nvc0_pm.patch
+upstream/drm-mgag200-fix-g200er-pll-picking-algorithm.patch
+upstream/dma-imx-dma-fix-kernel-crash-due-to-missing-clock-conversion.patch
+upstream/fuse-verify-all-ioctl-retry-iov-elements.patch
+upstream/drm-i915-prefer-wide-slow-to-fast-narrow-in-dp-configs.patch
+upstream/drm-nvd0-disp-mask-off-high-16-bit-of-negative-cursor-x-coordinate.patch
+upstream/drm-i915-correctly-order-the-ring-init-sequence.patch
+upstream/drm-i915-ignore-edp-bpc-settings-from-vbt.patch
+upstream/drm-i915-reorder-edp-disabling-to-fix-ivb-macbook-air.patch
+upstream/drm-radeon-properly-handle-crtc-powergating.patch
+upstream/drm-radeon-do-not-reenable-crtc-after-moving-vram-start-address.patch
+
 # bugfixes
 bugfix/media-lirc_sir-make-device-registration-work.patch
 
