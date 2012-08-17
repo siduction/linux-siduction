@@ -9,7 +9,7 @@ dfsg/r8192e-remove-firmware-again.patch
 
 # stable candidate
 
-nouveau-fixup-scanout-enable-in-nvc0_pm.patch
+upstream/nouveau-fixup-scanout-enable-in-nvc0_pm.patch
 upstream/drm-mgag200-fix-g200er-pll-picking-algorithm.patch
 upstream/dma-imx-dma-fix-kernel-crash-due-to-missing-clock-conversion.patch
 upstream/fuse-verify-all-ioctl-retry-iov-elements.patch
