@@ -1,3 +1,11 @@
+linux-siduction (3.5-7) unstable; urgency=low
+
+  * import patch-3.5.3
+  * Set ABI to 3.towo
+  * updatet aufs
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 26 Aug 2012 14:09:37 +0200
+
 linux-siduction (3.5-6) unstable; urgency=low
 
   * Add patches from the stable queue
