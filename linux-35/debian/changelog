@@ -1,3 +1,48 @@
+linux-siduction (3.5-8) unstable; urgency=low
+
+  * Add üatches from the stable queue
+    - acpi-export-symbol-acpi_get_table_with_size.patch
+    - alsa-hda-don-t-create-dysfunctional-mixer-controls-for-ca0132.patch
+    - alsa-hda-fix-copyright-debug-message.patch
+    - alsa-hda-fix-leftover-codec-power_transition.patch
+    - asoc-omap-mcbsp-fix-6pin-mux-configuration.patch
+    - asoc-wm9712-fix-microphone-source-selection.patch
+    - ath9k-fix-decrypt_error-initialization-in-ath_rx_tasklet.patch
+    - ath9k-stop-btcoex-on-device-suspend.patch
+    - audit-don-t-free_chunk-after-fsnotify_add_mark.patch
+    - audit-fix-refcounting-in-audit-tree.patch
+    - bluetooth-fix-legacy-pairing-with-some-devices.patch
+    - bluetooth-fix-using-a-null-inquiry-cache-entry.patch
+    - bluetooth-fix-using-null-inquiry-entry.patch
+    - bluetooth-set-name_state-to-unknown-when-entry-name-is-empty.patch
+    - btrfs-revert-checksum-error-statistic-which-can-cause-a-bug.patch
+    - cciss-fix-incorrect-scsi-status-reporting.patch
+    - drm-stop-vmgfx-driver-explosion.patch
+    - mm-hugetlbfs-correctly-populate-shared-pmd.patch
+    - nfs-alias-the-nfs-module-to-nfs4.patch
+    - nfs-clear-key-construction-data-if-the-idmap-upcall-fails.patch
+    - nfsd4-fix-security-flavor-of-nfsv4.0-callback.patch
+    - nfs-return-enokey-when-the-upcall-fails-to-map-the-name.patch
+    - nfs-tear-down-caches-in-nfs_init_writepagecache-when-allocation-fails.patch
+    - nfsv3-ensure-that-do_proc_get_root-reports-errors-correctly.patch
+    - nfsv4.1-remove-a-bogus-bug_on-in-nfs4_layoutreturn_done.patch
+    - pci-ehci-fix-crash-during-hibernation-on-asus-computers.patch
+    - pnfs-defer-release-of-pages-in-layoutget.patch
+    - revert-drm-radeon-fix-bo-creation-retry-path.patch
+    - svcrpc-fix-bug-in-svc_tcp_clear_pages.patch
+    - svcrpc-fix-svc_xprt_enqueue-svc_recv-busy-looping.patch
+    - svcrpc-sends-on-closed-socket-should-stop-immediately.patch
+    - target-fix-null-pointer-dereference-bug-alloc_page-fails-to-get-memory.patch
+    - ubifs-fix-complaints-about-too-small-debug-buffer-size.patch
+    - ubifs-fix-crash-on-error-path.patch
+    - usb-emi62-remove-__devinit-from-the-struct-usb_device_id-table.patch
+    - usb-vt6656-remove-__devinit-from-the-struct-usb_device_id-table.patch
+    - usb-winbond-remove-__devinit-from-the-struct-usb_device_id-table.patch
+    - vfs-canonicalize-create-mode-in-build_open_flags.patch
+    - vfs-missed-source-of-f_pos-races.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 30 Aug 2012 19:28:48 +0200
+
 linux-siduction (3.5-7) unstable; urgency=low
 
   * import patch-3.5.3
