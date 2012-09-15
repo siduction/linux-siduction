@@ -1,6 +1,13 @@
+linux-siduction (3.5-9) unstable; urgency=low
+
+  * import patch-3.5.4
+  * set ABI to 4.towo
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 15 Sep 2012 16:47:31 +0200
+
 linux-siduction (3.5-8) unstable; urgency=low
 
-  * Add üatches from the stable queue
+  * Add patches from the stable queue
     - acpi-export-symbol-acpi_get_table_with_size.patch
     - alsa-hda-don-t-create-dysfunctional-mixer-controls-for-ca0132.patch
     - alsa-hda-fix-copyright-debug-message.patch
