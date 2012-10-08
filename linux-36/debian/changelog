@@ -1,3 +1,9 @@
+linux-siduction (3.6-3) UNRELEASED; urgency=low
+
+  * enables auf in config
+
+ -- siduction builders <packaging@siduction.org>  Mon, 08 Oct 2012 17:02:18 +0200
+
 linux-siduction (3.6-2) unstable; urgency=low
 
   * Set ABI to 1.towo
