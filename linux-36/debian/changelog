@@ -1,3 +1,9 @@
+linux-siduction (3.6-6) unstable; urgency=low
+
+  * CONFIG_B43_PCMCIA removed
+
+ -- siduction builders <packaging@siduction.org>  Wed, 24 Oct 2012 09:45:49 +0200
+
 linux-siduction (3.6-5) unstable; urgency=low
 
   * Set ABI to 3.towo
