@@ -1,5 +1,5 @@
 # upstream updates
-uüstream/patch-3.6.4
+upstream/patch-3.6.4
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
