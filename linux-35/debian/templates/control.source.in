@@ -1,9 +1,0 @@
-Section: kernel
-Priority: optional
-Maintainer: Torsten Wohlfarth <towo@siduction.org>
-XBSC-Original-Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
-Standards-Version: 3.9.3
-Build-Depends: debhelper (>= 9.20120115), cpio, python
-Homepage: http://kernel.org/
-Vcs-Svn: git://git.siduction.org:packages/siduction-repository/linux-siduction.git
-Vcs-Browser: http://git.siduction.org/?p=packages/siduction-repository/linux-siduction.git
