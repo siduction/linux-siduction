@@ -138,11 +138,11 @@ tp74
 (dp75
 S'abiname'
 p76
-S'3.6-5.towo'
+S'3.6-6.towo'
 p77
 sS'source'
 p78
-V3.6-9
+V3.6-10
 p79
 ss(S'description'
 g19
@@ -224,7 +224,7 @@ tp117
 (dp118
 S'abiname'
 p119
-S'5.towo'
+S'6.towo'
 p120
 ss(S'image'
 g19
