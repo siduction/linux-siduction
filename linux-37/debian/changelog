@@ -1,4 +1,4 @@
-linux-siduction (3.7-6) unstable; urgency=low
+linux-siduction (3.7-7) unstable; urgency=low
 
   * import linux 3.7.3
   * set ABI to 3.towo
