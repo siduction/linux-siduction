@@ -11,6 +11,8 @@ dfsg/r8192e-remove-firmware-again.patch
 
 # bugfixes
 bugfix/pwc-Fix-codec1-cameras-no-longer-working.patch
+bugfix/01_fix_efi.patch
+bugfix/02_fix_efi.patch
 
 # debian specific patches.
 debian/version.patch
