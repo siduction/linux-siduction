@@ -11,8 +11,12 @@ dfsg/r8192e-remove-firmware-again.patch
 
 # bugfixes
 bugfix/pwc-Fix-codec1-cameras-no-longer-working.patch
-bugfix/01_fix_efi.patch
-bugfix/02_fix_efi.patch
+bugfix/efi-make-efi_enabled-a-function-to-query-efi-facilities.patch
+bugfix/samsung-laptop-disable-on-efi-hardware.patch
+bugfix/x86-efi-fix-display-detection-in-efi-boot-stub.patch
+bugfix/x86-efi-fix-32-bit-efi-handover-protocol-entry-point.patch
+bugfix/efi-x86-pass-a-proper-identity-mapping-in-efi_call_phys_prelog.patch
+bugfix/x86-efi-set-runtime_version-to-the-efi-spec-revision.patch
 
 # debian specific patches.
 debian/version.patch
