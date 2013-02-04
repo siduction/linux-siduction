@@ -1,3 +1,10 @@
+linux-siduction (3.7-12) unstable; urgency=low
+
+  * import linux 3.7.6
+  * set ABI to 6.towo
+
+ -- siduction builders <packaging@siduction.org>  Mon, 04 Feb 2013 09:17:14 +0100
+
 linux-siduction (3.7-11) unstable; urgency=low
 
   * Add  patches for samsung efi problem (https://bugzilla.kernel.org/show_bug.cgi?id=47121)
