@@ -135,11 +135,11 @@ tp70
 (dp71
 S'abiname'
 p72
-S'3.7-6.towo'
+S'3.7-7.towo'
 p73
 sS'source'
 p74
-V3.7-12
+V3.7-13
 p75
 ss(S'description'
 g32
@@ -217,7 +217,7 @@ tp112
 (dp113
 S'abiname'
 p114
-S'6.towo'
+S'7.towo'
 p115
 ss(S'image'
 p116
