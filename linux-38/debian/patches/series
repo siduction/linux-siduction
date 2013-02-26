@@ -11,6 +11,7 @@ dfsg/r8192e-remove-firmware-again.patch
 # stable candidate
 
 # bugfixes
+bugfix/sock_diag_fix-out-of-bounds-access-to-sock_diag_handlers.patch
 
 # debian specific patches.
 debian/version.patch

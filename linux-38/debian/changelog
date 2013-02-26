@@ -1,3 +1,10 @@
+linux-siduction (3.8-2) unstable; urgency=low
+
+  * add patch CVE Request: kernel - sock_diag: Fix out-of-bounds access to sock_diag_handlers[]
+  * config: add CONFIG_USB_UAS=m
+
+ -- siduction builders <packaging@siduction.org>  Tue, 26 Feb 2013 14:23:38 +0100
+
 linux-siduction (3.8-1) unstable; urgency=low
 
   * start of linux-3.8 branch
