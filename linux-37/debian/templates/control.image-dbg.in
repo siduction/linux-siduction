@@ -1,5 +1,5 @@
-Package: linux-image-@abiname@@localversion@-dbg
-Depends: linux-image-@abiname@@localversion@, ${misc:Depends}
+Package: linux-image-3.7-@abiname@@localversion@-dbg
+Depends: linux-image-3.7-@abiname@@localversion@, ${misc:Depends}
 Section: debug
 Priority: extra
 Description: Debugging infos for Linux @abiname@@localversion@

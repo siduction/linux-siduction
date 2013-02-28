@@ -1,4 +1,4 @@
-Package: linux-headers-@abiname@@localversion@
+Package: linux-headers-3.7-@abiname@@localversion@
 Depends: ${misc:Depends}
 Conflicts: r8168-dkm
 Provides: linux-headers
