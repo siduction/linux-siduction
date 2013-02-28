@@ -1,5 +1,5 @@
 # upstream updates
-#upstream/patch-3.8.1
+upstream/patch-3.8.1
 #upstream/patch-3.8.1-rc1
 upstream/revert-extraversion.diff
 
@@ -11,7 +11,6 @@ dfsg/r8192e-remove-firmware-again.patch
 # stable candidate
 
 # bugfixes
-bugfix/sock_diag_fix-out-of-bounds-access-to-sock_diag_handlers.patch
 
 # debian specific patches.
 debian/version.patch
