@@ -1,4 +1,4 @@
-linux-siduction (3.8-8) unstable; urgency=low
+linux-siduction (3.8-7) unstable; urgency=low
 
   * set ABI to 3.towo.1
   * import patches from the stable queue:
