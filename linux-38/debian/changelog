@@ -1,9 +1,26 @@
-linux-siduction (3.8-6) UNRELEASED; urgency=low
+linux-siduction (3.8-8) unstable; urgency=low
 
-  * set ABI to 3.towo
-  * import linux 3.8.3
+  * set ABI to 3.towo.1
+  * import patches from the stable queue:
+    - atl1c-restore-buffer-state.patch
+    - btrfs-use-rcu_barrier-to-wait-for-bdev-puts-at-unmount.patch
+    - loopdev-fix-a-deadlock.patch
+    - loopdev-remove-an-user-triggerable-oops.patch
+    - revert-drm-i915-enable-irqs-earlier-when-resuming.patch
+    - revert-drm-i915-reorder-setup-sequence-to-have-irqs-for-output-setup.patch
+    - usb-added-support-for-cinterion-s-products-ah6-and-pls8.patch
+    - usb-cdc-wdm-fix-buffer-overflow.patch
+    - usb-cp210x-new-vendor-device-ids.patch
+    - usb-dwc3-core-don-t-forget-to-free-coherent-memory.patch
+    - usb-ehci-don-t-check-dma-values-in-qh-overlays.patch
+    - usb-ehci-work-around-silicon-bug-in-intel-s-ehci-controllers.patch
+    - usb-option-add-huawei-e5331.patch
+    - usb-serial-add-rigblaster-advantage-to-device-table.patch
+    - usb-storage-fix-huawei-mode-switching-regression.patch
+  * update aufs
+  * add radeon-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
 
- -- siduction builders <packaging@siduction.org>  Sat, 16 Mar 2013 08:53:08 +0100
+ -- siduction builders <packaging@siduction.org>  Tue, 19 Mar 2013 09:25:09 +0100
 
 linux-siduction (3.8-5) unstable; urgency=low
 

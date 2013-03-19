@@ -2,6 +2,21 @@
 upstream/patch-3.8.3
 #upstream/patch-3.8.4-rc1
 upstream/revert-extraversion.diff
+upstream/usb-option-add-huawei-e5331.patch
+upstream/usb-cdc-wdm-fix-buffer-overflow.patch
+upstream/usb-dwc3-core-don-t-forget-to-free-coherent-memory.patch
+upstream/usb-cp210x-new-vendor-device-ids.patch
+upstream/usb-added-support-for-cinterion-s-products-ah6-and-pls8.patch
+upstream/usb-serial-add-rigblaster-advantage-to-device-table.patch
+upstream/usb-storage-fix-huawei-mode-switching-regression.patch
+upstream/usb-ehci-work-around-silicon-bug-in-intel-s-ehci-controllers.patch
+upstream/usb-ehci-don-t-check-dma-values-in-qh-overlays.patch
+upstream/btrfs-use-rcu_barrier-to-wait-for-bdev-puts-at-unmount.patch
+upstream/loopdev-fix-a-deadlock.patch
+upstream/loopdev-remove-an-user-triggerable-oops.patch
+upstream/atl1c-restore-buffer-state.patch
+upstream/revert-drm-i915-enable-irqs-earlier-when-resuming.patch
+upstream/revert-drm-i915-reorder-setup-sequence-to-have-irqs-for-output-setup.patch
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
