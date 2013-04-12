@@ -1,3 +1,10 @@
+linux-siduction (3.8-11) unstable; urgency=low
+
+  * set ABI to 7.towo
+  * import linux 3.8.7
+
+ -- siduction builders <packaging@siduction.org>  Fri, 12 Apr 2013 23:09:47 +0200
+
 linux-siduction (3.8-10) unstable; urgency=low
 
   * set ABI to 6.towo
