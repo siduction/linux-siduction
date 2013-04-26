@@ -9,9 +9,9 @@ Vcs-Svn: git://git.siduction.org:packages/siduction-repository/linux-siduction.g
 Vcs-Browser: http://git.siduction.org/?p=packages/siduction-repository/linux-siduction.git
 Homepage: http://kernel.org/
 
-Package: linux-image-3.8-8.towo-siduction-amd64
+Package: linux-image-3.8-9.towo-siduction-amd64
 Architecture: amd64
-Provides: linux-image, linux-modules-3.8-8.towo-siduction-amd64
+Provides: linux-image, linux-modules-3.8-9.towo-siduction-amd64
 Pre-Depends: debconf | debconf-2.0
 Depends: kmod | module-init-tools (>= 3.16), ${misc:Depends}, initramfs-tools (>= 0.110~) [amd64] | linux-initramfs-tool [amd64]
 Recommends: firmware-linux-free (>= 3~)
@@ -26,7 +26,7 @@ Package: linux-image-siduction-amd64
 Architecture: amd64
 Section: metapackages
 Priority: extra
-Depends: linux-image-3.8-8.towo-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-image-3.8-9.towo-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
 Recommends: linux-headers-siduction-amd64 (= ${binary:Version})
 Description: Linux image for siduction on 64-bit PCs
  This metapackage depends on the latest binary image for Linux kernel on
@@ -36,27 +36,27 @@ Package: linux-headers-siduction-amd64
 Architecture: amd64
 Section: metapackages
 Priority: extra
-Depends: linux-headers-3.8-8.towo-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-headers-3.8-9.towo-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
 Description: Linux header for siduction on 64-bit PCs
  This metapackage depends on the latest binary image for Linux kernel on
  PCs with AMD64 or Intel 64 processors machines for siduction.
 
-Package: linux-headers-3.8-8.towo-siduction-amd64
+Package: linux-headers-3.8-9.towo-siduction-amd64
 Architecture: amd64
 Provides: linux-headers
 Depends: ${misc:Depends}, gcc-4.7
 Conflicts: r8168-dkm
-Description: Header files for Linux 3.8-8.towo-siduction-amd64
+Description: Header files for Linux 3.8-9.towo-siduction-amd64
  This package provides the architecture-specific kernel header files for
- Linux kernel 3.8-8.towo-siduction-amd64, generally used for building
+ Linux kernel 3.8-9.towo-siduction-amd64, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-3.8-8.towo-siduction-amd64, and can be used for
+ /usr/src/linux-headers-3.8-9.towo-siduction-amd64, and can be used for
  building modules that load into the kernel provided by the
- linux-image-3.8-8.towo-siduction-amd64 package.
+ linux-image-3.8-9.towo-siduction-amd64 package.
 
-Package: linux-image-3.8-8.towo-siduction-686
+Package: linux-image-3.8-9.towo-siduction-686
 Architecture: i386
-Provides: linux-image, linux-modules-3.8-8.towo-siduction-686
+Provides: linux-image, linux-modules-3.8-9.towo-siduction-686
 Pre-Depends: debconf | debconf-2.0
 Depends: kmod | module-init-tools (>= 3.16), ${misc:Depends}, initramfs-tools (>= 0.110~) [i386] | linux-initramfs-tool [i386]
 Recommends: firmware-linux-free (>= 3~), libc6-i686 [i386]
@@ -73,7 +73,7 @@ Package: linux-image-siduction-686
 Architecture: i386
 Section: metapackages
 Priority: extra
-Depends: linux-image-3.8-8.towo-siduction-686 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-image-3.8-9.towo-siduction-686 (= ${binary:Version}), ${misc:Depends}
 Recommends: linux-headers-siduction-686 (= ${binary:Version})
 Description: Linux image for siduction on modern PCs
  This metapackage depends on the latest binary image for Linux kernel on
@@ -86,7 +86,7 @@ Package: linux-headers-siduction-686
 Architecture: i386
 Section: metapackages
 Priority: extra
-Depends: linux-headers-3.8-8.towo-siduction-686 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-headers-3.8-9.towo-siduction-686 (= ${binary:Version}), ${misc:Depends}
 Description: Linux header for siduction on modern PCs
  This metapackage depends on the latest binary image for Linux kernel on
  PCs with Intel Pentium Pro/II/III/4/4M/D/M, Xeon, Celeron, Core or Atom;
@@ -94,22 +94,22 @@ Description: Linux header for siduction on modern PCs
  Transmeta Efficeon; VIA C3 "Nehemiah" or C7 processors machines for
  siduction.
 
-Package: linux-headers-3.8-8.towo-siduction-686
+Package: linux-headers-3.8-9.towo-siduction-686
 Architecture: i386
 Provides: linux-headers
 Depends: ${misc:Depends}, gcc-4.7
 Conflicts: r8168-dkm
-Description: Header files for Linux 3.8-8.towo-siduction-686
+Description: Header files for Linux 3.8-9.towo-siduction-686
  This package provides the architecture-specific kernel header files for
- Linux kernel 3.8-8.towo-siduction-686, generally used for building
+ Linux kernel 3.8-9.towo-siduction-686, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-3.8-8.towo-siduction-686, and can be used for
+ /usr/src/linux-headers-3.8-9.towo-siduction-686, and can be used for
  building modules that load into the kernel provided by the
- linux-image-3.8-8.towo-siduction-686 package.
+ linux-image-3.8-9.towo-siduction-686 package.
 
-Package: linux-image-3.8-8.towo-siduction-686-pae
+Package: linux-image-3.8-9.towo-siduction-686-pae
 Architecture: i386
-Provides: linux-image, linux-modules-3.8-8.towo-siduction-686-pae
+Provides: linux-image, linux-modules-3.8-9.towo-siduction-686-pae
 Pre-Depends: debconf | debconf-2.0
 Depends: kmod | module-init-tools (>= 3.16), ${misc:Depends}, initramfs-tools (>= 0.110~) [i386] | linux-initramfs-tool [i386]
 Recommends: firmware-linux-free (>= 3~), libc6-i686 [i386]
@@ -125,7 +125,7 @@ Package: linux-image-siduction-686-pae
 Architecture: i386
 Section: metapackages
 Priority: extra
-Depends: linux-image-3.8-8.towo-siduction-686-pae (= ${binary:Version}), ${misc:Depends}
+Depends: linux-image-3.8-9.towo-siduction-686-pae (= ${binary:Version}), ${misc:Depends}
 Recommends: linux-headers-siduction-686-pae (= ${binary:Version})
 Description: Linux image for siduction on modern PCs with pae support
  This metapackage depends on the latest binary image for Linux kernel on
@@ -137,23 +137,23 @@ Package: linux-headers-siduction-686-pae
 Architecture: i386
 Section: metapackages
 Priority: extra
-Depends: linux-headers-3.8-8.towo-siduction-686-pae (= ${binary:Version}), ${misc:Depends}
+Depends: linux-headers-3.8-9.towo-siduction-686-pae (= ${binary:Version}), ${misc:Depends}
 Description: Linux header for siduction on modern PCs with pae support
  This metapackage depends on the latest binary image for Linux kernel on
  PCs with Intel Xeon, Core or Atom; AMD Geode LX/NX, Athlon (K7), Opteron,
  Sempron, Turion or Phenom; Transmeta Efficeon; C7 processors machines for
  siduction.
 
-Package: linux-headers-3.8-8.towo-siduction-686-pae
+Package: linux-headers-3.8-9.towo-siduction-686-pae
 Architecture: i386
 Provides: linux-headers
 Depends: ${misc:Depends}, gcc-4.7
 Conflicts: r8168-dkm
-Description: Header files for Linux 3.8-8.towo-siduction-686-pae
+Description: Header files for Linux 3.8-9.towo-siduction-686-pae
  This package provides the architecture-specific kernel header files for
- Linux kernel 3.8-8.towo-siduction-686-pae, generally used for building
+ Linux kernel 3.8-9.towo-siduction-686-pae, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-3.8-8.towo-siduction-686-pae, and can be used for
+ /usr/src/linux-headers-3.8-9.towo-siduction-686-pae, and can be used for
  building modules that load into the kernel provided by the
- linux-image-3.8-8.towo-siduction-686-pae package.
+ linux-image-3.8-9.towo-siduction-686-pae package.
 
