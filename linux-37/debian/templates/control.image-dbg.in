@@ -1,7 +1,0 @@
-Package: linux-image-3.7-@abiname@@localversion@-dbg
-Depends: linux-image-3.7-@abiname@@localversion@, ${misc:Depends}
-Section: debug
-Priority: extra
-Description: Debugging infos for Linux @abiname@@localversion@
- This package provides the binary debug image and pre-built debug loadable
- modules for Linux kernel @upstreamversion@ on @longclass@ machines.
