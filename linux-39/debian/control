@@ -3,7 +3,7 @@ Section: kernel
 Priority: optional
 Maintainer: Torsten Wohlfarth <towo@siduction.org>
 Standards-Version: 3.9.3
-Build-Depends: debhelper (>= 9.20120115), cpio, python, gcc-4.7 [amd64 i386]
+Build-Depends: debhelper (>= 9.20120115), cpio, python, gcc-4.7 [amd64 i386], bc
 XBSC-Original-Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 Vcs-Svn: git://git.siduction.org:packages/siduction-repository/linux-siduction.git
 Vcs-Browser: http://git.siduction.org/?p=packages/siduction-repository/linux-siduction.git
