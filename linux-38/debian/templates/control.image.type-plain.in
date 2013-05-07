@@ -8,21 +8,4 @@ Suggests: linux-doc-@version@
 Description: Linux @upstreamversion@ for @class@
  The Linux kernel @upstreamversion@ and modules for use on @longclass@.
 
-Package: linux-image@localversion@
-Section: metapackages
-Priority: extra
-Depends: linux-image-@abiname@@localversion@ (= ${binary:Version}), ${misc:Depends}
-Recommends: linux-headers@localversion@ (= ${binary:Version})
-Description: Linux image for siduction on @class@
- This metapackage depends on the latest binary image for Linux kernel on
- @longclass@ machines for siduction.
-
-Package: linux-headers@localversion@
-Section: metapackages
-Priority: extra
-Depends: linux-headers-@abiname@@localversion@ (= ${binary:Version}), ${misc:Depends}
-Description: Linux header for siduction on @class@
- This metapackage depends on the latest binary image for Linux kernel on
- @longclass@ machines for siduction.
-
 
