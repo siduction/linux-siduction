@@ -1,17 +1,15 @@
 diff --git a/Makefile b/Makefile
-index 8fe6991..f4239eb 100644
+index 8fe6991..5fcb591 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  VERSION = 3
  PATCHLEVEL = 9
 -SUBLEVEL = 0
--EXTRAVERSION =
 +SUBLEVEL = 1
-+EXTRAVERSION = -rc1
+ EXTRAVERSION =
  NAME = Unicycling Gorilla
  
- # *DOCUMENTATION*
 diff --git a/arch/arm/boot/dts/at91sam9260.dtsi b/arch/arm/boot/dts/at91sam9260.dtsi
 index cb7bcc5..02b70a4 100644
 --- a/arch/arm/boot/dts/at91sam9260.dtsi
@@ -164,22 +162,13 @@ index 606d48f..8aab786 100644
  CONFIG_LEDS_GPIO=y
  CONFIG_LEDS_TRIGGER_TIMER=y
 diff --git a/arch/arm/include/asm/pgtable.h b/arch/arm/include/asm/pgtable.h
-index 80d6fc4..8774276 100644
+index 80d6fc4..9bcd262 100644
 --- a/arch/arm/include/asm/pgtable.h
 +++ b/arch/arm/include/asm/pgtable.h
-@@ -61,6 +61,24 @@ extern void __pgd_error(const char *file, int line, pgd_t);
+@@ -61,6 +61,15 @@ extern void __pgd_error(const char *file, int line, pgd_t);
  #define FIRST_USER_ADDRESS	PAGE_SIZE
  
  /*
-+ * Use TASK_SIZE as the ceiling argument for free_pgtables() and
-+ * free_pgd_range() to avoid freeing the modules pmd when LPAE is enabled (pmd
-+ * page shared between user and kernel).
-+ */
-+#ifdef CONFIG_ARM_LPAE
-+#define USER_PGTABLES_CEILING	TASK_SIZE
-+#endif
-+
-+/*
 + * Use TASK_SIZE as the ceiling argument for free_pgtables() and
 + * free_pgd_range() to avoid freeing the modules pmd when LPAE is enabled (pmd
 + * page shared between user and kernel).
