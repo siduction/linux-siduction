@@ -1,3 +1,9 @@
+linux-siduction (3.9-6) unstable; urgency=low
+
+  * realy set ABI to 2.towo.2
+
+ -- siduction builders <packaging@siduction.org>  Sat, 18 May 2013 13:28:52 +0200
+
 linux-siduction (3.9-5) unstable; urgency=low
 
   * set ABI to 2.towo.2

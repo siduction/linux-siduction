@@ -157,11 +157,11 @@ tp81
 (dp82
 S'abiname'
 p83
-S'3.9-2.towo'
+S'3.9-2.towo.2'
 p84
 sS'source'
 p85
-V3.9-5
+V3.9-6
 p86
 ss(S'description'
 g25
@@ -217,7 +217,7 @@ tp112
 (dp113
 S'abiname'
 p114
-S'2.towo'
+S'2.towo.2'
 p115
 ss(S'image'
 p116
