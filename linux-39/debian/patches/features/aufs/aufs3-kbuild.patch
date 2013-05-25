@@ -1,7 +1,5 @@
-aufs3.x-rcN kbuild patch
+aufs3.9 kbuild patch
 
-diff --git a/fs/Kconfig b/fs/Kconfig
-index 780725a..d460c05 100644
 --- a/fs/Kconfig
 +++ b/fs/Kconfig
 @@ -211,6 +211,7 @@ source "fs/sysv/Kconfig"
@@ -12,8 +10,6 @@ index 780725a..d460c05 100644
  
  endif # MISC_FILESYSTEMS
  
-diff --git a/fs/Makefile b/fs/Makefile
-index 9d53192..e70f08f 100644
 --- a/fs/Makefile
 +++ b/fs/Makefile
 @@ -127,3 +127,4 @@ obj-$(CONFIG_F2FS_FS)		+= f2fs/
@@ -21,8 +17,6 @@ index 9d53192..e70f08f 100644
  obj-$(CONFIG_CEPH_FS)		+= ceph/
  obj-$(CONFIG_PSTORE)		+= pstore/
 +obj-$(CONFIG_AUFS_FS)           += aufs/
-diff --git a/include/uapi/linux/Kbuild b/include/uapi/linux/Kbuild
-index 5c8a1d2..fea7572 100644
 --- a/include/uapi/linux/Kbuild
 +++ b/include/uapi/linux/Kbuild
 @@ -56,6 +56,7 @@ header-y += atmppp.h

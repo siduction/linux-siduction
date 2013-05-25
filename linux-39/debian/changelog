@@ -1,3 +1,15 @@
+linux-siduction (3.9-8) unstable; urgency=low
+
+  * set ABI to 4.towo
+  * import linux-3.9.4
+  * update aufs
+  * import patches from the stable queue
+    - avr32-fix-relocation-check-for-signed-18-bit-offset
+    - usb-ohci-fix-logic-for-scheduling-isochronous-urbs
+    - usb-fix-latency-in-uhci-hcd-and-ohci-hcd
+
+ -- siduction builders <packaging@siduction.org>  Sat, 25 May 2013 17:26:22 +0200
+
 linux-siduction (3.9-7) unstable; urgency=low
 
   * set ABI to 3.towo
