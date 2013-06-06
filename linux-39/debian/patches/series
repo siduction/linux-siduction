@@ -1,5 +1,6 @@
 # upstream updates
 upstream/patch-3.9.4
+upstream/patch-3.9.5-rc1
 upstream/revert-extraversion.diff
 upstream/avr32-fix-relocation-check-for-signed-18-bit-offset.patch
 upstream/usb-ohci-fix-logic-for-scheduling-isochronous-urbs.patch
