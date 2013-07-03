@@ -1,3 +1,10 @@
+linux-siduction (3.10-0) unstable; urgency=low
+
+  * set ABI to 0.towo
+  * update aufs
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 03 Jul 2013 11:10:05 +0200
+
 linux-siduction (3.9-15) unstable; urgency=low
 
   * set ABI to 8.towo

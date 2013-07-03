@@ -144,11 +144,11 @@ tp75
 (dp76
 S'abiname'
 p77
-S'3.9-8.towo'
+S'3.10-0.towo'
 p78
 sS'source'
 p79
-V3.9-15
+V3.10-0
 p80
 ss(S'description'
 g18
@@ -217,7 +217,7 @@ tp112
 (dp113
 S'abiname'
 p114
-S'8.towo'
+S'0.towo'
 p115
 ss(S'image'
 p116
@@ -267,7 +267,7 @@ S'none'
 p141
 asS'compiler'
 p142
-S'gcc-4.7'
+S'gcc-4.8'
 p143
 ss(S'relations'
 p144
@@ -281,9 +281,9 @@ sS'lilo'
 p149
 S'lilo (>= 22.8-8.2~)'
 p150
-sS'gcc-4.7'
+sS'gcc-4.8'
 p151
-S'gcc-4.7'
+S'gcc-4.8'
 p152
 sS'initramfs-tools'
 p153
