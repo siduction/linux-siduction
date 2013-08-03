@@ -1,3 +1,11 @@
+linux-siduction (3.10-4) unstable; urgency=low
+
+  * set ABI to 4.towo
+  * import linux 3.10.4
+  * can't update kernels frequently because i'm in hospital at the moment
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 03 Aug 2013 18:34:46 +0200
+
 linux-siduction (3.10-0) unstable; urgency=low
 
   * set ABI to 0.towo
