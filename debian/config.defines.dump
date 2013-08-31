@@ -107,11 +107,11 @@ tp57
 (dp58
 S'abiname'
 p59
-S'3.10-9.towo'
+S'3.10-10.towo'
 p60
 sS'source'
 p61
-V3.10-9
+V3.10-10
 p62
 ss(S'description'
 g19
@@ -167,7 +167,7 @@ tp88
 (dp89
 S'abiname'
 p90
-S'9.towo'
+S'10.towo'
 p91
 ss(S'image'
 p92
