@@ -1,5 +1,5 @@
 diff --git a/Documentation/hwmon/k10temp b/Documentation/hwmon/k10temp
-index 90956b61..4dfdc8f8 100644
+index 90956b6..4dfdc8f 100644
 --- a/Documentation/hwmon/k10temp
 +++ b/Documentation/hwmon/k10temp
 @@ -12,6 +12,7 @@ Supported chips:
@@ -11,21 +11,19 @@ index 90956b61..4dfdc8f8 100644
    Prefix: 'k10temp'
    Addresses scanned: PCI space
 diff --git a/Makefile b/Makefile
-index fe8204be..666ad5f7 100644
+index fe8204b..efd2396 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  VERSION = 3
  PATCHLEVEL = 11
 -SUBLEVEL = 0
--EXTRAVERSION =
 +SUBLEVEL = 1
-+EXTRAVERSION = -rc1
+ EXTRAVERSION =
  NAME = Linux for Workgroups
  
- # *DOCUMENTATION*
 diff --git a/arch/x86/include/asm/xor_avx.h b/arch/x86/include/asm/xor_avx.h
-index 7ea79c5f..492b2980 100644
+index 7ea79c5..492b298 100644
 --- a/arch/x86/include/asm/xor_avx.h
 +++ b/arch/x86/include/asm/xor_avx.h
 @@ -167,12 +167,12 @@ static struct xor_block_template xor_block_avx = {
@@ -44,7 +42,7 @@ index 7ea79c5f..492b2980 100644
  #else
  
 diff --git a/drivers/acpi/ec.c b/drivers/acpi/ec.c
-index 80403c1a..45af90a1 100644
+index 80403c1..45af90a 100644
 --- a/drivers/acpi/ec.c
 +++ b/drivers/acpi/ec.c
 @@ -987,6 +987,10 @@ static struct dmi_system_id __initdata ec_dmi_table[] = {
@@ -59,7 +57,7 @@ index 80403c1a..45af90a1 100644
  };
  
 diff --git a/drivers/hv/channel_mgmt.c b/drivers/hv/channel_mgmt.c
-index 0df75908..461f47b6 100644
+index 0df7590..461f47b 100644
 --- a/drivers/hv/channel_mgmt.c
 +++ b/drivers/hv/channel_mgmt.c
 @@ -262,6 +262,13 @@ static void vmbus_process_offer(struct work_struct *work)
@@ -91,7 +89,7 @@ index 0df75908..461f47b6 100644
  }
  
 diff --git a/drivers/hwmon/Kconfig b/drivers/hwmon/Kconfig
-index e989f7fd..1e278380 100644
+index e989f7f..1e27838 100644
 --- a/drivers/hwmon/Kconfig
 +++ b/drivers/hwmon/Kconfig
 @@ -296,8 +296,8 @@ config SENSORS_K10TEMP
@@ -106,7 +104,7 @@ index e989f7fd..1e278380 100644
  	  This driver can also be built as a module.  If so, the module
  	  will be called k10temp.
 diff --git a/drivers/hwmon/k10temp.c b/drivers/hwmon/k10temp.c
-index e3b037c7..e6338563 100644
+index e3b037c..e633856 100644
 --- a/drivers/hwmon/k10temp.c
 +++ b/drivers/hwmon/k10temp.c
 @@ -1,5 +1,5 @@
@@ -125,7 +123,7 @@ index e3b037c7..e6338563 100644
  };
  MODULE_DEVICE_TABLE(pci, k10temp_id_table);
 diff --git a/drivers/misc/hpilo.c b/drivers/misc/hpilo.c
-index 621c7a37..b83e3ca1 100644
+index 621c7a3..b83e3ca 100644
 --- a/drivers/misc/hpilo.c
 +++ b/drivers/misc/hpilo.c
 @@ -759,7 +759,7 @@ static int ilo_probe(struct pci_dev *pdev,
@@ -147,7 +145,7 @@ index 621c7a37..b83e3ca1 100644
  MODULE_DESCRIPTION(ILO_NAME);
  MODULE_AUTHOR("David Altobelli <david.altobelli@hp.com>");
 diff --git a/drivers/misc/mei/hw-me.c b/drivers/misc/mei/hw-me.c
-index b22c7e24..3412adcd 100644
+index b22c7e2..3412adc 100644
 --- a/drivers/misc/mei/hw-me.c
 +++ b/drivers/misc/mei/hw-me.c
 @@ -176,21 +176,18 @@ static int mei_me_hw_reset(struct mei_device *dev, bool intr_enable)
@@ -176,7 +174,7 @@ index b22c7e24..3412adcd 100644
  }
  
 diff --git a/drivers/net/wireless/mwifiex/main.c b/drivers/net/wireless/mwifiex/main.c
-index 1753431d..108267d4 100644
+index 1753431..108267d 100644
 --- a/drivers/net/wireless/mwifiex/main.c
 +++ b/drivers/net/wireless/mwifiex/main.c
 @@ -458,20 +458,6 @@ static void mwifiex_fw_dpc(const struct firmware *firmware, void *context)
@@ -201,7 +199,7 @@ index 1753431d..108267d4 100644
  
  	mwifiex_drv_get_driver_version(adapter, fmt, sizeof(fmt) - 1);
 diff --git a/drivers/rtc/rtc-max77686.c b/drivers/rtc/rtc-max77686.c
-index 9915cb96..9efe118a 100644
+index 9915cb9..9efe118 100644
 --- a/drivers/rtc/rtc-max77686.c
 +++ b/drivers/rtc/rtc-max77686.c
 @@ -240,9 +240,9 @@ static int max77686_rtc_read_alarm(struct device *dev, struct rtc_wkalrm *alrm)
@@ -217,7 +215,7 @@ index 9915cb96..9efe118a 100644
  		goto out;
  	}
 diff --git a/drivers/staging/imx-drm/imx-drm-core.c b/drivers/staging/imx-drm/imx-drm-core.c
-index 9854a1da..6bc205ba 100644
+index 9854a1d..6bc205b 100644
 --- a/drivers/staging/imx-drm/imx-drm-core.c
 +++ b/drivers/staging/imx-drm/imx-drm-core.c
 @@ -678,6 +678,7 @@ found:
@@ -229,7 +227,7 @@ index 9854a1da..6bc205ba 100644
  /*
   * imx_drm_remove_encoder - remove an encoder
 diff --git a/drivers/target/iscsi/iscsi_target.c b/drivers/target/iscsi/iscsi_target.c
-index f73da43c..3a179302 100644
+index f73da43..3a17930 100644
 --- a/drivers/target/iscsi/iscsi_target.c
 +++ b/drivers/target/iscsi/iscsi_target.c
 @@ -1086,7 +1086,6 @@ int iscsit_process_scsi_cmd(struct iscsi_conn *conn, struct iscsi_cmd *cmd,
@@ -280,7 +278,7 @@ index f73da43c..3a179302 100644
  					 (unsigned char *)hdr);
  	}
 diff --git a/drivers/target/iscsi/iscsi_target_login.c b/drivers/target/iscsi/iscsi_target_login.c
-index 3402241b..bc788c52 100644
+index 3402241..bc788c5 100644
 --- a/drivers/target/iscsi/iscsi_target_login.c
 +++ b/drivers/target/iscsi/iscsi_target_login.c
 @@ -1163,12 +1163,11 @@ static int __iscsi_target_login_thread(struct iscsi_np *np)
@@ -301,7 +299,7 @@ index 3402241b..bc788c52 100644
  			return 1;
  		}
 diff --git a/drivers/target/target_core_spc.c b/drivers/target/target_core_spc.c
-index 4cb667d7..9fabbf72 100644
+index 4cb667d..9fabbf7 100644
 --- a/drivers/target/target_core_spc.c
 +++ b/drivers/target/target_core_spc.c
 @@ -97,9 +97,12 @@ spc_emulate_inquiry_std(struct se_cmd *cmd, unsigned char *buf)
@@ -321,7 +319,7 @@ index 4cb667d7..9fabbf72 100644
  
  	return 0;
 diff --git a/drivers/target/target_core_transport.c b/drivers/target/target_core_transport.c
-index 7172d005..d8e49d79 100644
+index 7172d00..d8e49d7 100644
 --- a/drivers/target/target_core_transport.c
 +++ b/drivers/target/target_core_transport.c
 @@ -2134,6 +2134,7 @@ static void transport_write_pending_qf(struct se_cmd *cmd)
@@ -350,7 +348,7 @@ index 7172d005..d8e49d79 100644
  		if (cmd->se_lun)
  			transport_lun_remove_cmd(cmd);
 diff --git a/drivers/usb/gadget/f_acm.c b/drivers/usb/gadget/f_acm.c
-index 4b7e33e5..ab1065af 100644
+index 4b7e33e..ab1065a 100644
 --- a/drivers/usb/gadget/f_acm.c
 +++ b/drivers/usb/gadget/f_acm.c
 @@ -285,6 +285,7 @@ static struct usb_string acm_string_defs[] = {
@@ -362,7 +360,7 @@ index 4b7e33e5..ab1065af 100644
  
  static struct usb_gadget_strings acm_string_table = {
 diff --git a/sound/soc/fsl/Kconfig b/sound/soc/fsl/Kconfig
-index aa438546..805b83e2 100644
+index aa43854..805b83e 100644
 --- a/sound/soc/fsl/Kconfig
 +++ b/sound/soc/fsl/Kconfig
 @@ -109,11 +109,11 @@ config SND_SOC_IMX_SSI
@@ -380,7 +378,7 @@ index aa438546..805b83e2 100644
  
  config SND_SOC_IMX_AUDMUX
 diff --git a/sound/soc/fsl/imx-pcm.h b/sound/soc/fsl/imx-pcm.h
-index 67f656c7..0e3619ef 100644
+index 67f656c..0e3619e 100644
 --- a/sound/soc/fsl/imx-pcm.h
 +++ b/sound/soc/fsl/imx-pcm.h
 @@ -32,7 +32,7 @@ imx_pcm_dma_params_init_data(struct imx_dma_data *dma_data,
