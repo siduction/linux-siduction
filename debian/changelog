@@ -1,3 +1,10 @@
+linux-siduction (3.12-1) unstable; urgency=low
+
+  * set ABI to 0.towo.1
+  * start linux 3.12 branch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 08 Nov 2013 07:34:50 +0100
+
 linux-siduction (3.11-9) unstable; urgency=low
 
   * set ABI to 6.towo

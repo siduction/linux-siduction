@@ -1071,7 +1071,7 @@
 +Otherwise from /new.
 --- /dev/null
 +++ b/Documentation/filesystems/aufs/README
-@@ -0,0 +1,346 @@
+@@ -0,0 +1,344 @@
 +
 +Aufs3 -- advanced multi layered unification filesystem version 3.x
 +http://aufs.sf.net
@@ -1242,9 +1242,7 @@
 +1.
 +- apply ./aufs3-kbuild.patch to your kernel source files.
 +- apply ./aufs3-base.patch too.
-+- apply ./aufs3-proc_map.patch too, if you want to make /proc/PID/maps (and
-+  others including lsof(1)) show the file path on aufs instead of the
-+  path on the branch fs.
++- apply ./aufs3-mmap.patch too.
 +- apply ./aufs3-standalone.patch too, if you have a plan to set
 +  CONFIG_AUFS_FS=m. otherwise you don't need ./aufs3-standalone.patch.
 +- copy ./{Documentation,fs,include/uapi/linux/aufs_type.h} files to your
@@ -1264,9 +1262,7 @@
 +2.
 +- module only (CONFIG_AUFS_FS=m).
 +- apply ./aufs3-base.patch to your kernel source files.
-+- apply ./aufs3-proc_map.patch too to your kernel source files,
-+  if you want to make /proc/PID/maps (and others including lsof(1)) show
-+  the file path on aufs instead of the path on the branch fs.
++- apply ./aufs3-mmap.patch too.
 +- apply ./aufs3-standalone.patch too.
 +- build your kernel, don't forget "make headers_install", and reboot.
 +- edit ./config.mk and set other aufs configurations if necessary.
@@ -1400,7 +1396,9 @@
 +POIRETTE Marc made a donation (2013/4).
 +Alessandro Gorreta made a donation (2013/4).
 +lauri kasvandik made a donation (2013/5).
-+pemasu from Finland made a donation (2013/7).
++"pemasu from Finland" made a donation (2013/7).
++The Parted Magic Project made a donation (2013/9).
++Pavel Barta made a donation (2013/10).
 +
 +Thank you very much.
 +Donations are always, including future donations, very important and
@@ -1851,7 +1849,7 @@
 +
 +	/*
 +	 * a limit for rmdir/rename a dir
-+	 * cf. AUFS_MAX_NAMELEN in include/linux/aufs_type.h
++	 * cf. AUFS_MAX_NAMELEN in include/uapi/linux/aufs_type.h
 +	 */
 +	err = vfs_statfs(&br->br_path, &kst);
 +	if (unlikely(err))
@@ -2966,7 +2964,7 @@
 +#endif /* __AUFS_BRANCH_H__ */
 --- /dev/null
 +++ b/fs/aufs/conf.mk
-@@ -0,0 +1,38 @@
+@@ -0,0 +1,37 @@
 +
 +AuConfStr = CONFIG_AUFS_FS=${CONFIG_AUFS_FS}
 +
@@ -2981,7 +2979,6 @@
 +	HNOTIFY HFSNOTIFY \
 +	EXPORT INO_T_64 \
 +	RDU \
-+	PROC_MAP \
 +	SP_IATTR \
 +	SHWH \
 +	BR_RAMFS \
@@ -5207,7 +5204,7 @@
 +#endif /* __AUFS_DCSUB_H__ */
 --- /dev/null
 +++ b/fs/aufs/debug.c
-@@ -0,0 +1,491 @@
+@@ -0,0 +1,518 @@
 +/*
 + * Copyright (C) 2005-2013 Junjiro R. Okajima
 + *
@@ -5233,9 +5230,39 @@
 +#include <linux/vt_kern.h>
 +#include "aufs.h"
 +
-+int aufs_debug;
++/* Returns 0, or -errno.  arg is in kp->arg. */
++static int param_atomic_t_set(const char *val, const struct kernel_param *kp)
++{
++	int err, n;
++
++	err = kstrtoint(val, 0, &n);
++	if (!err) {
++		if (n > 0)
++			au_debug_on();
++		else
++			au_debug_off();
++	}
++	return err;
++}
++
++/* Returns length written or -errno.  Buffer is 4k (ie. be short!) */
++static int param_atomic_t_get(char *buffer, const struct kernel_param *kp)
++{
++	atomic_t *a;
++
++	a = kp->arg;
++	return sprintf(buffer, "%d", atomic_read(a));
++}
++
++static struct kernel_param_ops param_ops_atomic_t = {
++	.set = param_atomic_t_set,
++	.get = param_atomic_t_get
++	/* void (*free)(void *arg) */
++};
++
++atomic_t aufs_debug = ATOMIC_INIT(0);
 +MODULE_PARM_DESC(debug, "debug print");
-+module_param_named(debug, aufs_debug, int, S_IRUGO | S_IWUSR | S_IWGRP);
++module_param_named(debug, aufs_debug, atomic_t, S_IRUGO | S_IWUSR | S_IWGRP);
 +
 +char *au_plevel = KERN_DEBUG;
 +#define dpri(fmt, ...) do {					\
@@ -5588,14 +5615,11 @@
 +			continue;
 +		h_inode = au_h_iptr(inode, bindex);
 +		if (unlikely(h_inode != h_dentry->d_inode)) {
-+			int old = au_debug_test();
-+			if (!old)
-+				au_debug(1);
++			au_debug_on();
 +			AuDbg("b%d, %s:%d\n", bindex, func, line);
 +			AuDbgDentry(dentry);
 +			AuDbgInode(inode);
-+			if (!old)
-+				au_debug(0);
++			au_debug_off();
 +			BUG();
 +		}
 +	}
@@ -5701,7 +5725,7 @@
 +}
 --- /dev/null
 +++ b/fs/aufs/debug.h
-@@ -0,0 +1,242 @@
+@@ -0,0 +1,249 @@
 +/*
 + * Copyright (C) 2005-2013 Junjiro R. Okajima
 + *
@@ -5729,6 +5753,7 @@
 +
 +#ifdef __KERNEL__
 +
++#include <linux/atomic.h>
 +#include <linux/module.h>
 +#include <linux/kallsyms.h>
 +#include <linux/sysrq.h>
@@ -5737,22 +5762,28 @@
 +#define AuDebugOn(a)		BUG_ON(a)
 +
 +/* module parameter */
-+extern int aufs_debug;
-+static inline void au_debug(int n)
++extern atomic_t aufs_debug;
++static inline void au_debug_on(void)
 +{
-+	aufs_debug = n;
-+	smp_mb();
++	atomic_inc(&aufs_debug);
++}
++static inline void au_debug_off(void)
++{
++	atomic_dec_if_positive(&aufs_debug);
 +}
 +
 +static inline int au_debug_test(void)
 +{
-+	return aufs_debug;
++	return atomic_read(&aufs_debug) > 0;
 +}
 +#else
 +#define AuDebugOn(a)		do {} while (0)
-+AuStubVoid(au_debug, int n)
++AuStubVoid(au_debug_on, void)
++AuStubVoid(au_debug_off, void)
 +AuStubInt0(au_debug_test, void)
 +#endif /* CONFIG_AUFS_DEBUG */
++
++#define param_check_atomic_t(name, p) __param_check(name, p, atomic_t)
 +
 +/* ---------------------------------------------------------------------- */
 +
@@ -10610,7 +10641,7 @@
 +};
 --- /dev/null
 +++ b/fs/aufs/file.h
-@@ -0,0 +1,312 @@
+@@ -0,0 +1,310 @@
 +/*
 + * Copyright (C) 2005-2013 Junjiro R. Okajima
 + *
@@ -10911,13 +10942,11 @@
 +static inline void au_vm_prfile_set(struct vm_area_struct *vma,
 +				    struct file *file)
 +{
-+#ifdef CONFIG_AUFS_PROC_MAP
 +	get_file(file);
 +	vma->vm_prfile = file;
 +#ifndef CONFIG_MMU
 +	get_file(file);
 +	vma->vm_region->vm_prfile = file;
-+#endif
 +#endif
 +}
 +
@@ -11085,7 +11114,7 @@
 +}
 --- /dev/null
 +++ b/fs/aufs/f_op.c
-@@ -0,0 +1,721 @@
+@@ -0,0 +1,726 @@
 +/*
 + * Copyright (C) 2005-2013 Junjiro R. Okajima
 + *
@@ -11140,6 +11169,11 @@
 +		au_set_fbstart(file, bindex);
 +		au_set_h_fptr(file, bindex, h_file);
 +		au_update_figen(file);
++		if (!(file->f_mode & FMODE_WRITE)) {
++			lg_local_lock(&files_lglock);
++			__file_sb_list_add(file, dentry->d_sb);
++			lg_local_unlock(&files_lglock);
++		}
 +		/* todo: necessary? */
 +		/* file->f_ra = h_file->f_ra; */
 +	}
@@ -12851,7 +12885,7 @@
 +	h_dir = event->to_tell;
 +	h_inode = event->inode;
 +#ifdef AuDbgHnotify
-+	au_debug(1);
++	au_debug_on();
 +	if (1 || h_child_qstr.len != sizeof(AUFS_XINO_FNAME) - 1
 +	    || strncmp(h_child_qstr.name, AUFS_XINO_FNAME, h_child_qstr.len)) {
 +		AuDbg("i%lu, mask 0x%x %s, hcname %.*s, hi%lu\n",
@@ -12859,7 +12893,7 @@
 +		      AuLNPair(&h_child_qstr), h_inode ? h_inode->i_ino : 0);
 +		/* WARN_ON(1); */
 +	}
-+	au_debug(0);
++	au_debug_off();
 +#endif
 +
 +	AuDebugOn(!inode_mark);
@@ -18704,7 +18738,7 @@
 +}
 --- /dev/null
 +++ b/fs/aufs/Kconfig
-@@ -0,0 +1,202 @@
+@@ -0,0 +1,179 @@
 +config AUFS_FS
 +	tristate "Aufs (Advanced multi layered unification filesystem) support"
 +	help
@@ -18806,29 +18840,6 @@
 +	shows better performance in most cases.
 +	See detail in aufs.5.
 +
-+config AUFS_PROC_MAP
-+	bool "support for /proc/maps and lsof(1)"
-+	depends on PROC_FS
-+	help
-+	When you issue mmap(2) in aufs, it is actually a direct mmap(2)
-+	call to the file on the branch fs since the file in aufs is
-+	purely virtual. And the file path printed in /proc/maps (and
-+	others) will be the path on the branch fs. In most cases, it
-+	does no harm. But some utilities like lsof(1) may confuse since
-+	the utility or user may expect the file path in aufs to be
-+	printed.
-+	To address this issue, aufs provides a patch which introduces a
-+	new member called vm_prfile into struct vm_are_struct. The patch
-+	is meaningless without enabling this configuration since nobody
-+	sets the new vm_prfile member.
-+	If you don't apply the patch, then enabling this configuration
-+	will cause a compile error.
-+	This approach is fragile since if someone else make some changes
-+	around vm_file, then vm_prfile may not work anymore. As a
-+	workaround such case, aufs provides this configuration. If you
-+	disable it, then lsof(1) may produce incorrect result but the
-+	problem will be gone even if the aufs patch is applied (I hope).
-+
 +config AUFS_SP_IATTR
 +	bool "Respect the attributes (mtime/ctime mainly) of special files"
 +	help
@@ -18909,7 +18920,7 @@
 +endif
 --- /dev/null
 +++ b/fs/aufs/loop.c
-@@ -0,0 +1,147 @@
+@@ -0,0 +1,146 @@
 +/*
 + * Copyright (C) 2005-2013 Junjiro R. Okajima
 + *
@@ -18944,6 +18955,14 @@
 +{
 +	struct super_block *h_sb;
 +	struct file *backing_file;
++
++	if (unlikely(!backing_file_func)) {
++		/* don't load "loop" module here */
++		backing_file_func = symbol_get(loop_backing_file);
++		if (unlikely(!backing_file_func))
++			/* "loop" module is not loaded */
++			return 0;
++	}
 +
 +	h_sb = h_adding->d_sb;
 +	backing_file = backing_file_func(h_sb);
@@ -19034,21 +19053,12 @@
 +
 +	AuDebugOn(sizeof(sb->s_magic) != sizeof(unsigned long));
 +
-+	err = -ENOMEM;
++	err = 0;
 +	au_warn_loopback_array = kcalloc(au_warn_loopback_step,
 +					 sizeof(unsigned long), GFP_NOFS);
 +	if (unlikely(!au_warn_loopback_array))
-+		goto out;
++		err = -ENOMEM;
 +
-+	err = 0;
-+	backing_file_func = symbol_get(loop_backing_file);
-+	if (backing_file_func)
-+		goto out; /* success */
-+
-+	pr_err("loop_backing_file() is not defined\n");
-+	err = -ENOSYS;
-+	kfree(au_warn_loopback_array);
-+out:
 +	return err;
 +}
 +
@@ -19185,9 +19195,9 @@
 +ccflags-y += -DDEBUG
 +# sparse requires the full pathname
 +ifdef M
-+ccflags-y += -include ${M}/../../include/linux/aufs_type.h
++ccflags-y += -include ${M}/../../include/uapi/linux/aufs_type.h
 +else
-+ccflags-y += -include ${srctree}/include/linux/aufs_type.h
++ccflags-y += -include ${srctree}/include/uapi/linux/aufs_type.h
 +endif
 +
 +obj-$(CONFIG_AUFS_FS) += aufs.o
@@ -27782,7 +27792,7 @@
 +}
 --- /dev/null
 +++ b/fs/aufs/vfsub.h
-@@ -0,0 +1,311 @@
+@@ -0,0 +1,312 @@
 +/*
 + * Copyright (C) 2005-2013 Junjiro R. Okajima
 + *
@@ -27820,6 +27830,7 @@
 +extern struct lglock vfsmount_lock;
 +extern void __mnt_drop_write(struct vfsmount *);
 +extern spinlock_t inode_sb_list_lock;
++void __file_sb_list_add(struct file *file, struct super_block *sb);
 +
 +/* copied from linux/fs/file_table.c */
 +extern struct lglock files_lglock;
@@ -30281,7 +30292,7 @@
 +#endif /* __AUFS_WKQ_H__ */
 --- /dev/null
 +++ b/fs/aufs/xino.c
-@@ -0,0 +1,1305 @@
+@@ -0,0 +1,1312 @@
 +/*
 + * Copyright (C) 2005-2013 Junjiro R. Okajima
 + *
@@ -30530,28 +30541,33 @@
 +	unsigned long jiffy;
 +	blkcnt_t blocks;
 +	aufs_bindex_t bi, bend;
-+	struct kstatfs st;
++	struct kstatfs *st;
 +	struct au_branch *br;
 +	struct file *new_xino, *file;
 +	struct super_block *h_sb;
 +	struct au_xino_lock_dir ldir;
 +
++	err = -ENOMEM;
++	st = kzalloc(sizeof(*st), GFP_NOFS);
++	if (unlikely(!st))
++		goto out;
++
 +	err = -EINVAL;
 +	bend = au_sbend(sb);
 +	if (unlikely(bindex < 0 || bend < bindex))
-+		goto out;
++		goto out_st;
 +	br = au_sbr(sb, bindex);
 +	file = br->br_xino.xi_file;
 +	if (!file)
-+		goto out;
++		goto out_st;
 +
-+	err = vfs_statfs(&file->f_path, &st);
++	err = vfs_statfs(&file->f_path, st);
 +	if (unlikely(err))
 +		AuErr1("statfs err %d, ignored\n", err);
 +	jiffy = jiffies;
 +	blocks = file_inode(file)->i_blocks;
 +	pr_info("begin truncating xino(b%d), ib%llu, %llu/%llu free blks\n",
-+		bindex, (u64)blocks, st.f_bfree, st.f_blocks);
++		bindex, (u64)blocks, st->f_bfree, st->f_blocks);
 +
 +	au_xino_lock_dir(sb, file, &ldir);
 +	/* mnt_want_write() is unnecessary here */
@@ -30560,7 +30576,7 @@
 +	err = PTR_ERR(new_xino);
 +	if (IS_ERR(new_xino)) {
 +		pr_err("err %d, ignored\n", err);
-+		goto out;
++		goto out_st;
 +	}
 +	err = 0;
 +	fput(file);
@@ -30579,16 +30595,18 @@
 +		get_file(new_xino);
 +	}
 +
-+	err = vfs_statfs(&new_xino->f_path, &st);
++	err = vfs_statfs(&new_xino->f_path, st);
 +	if (!err) {
 +		pr_info("end truncating xino(b%d), ib%llu, %llu/%llu free blks\n",
 +			bindex, (u64)file_inode(new_xino)->i_blocks,
-+			st.f_bfree, st.f_blocks);
++			st->f_bfree, st->f_blocks);
 +		if (file_inode(new_xino)->i_blocks < blocks)
 +			au_sbi(sb)->si_xino_jiffy = jiffy;
 +	} else
 +		AuErr1("statfs err %d, ignored\n", err);
 +
++out_st:
++	kfree(st);
 +out:
 +	return err;
 +}
@@ -31588,28 +31606,6 @@
 +	return err;
 +}
 --- /dev/null
-+++ b/include/linux/aufs_type.h
-@@ -0,0 +1,19 @@
-+/*
-+ * Copyright (C) 2012-2013 Junjiro R. Okajima
-+ *
-+ * This program, aufs is free software; you can redistribute it and/or modify
-+ * it under the terms of the GNU General Public License as published by
-+ * the Free Software Foundation; either version 2 of the License, or
-+ * (at your option) any later version.
-+ *
-+ * This program is distributed in the hope that it will be useful,
-+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
-+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-+ * GNU General Public License for more details.
-+ *
-+ * You should have received a copy of the GNU General Public License
-+ * along with this program; if not, write to the Free Software
-+ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-+ */
-+
-+#include <uapi/linux/aufs_type.h>
---- /dev/null
 +++ b/include/uapi/linux/aufs_type.h
 @@ -0,0 +1,282 @@
 +/*
@@ -31654,7 +31650,7 @@
 +
 +#include <linux/limits.h>
 +
-+#define AUFS_VERSION	"3.x-rcN-20130909"
++#define AUFS_VERSION	"3.x-rcN-20131104"
 +
 +/* todo? move this to linux-2.6.19/include/magic.h */
 +#define AUFS_SUPER_MAGIC	('a' << 24 | 'u' << 16 | 'f' << 8 | 's')
