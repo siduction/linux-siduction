@@ -1,3 +1,11 @@
+linux-siduction (3.12-5) unstable; urgency=low
+
+  * set ABI to 3.towo.2
+  * fixed a typo in config so that r8712u will build
+  * realy reactivate r8712u
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 05 Dec 2013 17:21:17 +0100
+
 linux-siduction (3.12-4) unstable; urgency=low
 
   * set ABI to 3.towo
