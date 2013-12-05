@@ -1,3 +1,21 @@
+linux-siduction (3.12-4) unstable; urgency=low
+
+  * set ABI to 3.towo
+  * disabled RCU preemtation
+  * import linux 3.12.3
+  * reverted r92su, it seems to make problems, see http://forum.siduction.org/index.php?topic=3990.0
+  * reactivate r9712u
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 05 Dec 2013 09:44:02 +0100
+
+linux-siduction (3.12-3) unstable; urgency=low
+
+  * set ABI to 2.towo
+  * import linux 3.12.2
+  * update r92su
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 30 Nov 2013 15:00:15 +0100
+
 linux-siduction (3.12-2) unstable; urgency=low
 
   * set ABI to 1.towo
