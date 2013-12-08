@@ -120,11 +120,11 @@ tp63
 (dp64
 S'abiname'
 p65
-S'3.12-3.towo.2'
+S'3.12-4.towo'
 p66
 sS'source'
 p67
-V3.12-5
+V3.12-6
 p68
 ss(S'description'
 g19
@@ -190,7 +190,7 @@ tp99
 (dp100
 S'abiname'
 p101
-S'3.towo.2'
+S'4.towo'
 p102
 ss(S'image'
 p103
