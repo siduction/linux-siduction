@@ -1,3 +1,11 @@
+linux-siduction (3.13-1) unstable; urgency=medium
+
+  * set ABI to 0.towo
+  * linux 3.13.0
+  * update aufs to aufs 3.x-rcN-20140120.
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 20 Jan 2014 08:04:58 +0100
+
 linux-siduction (3.12-10) unstable; urgency=medium
 
   * set ABI to 8.towo
