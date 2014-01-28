@@ -1,5 +1,6 @@
 # upstream updates
 #upstream/patch-3.13.1
+#upstream/patch-3.13.1-rc1
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
@@ -10,6 +11,7 @@ dfsg/r8192e-remove-firmware-again.patch
 # stable candidate
 
 # bugfixes
+bugfix/revert-Bluetooth-Use-devname-vhci-module-alias-for-v.patch
 
 # debian specific patches.
 debian/version.patch
@@ -22,6 +24,8 @@ features/ath_override-eeprom-countrycode.patch
 features/kvm_intel_enabled-nested-on-default.patch
 features/radeon-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
 features/fs-enable-link-security-restrictions-by-default.patch
+
+features/drm/drm_bochs_new-driver.patch
 
 # patches from aufs repository, with s/EXPORT_SYMBOL/&_GPL/
 features/aufs/aufs3-base.patch
@@ -97,4 +101,3 @@ features/acerhk/0063-acerhk-drop-polling-support-it-s-not-actually-used-b.patch
 features/acerhk/0064-acerhk-fix-whitespace-formatting-for-sys-kernel-debu.patch
 features/acerhk/0065-acerhk-make-functions-void-which-are-never-checked-a.patch
 features/acerhk/9999-acerhk-add-kbuild-hooks.diff
-
