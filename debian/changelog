@@ -1,3 +1,12 @@
+linux-siduction (3.13-4) unstable; urgency=medium
+
+  * set ABI to 1.towo
+  * import patch-3.13.1
+  * CONFIG_HZ=300 testsetting, i have some lags with android in vbox over genymotion with HZ=1000
+    mayby the next build will back to HZ=1000
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 29 Jan 2014 22:54:23 +0100
+
 linux-siduction (3.13-3) unstable; urgency=medium
 
   * set ABI to 0.towo.3
