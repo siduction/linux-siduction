@@ -1,3 +1,10 @@
+linux-siduction (3.13-7) unstable; urgency=medium
+
+  * set ABI to 4.towo
+  * import patch 3.13.4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 21 Feb 2014 10:07:40 +0100
+
 linux-siduction (3.13-6) unstable; urgency=medium
 
   * set ABI to 3.towo
