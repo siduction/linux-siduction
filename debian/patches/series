@@ -11,6 +11,7 @@ dfsg/r8192e-remove-firmware-again.patch
 
 # bugfixes
 bugfix/revert-Bluetooth-Use-devname-vhci-module-alias-for-v.patch
+bugfix/0001-drm-i915-Prevent-context-obj-from-being-overwritten.patch
 
 # debian specific patches.
 debian/version.patch

@@ -1,10 +1,9 @@
-linux-siduction (3.13-11) UNRELEASED; urgency=medium
+linux-siduction (3.13-12) unstable; urgency=medium
 
-  * set ABI to 7.towo
-  * import patch 3.13.7
-  * add bfq as io-scheduler, has to be set manual, default is cfq
+  * set ABI to 7.towo.2
+  * import 0001-drm-i915-Prevent-context-obj-from-being-overwritten.patch
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 24 Mar 2014 08:13:34 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 27 Mar 2014 22:53:24 +0100
 
 linux-siduction (3.13-10) unstable; urgency=medium
 
