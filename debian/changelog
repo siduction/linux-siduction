@@ -1,9 +1,8 @@
-linux-siduction (3.13-12) unstable; urgency=medium
+linux-siduction (3.13-12) UNRELEASED; urgency=medium
 
   * set ABI to 7.towo.2
-  * import 0001-drm-i915-Prevent-context-obj-from-being-overwritten.patch
 
- -- Torsten Wohlfarth <towo@siduction.org>  Thu, 27 Mar 2014 22:53:24 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 28 Mar 2014 08:52:33 +0100
 
 linux-siduction (3.13-10) unstable; urgency=medium
 
