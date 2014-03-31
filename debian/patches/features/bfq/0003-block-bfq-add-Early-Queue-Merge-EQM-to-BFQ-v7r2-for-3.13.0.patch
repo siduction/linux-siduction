@@ -187,7 +187,7 @@ index f5f71e4..d3626df 100644
 -
 -	__bfq_set_in_service_queue(bfqd, bfqq);
 -	return bfqq;
-+		return ((struct bio *)io_struct)->bi_sector;
++		return ((struct bio *)io_struct)->bi_iter.bi_sector;
  }
  
 -static inline sector_t bfq_dist_from_last(struct bfq_data *bfqd,

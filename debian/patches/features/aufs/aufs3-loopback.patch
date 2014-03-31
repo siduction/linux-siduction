@@ -1,8 +1,10 @@
 aufs3.x-rcN loopback patch
 
+diff --git a/drivers/block/loop.c b/drivers/block/loop.c
+index ec278ac..1894990 100644
 --- a/drivers/block/loop.c
 +++ b/drivers/block/loop.c
-@@ -513,7 +513,7 @@ out:
+@@ -514,7 +514,7 @@ out:
  }
  
  struct switch_request {
@@ -11,7 +13,7 @@ aufs3.x-rcN loopback patch
  	struct completion wait;
  };
  
-@@ -575,7 +575,8 @@ static int loop_thread(void *data)
+@@ -576,7 +576,8 @@ static int loop_thread(void *data)
   * First it needs to flush existing IO, it does this by sending a magic
   * BIO down the pipe. The completion of this BIO does the actual switch.
   */
@@ -21,7 +23,7 @@ aufs3.x-rcN loopback patch
  {
  	struct switch_request w;
  	struct bio *bio = bio_alloc(GFP_KERNEL, 0);
-@@ -583,6 +584,7 @@ static int loop_switch(struct loop_devic
+@@ -584,6 +585,7 @@ static int loop_switch(struct loop_device *lo, struct file *file)
  		return -ENOMEM;
  	init_completion(&w.wait);
  	w.file = file;
@@ -29,7 +31,7 @@ aufs3.x-rcN loopback patch
  	bio->bi_private = &w;
  	bio->bi_bdev = NULL;
  	loop_make_request(lo->lo_queue, bio);
-@@ -599,7 +601,7 @@ static int loop_flush(struct loop_device
+@@ -600,7 +602,7 @@ static int loop_flush(struct loop_device *lo)
  	if (!lo->lo_thread)
  		return 0;
  
@@ -38,7 +40,7 @@ aufs3.x-rcN loopback patch
  }
  
  /*
-@@ -618,6 +620,7 @@ static void do_loop_switch(struct loop_d
+@@ -619,6 +621,7 @@ static void do_loop_switch(struct loop_device *lo, struct switch_request *p)
  	mapping = file->f_mapping;
  	mapping_set_gfp_mask(old_file->f_mapping, lo->old_gfp_mask);
  	lo->lo_backing_file = file;
@@ -46,7 +48,7 @@ aufs3.x-rcN loopback patch
  	lo->lo_blocksize = S_ISBLK(mapping->host->i_mode) ?
  		mapping->host->i_bdev->bd_block_size : PAGE_SIZE;
  	lo->old_gfp_mask = mapping_gfp_mask(mapping);
-@@ -626,6 +629,13 @@ out:
+@@ -627,6 +630,13 @@ out:
  	complete(&p->wait);
  }
  
@@ -60,7 +62,7 @@ aufs3.x-rcN loopback patch
  
  /*
   * loop_change_fd switched the backing store of a loopback device to
-@@ -639,6 +649,7 @@ static int loop_change_fd(struct loop_de
+@@ -640,6 +650,7 @@ static int loop_change_fd(struct loop_device *lo, struct block_device *bdev,
  			  unsigned int arg)
  {
  	struct file	*file, *old_file;
@@ -68,7 +70,7 @@ aufs3.x-rcN loopback patch
  	struct inode	*inode;
  	int		error;
  
-@@ -655,9 +666,16 @@ static int loop_change_fd(struct loop_de
+@@ -656,9 +667,16 @@ static int loop_change_fd(struct loop_device *lo, struct block_device *bdev,
  	file = fget(arg);
  	if (!file)
  		goto out;
@@ -85,7 +87,7 @@ aufs3.x-rcN loopback patch
  
  	error = -EINVAL;
  
-@@ -669,17 +687,21 @@ static int loop_change_fd(struct loop_de
+@@ -670,17 +688,21 @@ static int loop_change_fd(struct loop_device *lo, struct block_device *bdev,
  		goto out_putf;
  
  	/* and ... switch */
@@ -108,7 +110,7 @@ aufs3.x-rcN loopback patch
   out:
  	return error;
  }
-@@ -840,7 +862,7 @@ static void loop_config_discard(struct l
+@@ -841,7 +863,7 @@ static void loop_config_discard(struct loop_device *lo)
  static int loop_set_fd(struct loop_device *lo, fmode_t mode,
  		       struct block_device *bdev, unsigned int arg)
  {
@@ -117,7 +119,7 @@ aufs3.x-rcN loopback patch
  	struct inode	*inode;
  	struct address_space *mapping;
  	unsigned lo_blocksize;
-@@ -855,6 +877,12 @@ static int loop_set_fd(struct loop_devic
+@@ -856,6 +878,12 @@ static int loop_set_fd(struct loop_device *lo, fmode_t mode,
  	file = fget(arg);
  	if (!file)
  		goto out;
@@ -130,7 +132,7 @@ aufs3.x-rcN loopback patch
  
  	error = -EBUSY;
  	if (lo->lo_state != Lo_unbound)
-@@ -903,6 +931,7 @@ static int loop_set_fd(struct loop_devic
+@@ -904,6 +932,7 @@ static int loop_set_fd(struct loop_device *lo, fmode_t mode,
  	lo->lo_device = bdev;
  	lo->lo_flags = lo_flags;
  	lo->lo_backing_file = file;
@@ -138,7 +140,7 @@ aufs3.x-rcN loopback patch
  	lo->transfer = transfer_none;
  	lo->ioctl = NULL;
  	lo->lo_sizelimit = 0;
-@@ -947,6 +976,7 @@ out_clr:
+@@ -948,6 +977,7 @@ out_clr:
  	lo->lo_thread = NULL;
  	lo->lo_device = NULL;
  	lo->lo_backing_file = NULL;
@@ -146,7 +148,7 @@ aufs3.x-rcN loopback patch
  	lo->lo_flags = 0;
  	set_capacity(lo->lo_disk, 0);
  	invalidate_bdev(bdev);
-@@ -956,6 +986,8 @@ out_clr:
+@@ -957,6 +987,8 @@ out_clr:
  	lo->lo_state = Lo_unbound;
   out_putf:
  	fput(file);
@@ -155,7 +157,7 @@ aufs3.x-rcN loopback patch
   out:
  	/* This is safe: open() is still holding a reference. */
  	module_put(THIS_MODULE);
-@@ -1002,6 +1034,7 @@ loop_init_xfer(struct loop_device *lo, s
+@@ -1003,6 +1035,7 @@ loop_init_xfer(struct loop_device *lo, struct loop_func_table *xfer,
  static int loop_clr_fd(struct loop_device *lo)
  {
  	struct file *filp = lo->lo_backing_file;
@@ -163,7 +165,7 @@ aufs3.x-rcN loopback patch
  	gfp_t gfp = lo->old_gfp_mask;
  	struct block_device *bdev = lo->lo_device;
  
-@@ -1035,6 +1068,7 @@ static int loop_clr_fd(struct loop_devic
+@@ -1036,6 +1069,7 @@ static int loop_clr_fd(struct loop_device *lo)
  
  	spin_lock_irq(&lo->lo_lock);
  	lo->lo_backing_file = NULL;
@@ -171,7 +173,7 @@ aufs3.x-rcN loopback patch
  	spin_unlock_irq(&lo->lo_lock);
  
  	loop_release_xfer(lo);
-@@ -1077,6 +1111,8 @@ static int loop_clr_fd(struct loop_devic
+@@ -1078,6 +1112,8 @@ static int loop_clr_fd(struct loop_device *lo)
  	 * bd_mutex which is usually taken before lo_ctl_mutex.
  	 */
  	fput(filp);
@@ -180,6 +182,8 @@ aufs3.x-rcN loopback patch
  	return 0;
  }
  
+diff --git a/drivers/block/loop.h b/drivers/block/loop.h
+index 90df5d6..cb91822 100644
 --- a/drivers/block/loop.h
 +++ b/drivers/block/loop.h
 @@ -44,7 +44,7 @@ struct loop_device {
@@ -191,9 +195,11 @@ aufs3.x-rcN loopback patch
  	struct block_device *lo_device;
  	unsigned	lo_blocksize;
  	void		*key_data; 
+diff --git a/fs/aufs/f_op.c b/fs/aufs/f_op.c
+index 2e0302d..b35af58 100644
 --- a/fs/aufs/f_op.c
 +++ b/fs/aufs/f_op.c
-@@ -350,7 +350,7 @@ static ssize_t aufs_splice_read(struct f
+@@ -337,7 +337,7 @@ static ssize_t aufs_splice_read(struct file *file, loff_t *ppos,
  	err = -EINVAL;
  	h_file = au_hf_top(file);
  	get_file(h_file);
@@ -202,9 +208,11 @@ aufs3.x-rcN loopback patch
  		au_warn_loopback(h_file->f_dentry->d_sb);
  		if (file->f_mapping != h_file->f_mapping) {
  			file->f_mapping = h_file->f_mapping;
+diff --git a/fs/aufs/loop.c b/fs/aufs/loop.c
+index 3b03b52..4ab749d 100644
 --- a/fs/aufs/loop.c
 +++ b/fs/aufs/loop.c
-@@ -143,3 +143,19 @@ void au_loopback_fin(void)
+@@ -130,3 +130,19 @@ void au_loopback_fin(void)
  	symbol_put(loop_backing_file);
  	kfree(au_warn_loopback_array);
  }
@@ -224,9 +232,11 @@ aufs3.x-rcN loopback patch
 +	AuDebugOn(!f);
 +	return f;
 +}
+diff --git a/fs/aufs/loop.h b/fs/aufs/loop.h
+index da8b756..28cb7ea 100644
 --- a/fs/aufs/loop.h
 +++ b/fs/aufs/loop.h
-@@ -38,7 +38,11 @@ void au_warn_loopback(struct super_block
+@@ -25,7 +25,11 @@ void au_warn_loopback(struct super_block *h_sb);
  
  int au_loopback_init(void);
  void au_loopback_fin(void);
@@ -238,7 +248,7 @@ aufs3.x-rcN loopback patch
  AuStubInt0(au_test_loopback_overlap, struct super_block *sb,
  	   struct dentry *h_adding)
  AuStubInt0(au_test_loopback_kthread, void)
-@@ -46,6 +50,8 @@ AuStubVoid(au_warn_loopback, struct supe
+@@ -33,6 +37,8 @@ AuStubVoid(au_warn_loopback, struct super_block *h_sb)
  
  AuStubInt0(au_loopback_init, void)
  AuStubVoid(au_loopback_fin, void)
@@ -247,9 +257,11 @@ aufs3.x-rcN loopback patch
  #endif /* BLK_DEV_LOOP */
  
  #endif /* __KERNEL__ */
+diff --git a/fs/aufs/super.c b/fs/aufs/super.c
+index 6828e68..d8d43f9 100644
 --- a/fs/aufs/super.c
 +++ b/fs/aufs/super.c
-@@ -820,7 +820,10 @@ static const struct super_operations auf
+@@ -807,7 +807,10 @@ static const struct super_operations aufs_sop = {
  	.statfs		= aufs_statfs,
  	.put_super	= aufs_put_super,
  	.sync_fs	= aufs_sync_fs,
@@ -261,9 +273,11 @@ aufs3.x-rcN loopback patch
  };
  
  /* ---------------------------------------------------------------------- */
+diff --git a/include/linux/fs.h b/include/linux/fs.h
+index f28435e..6c80848 100644
 --- a/include/linux/fs.h
 +++ b/include/linux/fs.h
-@@ -1621,6 +1621,10 @@ struct super_operations {
+@@ -1622,6 +1622,10 @@ struct super_operations {
  	int (*bdev_try_to_free_page)(struct super_block*, struct page*, gfp_t);
  	long (*nr_cached_objects)(struct super_block *, int);
  	long (*free_cached_objects)(struct super_block *, long, int);

@@ -2,11 +2,11 @@
 +++ b/Makefile	2013-12-29 20:04:46.000000000 +0100
 @@ -1,7 +1,7 @@
  VERSION = 3
- PATCHLEVEL = 13
--SUBLEVEL = 7
+ PATCHLEVEL = 14
+-SUBLEVEL = 0
 -EXTRAVERSION =
 +SUBLEVEL =
 +EXTRAVERSION =
- NAME = One Giant Leap for Frogkind
+ NAME = Shuffling Zombie Juror
  
  # *DOCUMENTATION*

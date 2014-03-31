@@ -153,11 +153,11 @@ tp80
 (dp81
 S'abiname'
 p82
-S'3.13-7.towo.2'
+S'3.14-0.towo.1'
 p83
 sS'source'
 p84
-V3.13-12
+V3.14-1
 p85
 ss(S'siduction-amd64-dbg'
 g5
@@ -186,7 +186,7 @@ tp98
 (dp99
 S'abiname'
 p100
-S'7.towo.2'
+S'0.towo.1'
 p101
 ss(S'image'
 p102

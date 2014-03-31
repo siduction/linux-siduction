@@ -1,22 +1,21 @@
 # upstream updates
-upstream/patch-3.13.6
+#upstream/patch-3.14.1
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
-dfsg/sound-pci-cs46xx-request_firmware.patch
+#dfsg/sound-pci-cs46xx-request_firmware.patch
 dfsg/r8192e-remove-firmware-again.patch
 
 # stable candidate
 
 # bugfixes
 bugfix/revert-Bluetooth-Use-devname-vhci-module-alias-for-v.patch
-bugfix/0001-drm-i915-Prevent-context-obj-from-being-overwritten.patch
 
 # debian specific patches.
 debian/version.patch
 debian/kernelvariables.patch
-debian/doc-build-parallel.patch
+#debian/doc-build-parallel.patch
 
 # features
 features/defaults-fat-utf8.patch
@@ -29,7 +28,7 @@ features/bfq/0001-block-cgroups-kconfig-build-bits-for-BFQ-v7r2-3.13.patch
 features/bfq/0002-block-introduce-the-BFQ-v7r2-I-O-sched-for-3.13.patch
 features/bfq/0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r2-for-3.13.0.patch
 
-features/drm/drm_bochs_new-driver.patch
+#features/drm/drm_bochs_new-driver.patch
 
 # patches from aufs repository, with s/EXPORT_SYMBOL/&_GPL/
 features/aufs/aufs3-base.patch

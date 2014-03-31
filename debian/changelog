@@ -1,6 +1,14 @@
-linux-siduction (3.13-12) UNRELEASED; urgency=medium
+linux-siduction (3.14-1) unstable; urgency=medium
+
+  * set ABI to 0.towo.1
+  * linux 3.14
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 31 Mar 2014 08:04:25 +0200
+
+linux-siduction (3.13-12) unstable; urgency=medium
 
   * set ABI to 7.towo.2
+  * import bfq-patchset, cfq is default
 
  -- Torsten Wohlfarth <towo@siduction.org>  Fri, 28 Mar 2014 08:52:33 +0100
 
