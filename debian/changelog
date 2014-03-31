@@ -1,3 +1,10 @@
+linux-siduction (3.14-2) unstable; urgency=medium
+
+  * set ABI to 0.towo.2
+  * set bfq as option, cfq is the default i/o scheduler
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 31 Mar 2014 09:59:01 +0200
+
 linux-siduction (3.14-1) unstable; urgency=medium
 
   * set ABI to 0.towo.1
