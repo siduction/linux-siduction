@@ -248,7 +248,7 @@ index 539eeb9..5e700b1 100644
  	return error;
  }
 diff --git a/mm/memory.c b/mm/memory.c
-index be6a0c0..49bffa0 100644
+index 22dfa61..81813d9 100644
 --- a/mm/memory.c
 +++ b/mm/memory.c
 @@ -2755,7 +2755,7 @@ reuse:
@@ -260,7 +260,7 @@ index be6a0c0..49bffa0 100644
  		}
  		put_page(dirty_page);
  		if (page_mkwrite) {
-@@ -3466,7 +3466,7 @@ static int __do_fault(struct mm_struct *mm, struct vm_area_struct *vma,
+@@ -3467,7 +3467,7 @@ static int __do_fault(struct mm_struct *mm, struct vm_area_struct *vma,
  
  		/* file_update_time outside page_lock */
  		if (vma->vm_file && !page_mkwrite)
