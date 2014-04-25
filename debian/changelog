@@ -1,3 +1,11 @@
+linux-siduction (3.14-6) unstable; urgency=medium
+
+  * set ABI to 1.towo.2
+  * add ACPICA_Tables_Fix_a_bad_pointer_iss~_in_acpi_tb_parse_root_table.patch fixes #74131
+    and http://forum.siduction.org/index.php?topic=4487.0
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 25 Apr 2014 15:28:59 +0200
+
 linux-siduction (3.14-5) unstable; urgency=medium
 
   * set ABI to 1.towo
