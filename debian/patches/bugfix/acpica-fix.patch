@@ -39,5 +39,4 @@
  			table_entry_size = ACPI_RSDT_ENTRY_SIZE;
  		}
  	}
--- 
-
+--

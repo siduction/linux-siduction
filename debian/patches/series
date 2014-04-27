@@ -1,5 +1,5 @@
 # upstream updates
-upstream/patch-3.14.1
+upstream/patch-3.14.2
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
@@ -11,7 +11,7 @@ dfsg/r8192e-remove-firmware-again.patch
 
 # bugfixes
 bugfix/revert-Bluetooth-Use-devname-vhci-module-alias-for-v.patch
-bugfix/ACPICA_Tables_Fix_a_bad_pointer_iss~_in_acpi_tb_parse_root_table.patch
+bugfix/acpica-fix.patch
 
 # debian specific patches.
 debian/version.patch
