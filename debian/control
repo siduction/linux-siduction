@@ -2,11 +2,11 @@ Source: linux-siduction
 Section: kernel
 Priority: optional
 Maintainer: Torsten Wohlfarth <towo@siduction.org>
-Standards-Version: 3.9.3
+Uploaders: Alf Gaida <agaida@siduction.org>
+Standards-Version: 3.9.5
 Build-Depends: debhelper (>= 9.20120115), cpio, python, bc, gcc-4.8 [amd64 i386]
-XBSC-Original-Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
-Vcs-Svn: git://git.siduction.org:packages/siduction-repository/linux-siduction.git
-Vcs-Browser: http://git.siduction.org/?p=packages/siduction-repository/linux-siduction.git
+Vcs-Git: git://git.siduction.org/code/linux-siduction.git
+Vcs-Browser: http://git.siduction.org/?p=code/linux-siduction.git
 Homepage: http://kernel.org/
 
 Package: linux-image-3.14-3.towo-siduction-amd64
