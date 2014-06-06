@@ -1,10 +1,3 @@
-@@ -, +, @@ 
- acpi_tb_parse_root_table().
-  Commit: 671cc68dc61f029d44b43a681356078e02d8dab8
-  Subject: ACPICA: Back port and refine validation of the XSDT root table.
----
- drivers/acpi/acpica/tbutils.c |    6 ++++--
- 1 file changed, 4 insertions(+), 2 deletions(-)
 --- a/drivers/acpi/acpica/tbutils.c	
 +++ a/drivers/acpi/acpica/tbutils.c	
 @@ -461,6 +461,7 @@ acpi_status __init acpi_tb_parse_root_table(acpi_physical_address rsdp_address)
