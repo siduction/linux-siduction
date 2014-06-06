@@ -1,3 +1,10 @@
+linux-siduction (3.14-12) unstable; urgency=medium
+
+  * add patches for CVE-2014-3153
+  * set ABI to 5.towo.2
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 06 Jun 2014 17:24:59 +0200
+
 linux-siduction (3.14-11) unstable; urgency=medium
 
   * set ABI to 5.towo
