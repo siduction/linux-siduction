@@ -1,5 +1,5 @@
 # upstream updates
-upstream/patch-3.14.5
+upstream/patch-3.14.6
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
@@ -12,12 +12,6 @@ dfsg/r8192e-remove-firmware-again.patch
 # bugfixes
 bugfix/revert-Bluetooth-Use-devname-vhci-module-alias-for-v.patch
 bugfix/acpica-fix.patch
-bugfix/futex-add-another-early-deadlock-detection-check.patch
-bugfix/futex-prevent-attaching-to-kernel-threads.patch
-bugfix/futex-prevent-requeue-pi-on-same-futex.patch-futex-forbid-uaddr-uaddr2-in-futex_requeue-...-requeue_pi-1.patch
-bugfix/futex-validate-atomic-acquisition-in-futex_lock_pi_atomic.patch
-bugfix/futex-always-cleanup-owner-tid-in-unlock_pi.patch
-bugfix/futex-make-lookup_pi_state-more-robust.patch
 
 # debian specific patches.
 debian/version.patch

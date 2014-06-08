@@ -158,11 +158,11 @@ tp82
 (dp83
 S'abiname'
 p84
-S'3.14-5.towo.2'
+S'3.14-6.towo'
 p85
 sS'source'
 p86
-V3.14-13
+V3.14-14
 p87
 ss(S'description'
 g24
@@ -218,7 +218,7 @@ tp113
 (dp114
 S'abiname'
 p115
-S'5.towo.2'
+S'6.towo'
 p116
 ss(S'image'
 g24
