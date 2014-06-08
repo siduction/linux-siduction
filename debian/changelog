@@ -2,6 +2,7 @@ linux-siduction (3.14-14) unstable; urgency=medium
 
   * set ABI to 6.towo
   * import linux 3.14.6
+  * removed acpica-fix.patch is now upstream
 
  -- Torsten Wohlfarth <towo@siduction.org>  Sun, 08 Jun 2014 10:41:20 +0200
 

@@ -11,7 +11,6 @@ dfsg/r8192e-remove-firmware-again.patch
 
 # bugfixes
 bugfix/revert-Bluetooth-Use-devname-vhci-module-alias-for-v.patch
-bugfix/acpica-fix.patch
 
 # debian specific patches.
 debian/version.patch
