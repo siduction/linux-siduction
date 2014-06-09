@@ -275,8 +275,8 @@
  	depends on VIDEO_V4L2 && I2C
  	depends on MEDIA_CAMERA_SUPPORT
  	---help---
---- a/drivers/video/Kconfig
-+++ b/drivers/video/Kconfig
+--- a/drivers/video/fbdev/Kconfig
++++ b/drivers/video/fbdev/Kconfig
 @@ -1016,101 +1016,6 @@ config FB_ATMEL_STN
  
  	  If unsure, say N.
@@ -379,13 +379,3 @@
  config FB_I740
  	tristate "Intel740 support"
  	depends on FB && PCI
---- a/drivers/staging/rtl8188eu/Kconfig
-+++ b/drivers/staging/rtl8188eu/Kconfig
-@@ -1,6 +1,7 @@
- config R8188EU
- 	tristate "Realtek RTL8188EU Wireless LAN NIC driver"
- 	depends on WLAN && USB
-+	depends on BROKEN
- 	select WIRELESS_EXT
- 	select WEXT_PRIV
- 	default N

@@ -158,11 +158,11 @@ tp82
 (dp83
 S'abiname'
 p84
-S'3.14-6.towo'
+S'3.15-0.towo'
 p85
 sS'source'
 p86
-V3.14-14
+V3.15-1
 p87
 ss(S'description'
 g24
@@ -218,7 +218,7 @@ tp113
 (dp114
 S'abiname'
 p115
-S'6.towo'
+S'0.towo'
 p116
 ss(S'image'
 g24
@@ -267,7 +267,7 @@ S'none'
 p141
 asS'compiler'
 p142
-S'gcc-4.8'
+S'gcc-4.9'
 p143
 ss(S'relations'
 p144
@@ -277,21 +277,21 @@ S'initramfs-fallback'
 p147
 S'linux-initramfs-tool'
 p148
-sS'lilo'
+sS'gcc-4.9'
 p149
-S'lilo (>= 22.8-8.2~)'
+S'gcc-4.9'
 p150
-sS'gcc-4.8'
-p151
-S'gcc-4.8'
-p152
 sS'initramfs-tools'
-p153
+p151
 S'initramfs-tools (>= 0.110~)'
-p154
+p152
 sS'elilo'
-p155
+p153
 S'elilo (>= 3.12-3.1~)'
+p154
+sS'lilo'
+p155
+S'lilo (>= 22.8-8.2~)'
 p156
 sstRp157
 .
