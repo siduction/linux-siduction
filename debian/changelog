@@ -1,3 +1,10 @@
+linux-siduction (3.15-3) unstable; urgency=medium
+
+  * set ABI to 0.towo.3
+  * add bugfix/CM109-mixer-quirk.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 15 Jun 2014 12:52:19 +0200
+
 linux-siduction (3.15-2) unstable; urgency=medium
 
   * set ABI to 0.towo.2

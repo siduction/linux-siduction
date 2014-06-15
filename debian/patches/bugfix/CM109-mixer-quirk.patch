@@ -1,0 +1,29 @@
+--- linux-siduction-3.15.orig/sound/usb/mixer.c
++++ linux-siduction-3.15/sound/usb/mixer.c
+@@ -907,6 +907,26 @@ static void volume_control_quirks(struct
+ 		}
+ 		break;
+ 
++	case USB_ID(0x0d8c, 0x0008):
++	case USB_ID(0x0d8c, 0x0009):
++	case USB_ID(0x0d8c, 0x000a):
++	case USB_ID(0x0d8c, 0x000b):
++	case USB_ID(0x0d8c, 0x000c):
++	case USB_ID(0x0d8c, 0x000d):
++	case USB_ID(0x0d8c, 0x000e):
++	case USB_ID(0x0d8c, 0x000f):
++	/*
++	 * C-Media CM109 bad dB range reported, used values from datasheet
++	*/
++		if (strcmp(kctl->id.name, "Speaker Playback Volume") == 0) {
++			snd_printk(KERN_INFO
++				"C-Media CM109 quirk: cval->min=-4500, cval->max=0, cval->res=119\n");
++			cval->min = -4500;
++			cval->max = 0;
++			cval->res = 119;
++		}
++		break;
++
+ 	}
+ }
+ 
