@@ -1,5 +1,5 @@
 # upstream updates
-upstream/patch-3.15.1-rc1
+upstream/patch-3.15.1
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
@@ -11,7 +11,7 @@ dfsg/r8192e-remove-firmware-again.patch
 # bugfixes
 #bugfix/revert-Bluetooth-Use-devname-vhci-module-alias-for-v.patch
 #bugfix/0001-drm-i915-Prevent-context-obj-from-being-overwritten.patch
-bugfix/bugfixCM109-mixer-quirk.patch
+bugfix/CM109-mixer-quirk.patch
 
 # debian specific patches.
 debian/version.patch
