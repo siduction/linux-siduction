@@ -1,3 +1,9 @@
+linux-siduction (3.15-8) unstable; urgency=medium
+
+  * realy set ABI to 2.towo, sorry for the noise
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 27 Jun 2014 11:25:08 +0200
+
 linux-siduction (3.15-7) unstable; urgency=medium
 
   * fix config
