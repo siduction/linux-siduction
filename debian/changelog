@@ -1,3 +1,11 @@
+linux-siduction (3.15-9) unstable; urgency=medium
+
+  * set ABI to 3.towo
+  * import patch-3.15.3
+  * add bfq patchset
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 01 Jul 2014 08:20:21 +0200
+
 linux-siduction (3.15-8) unstable; urgency=medium
 
   * realy set ABI to 2.towo, sorry for the noise

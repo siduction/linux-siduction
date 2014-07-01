@@ -1,5 +1,5 @@
 # upstream updates
-upstream/patch-3.15.2
+upstream/patch-3.15.3
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
@@ -16,19 +16,18 @@ bugfix/CM109-mixer-quirk.patch
 # debian specific patches.
 debian/version.patch
 debian/kernelvariables.patch
-#debian/doc-build-parallel.patch
 
 # features
 features/defaults-fat-utf8.patch
-#features/ath_override-eeprom-countrycode.patch
+features/ath_override-eeprom-countrycode.patch
 features/kvm_intel_enabled-nested-on-default.patch
 features/radeon-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
 features/fs-enable-link-security-restrictions-by-default.patch
 features/efi-autoload-efivars.patch
 
-#features/bfq/0001-block-cgroups-kconfig-build-bits-for-BFQ-v7r2-3.13.patch
-#features/bfq/0002-block-introduce-the-BFQ-v7r2-I-O-sched-for-3.13.patch
-#features/bfq/0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r2-for-3.13.0.patch
+features/bfq/0001-block-cgroups-kconfig-build-bits-for-BFQ-v7r4-3.15-rc5.patch
+features/bfq/0002-block-introduce-the-BFQ-v7r4-I-O-sched-for-3.15-rc5.patch
+features/bfq/0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r4-for-3.15.0-rc5.patch
 
 #features/drm/drm_bochs_new-driver.patch
 
