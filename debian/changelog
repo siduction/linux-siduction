@@ -1,3 +1,11 @@
+linux-siduction (3.15-11) unstable; urgency=medium
+
+  * set ABI to 4.towo
+  * import patch-3.15.4
+  * removed some config options which are leftover from my rc-tests
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 07 Jul 2014 07:30:58 +0200
+
 linux-siduction (3.15-10) unstable; urgency=medium
 
   * set ABI to 3.towo.2
