@@ -138,7 +138,7 @@ S'3.15-6.towo'
 p73
 sS'source'
 p74
-V3.15-14
+V3.15-15
 p75
 ss(S'description'
 g19
@@ -267,7 +267,7 @@ S'none'
 p141
 asS'compiler'
 p142
-S'gcc-4.9'
+S'gcc-4.8'
 p143
 ss(S'relations'
 p144
@@ -277,21 +277,21 @@ S'initramfs-fallback'
 p147
 S'linux-initramfs-tool'
 p148
-sS'gcc-4.9'
-p149
-S'gcc-4.9'
-p150
-sS'initramfs-tools'
-p151
-S'initramfs-tools (>= 0.110~)'
-p152
-sS'elilo'
-p153
-S'elilo (>= 3.12-3.1~)'
-p154
 sS'lilo'
-p155
+p149
 S'lilo (>= 22.8-8.2~)'
+p150
+sS'gcc-4.8'
+p151
+S'gcc-4.8'
+p152
+sS'initramfs-tools'
+p153
+S'initramfs-tools (>= 0.110~)'
+p154
+sS'elilo'
+p155
+S'elilo (>= 3.12-3.1~)'
 p156
 sstRp157
 .
