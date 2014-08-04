@@ -1,33 +1,37 @@
 # upstream updates
-upstream/patch-3.15.8
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
-dfsg/r8192e-remove-firmware-again.patch
+#dfsg/r8192e-remove-firmware-again.patch
 
 # stable candidate
 
 # bugfixes
-#bugfix/revert-Bluetooth-Use-devname-vhci-module-alias-for-v.patch
-#bugfix/0001-drm-i915-Prevent-context-obj-from-being-overwritten.patch
-bugfix/CM109-mixer-quirk.patch
+bugfix/firmware_class-return-specific-errors-from-file-read.patch
+bugfix/firmware_class-log-every-success-and-failure.patch
+bugfix/firmware-remove-redundant-log-messages-from-drivers.patch
+bugfix/radeon-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
+bugfix/misc-bmp085-Enable-building-as-a-module.patch
+bugfix/kbuild-use-nostdinc-in-compile-tests.patch
+bugfix/disable-some-marvell-phys.patch
 
 # debian specific patches.
 debian/version.patch
 debian/kernelvariables.patch
+features/Kbuild-kconfig-Verbose-version-of-listnewconfig.patch
+#debian/doc-build-parallel.patch
 
 # features
 features/defaults-fat-utf8.patch
-features/ath_override-eeprom-countrycode.patch
 features/kvm_intel_enabled-nested-on-default.patch
-features/radeon-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
 features/fs-enable-link-security-restrictions-by-default.patch
+features/x86-memtest-WARN-if-bad-RAM-found.patch
 features/efi-autoload-efivars.patch
 
-features/bfq/0001-block-cgroups-kconfig-build-bits-for-BFQ-v7r4-3.15-rc5.patch
-features/bfq/0002-block-introduce-the-BFQ-v7r4-I-O-sched-for-3.15-rc5.patch
-features/bfq/0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r4-for-3.15.0-rc5.patch
+#features/bfq/0001-block-cgroups-kconfig-build-bits-for-BFQ-v7r2-3.13.patch
+#features/bfq/0002-block-introduce-the-BFQ-v7r2-I-O-sched-for-3.13.patch
+#features/bfq/0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r2-for-3.13.0.patch
 
 #features/drm/drm_bochs_new-driver.patch
 
@@ -105,5 +109,3 @@ features/acerhk/0063-acerhk-drop-polling-support-it-s-not-actually-used-b.patch
 features/acerhk/0064-acerhk-fix-whitespace-formatting-for-sys-kernel-debu.patch
 features/acerhk/0065-acerhk-make-functions-void-which-are-never-checked-a.patch
 features/acerhk/9999-acerhk-add-kbuild-hooks.diff
-
-#stable-queue/

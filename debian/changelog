@@ -1,3 +1,10 @@
+linux-siduction (3.16-1) unstable; urgency=medium
+
+  * set ABI to 0.towo
+  * new upstream version 3.16.0
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 04 Aug 2014 11:06:37 +0200
+
 linux-siduction (3.15-17) unstable; urgency=medium
 
   * set ABI to 8.towo

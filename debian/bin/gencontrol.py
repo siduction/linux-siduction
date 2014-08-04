@@ -256,7 +256,7 @@ class Gencontrol(Base):
             image = self.templates["control.image.type-standalone"]
         else:
         """
-        if True: #aptosid
+        if True: #siduction
             image = self.templates["control.image.type-%s" % config_entry_image['type']]
 
         config_entry_xen = self.config.merge('xen', arch, featureset, flavour)
@@ -402,7 +402,7 @@ class Gencontrol(Base):
                                self.version.linux_upstream)
                         + self.abiname_part)
         """
-        self.abiname = self.version.linux_upstream + self.abiname_part #aptosid
+        self.abiname = self.version.linux_upstream + self.abiname_part #siduction
         self.vars = {
             'upstreamversion': self.version.linux_upstream,
             'version': self.version.linux_version,
@@ -419,7 +419,7 @@ class Gencontrol(Base):
                 raise RuntimeError("Can't upload to %s with a version of %s" %
                         (distribution, version))
         if distribution in ('experimental', ):
-            if not version.linux_revision_experimental:
+            if version.linux_revision_experimental:
                 raise RuntimeError("Can't upload to %s with a version of %s" %
                         (distribution, version))
 
