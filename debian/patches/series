@@ -1,5 +1,6 @@
 # upstream updates
 upstream/patch-3.16.1
+upstream/patch-3.16.2-rc2
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
