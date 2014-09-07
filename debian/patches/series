@@ -21,7 +21,7 @@ bugfix/disable-some-marvell-phys.patch
 debian/version.patch
 debian/kernelvariables.patch
 features/Kbuild-kconfig-Verbose-version-of-listnewconfig.patch
-#debian/doc-build-parallel.patch
+debian/iwlwifi-do-not-request-unreleased-firmware.patch
 
 # features
 features/defaults-fat-utf8.patch
