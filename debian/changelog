@@ -1,7 +1,14 @@
+linux-siduction (3.16-6) unstable; urgency=medium
+
+  * set ABI to 2.towo.3
+  * import patch-3.16.3-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 16 Sep 2014 11:29:08 +0200
+
 linux-siduction (3.16-5) unstable; urgency=medium
 
-   * set ABI to 2.towo.2
-   * add iwlwifi-do-not-request-unreleased-firmware.patch
+  * set ABI to 2.towo.2
+  * add iwlwifi-do-not-request-unreleased-firmware.patch
 
  -- Torsten Wohlfarth <towo@siduction.org>  Sun, 07 Sep 2014 12:13:17 +0200
 
