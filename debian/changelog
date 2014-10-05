@@ -1,3 +1,10 @@
+linux-siduction (3.16-9) UNRELEASED; urgency=medium
+
+  * set ABI to 4.towo
+  * sync with debian/svn
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 05 Oct 2014 19:59:26 +0200
+
 linux-siduction (3.16-8) unstable; urgency=medium
 
   * set ABI to 3.towo.2
