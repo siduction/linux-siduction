@@ -1,6 +1,4 @@
 # upstream updates
-upstream/patch-3.16.3
-upstream/patch-3.16.4-rc1
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
@@ -17,6 +15,10 @@ bugfix/radeon-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
 bugfix/misc-bmp085-Enable-building-as-a-module.patch
 bugfix/kbuild-use-nostdinc-in-compile-tests.patch
 bugfix/disable-some-marvell-phys.patch
+bugfix/0001-saa7146-Create-a-device-name-before-it-s-used.patch
+bugfix/builddeb-put-the-dbg-files-into-the-correct-director.patch
+bugfix/aic94xx-remove-broken-fallback-for-missing-ctrl-a.patch
+bugfix/x86-reject-x32-executables-if-x32-abi-not-supported.patch
 
 # debian specific patches.
 debian/version.patch
@@ -27,9 +29,11 @@ debian/iwlwifi-do-not-request-unreleased-firmware.patch
 # features
 features/defaults-fat-utf8.patch
 features/kvm_intel_enabled-nested-on-default.patch
-features/fs-enable-link-security-restrictions-by-default.patch
-features/x86-memtest-WARN-if-bad-RAM-found.patch
+#features/fs-enable-link-security-restrictions-by-default.patch
+#features/x86-memtest-WARN-if-bad-RAM-found.patch
 features/efi-autoload-efivars.patch
+features/x86-memtest-WARN-if-bad-RAM-found.patch
+features/x86-make-x32-syscall-support-conditional.patch
 
 #features/bfq/0001-block-cgroups-kconfig-build-bits-for-BFQ-v7r2-3.13.patch
 #features/bfq/0002-block-introduce-the-BFQ-v7r2-I-O-sched-for-3.13.patch

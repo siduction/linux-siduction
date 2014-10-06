@@ -199,36 +199,6 @@
  	select SND_RAWMIDI
  	select SND_AC97_CODEC
  	help
---- a/drivers/staging/wlags49_h2/Kconfig
-+++ b/drivers/staging/wlags49_h2/Kconfig
-@@ -1,6 +1,7 @@
- config WLAGS49_H2
- 	tristate "Agere Systems HERMES II Wireless PC Card Model 0110"
- 	depends on WLAN && PCMCIA
-+	depends on BROKEN
- 	select WIRELESS_EXT
- 	select WEXT_SPY
- 	select WEXT_PRIV
---- a/drivers/staging/wlags49_h25/Kconfig
-+++ b/drivers/staging/wlags49_h25/Kconfig
-@@ -1,6 +1,7 @@
- config WLAGS49_H25
- 	tristate "Linksys HERMES II.5 WCF54G_Wireless-G_CompactFlash_Card"
- 	depends on WLAN && PCMCIA
-+	depends on BROKEN
- 	select WIRELESS_EXT
- 	select WEXT_SPY
- 	select WEXT_PRIV
---- a/drivers/staging/keucr/Kconfig
-+++ b/drivers/staging/keucr/Kconfig
-@@ -1,6 +1,7 @@
- config USB_ENESTORAGE
- 	tristate "USB ENE SM card reader support"
- 	depends on USB && SCSI && m
-+	depends on BROKEN
- 	---help---
- 	  Say Y here if you wish to control a ENE SM Card reader.
- 	  To use SD/MS card, please build driver/usb/storage/ums-eneub6250.ko
 --- a/drivers/staging/ft1000/Kconfig
 +++ b/drivers/staging/ft1000/Kconfig
 @@ -7,6 +7,7 @@ config FT1000_USB

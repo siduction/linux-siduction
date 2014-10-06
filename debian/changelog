@@ -1,4 +1,19 @@
-linux-siduction (3.16-9) UNRELEASED; urgency=medium
+linux-siduction (3.17-2) unstable; urgency=medium
+
+  * set ABI to 0.towo.2
+  * reenabled PAE build
+  * fixed config CONFIG_IP_NF_NAT and CONFIG_IP6_NF_NAT
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 06 Oct 2014 19:39:03 +0200
+
+linux-siduction (3.17-1) unstable; urgency=medium
+
+  * set ABI to 0.towo
+  * linux 3.17.0
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 05 Oct 2014 22:07:45 +0200
+
+linux-siduction (3.16-9) unstable; urgency=medium
 
   * set ABI to 4.towo
   * sync with debian/svn
