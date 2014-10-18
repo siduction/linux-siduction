@@ -1,3 +1,17 @@
+linux-siduction (3.17-7) unstable; urgency=medium
+
+  * set ABI to 1.towo.2
+  * add bugfix/3.17_btrts_fix.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 18 Oct 2014 18:18:07 +0200
+
+linux-siduction (3.17-6) unstable; urgency=medium
+
+  * set ABI to 1.towo
+  * import patch-3.17.1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 15 Oct 2014 15:37:42 +0200
+
 linux-siduction (3.17-5) unstable; urgency=medium
 
   * set ABI to 0.towo.4
