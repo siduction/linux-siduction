@@ -1,5 +1,6 @@
 # upstream updates
 upstream/patch-3.17.1
+upstream/patch-3.17.2-rc1
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
@@ -20,7 +21,6 @@ bugfix/0001-saa7146-Create-a-device-name-before-it-s-used.patch
 bugfix/builddeb-put-the-dbg-files-into-the-correct-director.patch
 bugfix/aic94xx-remove-broken-fallback-for-missing-ctrl-a.patch
 bugfix/x86-reject-x32-executables-if-x32-abi-not-supported.patch
-bugfix/3.17_btrts_fix.patch
 
 # debian specific patches.
 debian/version.patch
