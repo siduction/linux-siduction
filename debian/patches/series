@@ -1,5 +1,5 @@
 # upstream updates
-upstream/patch-3.17.4
+upstream/patch-3.17.5
 #upstream/patch-3.17.4-rc1
 upstream/revert-extraversion.diff
 
@@ -18,7 +18,7 @@ bugfix/misc-bmp085-Enable-building-as-a-module.patch
 bugfix/kbuild-use-nostdinc-in-compile-tests.patch
 bugfix/disable-some-marvell-phys.patch
 bugfix/0001-saa7146-Create-a-device-name-before-it-s-used.patch
-bugfix/builddeb-put-the-dbg-files-into-the-correct-director.patch
+#bugfix/builddeb-put-the-dbg-files-into-the-correct-director.patch
 bugfix/aic94xx-remove-broken-fallback-for-missing-ctrl-a.patch
 bugfix/fix_vgaarb.patch
 
