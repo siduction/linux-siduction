@@ -1,6 +1,4 @@
 # upstream updates
-upstream/patch-3.17.5
-#upstream/patch-3.17.4-rc1
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
@@ -12,15 +10,12 @@ dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
 # bugfixes
 bugfix/firmware_class-return-specific-errors-from-file-read.patch
 bugfix/firmware_class-log-every-success-and-failure.patch
-bugfix/firmware-remove-redundant-log-messages-from-drivers.patch
-bugfix/radeon-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
+#bugfix/firmware-remove-redundant-log-messages-from-drivers.patch
+#bugfix/radeon-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
 bugfix/misc-bmp085-Enable-building-as-a-module.patch
 bugfix/kbuild-use-nostdinc-in-compile-tests.patch
 bugfix/disable-some-marvell-phys.patch
-bugfix/0001-saa7146-Create-a-device-name-before-it-s-used.patch
-#bugfix/builddeb-put-the-dbg-files-into-the-correct-director.patch
 bugfix/aic94xx-remove-broken-fallback-for-missing-ctrl-a.patch
-bugfix/fix_vgaarb.patch
 
 # debian specific patches.
 debian/version.patch
@@ -35,7 +30,7 @@ features/kvm_intel_enabled-nested-on-default.patch
 #features/x86-memtest-WARN-if-bad-RAM-found.patch
 features/efi-autoload-efivars.patch
 features/x86-memtest-WARN-if-bad-RAM-found.patch
-features/x86-make-x32-syscall-support-conditional.patch
+#features/x86-make-x32-syscall-support-conditional.patch
 
 #features/bfq/0001-block-cgroups-kconfig-build-bits-for-BFQ-v7r2-3.13.patch
 #features/bfq/0002-block-introduce-the-BFQ-v7r2-I-O-sched-for-3.13.patch
@@ -50,6 +45,8 @@ features/aufs/aufs3-source.patch
 features/aufs/aufs3-loopback.patch
 features/aufs/aufs3-mmap.patch
 features/aufs/aufs3-kbuild.patch
+features/aufs/tmpfs-idr.patch
+features/aufs/vfs-ino.patch
 
 features/acerhk/0001-acerhk-import-acerhk-0.5.35.patch
 features/acerhk/0002-acerhk-add-support-for-Acer-Aspire-5102WLMi.patch

@@ -21,10 +21,10 @@ index df21e66..c8df03d 100644
  /**
   *	touch_atime	-	update the access time
 diff --git a/fs/namespace.c b/fs/namespace.c
-index a01c773..3ac4837 100644
+index fbba8b1..4b265ae 100644
 --- a/fs/namespace.c
 +++ b/fs/namespace.c
-@@ -452,6 +452,7 @@ void __mnt_drop_write(struct vfsmount *mnt)
+@@ -454,6 +454,7 @@ void __mnt_drop_write(struct vfsmount *mnt)
  	mnt_dec_writers(real_mount(mnt));
  	preempt_enable();
  }
@@ -32,7 +32,7 @@ index a01c773..3ac4837 100644
  
  /**
   * mnt_drop_write - give up write access to a mount
-@@ -1576,6 +1577,7 @@ int iterate_mounts(int (*f)(struct vfsmount *, void *), void *arg,
+@@ -1700,6 +1701,7 @@ int iterate_mounts(int (*f)(struct vfsmount *, void *), void *arg,
  	}
  	return 0;
  }
@@ -41,7 +41,7 @@ index a01c773..3ac4837 100644
  static void cleanup_group_ids(struct mount *mnt, struct mount *end)
  {
 diff --git a/fs/notify/group.c b/fs/notify/group.c
-index ad19959..adf290d 100644
+index d16b62c..06ca6bc 100644
 --- a/fs/notify/group.c
 +++ b/fs/notify/group.c
 @@ -22,6 +22,7 @@
@@ -189,7 +189,7 @@ index 188c1d2..426d9af 100644
  int devcgroup_inode_mknod(int mode, dev_t dev)
  {
 diff --git a/security/security.c b/security/security.c
-index e41b1a8..37cc870 100644
+index 18b35c6..12c67af 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -407,6 +407,7 @@ int security_path_rmdir(struct path *dir, struct dentry *dentry)
