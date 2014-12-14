@@ -1,3 +1,10 @@
+linux-siduction (3.18-2) unstable; urgency=medium
+
+  * set abi to 0.towo.2
+  * add rtl8192ce.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 14 Dec 2014 12:36:01 +0100
+
 linux-siduction (3.18-1) unstable; urgency=medium
 
   * set ABI to 0.towo
