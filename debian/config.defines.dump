@@ -213,11 +213,11 @@ tp116
 (dp117
 S'abiname'
 p118
-S'3.18-0.towo.3'
+S'3.18-1.towo'
 p119
 sS'source'
 p120
-V3.18-4
+V3.18-5
 p121
 sS'upstream'
 p122
@@ -256,7 +256,7 @@ tp140
 (dp141
 S'abiname'
 p142
-S'0.towo.3'
+S'1.towo'
 p143
 ss(S'image'
 p144
