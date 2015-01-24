@@ -1,5 +1,6 @@
 # upstream updates
 upstream/patch-3.18.3
+upstream/3.18.4-review.patch
 upstream/revert-extraversion.diff
 
 # dfsg-ify the binaries
@@ -17,6 +18,7 @@ bugfix/misc-bmp085-Enable-building-as-a-module.patch
 bugfix/kbuild-use-nostdinc-in-compile-tests.patch
 bugfix/disable-some-marvell-phys.patch
 bugfix/aic94xx-remove-broken-fallback-for-missing-ctrl-a.patch
+bugfix/overlayfs_inotify.patch
 
 # debian specific patches.
 debian/version.patch

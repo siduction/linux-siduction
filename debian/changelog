@@ -1,3 +1,11 @@
+linux-siduction (3.18-10) unstable; urgency=medium
+
+  * set ABI to 3.towo.2
+  * add overlayfs_inotify.patch
+  * add 3.18.4-review.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 24 Jan 2015 14:26:23 +0100
+
 linux-siduction (3.18-9) unstable; urgency=medium
 
   * set ABI to 3.towo
