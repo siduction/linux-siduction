@@ -1,6 +1,14 @@
-linux-siduction (3.18-10) unstable; urgency=medium
+linux-siduction (3.18-11) unstable; urgency=medium
 
   * set ABI to 3.towo.2
+  * import patch-3.18.4-rc1
+  * remove 3.18.4-review.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 25 Jan 2015 19:54:56 +0100
+
+linux-siduction (3.18-10) unstable; urgency=medium
+
+  * set ABI to 3.towo.1
   * add overlayfs_inotify.patch
   * add 3.18.4-review.patch
 
