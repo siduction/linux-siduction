@@ -1,8 +1,9 @@
-linux-siduction (3.18-16) UNRELEASED; urgency=medium
+linux-siduction (3.18-17) unstable; urgency=medium
 
-  * 
+  * set Abi to 5.towo.3
+  * reenable 32bit emulation, sorry for the noise 
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sat, 31 Jan 2015 16:39:25 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 31 Jan 2015 23:12:36 +0100
 
 linux-siduction (3.18-15) unstable; urgency=medium
 
