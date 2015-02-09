@@ -1,3 +1,10 @@
+linux-siduction (3.19-1) unstable; urgency=medium
+
+  * set ABI to 0.towo
+  * linux 3.19.0
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 09 Feb 2015 07:29:51 +0100
+
 linux-siduction (3.18-18) unstable; urgency=medium
 
   * set ABi to 6.towo
