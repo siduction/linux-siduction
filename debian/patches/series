@@ -17,6 +17,7 @@ bugfix/kbuild-use-nostdinc-in-compile-tests.patch
 bugfix/disable-some-marvell-phys.patch
 bugfix/aic94xx-remove-broken-fallback-for-missing-ctrl-a.patch
 bugfix/overlayfs_inotify.patch
+bugfix/ext4-ignore-journal-checksum-on-remount-don-t-fail.patch
 
 # debian specific patches.
 debian/version.patch

@@ -1,3 +1,11 @@
+linux-siduction (3.19-4) unstable; urgency=medium
+
+  * config: CONFIG_DRM_LOAD_EDID_FIRMWARE=y, CONFIG_EFI_MIXED=y
+  * set ABI to 0.towo.2
+  * add bugfix/ext4-ignore-journal-checksum-on-remount-don-t-fail.patch from the stable-queue
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 25 Feb 2015 15:25:00 +0100
+
 linux-siduction (3.19-1) unstable; urgency=medium
 
   * set ABI to 0.towo
