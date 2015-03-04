@@ -1,4 +1,11 @@
-linux-siduction (3.19-4) unstable; urgency=medium
+linux-siduction (3.19-3) unstable; urgency=medium
+
+  * import patch-3.19.1-rc1
+  * set ABI to 0.towo.3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 04 Mar 2015 10:31:13 +0100
+
+linux-siduction (3.19-2) unstable; urgency=medium
 
   * config: CONFIG_DRM_LOAD_EDID_FIRMWARE=y, CONFIG_EFI_MIXED=y
   * set ABI to 0.towo.2
