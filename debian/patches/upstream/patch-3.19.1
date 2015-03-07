@@ -1,17 +1,15 @@
 diff --git a/Makefile b/Makefile
-index b15036b1890c..76d8a66bac1f 100644
+index b15036b1890c..688777b17869 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  VERSION = 3
  PATCHLEVEL = 19
 -SUBLEVEL = 0
--EXTRAVERSION =
 +SUBLEVEL = 1
-+EXTRAVERSION = -rc1
+ EXTRAVERSION =
  NAME = Diseased Newt
  
- # *DOCUMENTATION*
 diff --git a/arch/arc/include/asm/pgtable.h b/arch/arc/include/asm/pgtable.h
 index 6b0b7f7ef783..7670f33b9ce2 100644
 --- a/arch/arc/include/asm/pgtable.h
@@ -779,6 +777,144 @@ index e3b21e51ff7e..270bbd41769e 100644
  	return ret;
  }
  
+diff --git a/arch/powerpc/kvm/book3s_hv_rm_xics.c b/arch/powerpc/kvm/book3s_hv_rm_xics.c
+index 7b066f6b02ad..7c22997de906 100644
+--- a/arch/powerpc/kvm/book3s_hv_rm_xics.c
++++ b/arch/powerpc/kvm/book3s_hv_rm_xics.c
+@@ -152,7 +152,7 @@ static void icp_rm_down_cppr(struct kvmppc_xics *xics, struct kvmppc_icp *icp,
+ 	 * in virtual mode.
+ 	 */
+ 	do {
+-		old_state = new_state = ACCESS_ONCE(icp->state);
++		old_state = new_state = READ_ONCE(icp->state);
+ 
+ 		/* Down_CPPR */
+ 		new_state.cppr = new_cppr;
+@@ -211,7 +211,7 @@ unsigned long kvmppc_rm_h_xirr(struct kvm_vcpu *vcpu)
+ 	 * pending priority
+ 	 */
+ 	do {
+-		old_state = new_state = ACCESS_ONCE(icp->state);
++		old_state = new_state = READ_ONCE(icp->state);
+ 
+ 		xirr = old_state.xisr | (((u32)old_state.cppr) << 24);
+ 		if (!old_state.xisr)
+@@ -277,7 +277,7 @@ int kvmppc_rm_h_ipi(struct kvm_vcpu *vcpu, unsigned long server,
+ 	 * whenever the MFRR is made less favored.
+ 	 */
+ 	do {
+-		old_state = new_state = ACCESS_ONCE(icp->state);
++		old_state = new_state = READ_ONCE(icp->state);
+ 
+ 		/* Set_MFRR */
+ 		new_state.mfrr = mfrr;
+@@ -352,7 +352,7 @@ int kvmppc_rm_h_cppr(struct kvm_vcpu *vcpu, unsigned long cppr)
+ 	icp_rm_clr_vcpu_irq(icp->vcpu);
+ 
+ 	do {
+-		old_state = new_state = ACCESS_ONCE(icp->state);
++		old_state = new_state = READ_ONCE(icp->state);
+ 
+ 		reject = 0;
+ 		new_state.cppr = cppr;
+diff --git a/arch/powerpc/kvm/book3s_xics.c b/arch/powerpc/kvm/book3s_xics.c
+index 807351f76f84..a4a8d9f0dcb7 100644
+--- a/arch/powerpc/kvm/book3s_xics.c
++++ b/arch/powerpc/kvm/book3s_xics.c
+@@ -327,7 +327,7 @@ static bool icp_try_to_deliver(struct kvmppc_icp *icp, u32 irq, u8 priority,
+ 		 icp->server_num);
+ 
+ 	do {
+-		old_state = new_state = ACCESS_ONCE(icp->state);
++		old_state = new_state = READ_ONCE(icp->state);
+ 
+ 		*reject = 0;
+ 
+@@ -512,7 +512,7 @@ static void icp_down_cppr(struct kvmppc_xics *xics, struct kvmppc_icp *icp,
+ 	 * in virtual mode.
+ 	 */
+ 	do {
+-		old_state = new_state = ACCESS_ONCE(icp->state);
++		old_state = new_state = READ_ONCE(icp->state);
+ 
+ 		/* Down_CPPR */
+ 		new_state.cppr = new_cppr;
+@@ -567,7 +567,7 @@ static noinline unsigned long kvmppc_h_xirr(struct kvm_vcpu *vcpu)
+ 	 * pending priority
+ 	 */
+ 	do {
+-		old_state = new_state = ACCESS_ONCE(icp->state);
++		old_state = new_state = READ_ONCE(icp->state);
+ 
+ 		xirr = old_state.xisr | (((u32)old_state.cppr) << 24);
+ 		if (!old_state.xisr)
+@@ -634,7 +634,7 @@ static noinline int kvmppc_h_ipi(struct kvm_vcpu *vcpu, unsigned long server,
+ 	 * whenever the MFRR is made less favored.
+ 	 */
+ 	do {
+-		old_state = new_state = ACCESS_ONCE(icp->state);
++		old_state = new_state = READ_ONCE(icp->state);
+ 
+ 		/* Set_MFRR */
+ 		new_state.mfrr = mfrr;
+@@ -679,7 +679,7 @@ static int kvmppc_h_ipoll(struct kvm_vcpu *vcpu, unsigned long server)
+ 		if (!icp)
+ 			return H_PARAMETER;
+ 	}
+-	state = ACCESS_ONCE(icp->state);
++	state = READ_ONCE(icp->state);
+ 	kvmppc_set_gpr(vcpu, 4, ((u32)state.cppr << 24) | state.xisr);
+ 	kvmppc_set_gpr(vcpu, 5, state.mfrr);
+ 	return H_SUCCESS;
+@@ -721,7 +721,7 @@ static noinline void kvmppc_h_cppr(struct kvm_vcpu *vcpu, unsigned long cppr)
+ 				      BOOK3S_INTERRUPT_EXTERNAL_LEVEL);
+ 
+ 	do {
+-		old_state = new_state = ACCESS_ONCE(icp->state);
++		old_state = new_state = READ_ONCE(icp->state);
+ 
+ 		reject = 0;
+ 		new_state.cppr = cppr;
+@@ -885,7 +885,7 @@ static int xics_debug_show(struct seq_file *m, void *private)
+ 		if (!icp)
+ 			continue;
+ 
+-		state.raw = ACCESS_ONCE(icp->state.raw);
++		state.raw = READ_ONCE(icp->state.raw);
+ 		seq_printf(m, "cpu server %#lx XIRR:%#x PPRI:%#x CPPR:%#x MFRR:%#x OUT:%d NR:%d\n",
+ 			   icp->server_num, state.xisr,
+ 			   state.pending_pri, state.cppr, state.mfrr,
+@@ -1082,7 +1082,7 @@ int kvmppc_xics_set_icp(struct kvm_vcpu *vcpu, u64 icpval)
+ 	 * the ICS states before the ICP states.
+ 	 */
+ 	do {
+-		old_state = ACCESS_ONCE(icp->state);
++		old_state = READ_ONCE(icp->state);
+ 
+ 		if (new_state.mfrr <= old_state.mfrr) {
+ 			resend = false;
+diff --git a/arch/powerpc/mm/hugetlbpage.c b/arch/powerpc/mm/hugetlbpage.c
+index 5ff4e07d920a..620d0ec93e6f 100644
+--- a/arch/powerpc/mm/hugetlbpage.c
++++ b/arch/powerpc/mm/hugetlbpage.c
+@@ -978,7 +978,7 @@ pte_t *find_linux_pte_or_hugepte(pgd_t *pgdir, unsigned long ea, unsigned *shift
+ 		 */
+ 		pdshift = PUD_SHIFT;
+ 		pudp = pud_offset(&pgd, ea);
+-		pud  = ACCESS_ONCE(*pudp);
++		pud  = READ_ONCE(*pudp);
+ 
+ 		if (pud_none(pud))
+ 			return NULL;
+@@ -990,7 +990,7 @@ pte_t *find_linux_pte_or_hugepte(pgd_t *pgdir, unsigned long ea, unsigned *shift
+ 		else {
+ 			pdshift = PMD_SHIFT;
+ 			pmdp = pmd_offset(&pud, ea);
+-			pmd  = ACCESS_ONCE(*pmdp);
++			pmd  = READ_ONCE(*pmdp);
+ 			/*
+ 			 * A hugepage collapse is captured by pmd_none, because
+ 			 * it mark the pmd none and do a hpte invalidate.
 diff --git a/arch/powerpc/sysdev/axonram.c b/arch/powerpc/sysdev/axonram.c
 index f532c92bf99d..367533bb3d48 100644
 --- a/arch/powerpc/sysdev/axonram.c
@@ -869,6 +1005,19 @@ index 3e09801e3104..9af01dc966d0 100644
  	vcpu->arch.ckc_timer.function = kvm_s390_idle_wakeup;
  	get_cpu_id(&vcpu->arch.cpu_id);
  	vcpu->arch.cpu_id.version = 0xff;
+diff --git a/arch/sh/mm/gup.c b/arch/sh/mm/gup.c
+index 37458f38b220..e113bb429e8e 100644
+--- a/arch/sh/mm/gup.c
++++ b/arch/sh/mm/gup.c
+@@ -17,7 +17,7 @@
+ static inline pte_t gup_get_pte(pte_t *ptep)
+ {
+ #ifndef CONFIG_X2TLB
+-	return ACCESS_ONCE(*ptep);
++	return READ_ONCE(*ptep);
+ #else
+ 	/*
+ 	 * With get_user_pages_fast, we walk down the pagetables without
 diff --git a/arch/x86/boot/compressed/Makefile b/arch/x86/boot/compressed/Makefile
 index ad754b4411f7..8bd44e8ee6e2 100644
 --- a/arch/x86/boot/compressed/Makefile
@@ -5383,6 +5532,21 @@ index 31a11b0e885d..368d9395d2e7 100644
  }
  EXPORT_SYMBOL_GPL(nfs_sb_active);
  
+diff --git a/fs/ocfs2/quota_local.c b/fs/ocfs2/quota_local.c
+index 10b653930ee2..465223b7592e 100644
+--- a/fs/ocfs2/quota_local.c
++++ b/fs/ocfs2/quota_local.c
+@@ -701,8 +701,8 @@ static int ocfs2_local_read_info(struct super_block *sb, int type)
+ 	/* We don't need the lock and we have to acquire quota file locks
+ 	 * which will later depend on this lock */
+ 	mutex_unlock(&sb_dqopt(sb)->dqio_mutex);
+-	info->dqi_maxblimit = 0x7fffffffffffffffLL;
+-	info->dqi_maxilimit = 0x7fffffffffffffffLL;
++	info->dqi_max_spc_limit = 0x7fffffffffffffffLL;
++	info->dqi_max_ino_limit = 0x7fffffffffffffffLL;
+ 	oinfo = kmalloc(sizeof(struct ocfs2_mem_dqinfo), GFP_NOFS);
+ 	if (!oinfo) {
+ 		mlog(ML_ERROR, "failed to allocate memory for ocfs2 quota"
 diff --git a/fs/proc/task_mmu.c b/fs/proc/task_mmu.c
 index 246eae84b13b..88f9b8352742 100644
 --- a/fs/proc/task_mmu.c
@@ -5420,6 +5584,82 @@ index 246eae84b13b..88f9b8352742 100644
  
  		if (addr == end)
  			break;
+diff --git a/fs/quota/dquot.c b/fs/quota/dquot.c
+index 69df5b239844..ca035a2fce81 100644
+--- a/fs/quota/dquot.c
++++ b/fs/quota/dquot.c
+@@ -2385,16 +2385,6 @@ out:
+ }
+ EXPORT_SYMBOL(dquot_quota_on_mount);
+ 
+-static inline qsize_t qbtos(qsize_t blocks)
+-{
+-	return blocks << QIF_DQBLKSIZE_BITS;
+-}
+-
+-static inline qsize_t stoqb(qsize_t space)
+-{
+-	return (space + QIF_DQBLKSIZE - 1) >> QIF_DQBLKSIZE_BITS;
+-}
+-
+ /* Generic routine for getting common part of quota structure */
+ static void do_get_dqblk(struct dquot *dquot, struct qc_dqblk *di)
+ {
+@@ -2444,13 +2434,13 @@ static int do_set_dqblk(struct dquot *dquot, struct qc_dqblk *di)
+ 		return -EINVAL;
+ 
+ 	if (((di->d_fieldmask & QC_SPC_SOFT) &&
+-	     stoqb(di->d_spc_softlimit) > dqi->dqi_maxblimit) ||
++	     di->d_spc_softlimit > dqi->dqi_max_spc_limit) ||
+ 	    ((di->d_fieldmask & QC_SPC_HARD) &&
+-	     stoqb(di->d_spc_hardlimit) > dqi->dqi_maxblimit) ||
++	     di->d_spc_hardlimit > dqi->dqi_max_spc_limit) ||
+ 	    ((di->d_fieldmask & QC_INO_SOFT) &&
+-	     (di->d_ino_softlimit > dqi->dqi_maxilimit)) ||
++	     (di->d_ino_softlimit > dqi->dqi_max_ino_limit)) ||
+ 	    ((di->d_fieldmask & QC_INO_HARD) &&
+-	     (di->d_ino_hardlimit > dqi->dqi_maxilimit)))
++	     (di->d_ino_hardlimit > dqi->dqi_max_ino_limit)))
+ 		return -ERANGE;
+ 
+ 	spin_lock(&dq_data_lock);
+diff --git a/fs/quota/quota_v1.c b/fs/quota/quota_v1.c
+index 469c6848b322..8fe79beced5c 100644
+--- a/fs/quota/quota_v1.c
++++ b/fs/quota/quota_v1.c
+@@ -169,8 +169,8 @@ static int v1_read_file_info(struct super_block *sb, int type)
+ 	}
+ 	ret = 0;
+ 	/* limits are stored as unsigned 32-bit data */
+-	dqopt->info[type].dqi_maxblimit = 0xffffffff;
+-	dqopt->info[type].dqi_maxilimit = 0xffffffff;
++	dqopt->info[type].dqi_max_spc_limit = 0xffffffffULL << QUOTABLOCK_BITS;
++	dqopt->info[type].dqi_max_ino_limit = 0xffffffff;
+ 	dqopt->info[type].dqi_igrace =
+ 			dqblk.dqb_itime ? dqblk.dqb_itime : MAX_IQ_TIME;
+ 	dqopt->info[type].dqi_bgrace =
+diff --git a/fs/quota/quota_v2.c b/fs/quota/quota_v2.c
+index 02751ec695c5..d1a8054bba9a 100644
+--- a/fs/quota/quota_v2.c
++++ b/fs/quota/quota_v2.c
+@@ -117,12 +117,12 @@ static int v2_read_file_info(struct super_block *sb, int type)
+ 	qinfo = info->dqi_priv;
+ 	if (version == 0) {
+ 		/* limits are stored as unsigned 32-bit data */
+-		info->dqi_maxblimit = 0xffffffff;
+-		info->dqi_maxilimit = 0xffffffff;
++		info->dqi_max_spc_limit = 0xffffffffULL << QUOTABLOCK_BITS;
++		info->dqi_max_ino_limit = 0xffffffff;
+ 	} else {
+-		/* used space is stored as unsigned 64-bit value */
+-		info->dqi_maxblimit = 0xffffffffffffffffULL;	/* 2^64-1 */
+-		info->dqi_maxilimit = 0xffffffffffffffffULL;
++		/* used space is stored as unsigned 64-bit value in bytes */
++		info->dqi_max_spc_limit = 0xffffffffffffffffULL; /* 2^64-1 */
++		info->dqi_max_ino_limit = 0xffffffffffffffffULL;
+ 	}
+ 	info->dqi_bgrace = le32_to_cpu(dinfo.dqi_bgrace);
+ 	info->dqi_igrace = le32_to_cpu(dinfo.dqi_igrace);
 diff --git a/fs/udf/inode.c b/fs/udf/inode.c
 index 5bc71d9a674a..7b72b7dd8906 100644
 --- a/fs/udf/inode.c
@@ -5718,6 +5958,21 @@ index 467c84efb596..06ebfa1f874b 100644
  	struct nfs_mds_commit_info	*mds;
  	struct pnfs_ds_commit_info	*ds;
  	struct nfs_direct_req		*dreq;	/* O_DIRECT request */
+diff --git a/include/linux/quota.h b/include/linux/quota.h
+index 097d7eb2441e..b86df497aba3 100644
+--- a/include/linux/quota.h
++++ b/include/linux/quota.h
+@@ -216,8 +216,8 @@ struct mem_dqinfo {
+ 	unsigned long dqi_flags;
+ 	unsigned int dqi_bgrace;
+ 	unsigned int dqi_igrace;
+-	qsize_t dqi_maxblimit;
+-	qsize_t dqi_maxilimit;
++	qsize_t dqi_max_spc_limit;
++	qsize_t dqi_max_ino_limit;
+ 	void *dqi_priv;
+ };
+ 
 diff --git a/include/linux/sunrpc/clnt.h b/include/linux/sunrpc/clnt.h
 index d86acc63b25f..598ba80ec30c 100644
 --- a/include/linux/sunrpc/clnt.h
@@ -6133,6 +6388,19 @@ index 4a9079b9f082..361a827b4962 100644
  		kunmap_atomic(map_page[i]);
  		put_page(pages[i]);
  	}
+diff --git a/mm/gup.c b/mm/gup.c
+index 8dd50ce6326f..9b2afbfe67e3 100644
+--- a/mm/gup.c
++++ b/mm/gup.c
+@@ -926,7 +926,7 @@ static int gup_pmd_range(pud_t pud, unsigned long addr, unsigned long end,
+ 
+ 	pmdp = pmd_offset(&pud, addr);
+ 	do {
+-		pmd_t pmd = ACCESS_ONCE(*pmdp);
++		pmd_t pmd = READ_ONCE(*pmdp);
+ 
+ 		next = pmd_addr_end(addr, end);
+ 		if (pmd_none(pmd) || pmd_trans_splitting(pmd))
 diff --git a/mm/hugetlb.c b/mm/hugetlb.c
 index 85032de5e20f..c49586f40758 100644
 --- a/mm/hugetlb.c
