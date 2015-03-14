@@ -1,7 +1,14 @@
+linux-siduction (3.19-5) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patches from the stable queue as patch-3.19.2-rc0
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 14 Mar 2015 22:01:00 +0100
+
 linux-siduction (3.19-4) unstable; urgency=medium
 
   * import patch-3.19.1
-  * set ABI to towo.3
+  * set ABI to towo.1
 
  -- Torsten Wohlfarth <towo@siduction.org>  Sat, 07 Mar 2015 17:48:30 +0100
 
