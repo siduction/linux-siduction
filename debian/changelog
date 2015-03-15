@@ -1,3 +1,10 @@
+linux-siduction (3.19-6) unstable; urgency=medium
+
+  * set ABI to towo.3
+  * add xt_recent_fix.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 15 Mar 2015 13:38:47 +0100
+
 linux-siduction (3.19-5) unstable; urgency=medium
 
   * set ABI to towo.2

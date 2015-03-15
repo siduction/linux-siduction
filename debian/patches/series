@@ -50,3 +50,4 @@ features/defaults-fat-utf8.patch
 #features/aufs/aufs3-kbuild.patch
 #features/aufs/tmpfs-idr.patch
 #features/aufs/vfs-ino.patch
+bugfix/xt_recent_fix.patch
