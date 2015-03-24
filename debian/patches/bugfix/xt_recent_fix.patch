@@ -1,0 +1,11 @@
+--- linux-siduction-3.19.orig/net/netfilter/xt_recent.c
++++ linux-siduction-3.19/net/netfilter/xt_recent.c
+@@ -378,7 +378,7 @@ static int recent_mt_check(const struct
+ 	mutex_lock(&recent_mutex);
+ 	t = recent_table_lookup(recent_net, info->name);
+ 	if (t != NULL) {
+-		if (info->hit_count > t->nstamps_max_mask) {
++		if (info->hit_count > t->nstamps_max_mask+1) {
+ 			pr_info("hitcount (%u) is larger than packets to be remembered (%u) for table %s\n",
+ 				info->hit_count, t->nstamps_max_mask + 1,
+ 				info->name);
