@@ -1,5 +1,31 @@
---- a/drivers/gpu/drm/radeon/radeon_drv.c
-+++ b/drivers/gpu/drm/radeon/radeon_drv.c
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ linux-siduction (4.0-1) unstable; urgency=medium
+ .
+   * set ABI to towo.1
+   * linux 4.0.0
+Author: Torsten Wohlfarth <towo@siduction.org>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- linux-siduction-4.0.orig/drivers/gpu/drm/radeon/radeon_drv.c
++++ linux-siduction-4.0/drivers/gpu/drm/radeon/radeon_drv.c
 @@ -32,6 +32,8 @@
  #include <drm/drmP.h>
  #include <drm/radeon_drm.h>
@@ -9,7 +35,7 @@
  
  #include <drm/drm_pciids.h>
  #include <linux/console.h>
-@@ -361,6 +363,36 @@
+@@ -364,6 +366,36 @@ static struct drm_driver driver_old = {
  #endif
  
  static struct drm_driver kms_driver;
@@ -20,50 +46,42 @@
 + */
 +static bool radeon_firmware_installed(void)
 +{
-+<----->struct path path;
++	struct path path;
 +
-+<----->if (kern_path("/lib/firmware/radeon", LOOKUP_DIRECTORY | LOOKUP_FOLLOW,
-+<-----><------>      &path) == 0) {
-+<-----><------>path_put(&path);
-+<-----><------>return true;
-+<----->}
++	if (kern_path("/lib/firmware/radeon", LOOKUP_DIRECTORY | LOOKUP_FOLLOW,
++		      &path) == 0) {
++		path_put(&path);
++		return true;
++	}
 +
-+<----->return false;
++	return false;
 +}
 +
 +#ifdef CONFIG_DRM_RADEON_UMS
 +static int
 +radeon_ums_pci_probe(struct pci_dev *pdev, const struct pci_device_id *ent)
 +{
-+<----->if (!radeon_firmware_installed()) {
-+<-----><------>DRM_ERROR("radeon DRM requires firmware-linux-nonfree.\n");
-+<-----><------>return -ENODEV;
-+<----->}
++	if (!radeon_firmware_installed()) {
++		DRM_ERROR("radeon DRM requires firmware-linux-nonfree.\n");
++		return -ENODEV;
++	}
 +
-+<----->return 0;
++	return 0;
 +}
 +#endif
  
  static int radeon_kick_out_firmware_fb(struct pci_dev *pdev)
  {
-@@ -388,6 +420,12 @@
+@@ -391,6 +423,12 @@ static int radeon_pci_probe(struct pci_d
  {
  	int ret;
  
-+<----->if ((ent->driver_data & RADEON_FAMILY_MASK) >= CHIP_R600 &&
-+<----->    !radeon_firmware_installed()) {
-+<-----><------>DRM_ERROR("radeon kernel modesetting for R600 or later requires firmware-linux-nonfree.\n");
-+<-----><------>return -ENODEV;
-+<----->}
++	if ((ent->driver_data & RADEON_FAMILY_MASK) >= CHIP_R600 &&
++	    !radeon_firmware_installed()) {
++		DRM_ERROR("radeon kernel modesetting for R600 or later requires firmware-linux-nonfree.\n");
++		return -ENODEV;
++	}
 +
  	/* Get rid of things like offb */
  	ret = radeon_kick_out_firmware_fb(pdev);
  	if (ret)
-@@ -610,6 +648,7 @@
- static struct pci_driver radeon_pci_driver = {
- 	.name = DRIVER_NAME,
- 	.id_table = pciidlist,
-+        .probe = radeon_ums_pci_probe,
- };
- #endif
- 
