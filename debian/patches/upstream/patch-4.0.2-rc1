@@ -8227,19 +8227,6 @@ index 142f66aece18..0ca013d66492 100644
  					 ssid + 2, ssid_len, NULL,
  					 0, (u32) -1, true, 0,
  					 ifmgd->associated->channel, false);
-diff --git a/net/netfilter/xt_cgroup.c b/net/netfilter/xt_cgroup.c
-index 7198d660b4de..a1d126f29463 100644
---- a/net/netfilter/xt_cgroup.c
-+++ b/net/netfilter/xt_cgroup.c
-@@ -39,7 +39,7 @@ cgroup_mt(const struct sk_buff *skb, struct xt_action_param *par)
- {
- 	const struct xt_cgroup_info *info = par->matchinfo;
- 
--	if (skb->sk == NULL)
-+	if (skb->sk == NULL || !sk_fullsock(skb->sk))
- 		return false;
- 
- 	return (info->id == skb->sk->sk_classid) ^ info->invert;
 diff --git a/net/netlink/af_netlink.c b/net/netlink/af_netlink.c
 index 05919bf3f670..d1d7a8166f46 100644
 --- a/net/netlink/af_netlink.c
