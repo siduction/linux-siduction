@@ -230,11 +230,11 @@ tp124
 (dp125
 S'abiname'
 p126
-S'4.0.2-towo.2'
+S'4.0.3-towo.1'
 p127
 sS'source'
 p128
-V4.0-6
+V4.0-7
 p129
 sS'upstream'
 p130
@@ -267,7 +267,7 @@ tp145
 (dp146
 S'abiname'
 p147
-S'towo.2'
+S'towo.1'
 p148
 ss(S'image'
 p149
