@@ -183,11 +183,11 @@ tp98
 (dp99
 S'abiname'
 p100
-S'4.0.4-towo.2'
+S'4.0.5-towo.1'
 p101
 sS'source'
 p102
-V4.0-10
+V4.0-11
 p103
 sS'upstream'
 p104
@@ -229,7 +229,7 @@ tp124
 (dp125
 S'abiname'
 p126
-S'towo.2'
+S'towo.1'
 p127
 ss(S'image'
 p128
