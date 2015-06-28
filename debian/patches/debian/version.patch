@@ -114,9 +114,9 @@ are set.
 --- a/kernel/printk/printk.c
 +++ b/kernel/printk/printk.c
 @@ -46,6 +46,7 @@
- #include <linux/irq_work.h>
  #include <linux/utsname.h>
  #include <linux/ctype.h>
+ #include <linux/uio.h>
 +#include <generated/package.h>
  
  #include <asm/uaccess.h>
