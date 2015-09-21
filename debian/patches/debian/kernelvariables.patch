@@ -57,7 +57,7 @@ use of $(ARCH) needs to be moved after this.
  KCONFIG_CONFIG	?= .config
  export KCONFIG_CONFIG
  
-@@ -378,6 +342,44 @@ CFLAGS_KERNEL	=
+@@ -366,6 +330,44 @@ CFLAGS_KERNEL	=
  AFLAGS_KERNEL	=
  CFLAGS_GCOV	= -fprofile-arcs -ftest-coverage
  
