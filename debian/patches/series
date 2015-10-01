@@ -2,8 +2,6 @@
 upstream/patch-4.2.2
 #upstream/patch-4.2.3-rc1
 
-upstream/fix_workqueue.c.patch
-
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
 

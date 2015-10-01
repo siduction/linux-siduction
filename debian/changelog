@@ -1,6 +1,7 @@
 linux-siduction (4.2-4) unstable; urgency=medium
 
   * import patch-4.2.2
+  * remove fix_workqueue.patch is upstream now
 
  -- Torsten Wohlfarth <towo@siduction.org>  Thu, 01 Oct 2015 11:53:04 +0200
 
