@@ -1,3 +1,9 @@
+linux-siduction (4.2-5) unstable; urgency=medium
+
+  * import patch-4.2.3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 04 Oct 2015 14:45:05 +0200
+
 linux-siduction (4.2-4) unstable; urgency=medium
 
   * import patch-4.2.2
