@@ -1,3 +1,11 @@
+linux-siduction (4.2-7) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * adding the missing scripts in debian
+ 
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 25 Oct 2015 10:28:09 +0100
+
 linux-siduction (4.2-6) unstable; urgency=medium
 
   * iport patch-4.2.4

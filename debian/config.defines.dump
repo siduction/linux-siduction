@@ -193,11 +193,11 @@ tp104
 (dp105
 S'abiname'
 p106
-S'4.2.4-towo.1'
+S'4.2.4-towo.2'
 p107
 sS'source'
 p108
-V4.2-6
+V4.2-7
 p109
 sS'upstream'
 p110
@@ -230,7 +230,7 @@ tp125
 (dp126
 S'abiname'
 p127
-S'towo.1'
+S'towo.2'
 p128
 ss(S'image'
 p129
