@@ -472,7 +472,7 @@ class Gencontrol(Base):
             self.abiname_part = '-%s' % self.config['abi', ]['abiname']
         # We need to keep at least three version components to avoid
         # userland breakage (e.g. #742226, #745984).
-        self.abiname_version = re.sub('^(\d+\.\d+)(?=-|$)', r'\1.5',
+        self.abiname_version = re.sub('^(\d+\.\d+)(?=-|$)', r'\1.0',
                                       self.version.linux_upstream)
         self.vars = {
             'upstreamversion': self.version.linux_upstream,
@@ -487,17 +487,6 @@ class Gencontrol(Base):
                                                 self.abiname_part)}
 
         distribution = self.changelog[0].distribution
-        if distribution in ('unstable', ):
-            if (version.linux_revision_experimental or
-                version.linux_revision_backports or
-                version.linux_revision_other):
-                raise RuntimeError("Can't upload to %s with a version of %s" % (distribution, version))
-        if distribution in ('experimental', ):
-            if not version.linux_revision_experimental:
-                raise RuntimeError("Can't upload to %s with a version of %s" % (distribution, version))
-        if distribution.endswith('-backports'):
-            if not version.linux_revision_backports:
-                raise RuntimeError("Can't upload to %s with a version of %s" % (distribution, version))
 
     def process_real_image(self, entry, fields, vars):
         entry = self.process_package(entry, vars)

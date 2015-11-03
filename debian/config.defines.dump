@@ -193,15 +193,15 @@ tp104
 (dp105
 S'abiname'
 p106
-S'4.2.5-towo.1'
+S'4.3.0-towo.1'
 p107
 sS'source'
 p108
-V4.2-8
+V4.3-0
 p109
 sS'upstream'
 p110
-S'4.2'
+S'4.3'
 p111
 ss(S'description'
 p112
@@ -375,14 +375,18 @@ S'initramfs-fallback'
 p207
 S'linux-initramfs-tool'
 p208
-sS'gcc-5'
+sS'gcc-4.9'
 p209
-S'gcc-5'
+S'gcc-4.9'
 p210
-sS'initramfs-tools'
+sS'gcc-5'
 p211
-S'initramfs-tools (>= 0.110~)'
+S'gcc-5'
 p212
-sstp213
-Rp214
+sS'initramfs-tools'
+p213
+S'initramfs-tools (>= 0.110~)'
+p214
+sstp215
+Rp216
 .
