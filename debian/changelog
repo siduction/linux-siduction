@@ -1,3 +1,11 @@
+linux-siduction (4.3-1) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * removed most of the patches from debian-upstream
+  * tunded some DRM config
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 06 Nov 2015 12:08:27 +0100
+
 linux-siduction (4.3-0) unstable; urgency=medium
 
   * linux 4.3 stable
