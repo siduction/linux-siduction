@@ -19,7 +19,7 @@ if ( ! $@ )
 
 $|=1;
 # Predefined values:
-my $version           = "4.3.1-towo.1-siduction-686-pae";
+my $version           = "4.3.2-towo.1-siduction-686-pae";
 my $link_in_boot      = "";
 my $kimage            = "vmlinuz";
 my $postrm_hook       = '';       #Normally we do not

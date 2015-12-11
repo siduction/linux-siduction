@@ -1,3 +1,14 @@
+linux-siduction (4.3-5) unstable; urgency=medium
+
+  * import patch-4.3.2
+    - X.509: Fix the time validation [ver #2]
+      This fixes CVE-2015-5327.  It affects kernels from 4.3-rc1 onwards.
+      Fix the X.509 time validation to use month number-1 when looking up the
+      number of days in that month.  Also put the month number validation before
+      doing the lookup so as not to risk overrunning the array.
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 11 Dec 2015 08:44:02 +0100
+
 linux-siduction (4.3-3) unstable; urgency=medium
 
   * set ABI to towo.1
