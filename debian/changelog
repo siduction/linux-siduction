@@ -1,3 +1,10 @@
+linux-siduction (4.3-6) unstable; urgency=medium
+
+  * import patch-4.3.3
+    - https://www.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.3.3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 15 Dec 2015 09:41:17 +0100
+
 linux-siduction (4.3-5) unstable; urgency=medium
 
   * import patch-4.3.2
