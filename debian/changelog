@@ -1,3 +1,9 @@
+linux-siduction (4.4-1) unstable; urgency=medium
+
+  * start linux-4.4 developement
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 11 Jan 2016 22:50:06 +0100
+
 linux-siduction (4.3-6) unstable; urgency=medium
 
   * import patch-4.3.3

@@ -93,8 +93,6 @@ pushd "${TMP_DIR}/linux-${VERSION}" >/dev/null 2>&1
 		drivers/net/appletalk/cops.h \
 		drivers/net/appletalk/cops_ffdrv.h \
 		drivers/net/appletalk/cops_ltdrv.h \
-		drivers/staging/ft1000/ft1000-pcmcia/boot.h \
-		drivers/staging/ft1000/ft1000-*/*.img \
 
 	echo "mark pruned modules as BROKEN"
 	patch -p1 < ${0%$(basename $0)}/../patches/dfsg/orig/disable-pruned-modules.patch
