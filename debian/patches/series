@@ -1,3 +1,5 @@
+upstream/patch-4.4.1
+
 # Changes to support package build system
 debian/version.patch
 debian/uname-version-timestamp.patch
@@ -49,4 +51,3 @@ bugfix/revert-xhci-don-t-finish-a-td-if-we-get-a-short-transfer.patch
 bugfix/net-mv643xx-disable-tso-by-default.patch
 bugfix/revert_mtrr.patch
 bugfix/ptrace-being-capable-wrt-a-process-requires-mapped-uids-gids.patch
-bugfix/KEYS-Fix-keyring-ref-leak-in-join_session_keyring.patch
