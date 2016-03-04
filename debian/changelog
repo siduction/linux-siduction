@@ -1,3 +1,10 @@
+linux-siduction (4.4-7) unstable; urgency=medium
+
+  * remove revert_mtrr.patch
+  * import patch-4.4.4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 04 Mar 2016 19:26:42 +0100
+
 linux-siduction (4.4-6) unstable; urgency=medium
 
   * import patch-4.4.3
