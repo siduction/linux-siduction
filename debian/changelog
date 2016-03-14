@@ -1,3 +1,17 @@
+linux-siduction (4.5-2) unstable; urgency=medium
+
+  * reupload to fix my wrong upload, no changes
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 14 Mar 2016 11:30:52 +0100
+
+linux-siduction (4.5-1) unstable; urgency=medium
+
+  * linux 4.5
+  * set ABI to towo.1
+  * sync patches with debian-git
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 14 Mar 2016 09:19:25 +0100
+
 linux-siduction (4.4-9) unstable; urgency=medium
 
   * import patch-4.4.5

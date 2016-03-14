@@ -100,7 +100,7 @@
  
 --- a/arch/powerpc/platforms/8xx/Kconfig
 +++ b/arch/powerpc/platforms/8xx/Kconfig
-@@ -155,16 +155,19 @@ config NO_UCODE_PATCH
+@@ -160,16 +160,19 @@ config NO_UCODE_PATCH
  
  config USB_SOF_UCODE_PATCH
  	bool "USB SOF patch"
@@ -122,17 +122,17 @@
  
 --- a/drivers/media/usb/dvb-usb/Kconfig
 +++ b/drivers/media/usb/dvb-usb/Kconfig
-@@ -234,6 +234,7 @@ config DVB_USB_OPERA1
+@@ -227,6 +227,7 @@ config DVB_USB_OPERA1
+ 
  config DVB_USB_AF9005
  	tristate "Afatech AF9005 DVB-T USB1.1 support"
- 	depends on DVB_USB
 +	depends on BROKEN
+ 	depends on DVB_USB
  	select MEDIA_TUNER_MT2060 if MEDIA_SUBDRV_AUTOSELECT
  	select MEDIA_TUNER_QT1010 if MEDIA_SUBDRV_AUTOSELECT
- 	help
---- a/drivers/net/appletalk/Kconfig
-+++ b/drivers/net/appletalk/Kconfig
-@@ -49,32 +49,6 @@ config LTPC
+--- a/drivers/net/appletalk/Kconfig	2006-11-29 21:57:37.000000000 +0000
++++ b/drivers/net/appletalk/Kconfig	2007-01-05 15:34:44.000000000 +0000
+@@ -49,32 +49,6 @@
  	  This driver is experimental, which means that it may not work.
  	  See the file <file:Documentation/networking/ltpc.txt>.
  
@@ -165,8 +165,8 @@
  config IPDDP
  	tristate "Appletalk-IP driver support"
  	depends on DEV_APPLETALK && ATALK
---- a/drivers/net/appletalk/Makefile
-+++ b/drivers/net/appletalk/Makefile
+--- a/drivers/net/appletalk/Makefile	2006-11-29 21:57:37.000000000 +0000
++++ b/drivers/net/appletalk/Makefile	2007-01-05 15:34:11.000000000 +0000
 @@ -3,5 +3,4 @@
  #
  
@@ -175,25 +175,17 @@
  obj-$(CONFIG_LTPC) += ltpc.o
 --- a/drivers/media/i2c/Kconfig
 +++ b/drivers/media/i2c/Kconfig
-@@ -398,6 +398,7 @@ config VIDEO_ADV7170
- config VIDEO_ADV7175
- 	tristate "Analog Devices ADV7175 video encoder"
- 	depends on VIDEO_V4L2 && I2C
-+	depends on BROKEN
- 	---help---
- 	  Support for the Analog Devices ADV7175 video encoder driver
- 
-@@ -508,6 +509,7 @@ config VIDEO_OV9650
+@@ -422,6 +422,7 @@ config VIDEO_OV7670
+ 	  controller.
  
  config VIDEO_VS6624
- 	tristate "ST VS6624 sensor support"
 +	depends on BROKEN
+ 	tristate "ST VS6624 sensor support"
  	depends on VIDEO_V4L2 && I2C
  	depends on MEDIA_CAMERA_SUPPORT
- 	---help---
 --- a/drivers/video/fbdev/Kconfig
 +++ b/drivers/video/fbdev/Kconfig
-@@ -999,101 +999,6 @@ config FB_ATMEL
+@@ -991,101 +991,6 @@ config FB_ATMEL_STN
  	help
  	  This enables support for the AT91/AT32 LCD Controller.
  
@@ -294,4 +286,15 @@
 -
  config FB_I740
  	tristate "Intel740 support"
- 	depends on FB && PCI
+    depends on FB && PCI
+--- a/drivers/video/fbdev/Makefile
++++ b/drivers/video/fbdev/Makefile
+@@ -22,8 +22,6 @@ obj-$(CONFIG_FB_PM3)		  += pm3fb.o
+ 
+ obj-$(CONFIG_FB_I740)		  += i740fb.o
+ obj-$(CONFIG_FB_MATROX)		  += matrox/
+-obj-$(CONFIG_FB_RIVA)		  += riva/
+-obj-$(CONFIG_FB_NVIDIA)		  += nvidia/
+ obj-$(CONFIG_FB_ATY)		  += aty/ macmodes.o
+ obj-$(CONFIG_FB_ATY128)		  += aty/ macmodes.o
+ obj-$(CONFIG_FB_RADEON)		  += aty/
