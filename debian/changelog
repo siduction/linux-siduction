@@ -1,3 +1,9 @@
+linux-siduction (4.5-4) unstable; urgency=medium
+
+  * fix build depends
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 10 Apr 2016 21:15:57 +0200
+
 linux-siduction (4.5-3) unstable; urgency=medium
 
   * disable sp5100_tco it does not work on many AMD CPU/APU
