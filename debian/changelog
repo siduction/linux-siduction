@@ -1,3 +1,12 @@
+linux-siduction (4.5-3) unstable; urgency=medium
+
+  * disable sp5100_tco it does not work on many AMD CPU/APU
+  * imoort patch-4.5.1-rc1
+  * set ABI to towo.2
+  * disable bugfix/uas-fix-high-order-alloc.patch it doesn't apply
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 10 Apr 2016 21:03:28 +0200
+
 linux-siduction (4.5-2) unstable; urgency=medium
 
   * reupload to fix my wrong upload, no changes

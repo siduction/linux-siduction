@@ -1,5 +1,5 @@
 BUILD_DIR = debian/build
 STAMPS_DIR = debian/stamps
 DISTRIBUTOR := siduction
-LOCALVERSION = 4.4-rc6
+
 -include debian/rules.defs.local
