@@ -1,0 +1,10 @@
+[base]
+flavours:
+ siduction-clearlinux-amd64
+
+[siduction-clearlinux-amd64_description]
+parts: xen
+
+[siduction-clearlinux-amd64_xen]
+flavours:
+ siduction-clearlinux-amd64
