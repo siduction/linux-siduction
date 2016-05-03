@@ -1,6 +1,0 @@
-[base]
-flavours:
- siduction-clearlinux-686
- siduction-clearlinux-686-pae
-[686-pae_description]
-parts: xen
