@@ -1,3 +1,12 @@
+linux-siduction (4.5-9) unstable; urgency=medium
+
+  * import patch-4.5.3
+  * set ABI to towo.1
+  * add sp5100_tco_fiix.patch
+  * reenable sp5100_tco
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 05 May 2016 12:34:08 +0200
+
 linux-siduction (4.5-8) unstable; urgency=medium
 
   * import patch-4.5.3-rc1

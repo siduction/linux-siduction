@@ -1,6 +1,6 @@
 #upstream patches
-upstream/patch-4.5.2
-upstream/patch-4.5.3-rc1
+upstream/patch-4.5.3
+#upstream/patch-4.5.4-rc1
 
 # Changes to support package build system
 debian/version.patch
@@ -48,6 +48,7 @@ features/x86-make-x32-syscall-support-conditional.patch
 bugfix/kbuild-use-nostdinc-in-compile-tests.patch
 bugfix/disable-some-marvell-phys.patch
 bugfix/rtsx_usb_ms-use-msleep_interruptible-in-polling-loop.patch
+bugfix/sp5100_tco_fix.patch
 
 # Miscellaneous features
 
