@@ -1,0 +1,5 @@
+BUILD_DIR = debian/build
+STAMPS_DIR = debian/stamps
+DISTRIBUTOR := siduction
+
+-include debian/rules.defs.local
