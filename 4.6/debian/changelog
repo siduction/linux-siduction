@@ -1,3 +1,15 @@
+linux-siduction (4.6-2) unstable; urgency=medium
+
+  * import patch 4.6.2
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 09 Jun 2016 10:17:36 +0200
+
+linux-siduction (4.6-1) unstable; urgency=medium
+
+  * upload to unstable
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 04 Jun 2016 20:13:48 +0200
+
 linux-siduction (4.6-0~exp3) experimental; urgency=medium
 
   * import patch-4.6.1
