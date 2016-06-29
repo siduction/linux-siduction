@@ -10,9 +10,7 @@ dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
 # bugfixes
 bugfix/firmware_class-log-every-success-and-failure.patch
 bugfix/firmware-remove-redundant-log-messages-from-drivers.patch
-#bugfix/sp5100_tco_fix.patch
 bugfix/videobuf2-core-fix-crash-after-fixing-cve-2016-4568.patch
-#bugfix/KVM-MTRR-remove-MSR-0x2f8.patch
 bugfix/media-videobuf2-v4l2-verify-planes-array-in-buffer-d.patch
 bugfix/disable-some-marvell-phys.patch
 
