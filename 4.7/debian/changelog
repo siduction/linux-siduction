@@ -1,3 +1,10 @@
+linux-siduction (4.7~rc6-1~exp1) experimental; urgency=medium
+
+  * set CONFIG_SCHEDSTATS=y
+  * linux 4.7-rc6
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 04 Jul 2016 11:41:00 +0200
+
 linux-siduction (4.7~rc5-1~exp1) experimental; urgency=medium
 
   * linux 4.7-rc5
