@@ -1,3 +1,10 @@
+linux-siduction (4.7~rc8-1~exp1) UNRELEASED; urgency=medium
+
+  * linux 4.7-rc8
+  * add bugfix/i915_update_color_management.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 19 Jul 2016 07:30:37 +0200
+
 linux-siduction (4.7~rc7-1~exp1) experimental; urgency=medium
 
   * linux 4.7-rc7
