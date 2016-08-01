@@ -1,9 +1,9 @@
-linux-siduction (4.7~rc8-1~exp1) UNRELEASED; urgency=medium
+linux-siduction (4.7-1) unstable; urgency=medium
 
-  * linux 4.7-rc8
-  * add bugfix/i915_update_color_management.patch
+  * linux 4.7
+  * set ABI to towo.1
 
- -- Torsten Wohlfarth <towo@siduction.org>  Tue, 19 Jul 2016 07:30:37 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 01 Aug 2016 09:05:40 +0200
 
 linux-siduction (4.7~rc7-1~exp1) experimental; urgency=medium
 
