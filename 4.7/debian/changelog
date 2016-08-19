@@ -1,3 +1,13 @@
+linux-siduction (4.7-3) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch 4.7.2-rc1
+  * removed patches
+    - bugfix/videobuf2-core-fix-crash-after-fixing-cve-2016-4568.patch
+    - bugfix/media-videobuf2-v4l2-verify-planes-array-in-buffer-d.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 19 Aug 2016 09:33:35 +0200
+
 linux-siduction (4.7-2) unstable; urgency=medium
 
   * import patch-4.7.1
