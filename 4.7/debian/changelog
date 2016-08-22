@@ -1,9 +1,23 @@
-linux-siduction (4.7-4) UNRELEASED; urgency=medium
+linux-siduction (4.7-6) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * add bugfix/ext4_avoid_modyfying_checksum_fields.patch
+    discussion on https://groups.google.com/forum/#%21topic/linux.kernel/SjITHuqTf-0
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 22 Aug 2016 06:52:00 +0200
+
+linux-siduction (4.7-5) unstable; urgency=medium
+
+  * new upload after forgotten dch -r
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 21 Aug 2016 22:15:49 +0200
+
+linux-siduction (4.7-4) unstable; urgency=medium
 
   * set ABI to towo.1
   * import patch-4.7.2
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sun, 21 Aug 2016 20:01:00 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 21 Aug 2016 22:14:38 +0200
 
 linux-siduction (4.7-3) unstable; urgency=medium
 
