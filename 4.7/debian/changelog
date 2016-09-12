@@ -1,7 +1,15 @@
+linux-siduction (4.7-8) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.7.4-rc1
+  * removed bugfix/ext4_avoid_modyfying_checksum_fields.patch, it's upstream now
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 12 Sep 2016 21:24:23 +0200
+
 linux-siduction (4.7-7) unstable; urgency=medium
 
   * set ABI to towo.1
-  * import patch-4..3
+  * import patch-4.7.3
 
  -- Torsten Wohlfarth <towo@siduction.org>  Thu, 08 Sep 2016 16:28:54 +0200
 

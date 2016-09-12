@@ -1,6 +1,6 @@
 # upstream updates
 upstream/patch-4.7.3
-#upstream/patch-4.7.4-rc1
+upstream/patch-4.7.4-rc1
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
@@ -13,7 +13,6 @@ bugfix/firmware-remove-redundant-log-messages-from-drivers.patch
 #bugfix/videobuf2-core-fix-crash-after-fixing-cve-2016-4568.patch
 #bugfix/media-videobuf2-v4l2-verify-planes-array-in-buffer-d.patch
 bugfix/disable-some-marvell-phys.patch
-bugfix/ext4_avoid_modyfying_checksum_fields.patch
 
 # debian specific patches.
 debian/version.patch
