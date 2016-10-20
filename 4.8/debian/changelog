@@ -1,3 +1,16 @@
+linux-siduction (4.8-6) unstable; urgency=medium
+
+  * revert to using gcc-5 because of -fstack-protector-strong not supported by compiler on amd64
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 20 Oct 2016 19:11:02 +0200
+
+linux-siduction (4.8-5) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.3 
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 20 Oct 2016 17:29:29 +0200
+
 linux-siduction (4.8-4) unstable; urgency=medium
 
   * set ABI to towo.1

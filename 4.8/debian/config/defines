@@ -5,7 +5,7 @@ abiname: towo.1
 arches:
  amd64
  i386
-compiler: gcc-6
+compiler: gcc-5
 featuresets:
  none
 
@@ -21,7 +21,7 @@ type: plain
 
 [relations]
 # compilers
-gcc-6: gcc-6
+gcc-5: gcc-5
 
 # initramfs-generators
 initramfs-fallback: linux-initramfs-tool
