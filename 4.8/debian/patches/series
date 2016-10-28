@@ -8,7 +8,7 @@ upstream/patch-4.8.5
 # stable candidate
 
 # bugfixes
-#bugfix/0001-UBUNTU-SAUCE-no-up-disable-pie-when-gcc-has-it-enabl.patch
+bugfix/0001-UBUNTU-SAUCE-no-up-disable-pie-when-gcc-has-it-enabl.patch
 #bugfix/firmware_class-log-every-success-and-failure.patch
 bugfix/firmware-remove-redundant-log-messages-from-drivers.patch
 bugfix/disable-some-marvell-phys.patch
