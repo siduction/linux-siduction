@@ -1,3 +1,26 @@
+linux-siduction (4.8-15) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.9
+  * import patch-4.8.10-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 20 Nov 2016 12:31:50 +0100
+
+linux-siduction (4.8-14) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.7
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 10 Nov 2016 17:44:26 +0100
+
+linux-siduction (4.8-13) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.6
+  * reenable CONFIG_CC_STACKPROTECTOR_STRONG=y
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 31 Oct 2016 13:56:13 +0100
+
 linux-siduction (4.8-12) unstable; urgency=medium
 
   * set ABI to towo.3

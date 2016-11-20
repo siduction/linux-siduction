@@ -5,13 +5,13 @@ Maintainer: Torsten Wohlfarth <towo@siduction.org>
 Uploaders: Alf Gaida <agaida@siduction.org>
 Standards-Version: 3.9.5
 Build-Depends: debhelper (>= 9.20120115), cpio, python, bc, libssl-dev, gcc-6 [amd64 i386]
+Vcs-Git: git://git.siduction.org/code/linux-siduction.git
 Homepage: http://kernel.org/
 Vcs-Browser: http://git.siduction.org/?p=code/linux-siduction.git
-Vcs-Git: git://git.siduction.org/code/linux-siduction.git
 
-Package: linux-image-4.8.5-towo.3-siduction-amd64
+Package: linux-image-4.8.9-towo.1-siduction-amd64
 Architecture: amd64
-Provides: linux-modules-4.8.5-towo.3-siduction-amd64
+Provides: linux-modules-4.8.9-towo.1-siduction-amd64
 Pre-Depends: debconf | debconf-2.0
 Depends: kmod, ${misc:Depends}, initramfs-tools (>= 0.110~) [amd64] | linux-initramfs-tool [amd64]
 Recommends: firmware-linux-free (>= 3~)
@@ -29,7 +29,7 @@ Package: linux-image-siduction-amd64
 Architecture: amd64
 Section: metapackages
 Priority: extra
-Depends: linux-image-4.8.5-towo.3-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-image-4.8.9-towo.1-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
 Recommends: linux-headers-siduction-amd64 (= ${binary:Version})
 Description: Linux image for siduction on 64-bit PCs
  This metapackage depends on the latest binary image for Linux kernel on
@@ -39,33 +39,33 @@ Package: linux-headers-siduction-amd64
 Architecture: amd64
 Section: metapackages
 Priority: extra
-Depends: linux-headers-4.8.5-towo.3-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-headers-4.8.9-towo.1-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
 Description: Linux headers for siduction on 64-bit PCs
  This metapackage depends on the latest binary image for Linux kernel on
  PCs with AMD64 or Intel 64 processors machines for siduction.
 
-Package: linux-headers-4.8.5-towo.3-siduction-amd64
+Package: linux-headers-4.8.9-towo.1-siduction-amd64
 Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}, gcc-6
 Conflicts: r8168-dkms
-Description: Header files for Linux 4.8.5-towo.3-siduction-amd64
+Description: Header files for Linux 4.8.9-towo.1-siduction-amd64
  This package provides the architecture-specific kernel header files for
- Linux kernel 4.8.5-towo.3-siduction-amd64, generally used for building
+ Linux kernel 4.8.9-towo.1-siduction-amd64, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-4.8.5-towo.3-siduction-amd64, and can be used for
+ /usr/src/linux-headers-4.8.9-towo.1-siduction-amd64, and can be used for
  building modules that load into the kernel provided by the
- linux-image-4.8.5-towo.3-siduction-amd64 package.
+ linux-image-4.8.9-towo.1-siduction-amd64 package.
 
-Package: xen-linux-system-4.8.5-towo.3-siduction-amd64
+Package: xen-linux-system-4.8.9-towo.1-siduction-amd64
 Architecture: amd64
 Section: metapackages
-Depends: linux-image-4.8.5-towo.3-siduction-amd64 (= ${binary:Version}), ${misc:Depends}, xen-system-siduction-amd64
+Depends: linux-image-4.8.9-towo.1-siduction-amd64 (= ${binary:Version}), ${misc:Depends}, xen-system-siduction-amd64
 Description: Xen system with Linux 4.8 on 64-bit PCs (meta-package)
  This package depends on the binary Linux image and hypervisors.
 
-Package: linux-image-4.8.5-towo.3-siduction-686
+Package: linux-image-4.8.9-towo.1-siduction-686
 Architecture: i386
-Provides: linux-modules-4.8.5-towo.3-siduction-686
+Provides: linux-modules-4.8.9-towo.1-siduction-686
 Pre-Depends: debconf | debconf-2.0
 Depends: kmod, ${misc:Depends}, initramfs-tools (>= 0.110~) [i386] | linux-initramfs-tool [i386]
 Recommends: firmware-linux-free (>= 3~), libc6-i686 [i386]
@@ -82,7 +82,7 @@ Package: linux-image-siduction-686
 Architecture: i386
 Section: metapackages
 Priority: extra
-Depends: linux-image-4.8.5-towo.3-siduction-686 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-image-4.8.9-towo.1-siduction-686 (= ${binary:Version}), ${misc:Depends}
 Recommends: linux-headers-siduction-686 (= ${binary:Version})
 Description: Linux image for siduction on modern PCs
  This metapackage depends on the latest binary image for Linux kernel on
@@ -95,7 +95,7 @@ Package: linux-headers-siduction-686
 Architecture: i386
 Section: metapackages
 Priority: extra
-Depends: linux-headers-4.8.5-towo.3-siduction-686 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-headers-4.8.9-towo.1-siduction-686 (= ${binary:Version}), ${misc:Depends}
 Description: Linux headers for siduction on modern PCs
  This metapackage depends on the latest binary image for Linux kernel on
  PCs with Intel Pentium Pro/II/III/4/4M/D/M, Xeon, Celeron, Core or Atom;
@@ -103,21 +103,21 @@ Description: Linux headers for siduction on modern PCs
  Transmeta Efficeon; VIA C3 "Nehemiah" or C7 processors machines for
  siduction.
 
-Package: linux-headers-4.8.5-towo.3-siduction-686
+Package: linux-headers-4.8.9-towo.1-siduction-686
 Architecture: i386
 Depends: ${shlibs:Depends}, ${misc:Depends}, gcc-6
 Conflicts: r8168-dkms
-Description: Header files for Linux 4.8.5-towo.3-siduction-686
+Description: Header files for Linux 4.8.9-towo.1-siduction-686
  This package provides the architecture-specific kernel header files for
- Linux kernel 4.8.5-towo.3-siduction-686, generally used for building
+ Linux kernel 4.8.9-towo.1-siduction-686, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-4.8.5-towo.3-siduction-686, and can be used for
+ /usr/src/linux-headers-4.8.9-towo.1-siduction-686, and can be used for
  building modules that load into the kernel provided by the
- linux-image-4.8.5-towo.3-siduction-686 package.
+ linux-image-4.8.9-towo.1-siduction-686 package.
 
-Package: linux-image-4.8.5-towo.3-siduction-686-pae
+Package: linux-image-4.8.9-towo.1-siduction-686-pae
 Architecture: i386
-Provides: linux-modules-4.8.5-towo.3-siduction-686-pae
+Provides: linux-modules-4.8.9-towo.1-siduction-686-pae
 Pre-Depends: debconf | debconf-2.0
 Depends: kmod, ${misc:Depends}, initramfs-tools (>= 0.110~) [i386] | linux-initramfs-tool [i386]
 Recommends: firmware-linux-free (>= 3~), libc6-i686 [i386]
@@ -137,7 +137,7 @@ Package: linux-image-siduction-686-pae
 Architecture: i386
 Section: metapackages
 Priority: extra
-Depends: linux-image-4.8.5-towo.3-siduction-686-pae (= ${binary:Version}), ${misc:Depends}
+Depends: linux-image-4.8.9-towo.1-siduction-686-pae (= ${binary:Version}), ${misc:Depends}
 Recommends: linux-headers-siduction-686-pae (= ${binary:Version})
 Description: Linux image for siduction on modern PCs
  This metapackage depends on the latest binary image for Linux kernel on
@@ -147,20 +147,20 @@ Package: linux-headers-siduction-686-pae
 Architecture: i386
 Section: metapackages
 Priority: extra
-Depends: linux-headers-4.8.5-towo.3-siduction-686-pae (= ${binary:Version}), ${misc:Depends}
+Depends: linux-headers-4.8.9-towo.1-siduction-686-pae (= ${binary:Version}), ${misc:Depends}
 Description: Linux headers for siduction on modern PCs
  This metapackage depends on the latest binary image for Linux kernel on
  PCs with one or more processors supporting PAE machines for siduction.
 
-Package: linux-headers-4.8.5-towo.3-siduction-686-pae
+Package: linux-headers-4.8.9-towo.1-siduction-686-pae
 Architecture: i386
 Depends: ${shlibs:Depends}, ${misc:Depends}, gcc-6
 Conflicts: r8168-dkms
-Description: Header files for Linux 4.8.5-towo.3-siduction-686-pae
+Description: Header files for Linux 4.8.9-towo.1-siduction-686-pae
  This package provides the architecture-specific kernel header files for
- Linux kernel 4.8.5-towo.3-siduction-686-pae, generally used for building
+ Linux kernel 4.8.9-towo.1-siduction-686-pae, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-4.8.5-towo.3-siduction-686-pae, and can be used for
+ /usr/src/linux-headers-4.8.9-towo.1-siduction-686-pae, and can be used for
  building modules that load into the kernel provided by the
- linux-image-4.8.5-towo.3-siduction-686-pae package.
+ linux-image-4.8.9-towo.1-siduction-686-pae package.
 
