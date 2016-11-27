@@ -492,7 +492,7 @@ class Gencontrol(Base):
             self.abiname_part = '-%s' % self.config['abi', ]['abiname']
         # We need to keep at least three version components to avoid
         # userland breakage (e.g. #742226, #745984).
-        self.abiname_version = re.sub('^(\d+\.\d+)(?=-|$)', r'\1.9',
+        self.abiname_version = re.sub('^(\d+\.\d+)(?=-|$)', r'\1.11',
                                       self.version.linux_upstream)
         self.vars = {
             'upstreamversion': self.version.linux_upstream,
