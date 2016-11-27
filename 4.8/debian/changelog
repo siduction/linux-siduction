@@ -1,3 +1,16 @@
+linux-siduction (4.8-19) unstable; urgency=medium
+
+  * set distribution
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 27 Nov 2016 14:46:16 +0100
+
+linux-siduction (4.8-18) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * remove bugfix/0001-UBUNTU-SAUCE-no-up-disable-pie-when-gcc-has-it-enabl.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 27 Nov 2016 14:45:51 +0100
+
 linux-siduction (4.8-17) unstable; urgency=medium
 
   * set ABI to towo.1
