@@ -1,3 +1,10 @@
+linux-siduction (4.8-20) unstable; urgency=medium
+
+  * set ABI to towo.3
+  * build against binutils 2.27.51.20161127-1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 28 Nov 2016 07:52:09 +0100
+
 linux-siduction (4.8-19) unstable; urgency=medium
 
   * set distribution
