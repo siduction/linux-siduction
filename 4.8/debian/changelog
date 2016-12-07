@@ -1,3 +1,10 @@
+linux-siduction (4.8-22) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import bugfix/fix_race_condition_in_packet_set_ring.patch adresses CVE-2016-8655
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 07 Dec 2016 16:52:39 +0100
+
 linux-siduction (4.8-21) unstable; urgency=medium
 
   * set ABI to towo.1
