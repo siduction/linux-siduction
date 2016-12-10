@@ -1,3 +1,12 @@
+linux-siduction (4.8-23) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.13
+  * import 4.8.14-rc1
+  * removed bugfix/fix_race_condition_in_packet_set_ring.patch, it's upstream now
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 10 Dec 2016 17:46:11 +0100
+
 linux-siduction (4.8-22) unstable; urgency=medium
 
   * set ABI to towo.2
