@@ -14,7 +14,7 @@ bugfix/firmware_class-log-every-success-and-failure.patch
 bugfix/firmware-remove-redundant-log-messages-from-drivers.patch
 bugfix/disable-some-marvell-phys.patch
 bugfix/module-disable-matching-missing-version-crc.patch
-bugfix/revert-default-exported-asm-symbols-to-zero.patch
+bugfix/overlayfs_inotify.patch
 
 # debian specific patches.
 debian/version.patch
