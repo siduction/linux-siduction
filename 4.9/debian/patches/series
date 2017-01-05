@@ -1,5 +1,5 @@
 # upstream updates
-#upstream/patch-4.9.1
+upstream/patch-4.9.1-rc1
 
 # dfsg-ify the binaries
 #dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
@@ -7,8 +7,6 @@
 # stable candidate
 
 # bugfixes
-#bugfix/kbuild-modversions-for-EXPORT_SYMBOL-for-asm.patch
-bugfix/kbuild-provide-include-asm-asm-prototypes.h-for-x86.patch
 bugfix/iwlwifi-do-not-request-unreleased-firmware.patch
 bugfix/firmware_class-log-every-success-and-failure.patch
 bugfix/firmware-remove-redundant-log-messages-from-drivers.patch

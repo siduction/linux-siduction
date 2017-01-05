@@ -1,3 +1,11 @@
+linux-siduction (4.9-3) unstable; urgency=medium
+
+  * set Abi to towo.3
+  * import patch-4.9.1-rc1
+  * revert /bugfix/kbuild-provide-include-asm-asm-prototypes.h-for-x86.patch it's upstream now
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 05 Jan 2017 11:07:25 +0100
+
 linux-siduction (4.9-2) unstable; urgency=medium
 
   * set ABI to towo.2
