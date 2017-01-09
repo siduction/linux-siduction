@@ -1,0 +1,17 @@
+diff --git a/drivers/gpu/drm/i915/intel_display.c b/drivers/gpu/drm/i915/intel_display.c
+index 9ccd766..42348d4 100644
+--- a/drivers/gpu/drm/i915/intel_display.c
++++ b/drivers/gpu/drm/i915/intel_display.c
+@@ -12043,6 +12043,12 @@  static int intel_crtc_atomic_check(struct drm_crtc *crtc,
+	ret = intel_color_check(crtc, crtc_state);
+	if (ret)
+	    return ret;
++
++		/*
++		 * Changing color management on Intel hardware is
++		 * handled as part of planes update.
++		 */
++		crtc_state->planes_changed = true;
+    }
+ 
+    ret = 0;
