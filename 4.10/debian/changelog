@@ -1,3 +1,10 @@
+linux-siduction (4.9~rc4-1~exp1) UNRELEASED; urgency=medium
+
+  * start linux-4.10 developement
+  * linux-4.10-rc4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 09 Jan 2017 19:59:47 +0100
+
 linux-siduction (4.9~rc8-1~exp2) experimental; urgency=medium
 
   * add bugfix/module-disable-matching-missing-version-crc.patch
