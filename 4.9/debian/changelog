@@ -1,3 +1,10 @@
+linux-siduction (4.9-9) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.9.5
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 20 Jan 2017 12:55:15 +0100
+
 linux-siduction (4.9-8) unstable; urgency=medium
 
   * set ABI to towo.1
