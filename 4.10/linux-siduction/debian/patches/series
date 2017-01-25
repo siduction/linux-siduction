@@ -1,0 +1,34 @@
+# upstream updates
+#upstream/patch-4.9.1
+
+# dfsg-ify the binaries
+dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
+
+# stable candidate
+
+# bugfixes
+#bugfix/kbuild-modversions-for-EXPORT_SYMBOL-for-asm.patch
+#bugfix/kbuild-provide-include-asm-asm-prototypes.h-for-x86.patch
+bugfix/iwlwifi-do-not-request-unreleased-firmware.patch
+bugfix/firmware_class-log-every-success-and-failure.patch
+bugfix/firmware-remove-redundant-log-messages-from-drivers.patch
+bugfix/disable-some-marvell-phys.patch
+bugfix/module-disable-matching-missing-version-crc.patch
+bugfix/overlayfs_inotify.patch
+
+# debian specific patches.
+debian/version.patch
+debian/uname-version-timestamp.patch
+debian/kernelvariables.patch
+
+# features
+features/defaults-fat-utf8.patch
+features/ath_override-eeprom-countrycode.patch
+features/kvm_intel_enabled-nested-on-default.patch
+features/radeon-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
+features/fs-enable-link-security-restrictions-by-default.patch
+features/net_increase-IPV6_MAX_ADDRESSES-to-64.patch
+features/Kbuild-kconfig-Verbose-version-of-listnewconfig.patch
+
+bugfix/cpupower-bump-soname-version.patch
+bugfix/cpupower-fix-checks-for-cpu-existence.patch
