@@ -1,6 +1,3 @@
 [base]
 flavours:
  siduction-686
- siduction-686-pae
-[686-pae_description]
-parts: xen

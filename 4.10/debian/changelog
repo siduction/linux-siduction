@@ -1,3 +1,10 @@
+linux-siduction (4.10~rc6-1~exp1) experimental; urgency=medium
+
+  * linux-4.10-rc6
+  * CONFIG_HOTPLUG_CPU=y, the change from rc5 had no effect
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 30 Jan 2017 06:53:53 +0100
+
 linux-siduction (4.10~rc5-1~exp1) experimental; urgency=medium
 
   * start linux-4.10 developement

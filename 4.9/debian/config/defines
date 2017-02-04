@@ -5,7 +5,6 @@ abiname: towo.1
 arches:
  amd64
  i386
-#compiler: gcc-5
 compiler: gcc-6
 featuresets:
  none
@@ -18,13 +17,11 @@ part-long-xen: This kernel also runs on a Xen hypervisor.
 
 [image]
 initramfs-generators: initramfs-tools initramfs-fallback
-type: plain
 
 [relations]
 # compilers
-#gcc-5: gcc-5
 gcc-6: gcc-6
 
 # initramfs-generators
 initramfs-fallback: linux-initramfs-tool
-initramfs-tools: initramfs-tools (>= 0.110~)
+initramfs-tools: initramfs-tools (>= 0.121~)

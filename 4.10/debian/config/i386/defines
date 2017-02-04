@@ -1,43 +1,20 @@
 [base]
 featuresets:
  none
+flavours:
+ siduction-686
 kernel-arch: x86
 
 [build]
 debug-info: false
 image-file: arch/x86/boot/bzImage
 
-[description]
-part-long-pae: This kernel requires PAE (Physical Address Extension)
- This feature is supported by the Intel Pentium Pro/II/III/4/4M/D, Xeon,
- Core and Atom; AMD Geode NX, Athlon (K7), Duron, Opteron, Sempron,
- Turion or Phenom; Transmeta Efficeon; VIA C7; and some other processors.
-
 [image]
 bootloaders: grub-pc extlinux grub-efi-ia32
-configs:
 install-stem: vmlinuz
 suggests: crda
+breaks: xserver-xorg-input-vmmouse (<< 1:13.0.99)
 
 [siduction-686_description]
 hardware: modern PCs
 hardware-long: PCs with Intel Pentium Pro/II/III/4/4M/D/M, Xeon, Celeron, Core or Atom; AMD Geode LX/NX, Athlon (K7), Duron, Opteron, Sempron, Turion or Phenom; Transmeta Efficeon; VIA C3 "Nehemiah" or C7 processors
-
-[siduction-686_image]
-configs:
- kernelarch-x86/config-arch-32
-recommends: libc6-i686
-
-[siduction-686-pae_build]
-debug-info: false
-
-[siduction-686-pae_description]
-hardware: modern PCs
-hardware-long: PCs with one or more processors supporting PAE
-parts: pae
-
-[siduction-686-pae_image]
-configs:
- kernelarch-x86/config-arch-32
- kernelarch-x86/config-arch-32-pae
-recommends: libc6-i686
