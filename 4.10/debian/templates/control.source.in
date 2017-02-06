@@ -1,9 +1,14 @@
 Section: kernel
 Priority: optional
 Maintainer: Torsten Wohlfarth <towo@siduction.org>
-Uploaders: Alf Gaida <agaida@siduction.org>
-Standards-Version: 3.9.5
-Build-Depends: debhelper (>= 9.20120115), cpio, python, bc, libssl-dev,
-Homepage: http://kernel.org/
-Vcs-Git: git://git.siduction.org/code/linux-siduction.git
-Vcs-Browser: http://git.siduction.org/?p=code/linux-siduction.git
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9.20120115),
+ bc,
+ cpio,
+ libelf-dev,
+ python3,
+ libssl-dev,
+ xz-utils
+Vcs-git: git.siduction.org:extra/linux-siduction
+Vcs-Browser: https://git.siduction.org/extra/linux-siduction
+Homepage: https://www.kernel.org/

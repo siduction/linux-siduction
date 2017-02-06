@@ -4,7 +4,3 @@ flavours:
 
 [siduction-amd64_description]
 parts: xen
-
-[siduction-amd64_xen]
-flavours:
- siduction-amd64

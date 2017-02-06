@@ -16,7 +16,6 @@ part-long-xen: This kernel also runs on a Xen hypervisor.
 
 [image]
 initramfs-generators: initramfs-tools initramfs-fallback
-type: plain
 
 [relations]
 # compilers
@@ -24,4 +23,4 @@ gcc-6: gcc-6
 
 # initramfs-generators
 initramfs-fallback: linux-initramfs-tool
-initramfs-tools: initramfs-tools (>= 0.110~)
+initramfs-tools: initramfs-tools (>= 0.121~)
