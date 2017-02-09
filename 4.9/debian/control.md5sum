@@ -1,5 +1,5 @@
-f7000cc19f55f574628d48b3e813d888  debian/bin/gencontrol.py
-2661207fd3ab1511c0a36e9a2388f373  debian/changelog
+e5158c6f87a99b2f949d4b4ed83faf25  debian/bin/gencontrol.py
+45c4bdc2fba8d343d623062c9cc52ef1  debian/changelog
 d41d8cd98f00b204e9800998ecf8427e  debian/templates/control.main.in
 38004750aa03cea41d5d3aeafff16fcc  debian/templates/image.preinst.in
 afb508873a44a1f196c2a525fec4b415  debian/templates/image.prerm.in
@@ -7,7 +7,7 @@ afb508873a44a1f196c2a525fec4b415  debian/templates/image.prerm.in
 f7e8f970424d76f1babe12a66fe85368  debian/templates/control.image.in
 a4a60fc48b3240e46bbac6a1ddcaad30  debian/templates/image.postrm.in
 72ece843042cbcc9cdb62b3a8c5e3b7a  debian/templates/control.image-dbg.in
-082cbb9aa779a39859c14cb6618d5f99  debian/templates/control.source.in
+765f00e5efdbd0c3f2a56cf10763eb02  debian/templates/control.source.in
 6bf8fd71accd1530c46f3d6887d1ad4c  debian/templates/image-dbg.lintian-override.in
 0327750d6696dee915a532aec73a0fd6  debian/templates/image.postinst.in
 6fdcf2d04832e9f84e3b9c21fe34f4f0  debian/templates/control.headers.in

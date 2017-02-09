@@ -5,10 +5,10 @@ Maintainer: Torsten Wohlfarth <towo@siduction.org>
 Standards-Version: 3.9.8
 Build-Depends: debhelper (>= 9.20120115), bc, cpio, libelf-dev, python3, libssl-dev, xz-utils, gcc-6 [amd64 i386]
 Homepage: https://www.kernel.org/
-Vcs-Browser: https://github.com/fullstory/linux-aptosid
-Vcs-git: git://github.com/fullstory/linux-aptosid.git
+Vcs-Browser: https://git.siduction.org/extra/linux-siduction
+Vcs-git: git.siduction.org:extra/linux-siduction
 
-Package: linux-image-4.9.8-towo.1-siduction-amd64
+Package: linux-image-4.9.9-towo.1-siduction-amd64
 Architecture: amd64
 Depends: kmod, linux-base (>= 4.3~), ${misc:Depends}, initramfs-tools (>= 0.121~) [amd64] | linux-initramfs-tool [amd64]
 Recommends: firmware-linux-free, ${kernel:Recommends}
@@ -26,7 +26,7 @@ Package: linux-image-siduction-amd64
 Architecture: amd64
 Section: metapackages
 Priority: extra
-Depends: linux-image-4.9.8-towo.1-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-image-4.9.9-towo.1-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
 Recommends: linux-headers-siduction-amd64 (= ${binary:Version})
 Description: Linux image for aptosid on 64-bit PCs
  This metapackage depends on the latest binary image for Linux kernel on
@@ -36,24 +36,24 @@ Package: linux-headers-siduction-amd64
 Architecture: amd64
 Section: metapackages
 Priority: extra
-Depends: linux-headers-4.9.8-towo.1-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-headers-4.9.9-towo.1-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
 Description: Linux headers for aptosid on 64-bit PCs
  This metapackage depends on the latest binary image for Linux kernel on
  PCs with AMD64 or Intel 64 processors machines for aptosid.
 
-Package: linux-headers-4.9.8-towo.1-siduction-amd64
+Package: linux-headers-4.9.9-towo.1-siduction-amd64
 Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}, gcc-6
 Conflicts: r8168-dkms
-Description: Header files for Linux 4.9.8-towo.1-siduction-amd64
+Description: Header files for Linux 4.9.9-towo.1-siduction-amd64
  This package provides the architecture-specific kernel header files for
- Linux kernel 4.9.8-towo.1-siduction-amd64, generally used for building
+ Linux kernel 4.9.9-towo.1-siduction-amd64, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-4.9.8-towo.1-siduction-amd64, and can be used for
+ /usr/src/linux-headers-4.9.9-towo.1-siduction-amd64, and can be used for
  building modules that load into the kernel provided by the
- linux-image-4.9.8-towo.1-siduction-amd64 package.
+ linux-image-4.9.9-towo.1-siduction-amd64 package.
 
-Package: linux-image-4.9.8-towo.1-siduction-686
+Package: linux-image-4.9.9-towo.1-siduction-686
 Architecture: i386
 Depends: kmod, linux-base (>= 4.3~), ${misc:Depends}, initramfs-tools (>= 0.121~) [i386] | linux-initramfs-tool [i386]
 Recommends: firmware-linux-free, ${kernel:Recommends}
@@ -70,7 +70,7 @@ Package: linux-image-siduction-686
 Architecture: i386
 Section: metapackages
 Priority: extra
-Depends: linux-image-4.9.8-towo.1-siduction-686 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-image-4.9.9-towo.1-siduction-686 (= ${binary:Version}), ${misc:Depends}
 Recommends: linux-headers-siduction-686 (= ${binary:Version})
 Description: Linux image for aptosid on modern PCs
  This metapackage depends on the latest binary image for Linux kernel on
@@ -83,7 +83,7 @@ Package: linux-headers-siduction-686
 Architecture: i386
 Section: metapackages
 Priority: extra
-Depends: linux-headers-4.9.8-towo.1-siduction-686 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-headers-4.9.9-towo.1-siduction-686 (= ${binary:Version}), ${misc:Depends}
 Description: Linux headers for aptosid on modern PCs
  This metapackage depends on the latest binary image for Linux kernel on
  PCs with Intel Pentium Pro/II/III/4/4M/D/M, Xeon, Celeron, Core or Atom;
@@ -91,15 +91,15 @@ Description: Linux headers for aptosid on modern PCs
  Transmeta Efficeon; VIA C3 "Nehemiah" or C7 processors machines for
  aptosid.
 
-Package: linux-headers-4.9.8-towo.1-siduction-686
+Package: linux-headers-4.9.9-towo.1-siduction-686
 Architecture: i386
 Depends: ${shlibs:Depends}, ${misc:Depends}, gcc-6
 Conflicts: r8168-dkms
-Description: Header files for Linux 4.9.8-towo.1-siduction-686
+Description: Header files for Linux 4.9.9-towo.1-siduction-686
  This package provides the architecture-specific kernel header files for
- Linux kernel 4.9.8-towo.1-siduction-686, generally used for building
+ Linux kernel 4.9.9-towo.1-siduction-686, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-4.9.8-towo.1-siduction-686, and can be used for
+ /usr/src/linux-headers-4.9.9-towo.1-siduction-686, and can be used for
  building modules that load into the kernel provided by the
- linux-image-4.9.8-towo.1-siduction-686 package.
+ linux-image-4.9.9-towo.1-siduction-686 package.
 
