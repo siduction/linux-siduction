@@ -1,165 +1,394 @@
-linux-siduction (4.10~rc8-1~exp1) experimental; urgency=medium
+linux-siduction (4.10-2) unstable; urgency=medium
 
-  * linux-4.10-rc8
+  * set abi to towo.3
+  * add patch-4.10.1-rc1
+  * 1st upload for siduction/unstable
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 13 Feb 2017 12:02:16 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 24 Feb 2017 17:09:44 +0100
 
-linux-siduction (4.10~rc7-1~exp1) experimental; urgency=medium
+linux-siduction (4.9-23) unstable; urgency=medium
 
-  * linux-4.10-rc7
+  * set ABI to towo.1
+  * new upload to fix the packaging error
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sun, 05 Feb 2017 13:21:48 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 19 Feb 2017 15:36:40 +0100
 
-linux-siduction (4.10~rc6-1~exp1) experimental; urgency=medium
+linux-siduction (4.9-22) unstable; urgency=medium
 
-  * linux-4.10-rc6
-  * CONFIG_HOTPLUG_CPU=y, the change from rc5 had no effect
+  * set ABI to towo.1
+  * import patch-4.9.11
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 30 Jan 2017 06:53:53 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 18 Feb 2017 16:44:44 +0100
 
-linux-siduction (4.10~rc5-1~exp1) experimental; urgency=medium
+linux-siduction (4.9-21) unstable; urgency=medium
 
-  * start linux-4.10 developement
-  * linux-4.10-rc5
-  * sync patches with debian git
-  * CONFIG_HOTPLUG_CPU disabled
-  * removed 32bit packages
+  * set ABI to towo.2
+  * import patch-4.9.11-rc1
 
- -- Torsten Wohlfarth <towo@siduction.org>  Wed, 25 Jan 2017 07:51:21 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 17 Feb 2017 15:25:13 +0100
 
-linux-siduction (4.9~rc8-1~exp2) experimental; urgency=medium
+linux-siduction (4.9-20) unstable; urgency=medium
 
-  * add bugfix/module-disable-matching-missing-version-crc.patch
-  * add bugfix/revert-default-exported-asm-symbols-to-zero.patch
+  * set ABI to towo.1
+  * import patch-4.9.10
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 05 Dec 2016 18:29:21 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 15 Feb 2017 17:45:41 +0100
 
-linux-siduction (4.9~rc8-1~exp1) experimental; urgency=medium
+linux-siduction (4.9-19) unstable; urgency=medium
 
-  * linux-4.9-rc8
+  * set ABI to towo.2
+  * import patch-4.9.10-rc1
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 05 Dec 2016 07:31:23 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 13 Feb 2017 20:20:52 +0100
 
-linux-siduction (4.9~rc7-1~exp1) experimental; urgency=medium
+linux-siduction (4.9-18) unstable; urgency=medium
 
-  * linux 4.9-rc7
-  * revert bugfix/0001-UBUNTU-SAUCE-no-up-disable-pie-when-gcc-has-it-enabl.patch
+  * set ABI to towo.1
+  * import patch-4.9.9
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 28 Nov 2016 07:29:16 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 09 Feb 2017 11:08:05 +0100
 
-linux-siduction (4.9~rc6-1~exp1) experimental; urgency=medium
+linux-siduction (4.9-17) unstable; urgency=medium
 
-  * linux 4.9-rc6
-  * removed bugfix/kbuild-modversions-for-EXPORT_SYMBOL-for-asm.patch
+  * set ABI to towo.2
+  * import patch-4.9.9-rc1
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 21 Nov 2016 13:15:12 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 07 Feb 2017 14:47:01 +0100
 
-linux-siduction (4.9~rc5-1~exp1) experimental; urgency=medium
+linux-siduction (4.9-16) unstable; urgency=medium
 
-  * linux 4.9-rc5
+  * set ABI to towo.1
+  * import patch 4.9.8
+  * since 4.9-15 no PAE builds will be anymore
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sun, 13 Nov 2016 21:48:05 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 04 Feb 2017 14:14:41 +0100
 
-linux-siduction (4.9~rc4-1~exp6) experimental; urgency=medium
+linux-siduction (4.9-15) unstable; urgency=medium
 
-  * fix my typo in config :(
+  * fixe some typos
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sun, 06 Nov 2016 16:35:53 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 03 Feb 2017 08:49:05 +0100
 
-linux-siduction (4.9~rc4-1~exp5) experimental; urgency=medium
+linux-siduction (4.9-14) unstable; urgency=medium
 
-  * forget to set CONFIG_MODVERSIONS=y :(
+  * set ABI to towo.2
+  * import patch-4.9.8-rc1
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sun, 06 Nov 2016 16:28:34 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 03 Feb 2017 08:19:44 +0100
 
-linux-siduction (4.9~rc4-1~exp4) experimental; urgency=medium
+linux-siduction (4.9-13) unstable; urgency=medium
 
-  * fix bugfix/kbuild-modversions-for-EXPORT_SYMBOL-for-asm.patch ==> hope it helps
-  * CONFIG_MODVERSIONS=y
+  * set ABI to towo.1
+  * import patch-4.9.7
 
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 01 Feb 2017 15:26:08 +0100
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sun, 06 Nov 2016 16:04:37 +0100
+linux-siduction (4.9-12) unstable; urgency=medium
 
-linux-siduction (4.9~rc4-1~exp3) experimental; urgency=medium
+  * set ABI to towo.2
+  * import patch-4.9.7-rc1
 
-  * # CONFIG_MODVERSIONS is not set <== at the moment the only way to make the kernel boot
-  * reupöoad
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 31 Jan 2017 15:03:56 +0100
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sun, 06 Nov 2016 15:49:38 +0100
+linux-siduction (4.9-11) unstable; urgency=medium
 
-linux-siduction (4.9~rc4-1~exp1) experimental; urgency=medium
+  * set ABI to towo.1
+  * import patch-4.9.6
 
-  * linux 4.9-rc4
-  * CONFIG_MODVERSIONS=y
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 26 Jan 2017 17:59:09 +0100
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sun, 06 Nov 2016 11:48:15 +0100
+linux-siduction (4.9-10) unstable; urgency=medium
 
-linux-siduction (4.9~rc3-1~exp4) experimental; urgency=medium
+  * set ABI to towo.2
+  * import patch-4.9.6-rc1
 
-  * # CONFIG_MODVERSIONS is not set <== at the moment the only way to make the kernel boot
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 25 Jan 2017 20:30:51 +0100
 
- -- Torsten Wohlfarth <towo@siduction.org>  Tue, 01 Nov 2016 17:54:35 +0100
+linux-siduction (4.9-9) unstable; urgency=medium
 
-linux-siduction (4.9~rc3-1~exp3) experimental; urgency=medium
+  * set ABI to towo.1
+  * import patch-4.9.5
 
-  * add bugfix/fix_boot_x86-64.patch
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 20 Jan 2017 12:55:15 +0100
 
- -- Torsten Wohlfarth <towo@siduction.org>  Tue, 01 Nov 2016 17:40:28 +0100
+linux-siduction (4.9-8) unstable; urgency=medium
 
-linux-siduction (4.9~rc3-1~exp2) experimental; urgency=medium
+  * set ABI to towo.1
+  * import patch-4.9.4
 
-  * add bugfix/fix_modversions.patch
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 15 Jan 2017 20:50:36 +0100
 
- -- Torsten Wohlfarth <towo@siduction.org>  Tue, 01 Nov 2016 17:06:03 +0100
+linux-siduction (4.9-7) unstable; urgency=medium
 
-linux-siduction (4.9~rc3-1~exp1) experimental; urgency=medium
+  * set ABI to towo.1
+  * import patch-4.9.3
 
-  * linux 4.9-rc3
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 12 Jan 2017 20:11:10 +0100
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sun, 30 Oct 2016 20:35:06 +0100
+linux-siduction (4.9-6) unstable; urgency=medium
 
-linux-siduction (4.8~rc8-1~exp1) experimental; urgency=medium
+  * set ABI to towo.2
+  * import patch-4.9.3-rc1
 
-  * linux 4.8-rc8
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 10 Jan 2017 18:12:13 +0100
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 26 Sep 2016 10:16:52 +0200
+linux-siduction (4.9-5) unstable; urgency=medium
 
-linux-siduction (4.8~rc7-1~exp1) experimental; urgency=medium
+  * set ABI to towo.1
+  * import patch-4.9.2
 
-  * linux 4.8-rc7
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 09 Jan 2017 19:37:57 +0100
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Sep 2016 11:45:18 +0200
+linux-siduction (4.9-4) unstable; urgency=medium
 
-linux-siduction (4.8~rc6-1~exp1) experimental; urgency=medium
+  * set ABI to towo.1
+  * import patch-4.9.1
 
-  * reenable MARVELL_PHY=m
-  * linux 4.8-rc6
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 06 Jan 2017 14:31:13 +0100
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 12 Sep 2016 09:17:36 +0200
+linux-siduction (4.9-3) unstable; urgency=medium
 
-linux-siduction (4.8~rc5-1~exp1) experimental; urgency=medium
+  * set Abi to towo.3
+  * import patch-4.9.1-rc1
+  * revert /bugfix/kbuild-provide-include-asm-asm-prototypes.h-for-x86.patch it's upstream now
 
-  * linux 4.8-rc5
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 05 Jan 2017 11:07:25 +0100
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 05 Sep 2016 12:09:40 +0200
+linux-siduction (4.9-2) unstable; urgency=medium
 
-linux-siduction (4.8~rc4-1~exp2) experimental; urgency=medium
+  * set ABI to towo.2
+  * add patch bugfix/overlayfs_inotify.patch 
 
-  * disabled MARVELL_PHY=m, module fails to build
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 30 Dec 2016 15:28:16 +0100
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 29 Aug 2016 14:58:53 +0200
+linux-siduction (4.9-1) unstable; urgency=medium
 
-linux-siduction (4.8~rc4-1~exp1) experimental; urgency=medium
+  * set ABI to towo.1
+  * linux 4.9.0
 
-  * linux 4.8-rc4
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 13 Dec 2016 19:52:03 +0100
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 29 Aug 2016 10:12:41 +0200
+linux-siduction (4.8-24) unstable; urgency=medium
 
-linux-siduction (4.8~rc3-1~exp1) experimental; urgency=medium
+  * set ABI to towo.1
+  * import patch 4.8.14
 
-  * linux 4.8-rc3
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 11 Dec 2016 16:57:37 +0100
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 22 Aug 2016 18:45:48 +0200
+linux-siduction (4.8-23) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.13
+  * import 4.8.14-rc1
+  * removed bugfix/fix_race_condition_in_packet_set_ring.patch, it's upstream now
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 10 Dec 2016 17:46:11 +0100
+
+linux-siduction (4.8-22) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import bugfix/fix_race_condition_in_packet_set_ring.patch adresses CVE-2016-8655
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 07 Dec 2016 16:52:39 +0100
+
+linux-siduction (4.8-21) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.12
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 02 Dec 2016 15:52:38 +0100
+
+linux-siduction (4.8-20) unstable; urgency=medium
+
+  * set ABI to towo.3
+  * build against binutils 2.27.51.20161127-1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 28 Nov 2016 07:52:09 +0100
+
+linux-siduction (4.8-19) unstable; urgency=medium
+
+  * set distribution
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 27 Nov 2016 14:46:16 +0100
+
+linux-siduction (4.8-18) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * remove bugfix/0001-UBUNTU-SAUCE-no-up-disable-pie-when-gcc-has-it-enabl.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 27 Nov 2016 14:45:51 +0100
+
+linux-siduction (4.8-17) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.11
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 27 Nov 2016 12:14:15 +0100
+
+linux-siduction (4.8-16) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.10
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 21 Nov 2016 10:49:55 +0100
+
+linux-siduction (4.8-15) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.9
+  * import patch-4.8.10-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 20 Nov 2016 12:31:50 +0100
+
+linux-siduction (4.8-14) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.7
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 10 Nov 2016 17:44:26 +0100
+
+linux-siduction (4.8-13) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.6
+  * reenable CONFIG_CC_STACKPROTECTOR_STRONG=y
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 31 Oct 2016 13:56:13 +0100
+
+linux-siduction (4.8-12) unstable; urgency=medium
+
+  * set ABI to towo.3
+  * import patch-4.8.6-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 30 Oct 2016 12:05:45 +0100
+
+linux-siduction (4.8-11) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * add bugfix/0001-UBUNTU-SAUCE-no-up-disable-pie-when-gcc-has-it-enabl.patch
+  * reenable gcc-6 as compiler
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 28 Oct 2016 21:06:49 +0200
+
+linux-siduction (4.8-10) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.5
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 28 Oct 2016 19:10:42 +0200
+
+linux-siduction (4.8-9) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 22 Oct 2016 14:11:52 +0200
+
+linux-siduction (4.8-8) unstable; urgency=medium
+
+  * set ABI to towo.3
+  + revert to using gcc-5
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 22 Oct 2016 12:20:14 +0200
+
+linux-siduction (4.8-7) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.8.4-rc1
+  * reenable gcc-6 for build
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 21 Oct 2016 12:48:36 +0200
+
+linux-siduction (4.8-6) unstable; urgency=medium
+
+  * revert to using gcc-5 because of -fstack-protector-strong not supported by compiler on amd64
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 20 Oct 2016 19:11:02 +0200
+
+linux-siduction (4.8-5) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.3 
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 20 Oct 2016 17:29:29 +0200
+
+linux-siduction (4.8-4) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.2
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 18 Oct 2016 17:02:56 +0200
+
+linux-siduction (4.8-3) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.2-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 15 Oct 2016 14:54:10 +0200
+
+linux-siduction (4.8-2) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.8.1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 09 Oct 2016 16:22:13 +0200
+
+linux-siduction (4.8-1) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * linux 4.8
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 04 Oct 2016 07:53:17 +0200
+
+linux-siduction (4.7-14) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.7.6
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 30 Sep 2016 11:45:16 +0200
+
+linux-siduction (4.7-13) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.7.6-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 29 Sep 2016 07:23:37 +0200
+
+linux-siduction (4.7-12) unstable; urgency=medium
+
+  * new upload after perl-transition
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 26 Sep 2016 16:40:34 +0200
+
+linux-siduction (4.7-11) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.7.5
+  * fix missed dch -r
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 24 Sep 2016 11:07:41 +0200
+
+linux-siduction (4.7-9) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.7.4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 15 Sep 2016 12:06:57 +0200
+
+linux-siduction (4.7-8) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.7.4-rc1
+  * removed bugfix/ext4_avoid_modyfying_checksum_fields.patch, it's upstream now
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 12 Sep 2016 21:24:23 +0200
+
+linux-siduction (4.7-7) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.7.3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 08 Sep 2016 16:28:54 +0200
 
 linux-siduction (4.7-6) unstable; urgency=medium
 
