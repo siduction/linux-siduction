@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
-version=@abiname@@localversion@
-image_path=/boot/@image-stem@-$version
+version=4.10.2-towo.1-siduction-amd64
+image_path=/boot/vmlinuz-$version
 
 if [ "$1" = abort-upgrade ]; then
     exit 0
