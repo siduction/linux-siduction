@@ -1,4 +1,4 @@
-linux-siduction (4.11-1) unstable; urgency=medium
+linux-siduction (4.11-1~exp1) experimental; urgency=medium
 
   * set ABI to towo.1
   * linux-4.11
