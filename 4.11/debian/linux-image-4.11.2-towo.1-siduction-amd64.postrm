@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-version=4.11.1-towo.1-siduction-amd64
+version=4.11.2-towo.1-siduction-amd64
 image_path=/boot/vmlinuz-$version
 
 rm -f /lib/modules/$version/.fresh-install
