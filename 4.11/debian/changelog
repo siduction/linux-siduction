@@ -1,7 +1,14 @@
+linux-siduction (4.11-5~exp1) experimental; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.11-3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 27 May 2017 11:50:53 +0200
+
 linux-siduction (4.11-4~exp1) experimental; urgency=medium
 
   * set ABI to towo.1
-  * import patch-3.11.2
+  * import patch-4.11.2
 
  -- Torsten Wohlfarth <towo@siduction.org>  Sun, 21 May 2017 19:19:35 +0200
 
