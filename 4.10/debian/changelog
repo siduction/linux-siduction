@@ -1,3 +1,10 @@
+linux-siduction (4.10-25) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * fixed wrong Description-tags in debian/control
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 29 May 2017 14:30:45 +0200
+
 linux-siduction (4.10-24) unstable; urgency=medium
 
   * set ABI to towo.1
