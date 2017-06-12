@@ -30,4 +30,3 @@ features/net_increase-IPV6_MAX_ADDRESSES-to-64.patch
 features/Kbuild-kconfig-Verbose-version-of-listnewconfig.patch
 #bugfix/cpupower-bump-soname-version.patch
 #bugfix/cpupower-fix-checks-for-cpu-existence.patch
-bugfix/pat-patch-revert.patch
