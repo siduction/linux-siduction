@@ -18,6 +18,7 @@ Description: Linux image for siduction on @class@
 Package: linux-headers@localversion@
 Section: metapackages
 Priority: extra
+Provides: linux-headers
 Depends: linux-headers-@abiname@@localversion@ (= ${binary:Version}), ${misc:Depends}
 Description: Linux headers for siduction on @class@
  This metapackage depends on the latest binary image for Linux kernel on
