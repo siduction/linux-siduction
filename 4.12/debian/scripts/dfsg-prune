@@ -64,7 +64,8 @@ pushd "${TMP_DIR}"
 	else
 		# rc kernel
 		UP_TARBALL="linux-${MAJOR_VER}-${RC_VER}.tar.gz"
-		wget -Nc "https://git.kernel.org/torvalds/t/${UP_TARBALL}"
+#		wget -Nc "https://git.kernel.org/torvalds/t/${UP_TARBALL}"
+		cp /home/towo/source/kernel/linux-4.12-rc6.tar.gz ${TMP_DIR}/
 
 		if [ -n "${K_SUBLEVEL}" ]; then
 			ORIG_TARBALL="linux-siduction_${K_VERSION}.${K_PATCHLEVEL}.${K_SUBLEVEL}~${RC_VER}.orig.tar.xz"
