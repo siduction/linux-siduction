@@ -1,10 +1,10 @@
 [abi]
-abiname: towo.2
+abiname: towo.1
 
 [base]
 arches:
  amd64
-compiler: gcc-6
+compiler: gcc-7
 featuresets:
  none
 
@@ -19,7 +19,7 @@ initramfs-generators: initramfs-tools initramfs-fallback
 
 [relations]
 # compilers
-gcc-6: gcc-6
+gcc-7: gcc-7
 
 # initramfs-generators
 initramfs-fallback: linux-initramfs-tool
