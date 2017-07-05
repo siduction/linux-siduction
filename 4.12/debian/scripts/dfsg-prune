@@ -53,7 +53,7 @@ TMP_DIR="$(mktemp -d --tmpdir linux-siduction.XXXXXX)"
 pushd "${TMP_DIR}"
 	if [ -z "$RC_VER" ]; then
 		# stable kernel
-		UP_TARBALL="linux-${MAJOR_VER}.tar.xz"
+		UP_TARBALL="linux-${MAJOR_VER}.tar.gz"
 		wget -Nc "https://www.kernel.org/pub/linux/kernel/v${K_VERSION}.${K_PATCHLEVEL_SYM}/${UP_TARBALL}"
 
 		if [ -n "${K_SUBLEVEL}" ]; then
