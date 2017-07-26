@@ -1,3 +1,17 @@
+linux-siduction (4.12-4) unstable; urgency=medium
+
+  * set ABI to towo.3
+  * import patch-4.12.14-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 26 Jul 2017 08:28:32 +0200
+
+linux-siduction (4.12-3) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * tuned usb and hid config
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 21 Jul 2017 15:56:53 +0200
+
 linux-siduction (4.12-2) unstable; urgency=medium
 
   * set ABI to towo.1
