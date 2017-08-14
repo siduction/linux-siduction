@@ -1,6 +1,7 @@
 linux-siduction (4.13~rc5-1~exp1) experimental; urgency=medium
 
   * linux-4.13-rc5
+  * sync patches with debian git
 
  -- Torsten Wohlfarth <towo@siduction.org>  Sat, 12 Aug 2017 22:51:31 +0200
 
