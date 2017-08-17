@@ -7,7 +7,7 @@ features/Kbuild-kconfig-Verbose-version-of-listnewconfig.patch
 debian/modpost-symbol-prefix.patch
 
 # Fixes/improvements to firmware loading
-#features/drivers-media-dvb-usb-af9005-request_firmware.patch
+dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
 debian/iwlwifi-do-not-request-unreleased-firmware.patch
 bugfix/firmware_class-log-every-success-and-failure.patch
 bugfix/firmware-remove-redundant-log-messages-from-drivers.patch
@@ -63,10 +63,6 @@ bugfix/rtlwifi-fix-memory-leak-when-firmware-request-fails.patch
 bugfix/rtlwifi-fix-fallback-firmware-loading.patch
 bugfix/bfq-re-enable-auto-loading-when-built-as-a-module.patch
 
-# Miscellaneous features
-
-# Lockdown (formerly 'securelevel') patchset
-
 # Security fixes
 debian/i386-686-pae-pci-set-pci-nobios-by-default.patch
 bugfix/xfrm-policy-check-policy-direction-value.patch
@@ -76,6 +72,3 @@ bugfix/module-disable-matching-missing-version-crc.patch
 
 # ABI maintenance
 
-# Tools bug fixes
-bugfix/usbip-document-tcp-wrappers.patch
-bugfix/kbuild-fix-recordmcount-dependency.patch
