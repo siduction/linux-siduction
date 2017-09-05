@@ -1,3 +1,7 @@
+# upstream updates
+#upstream/patch-4.13.1
+#upstream/patch-4.13.2-rc1
+
 # Changes to support package build system
 debian/version.patch
 debian/uname-version-timestamp.patch
@@ -46,7 +50,6 @@ bugfix/platform-x86-ideapad-laptop-add-y720-15ikbn-to-no_hw.patch
 bugfix/platform-x86-ideapad-laptop-add-ideapad-v510-15ikb-t.patch
 bugfix/platform-x86-ideapad-laptop-add-several-models-to-no.patch
 debian/revert-gpu-host1x-add-iommu-support.patch
-bugfix/mm-revert-x86_64-and-arm64-elf_et_dyn_base-base.patch
 
 # Arch features
 features/x86-memtest-WARN-if-bad-RAM-found.patch
@@ -56,7 +59,6 @@ features/x86-make-x32-syscall-support-conditional.patch
 bugfix/kbuild-use-nostdinc-in-compile-tests.patch
 bugfix/disable-some-marvell-phys.patch
 bugfix/fs-add-module_softdep-declarations-for-hard-coded-cr.patch
-bugfix/kbuild-do-not-use-hyphen-in-exported-variable-name.patch
 bugfix/partially-revert-usb-kconfig-using-select-for-usb_co.patch
 bugfix/kbuild-include-addtree-remove-quotes-before-matching-path.patch
 bugfix/rtlwifi-fix-memory-leak-when-firmware-request-fails.patch
@@ -65,7 +67,6 @@ bugfix/bfq-re-enable-auto-loading-when-built-as-a-module.patch
 
 # Security fixes
 debian/i386-686-pae-pci-set-pci-nobios-by-default.patch
-bugfix/xfrm-policy-check-policy-direction-value.patch
 
 # Fix exported symbol versions
 bugfix/module-disable-matching-missing-version-crc.patch
