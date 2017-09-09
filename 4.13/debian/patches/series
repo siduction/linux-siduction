@@ -1,6 +1,6 @@
 # upstream updates
 #upstream/patch-4.13.1
-#upstream/patch-4.13.2-rc1
+upstream/patch-4.13.1-rc1
 
 # Changes to support package build system
 debian/version.patch
@@ -61,8 +61,6 @@ bugfix/disable-some-marvell-phys.patch
 bugfix/fs-add-module_softdep-declarations-for-hard-coded-cr.patch
 bugfix/partially-revert-usb-kconfig-using-select-for-usb_co.patch
 bugfix/kbuild-include-addtree-remove-quotes-before-matching-path.patch
-bugfix/rtlwifi-fix-memory-leak-when-firmware-request-fails.patch
-bugfix/rtlwifi-fix-fallback-firmware-loading.patch
 bugfix/bfq-re-enable-auto-loading-when-built-as-a-module.patch
 
 # Security fixes
