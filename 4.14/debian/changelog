@@ -1,3 +1,9 @@
+linux-siduction (4.14~rc3-1~exp2) experimental; urgency=medium
+
+  * try a new orig tar
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 03 Oct 2017 14:15:42 +0200
+
 linux-siduction (4.14~rc3-1~exp1) experimental; urgency=medium
 
   * linux-4.14-rc3

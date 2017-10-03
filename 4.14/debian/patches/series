@@ -7,7 +7,7 @@ debian/version.patch
 debian/uname-version-timestamp.patch
 debian/kernelvariables.patch
 debian/gitignore.patch
-features/all/Kbuild-kconfig-Verbose-version-of-listnewconfig.patch
+features/Kbuild-kconfig-Verbose-version-of-listnewconfig.patch
 debian/modpost-symbol-prefix.patch
 
 # Fixes/improvements to firmware loading
