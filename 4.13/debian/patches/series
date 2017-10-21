@@ -1,6 +1,6 @@
 # upstream updates
-upstream/patch-4.13.8
-upstream/patch-4.13.9-rc1
+upstream/patch-4.13.9
+#upstream/patch-4.13.10-rc1
 
 # Changes to support package build system
 debian/version.patch
