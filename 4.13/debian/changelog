@@ -1,3 +1,10 @@
+linux-siduction (4.13-18) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * removed the adfs-foo from config
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 21 Oct 2017 22:57:48 +0200
+
 linux-siduction (4.13-17) unstable; urgency=medium
 
   * set ABI to towo.1
