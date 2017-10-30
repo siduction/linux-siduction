@@ -1,3 +1,9 @@
+linux-siduction (4.14~rc7-1~exp1) experimental; urgency=medium
+
+  * linux-4.14-rc7
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 30 Oct 2017 09:32:36 +0100
+
 linux-siduction (4.14~rc6-1~exp1) experimental; urgency=medium
 
   * linux 4.14-rc6
