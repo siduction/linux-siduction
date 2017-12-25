@@ -1,3 +1,11 @@
+linux-siduction (4.14-13) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.14.9
+  * add libelf-dev as depent to the linux-headers package
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 25 Dec 2017 17:47:57 +0100
+
 linux-siduction (4.14-12) unstable; urgency=medium
 
   * set ABI to towo.2
