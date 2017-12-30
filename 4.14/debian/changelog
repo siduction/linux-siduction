@@ -1,3 +1,16 @@
+linux-siduction (4.14-16) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.14.10
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 30 Dec 2017 12:34:24 +0100
+
+linux-siduction (4.14-15) unstable; urgency=medium
+
+  * fix the sync-check.sh problem
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 27 Dec 2017 20:10:53 +0100
+
 linux-siduction (4.14-14) unstable; urgency=medium
 
   * set ABI to towo.2

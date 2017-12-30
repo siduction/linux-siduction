@@ -1,6 +1,6 @@
 # upstream changes
-upstream/patch-4.14.9
-upstream/patch-4.14.10-rc1
+upstream/patch-4.14.10
+#upstream/patch-4.14.11-rc1
 
 # Changes to support package build system
 debian/version.patch
@@ -54,6 +54,7 @@ debian/revert-gpu-host1x-add-iommu-support.patch
 
 # Arch features
 features/x86-memtest-WARN-if-bad-RAM-found.patch
+features/x86-make-x32-syscall-support-conditional.patch
 
 # Miscellaneous bug fixes
 bugfix/kbuild-use-nostdinc-in-compile-tests.patch
