@@ -1,3 +1,17 @@
+linux-siduction (4.14-19) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * set CONFIG_PAGE_TABLE_ISOLATION=y
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 04 Jan 2018 11:09:09 +0100
+
+linux-siduction (4.14-18) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.14.11
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 02 Jan 2018 21:08:25 +0100
+
 linux-siduction (4.14-17) unstable; urgency=medium
 
   * set ABI to towo.2
