@@ -1,3 +1,16 @@
+linux-siduction (4.15~rc7-1~exp2) experimental; urgency=medium
+
+  * add ssl-dev to build-depends
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 08 Jan 2018 07:00:40 +0100
+
+linux-siduction (4.15~rc7-1~exp1) experimental; urgency=medium
+
+  * set ABI to towo.1
+  * linux-4.15-rc7
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 07 Jan 2018 17:42:09 +0100
+
 linux-siduction (4.15~rc6-1~exp1) experimental; urgency=medium
 
   * set ABI to towo.1
