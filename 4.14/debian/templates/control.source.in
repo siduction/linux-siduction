@@ -6,6 +6,7 @@ Build-Depends: debhelper (>= 9.20120115),
  bc,
  cpio,
  libelf-dev,
+ libssl-dev,
  python3,
  xz-utils
 Vcs-git: git.siduction.org:extra/linux-siduction

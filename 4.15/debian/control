@@ -3,14 +3,14 @@ Section: kernel
 Priority: optional
 Maintainer: Torsten Wohlfarth <towo@siduction.org>
 Standards-Version: 3.9.8
-Build-Depends: debhelper (>= 9.20120115), bc, cpio, libelf-dev, python3, xz-utils, gcc-7 [amd64]
+Build-Depends: debhelper (>= 9.20120115), bc, cpio, libelf-dev, libssl-dev, python3, xz-utils, gcc-7 [amd64]
 Homepage: https://www.kernel.org/
 Vcs-Browser: https://git.siduction.org/extra/linux-siduction
 Vcs-git: git.siduction.org:extra/linux-siduction
 
 Package: linux-image-4.15.0-rc7-siduction-amd64
 Architecture: amd64
-Depends: kmod, linux-base (>= 4.3~), ${misc:Depends}, libssl-dev, initramfs-tools (>= 0.121~) [amd64] | linux-initramfs-tool [amd64]
+Depends: kmod, linux-base (>= 4.3~), ${misc:Depends}, initramfs-tools (>= 0.121~) [amd64] | linux-initramfs-tool [amd64]
 Recommends: firmware-linux-free, ${kernel:Recommends}
 Suggests: linux-doc-4.15, crda [amd64], grub-pc [amd64] | extlinux [amd64] | grub-efi-amd64 [amd64]
 Breaks: xserver-xorg-input-vmmouse (<< 1:13.0.99) [amd64], initramfs-tools (<< 0.121~)
@@ -44,7 +44,7 @@ Description: Linux headers for siduction on 64-bit PCs
 
 Package: linux-headers-4.15.0-rc7-siduction-amd64
 Architecture: amd64
-Depends: ${shlibs:Depends}, ${misc:Depends}, libelf-dev, gcc-7
+Depends: ${shlibs:Depends}, ${misc:Depends}, libelf-dev, build-essential, gcc-7
 Conflicts: r8168-dkms
 Description: Header files for Linux 4.15.0-rc7-siduction-amd64
  This package provides the architecture-specific kernel header files for
