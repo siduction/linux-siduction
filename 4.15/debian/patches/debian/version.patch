@@ -89,6 +89,28 @@ are set.
  	print_symbol("ip is at %s\n", ip);
  	printk("unat: %016lx pfs : %016lx rsc : %016lx\n",
  	       regs->ar_unat, regs->ar_pfs, regs->ar_rsc);
+--- a/arch/powerpc/kernel/process.c
++++ b/arch/powerpc/kernel/process.c
+@@ -42,6 +42,7 @@
+ #include <linux/hw_breakpoint.h>
+ #include <linux/uaccess.h>
+ #include <linux/elf-randomize.h>
++#include <generated/package.h>
+ 
+ #include <asm/pgtable.h>
+ #include <asm/io.h>
+@@ -1403,8 +1404,9 @@ void show_regs(struct pt_regs * regs)
+ 
+ 	printk("NIP:  "REG" LR: "REG" CTR: "REG"\n",
+ 	       regs->nip, regs->link, regs->ctr);
+-	printk("REGS: %px TRAP: %04lx   %s  (%s)\n",
+-	       regs, regs->trap, print_tainted(), init_utsname()->release);
++	printk("REGS: %px TRAP: %04lx   %s  (%s%s)\n",
++	       regs, regs->trap, print_tainted(), init_utsname()->release,
++	       LINUX_PACKAGE_ID);
+ 	printk("MSR:  "REG" ", regs->msr);
+ 	print_msr_bits(regs->msr);
+ 	pr_cont("  CR: %08lx  XER: %08lx\n", regs->ccr, regs->xer);
 --- a/kernel/hung_task.c
 +++ b/kernel/hung_task.c
 @@ -20,6 +20,7 @@

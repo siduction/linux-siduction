@@ -63,7 +63,7 @@ bugfix/disable-some-marvell-phys.patch
 bugfix/fs-add-module_softdep-declarations-for-hard-coded-cr.patch
 bugfix/partially-revert-usb-kconfig-using-select-for-usb_co.patch
 bugfix/kbuild-include-addtree-remove-quotes-before-matching-path.patch
-
+bugfix/all/libsas-Disable-asynchronous-aborts-for-SATA-devices.patch
 
 
 # Security fixes

@@ -1,3 +1,9 @@
+linux-siduction (4.15~rc8-1~exp1) experimental; urgency=medium
+
+  * linux-4.14-rc8
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 15 Jan 2018 07:19:51 +0100
+
 linux-siduction (4.15~rc7-1~exp3) experimental; urgency=medium
 
   * fix build-depends
