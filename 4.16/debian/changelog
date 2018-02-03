@@ -1,17 +1,8 @@
-linux-siduction (4.15-2) unstable; urgency=medium
+linux-siduction (4.16~rc3-1~exp1) UNRELEASED; urgency=medium
 
-  * set ABI to towo.2
-  * import patch-4.15.1-rc1
+  * start 4.16 developement
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sat, 03 Feb 2018 14:38:57 +0100
-
-linux-siduction (4.15-1) unstable; urgency=medium
-
-  * set ABI to towo.1
-  * linux-4.15.0
-  * enable drivers/staging/vboxvideo
-
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 29 Jan 2018 06:46:03 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 29 Jan 2018 06:41:18 +0100
 
 linux-siduction (4.15~rc9-1~exp1) experimental; urgency=medium
 

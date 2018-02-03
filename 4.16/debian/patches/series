@@ -1,6 +1,6 @@
 # upstream changes
-# upstream/patch-4.15.1
-upstream/patch-4.15.1-rc1
+# patch-4.15.1
+# patch-4.15.1-rc1
 
 # Changes to support package build system
 debian/version.patch
@@ -63,6 +63,7 @@ bugfix/disable-some-marvell-phys.patch
 bugfix/fs-add-module_softdep-declarations-for-hard-coded-cr.patch
 bugfix/partially-revert-usb-kconfig-using-select-for-usb_co.patch
 bugfix/kbuild-include-addtree-remove-quotes-before-matching-path.patch
+bugfix/all/libsas-Disable-asynchronous-aborts-for-SATA-devices.patch
 
 
 # Security fixes
@@ -70,6 +71,7 @@ debian/i386-686-pae-pci-set-pci-nobios-by-default.patch
 bugfix/media-dvb-usb-v2-lmedm04-Improve-logic-checking-of-w.patch
 bugfix/media-dvb-usb-v2-lmedm04-move-ts2020-attach-to-dm04_.patch
 bugfix/media-hdpvr-fix-an-error-handling-path-in-hdpvr_prob.patch
+bugfix/bluetooth-prevent-stack-info-leak-from-the-efs-element.patch
 
 # Fix exported symbol versions
 bugfix/module-disable-matching-missing-version-crc.patch
