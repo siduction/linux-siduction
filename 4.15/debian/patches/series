@@ -1,6 +1,6 @@
 # upstream changes
-upstream/patch-4.15.2
-upstream/patch-4.15.3-rc1
+upstream/patch-4.15.3
+#upstream/patch-4.15.4-rc1
 
 # Changes to support package build system
 debian/version.patch
@@ -54,8 +54,8 @@ bugfix/mmap-remember-the-map_fixed-flag-as-vm_fixed.patch
 bugfix/mmap-add-an-exception-to-the-stack-gap-for-hotspot-jvm.patch
 
 # Arch features
-#features/x86-memtest-WARN-if-bad-RAM-found.patch
-#features/x86-make-x32-syscall-support-conditional.patch
+features/x86-memtest-WARN-if-bad-RAM-found.patch
+features/x86-make-x32-syscall-support-conditional.patch
 
 # Miscellaneous bug fixes
 bugfix/kbuild-use-nostdinc-in-compile-tests.patch

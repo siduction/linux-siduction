@@ -1,3 +1,10 @@
+linux-siduction (4.15-7) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patc-4.15.3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 12 Feb 2018 10:32:06 +0100
+
 linux-siduction (4.15-6) unstable; urgency=medium
 
   * set ABI to towo.2
