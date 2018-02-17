@@ -1,6 +1,6 @@
 # upstream changes
-upstream/patch-4.15.3
-#upstream/patch-4.15.4-rc1
+upstream/patch-4.15.4
+# upstream/patch-4.15.5-rc1
 
 # Changes to support package build system
 debian/version.patch
@@ -67,9 +67,9 @@ bugfix/kbuild-include-addtree-remove-quotes-before-matching-path.patch
 
 # Security fixes
 debian/i386-686-pae-pci-set-pci-nobios-by-default.patch
-bugfix/media-dvb-usb-v2-lmedm04-Improve-logic-checking-of-w.patch
-bugfix/media-dvb-usb-v2-lmedm04-move-ts2020-attach-to-dm04_.patch
-bugfix/media-hdpvr-fix-an-error-handling-path-in-hdpvr_prob.patch
+#bugfix/media-dvb-usb-v2-lmedm04-Improve-logic-checking-of-w.patch
+#bugfix/media-dvb-usb-v2-lmedm04-move-ts2020-attach-to-dm04_.patch
+#bugfix/media-hdpvr-fix-an-error-handling-path-in-hdpvr_prob.patch
 
 # Fix exported symbol versions
 bugfix/module-disable-matching-missing-version-crc.patch
