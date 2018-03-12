@@ -8,7 +8,7 @@ Homepage: https://www.kernel.org/
 Vcs-Browser: https://git.siduction.org/extra/linux-siduction
 Vcs-git: git.siduction.org:extra/linux-siduction
 
-Package: linux-image-4.15.7-towo.2-siduction-amd64
+Package: linux-image-4.15.9-towo.1-siduction-amd64
 Architecture: amd64
 Depends: kmod, linux-base (>= 4.3~), ${misc:Depends}, initramfs-tools (>= 0.121~) [amd64] | linux-initramfs-tool [amd64]
 Recommends: firmware-linux-free, ${kernel:Recommends}
@@ -26,7 +26,7 @@ Package: linux-image-siduction-amd64
 Architecture: amd64
 Section: metapackages
 Priority: extra
-Depends: linux-image-4.15.7-towo.2-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-image-4.15.9-towo.1-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
 Recommends: linux-headers-siduction-amd64 (= ${binary:Version})
 Description: Linux image for siduction on 64-bit PCs
  This metapackage depends on the latest binary image for Linux kernel on
@@ -37,20 +37,20 @@ Architecture: amd64
 Section: metapackages
 Priority: extra
 Provides: linux-headers
-Depends: linux-headers-4.15.7-towo.2-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
+Depends: linux-headers-4.15.9-towo.1-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
 Description: Linux headers for siduction on 64-bit PCs
  This metapackage depends on the latest binary image for Linux kernel on
  PCs with AMD64 or Intel 64 processors machines for siduction.
 
-Package: linux-headers-4.15.7-towo.2-siduction-amd64
+Package: linux-headers-4.15.9-towo.1-siduction-amd64
 Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}, libelf-dev, build-essential, gcc-7
 Conflicts: r8168-dkms
-Description: Header files for Linux 4.15.7-towo.2-siduction-amd64
+Description: Header files for Linux 4.15.9-towo.1-siduction-amd64
  This package provides the architecture-specific kernel header files for
- Linux kernel 4.15.7-towo.2-siduction-amd64, generally used for building
+ Linux kernel 4.15.9-towo.1-siduction-amd64, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-4.15.7-towo.2-siduction-amd64, and can be used for
+ /usr/src/linux-headers-4.15.9-towo.1-siduction-amd64, and can be used for
  building modules that load into the kernel provided by the
- linux-image-4.15.7-towo.2-siduction-amd64 package.
+ linux-image-4.15.9-towo.1-siduction-amd64 package.
 

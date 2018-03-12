@@ -1,8 +1,50 @@
-linux-siduction (4.16~rc3-1~exp1) UNRELEASED; urgency=medium
+linux-siduction (4.16~rc5-1~exp1) experimental; urgency=medium
+
+  * linux-4.16-rc5
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 12 Mar 2018 09:14:47 +0100
+
+linux-siduction (4.16~rc4-1~exp7) experimental; urgency=medium
+
+  * error fixing
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 08 Mar 2018 20:58:04 +0100
+
+linux-siduction (4.16~rc4-1~exp6) experimental; urgency=medium
+
+  * fix the systemd issue CONFIG_CGROUP_CPUACCT=y
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 08 Mar 2018 19:57:14 +0100
+
+linux-siduction (4.16~rc4-1~exp5) experimental; urgency=medium
+
+  * try new build with CONFIG_HARDENED_USERCOPY_FALLBACK=y
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 06 Mar 2018 14:54:16 +0100
+
+linux-siduction (4.16~rc4-1~exp4) experimental; urgency=medium
+
+  * add revert-swiotlb-symboles.patch; should fix nvidia module problem
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 05 Mar 2018 17:53:19 +0100
+
+linux-siduction (4.16~rc4-1~exp3) experimental; urgency=medium
+
+  * add flex to build-deps
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 05 Mar 2018 11:36:17 +0100
+
+linux-siduction (4.16~rc4-1~exp2) experimental; urgency=medium
+
+  * add bison to build-deps
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 05 Mar 2018 11:30:29 +0100
+
+linux-siduction (4.16~rc4-1~exp1) experimental; urgency=medium
 
   * start 4.16 developement
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 29 Jan 2018 06:41:18 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 05 Mar 2018 11:22:33 +0100
 
 linux-siduction (4.15~rc9-1~exp1) experimental; urgency=medium
 
