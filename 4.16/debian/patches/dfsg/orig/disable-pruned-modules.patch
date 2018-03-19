@@ -1,3 +1,10 @@
+From: Ben Hutchings <ben@decadent.org.uk>
+Date: Mon, 13 Apr 2009 17:34:00 +0100
+Subject: Remove microcode patches for mgsuvd (not enabled in Debian configs)
+Forwarded: not-needed
+
+diff --git a/arch/powerpc/platforms/8xx/Kconfig b/arch/powerpc/platforms/8xx/Kconfig
+index 48a920a..81570b6 100644
 --- a/arch/powerpc/platforms/8xx/Kconfig
 +++ b/arch/powerpc/platforms/8xx/Kconfig
 @@ -160,16 +160,19 @@ config NO_UCODE_PATCH
@@ -20,6 +27,11 @@
  	help
  	  Help not implemented yet, coming soon.
  
+From: Ben Hutchings <ben@decadent.org.uk>
+Date: Mon, 17 Aug 2009 02:45:41 +0100
+Subject: dvb-usb-af9005: mark as broken
+Forwarded: not-needed
+
 --- a/drivers/media/usb/dvb-usb/Kconfig
 +++ b/drivers/media/usb/dvb-usb/Kconfig
 @@ -227,6 +227,7 @@ config DVB_USB_OPERA1
@@ -30,16 +42,12 @@
  	depends on DVB_USB
  	select MEDIA_TUNER_MT2060 if MEDIA_SUBDRV_AUTOSELECT
  	select MEDIA_TUNER_QT1010 if MEDIA_SUBDRV_AUTOSELECT
---- a/drivers/media/i2c/Kconfig
-+++ b/drivers/media/i2c/Kconfig
-@@ -422,6 +422,7 @@ config VIDEO_OV7670
- 	  controller.
- 
- config VIDEO_VS6624
-+	depends on BROKEN
- 	tristate "ST VS6624 sensor support"
- 	depends on VIDEO_V4L2 && I2C
- 	depends on MEDIA_CAMERA_SUPPORT
+From: Frederik Schüler <fs@debian.org>
+Date: Fri, 05 Jan 2007 15:55:24 +0000
+Subject: Add removal patches for: 3c359, smctr, keyspan, cops
+Forwarded: not-needed
+
+diff -ruN a/drivers/net/appletalk/Kconfig b/drivers/net/appletalk/Kconfig
 --- a/drivers/net/appletalk/Kconfig	2006-11-29 21:57:37.000000000 +0000
 +++ b/drivers/net/appletalk/Kconfig	2007-01-05 15:34:44.000000000 +0000
 @@ -49,32 +49,6 @@
@@ -84,6 +92,21 @@ diff -ruN a/drivers/net/appletalk/Makefile b/drivers/net/appletalk/Makefile
  obj-$(CONFIG_IPDDP) += ipddp.o
 -obj-$(CONFIG_COPS) += cops.o
  obj-$(CONFIG_LTPC) += ltpc.o
+From: Ben Hutchings <ben@decadent.org.uk>
+Date: Sat, 2 Jun 2012 19:53:38 +0100
+Subject: video: Remove nvidiafb and rivafb
+Bug-Debian: https://bugs.debian.org/383481
+Forwarded: no
+
+These drivers contain register programming code provided by the
+hardware vendor that appears to have been deliberately obfuscated.
+This is arguably not the preferred form for modification.
+
+These drivers are also largely redundant with nouveau.  The RIVA 128
+(NV3) is not supported by nouveau but is about 15 years old and
+probably discontinued 10 years ago.
+
+---
 --- a/drivers/video/fbdev/Kconfig
 +++ b/drivers/video/fbdev/Kconfig
 @@ -991,101 +991,6 @@ config FB_ATMEL_STN
@@ -199,3 +222,18 @@ diff -ruN a/drivers/net/appletalk/Makefile b/drivers/net/appletalk/Makefile
  obj-$(CONFIG_FB_ATY)		  += aty/ macmodes.o
  obj-$(CONFIG_FB_ATY128)		  += aty/ macmodes.o
  obj-$(CONFIG_FB_RADEON)		  += aty/
+From: Ben Hutchings <ben@decadent.org.uk>
+Date: Sun, 27 May 2012 01:56:58 +0100
+Subject: vs6624: mark as broken
+Forwarded: not-needed
+
+--- a/drivers/media/i2c/Kconfig
++++ b/drivers/media/i2c/Kconfig
+@@ -422,6 +422,7 @@ config VIDEO_OV7670
+ 	  controller.
+ 
+ config VIDEO_VS6624
++	depends on BROKEN
+ 	tristate "ST VS6624 sensor support"
+ 	depends on VIDEO_V4L2 && I2C
+ 	depends on MEDIA_CAMERA_SUPPORT

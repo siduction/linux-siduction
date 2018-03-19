@@ -92,7 +92,12 @@ pushd "${TMP_DIR}/linux-${VERSION}" >/dev/null 2>&1
 		drivers/net/appletalk/cops.c \
 		drivers/net/appletalk/cops.h \
 		drivers/net/appletalk/cops_ffdrv.h \
-		drivers/net/appletalk/cops_ltdrv.h \
+		drivers/net/appletalk/cops_ltdrv.h
+
+
+	# These include apparently obfuscated code
+	rm -rf	drivers/video/fbdev/nvidia/ \
+		drivers/video/fbdev/riva/
 
 	echo "mark pruned modules as BROKEN"
 	patch -p1 < ${0%$(basename $0)}/../patches/dfsg/orig/disable-pruned-modules.patch

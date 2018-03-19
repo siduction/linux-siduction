@@ -1,3 +1,18 @@
+linux-siduction (4.15-23) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.15.11
+  * set CONFIG_FANOTIFY_ACCESS_PERMISSIONS=y
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Mar 2018 11:57:43 +0100
+
+linux-siduction (4.15-22) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.15.11-rc3 
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 18 Mar 2018 13:29:41 +0100
+
 linux-siduction (4.15-21) unstable; urgency=medium
 
   * set ABI to towo.1

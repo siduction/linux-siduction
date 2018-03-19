@@ -1,3 +1,34 @@
+linux-siduction (4.16~rc6-1~exp5) experimental; urgency=medium
+
+  * fix config
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Mar 2018 10:30:36 +0100
+
+linux-siduction (4.16~rc6-1~exp4) experimental; urgency=medium
+
+  * fix config
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Mar 2018 10:00:30 +0100
+
+linux-siduction (4.16~rc6-1~exp3) experimental; urgency=medium
+
+  * fix config
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Mar 2018 09:49:00 +0100
+
+linux-siduction (4.16~rc6-1~exp2) experimental; urgency=medium
+
+  * fix config
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Mar 2018 09:25:41 +0100
+
+linux-siduction (4.16~rc6-1~exp1) experimental; urgency=medium
+
+  * linux-4.16-rc6
+  * sync patches with debian git
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Mar 2018 07:09:59 +0100
+
 linux-siduction (4.16~rc5-1~exp1) experimental; urgency=medium
 
   * linux-4.16-rc5

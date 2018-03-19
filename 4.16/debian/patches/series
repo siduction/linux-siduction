@@ -1,83 +1,96 @@
 # upstream changes
-# patch-4.15.1
-# patch-4.15.1-rc1
+# patch-4.16.1
+# patch-4.16.1-rc1
 
 # Changes to support package build system
 debian/version.patch
 debian/uname-version-timestamp.patch
 debian/kernelvariables.patch
+debian/gitignore.patch
+debian/ia64-hardcode-arch-script-output.patch
+debian/mips-disable-werror.patch
+debian/arch-sh4-fix-uimage-build.patch
+debian/powerpcspe-omit-uimage.patch
 features/Kbuild-kconfig-Verbose-version-of-listnewconfig.patch
 debian/modpost-symbol-prefix.patch
+debian/tools-perf-version.patch
+debian/tools-perf-install.patch
 
 # Fixes/improvements to firmware loading
 features/drivers-media-dvb-usb-af9005-request_firmware.patch
 debian/iwlwifi-do-not-request-unreleased-firmware.patch
-#bugfix/firmware_class-log-every-success-and-failure.patch
-#bugfix/firmware-remove-redundant-log-messages-from-drivers.patch
+bugfix/firmware_class-log-every-success-and-failure.patch
+bugfix/firmware-remove-redundant-log-messages-from-drivers.patch
 bugfix/radeon-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
 
 # Change some defaults for security reasons
-#debian/af_802154-Disable-auto-loading-as-mitigation-against.patch
-#debian/rds-Disable-auto-loading-as-mitigation-against-local.patch
-#debian/decnet-Disable-auto-loading-as-mitigation-against-lo.patch
-#debian/dccp-disable-auto-loading-as-mitigation-against-local-exploits.patch
-#debian/fs-enable-link-security-restrictions-by-default.patch
+debian/af_802154-Disable-auto-loading-as-mitigation-against.patch
+debian/rds-Disable-auto-loading-as-mitigation-against-local.patch
+debian/decnet-Disable-auto-loading-as-mitigation-against-lo.patch
+debian/dccp-disable-auto-loading-as-mitigation-against-local-exploits.patch
+debian/fs-enable-link-security-restrictions-by-default.patch
 
 # Set various features runtime-disabled by default
-#debian/sched-autogroup-disabled.patch
-#debian/yama-disable-by-default.patch
-#debian/add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by-default.patch
-#features/security-perf-allow-further-restriction-of-perf_event_open.patch
+debian/sched-autogroup-disabled.patch
+debian/yama-disable-by-default.patch
+debian/add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by-default.patch
+features/security-perf-allow-further-restriction-of-perf_event_open.patch
 
 # Disable autoloading/probing of various drivers by default
-#debian/cdc_ncm-cdc_mbim-use-ncm-by-default.patch
+debian/cdc_ncm-cdc_mbim-use-ncm-by-default.patch
 debian/snd-pcsp-disable-autoload.patch
 bugfix/viafb-autoload-on-olpc-xo1.5-only.patch
 debian/fjes-disable-autoload.patch
 
 # Taint if dangerous features are used
-#debian/fanotify-taint-on-use-of-fanotify_access_permissions.patch
-#debian/btrfs-warn-about-raid5-6-being-experimental-at-mount.patch
+debian/fanotify-taint-on-use-of-fanotify_access_permissions.patch
+debian/btrfs-warn-about-raid5-6-being-experimental-at-mount.patch
 
 # Reduce noise for bug #852324
-#debian/amd64-don-t-warn-about-expected-w+x-pages-on-xen.patch
+debian/amd64-don-t-warn-about-expected-w+x-pages-on-xen.patch
 
 # Arch bug fixes
-#bugfix/platform-x86-ideapad-laptop-add-ideapad-310-15ikb-to.patch
-#bugfix/platform-x86-ideapad-laptop-add-ideapad-v310-15isk-t.patch
-#bugfix/platform-x86-ideapad-laptop-add-y520-15ikbn-to-no_hw.patch
-#bugfix/platform-x86-ideapad-laptop-add-y720-15ikbn-to-no_hw.patch
-#bugfix/platform-x86-ideapad-laptop-add-ideapad-v510-15ikb-t.patch
-#bugfix/platform-x86-ideapad-laptop-add-several-models-to-no.patch
-#debian/revert-gpu-host1x-add-iommu-support.patch
-#bugfix/mmap-remember-the-map_fixed-flag-as-vm_fixed.patch
-#bugfix/mmap-add-an-exception-to-the-stack-gap-for-hotspot-jvm.patch
+bugfix/platform-x86-ideapad-laptop-add-ideapad-310-15ikb-to.patch
+bugfix/platform-x86-ideapad-laptop-add-ideapad-v310-15isk-t.patch
+bugfix/platform-x86-ideapad-laptop-add-y520-15ikbn-to-no_hw.patch
+bugfix/platform-x86-ideapad-laptop-add-y720-15ikbn-to-no_hw.patch
+bugfix/platform-x86-ideapad-laptop-add-ideapad-v510-15ikb-t.patch
+bugfix/platform-x86-ideapad-laptop-add-several-models-to-no.patch
+debian/revert-gpu-host1x-add-iommu-support.patch
+bugfix/perf-tools-fix-unwind-build-on-i386.patch
+bugfix/mmap-remember-the-map_fixed-flag-as-vm_fixed.patch
+bugfix/mmap-add-an-exception-to-the-stack-gap-for-hotspot-jvm.patch
 
 # Arch features
-#features/x86-memtest-WARN-if-bad-RAM-found.patch
-#features/x86-make-x32-syscall-support-conditional.patch
+features/x86-memtest-WARN-if-bad-RAM-found.patch
+features/x86-make-x32-syscall-support-conditional.patch
 
 # Miscellaneous bug fixes
-#bugfix/kbuild-use-nostdinc-in-compile-tests.patch
-#bugfix/disable-some-marvell-phys.patch
-#bugfix/fs-add-module_softdep-declarations-for-hard-coded-cr.patch
-#bugfix/partially-revert-usb-kconfig-using-select-for-usb_co.patch
-#bugfix/kbuild-include-addtree-remove-quotes-before-matching-path.patch
-#bugfix/libsas-Disable-asynchronous-aborts-for-SATA-devices.patch
+bugfix/kbuild-use-nostdinc-in-compile-tests.patch
+bugfix/disable-some-marvell-phys.patch
+bugfix/fs-add-module_softdep-declarations-for-hard-coded-cr.patch
+bugfix/partially-revert-usb-kconfig-using-select-for-usb_co.patch
+bugfix/kbuild-include-addtree-remove-quotes-before-matching-path.patch
+debian/revert-objtool-fix-config_stack_validation-y-warning.patch
+bugfix/i40e-build-for-64-bit-targets-only.patch
+
+# Miscellaneous features
 
 # Security fixes
-#debian/i386-686-pae-pci-set-pci-nobios-by-default.patch
-#bugfix/media-dvb-usb-v2-lmedm04-Improve-logic-checking-of-w.patch
-#bugfix/media-dvb-usb-v2-lmedm04-move-ts2020-attach-to-dm04_.patch
-#bugfix/media-hdpvr-fix-an-error-handling-path-in-hdpvr_prob.patch
-#bugfix/bluetooth-prevent-stack-info-leak-from-the-efs-element.patch
+debian/i386-686-pae-pci-set-pci-nobios-by-default.patch
 
 # Fix exported symbol versions
 bugfix/module-disable-matching-missing-version-crc.patch
 
 # Tools bug fixes
-#bugfix/usbip-document-tcp-wrappers.patch
-#bugfix/kbuild-fix-recordmcount-dependency.patch
-#bugfix/cpupower-bump-soname-version.patch
-#bugfix/cpupower-fix-checks-for-cpu-existence.patch
+bugfix/usbip-document-tcp-wrappers.patch
+bugfix/kbuild-fix-recordmcount-dependency.patch
+bugfix/tools-perf-man-date.patch
+bugfix/tools-perf-remove-shebangs.patch
+bugfix/tools-lib-traceevent-use-ldflags.patch
+bugfix/revert-perf-build-fix-libunwind-feature-detection-on.patch
+bugfix/tools-build-remove-bpf-run-time-check-at-build-time.patch
+bugfix/cpupower-bump-soname-version.patch
+bugfix/cpupower-fix-checks-for-cpu-existence.patch
+bugfix/lockdep-stub-nmi-watchdog-reset.patch
 bugfix/revert-swiotlb-symboles.patch

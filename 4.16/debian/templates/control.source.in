@@ -9,6 +9,7 @@ Build-Depends: debhelper (>= 9.20120115),
  flex,
  libelf-dev,
  libssl-dev,
+ openssl,
  python3,
  xz-utils
 Vcs-git: git.siduction.org:extra/linux-siduction
