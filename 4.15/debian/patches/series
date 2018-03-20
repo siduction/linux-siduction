@@ -1,6 +1,6 @@
 # upstream changes
 upstream/patch-4.15.11
-#upstream/patch-4.15.12-rc1
+upstream/patch-4.15.12-rc1
 
 # Changes to support package build system
 debian/version.patch
