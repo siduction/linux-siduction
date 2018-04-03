@@ -1,81 +1,221 @@
-linux-siduction (4.16~rc6-1~exp5) experimental; urgency=medium
+linux-siduction (4.16-1) unstable; urgency=medium
 
-  * fix config
+  * set ABI to towo.1
+  * 1st release of linux 4.16
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Mar 2018 10:30:36 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 03 Apr 2018 08:44:27 +0200
 
-linux-siduction (4.16~rc6-1~exp4) experimental; urgency=medium
+linux-siduction (4.15-30) unstable; urgency=medium
 
-  * fix config
+  * set ABI to towo.1
+  * import patch-4.15.15
+  * set CONFIG_UHID=y
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Mar 2018 10:00:30 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 01 Apr 2018 16:01:03 +0200
 
-linux-siduction (4.16~rc6-1~exp3) experimental; urgency=medium
+linux-siduction (4.15-29) unstable; urgency=medium
 
-  * fix config
+  * set ABI to towo.1
+  * import patch-4.15.14
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Mar 2018 09:49:00 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 29 Mar 2018 09:56:55 +0200
 
-linux-siduction (4.16~rc6-1~exp2) experimental; urgency=medium
+linux-siduction (4.15-28) unstable; urgency=medium
 
-  * fix config
+  * set ABI to towo.2
+  * import patch-4.15.14-rc1
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Mar 2018 09:25:41 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 28 Mar 2018 07:57:32 +0200
 
-linux-siduction (4.16~rc6-1~exp1) experimental; urgency=medium
+linux-siduction (4.15-27) unstable; urgency=medium
 
-  * linux-4.16-rc6
-  * sync patches with debian git
+  * set ABI to towo.1
+  * import patch-4.15.13
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Mar 2018 07:09:59 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 25 Mar 2018 17:08:58 +0200
 
-linux-siduction (4.16~rc5-1~exp1) experimental; urgency=medium
+linux-siduction (4.15-26) unstable; urgency=medium
 
-  * linux-4.16-rc5
+  * set ABI to towo.2
+  * import patch-4.15.13-rc1
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 12 Mar 2018 09:14:47 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 23 Mar 2018 13:01:29 +0100
 
-linux-siduction (4.16~rc4-1~exp7) experimental; urgency=medium
+linux-siduction (4.15-25) unstable; urgency=medium
 
-  * error fixing
+  * set ABI to towo.1
+  * import patch-4.15.12
 
- -- Torsten Wohlfarth <towo@siduction.org>  Thu, 08 Mar 2018 20:58:04 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 21 Mar 2018 17:59:33 +0100
 
-linux-siduction (4.16~rc4-1~exp6) experimental; urgency=medium
+linux-siduction (4.15-24) unstable; urgency=medium
 
-  * fix the systemd issue CONFIG_CGROUP_CPUACCT=y
+  * set ABI to towo.2
+  * import patch-4.15.12-rc1
 
- -- Torsten Wohlfarth <towo@siduction.org>  Thu, 08 Mar 2018 19:57:14 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Mar 2018 19:32:44 +0100
 
-linux-siduction (4.16~rc4-1~exp5) experimental; urgency=medium
+linux-siduction (4.15-23) unstable; urgency=medium
 
-  * try new build with CONFIG_HARDENED_USERCOPY_FALLBACK=y
+  * set ABI to towo.1
+  * import patch-4.15.11
+  * set CONFIG_FANOTIFY_ACCESS_PERMISSIONS=y
 
- -- Torsten Wohlfarth <towo@siduction.org>  Tue, 06 Mar 2018 14:54:16 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Mar 2018 11:57:43 +0100
 
-linux-siduction (4.16~rc4-1~exp4) experimental; urgency=medium
+linux-siduction (4.15-22) unstable; urgency=medium
 
-  * add revert-swiotlb-symboles.patch; should fix nvidia module problem
+  * set ABI to towo.2
+  * import patch-4.15.11-rc3 
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 05 Mar 2018 17:53:19 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 18 Mar 2018 13:29:41 +0100
 
-linux-siduction (4.16~rc4-1~exp3) experimental; urgency=medium
+linux-siduction (4.15-21) unstable; urgency=medium
 
-  * add flex to build-deps
+  * set ABI to towo.1
+  * import patch-4.15.10
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 05 Mar 2018 11:36:17 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 15 Mar 2018 11:50:44 +0100
 
-linux-siduction (4.16~rc4-1~exp2) experimental; urgency=medium
+linux-siduction (4.15-20) unstable; urgency=medium
 
-  * add bison to build-deps
+  * set ABI to towo.3
+  * import patch-4.15.10-rc2
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 05 Mar 2018 11:30:29 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 14 Mar 2018 12:50:21 +0100
 
-linux-siduction (4.16~rc4-1~exp1) experimental; urgency=medium
+linux-siduction (4.15-19) unstable; urgency=medium
 
-  * start 4.16 developement
+  * set ABI to towo.2
+  * import patch-4.15.10-rc1
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 05 Mar 2018 11:22:33 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 13 Mar 2018 22:20:56 +0100
+
+linux-siduction (4.15-18) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.15.9
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 12 Mar 2018 13:43:03 +0100
+
+linux-siduction (4.15-17) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.15.8
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 10 Mar 2018 12:03:15 +0100
+
+linux-siduction (4.15-16) unstable; urgency=medium
+
+  * set ABI to towo.3
+  * testbuild with config from aptosid
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 08 Mar 2018 18:03:09 +0100
+
+linux-siduction (4.15-15) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.15.8-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 08 Mar 2018 07:20:36 +0100
+
+linux-siduction (4.15-14) unstable; urgency=medium
+
+  * fix version error, sorry for the noise
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 02 Mar 2018 06:43:50 +0100
+
+linux-siduction (4.15-13) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.15.7
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 01 Mar 2018 11:42:05 +0100
+
+linux-siduction (4.15-12) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.15.7-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 27 Feb 2018 07:35:48 +0100
+
+linux-siduction (4.15-11) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.15.6
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 25 Feb 2018 19:50:40 +0100
+
+linux-siduction (4.15-10) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.15.5
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 23 Feb 2018 10:13:20 +0100
+
+linux-siduction (4.15-9) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.15.4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 17 Feb 2018 14:13:15 +0100
+
+linux-siduction (4.15-8) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.15.4-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 15 Feb 2018 18:07:09 +0100
+
+linux-siduction (4.15-7) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.15.3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 12 Feb 2018 10:32:06 +0100
+
+linux-siduction (4.15-6) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.15.3-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 09 Feb 2018 19:32:26 +0100
+
+linux-siduction (4.15-5) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.15.2
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 08 Feb 2018 06:45:58 +0100
+
+linux-siduction (4.15-4) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.15.2-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 06 Feb 2018 10:10:45 +0100
+
+linux-siduction (4.15-3) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.15.1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 03 Feb 2018 18:26:54 +0100
+
+linux-siduction (4.15-2) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.15.1-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 03 Feb 2018 14:38:57 +0100
+
+linux-siduction (4.15-1) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * linux-4.15.0
+  * enable drivers/staging/vboxvideo
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 29 Jan 2018 06:46:03 +0100
 
 linux-siduction (4.15~rc9-1~exp1) experimental; urgency=medium
 
