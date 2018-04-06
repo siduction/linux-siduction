@@ -1,3 +1,19 @@
+linux-siduction (4.16-3) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * revert bugfix/fix-v4l-devnode-nums.patch, kernel does not compile with that patch
+  * import patch 4.16.1-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 06 Apr 2018 22:43:37 +0200
+
+linux-siduction (4.16-2) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * add bugfix/fix-v4l-devnode-nums.patch, see diskussion on https://www.mail-archive.com/linux-media@vger.kernel.org/msg128789.html
+  * unset CONFIG_INPUT_EVBUG=m to prevent logspam
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 05 Apr 2018 15:29:15 +0200
+
 linux-siduction (4.16-1) unstable; urgency=medium
 
   * set ABI to towo.1
