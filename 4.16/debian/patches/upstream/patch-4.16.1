@@ -11,20 +11,18 @@ index dad3b2ec66d4..aeb6db4e35c3 100644
  - reg : offset and length of the register set for the device.
  - interrupts : should contain uart interrupt.
 diff --git a/Makefile b/Makefile
-index 363dd096e46e..f47d6bd6f5be 100644
+index 363dd096e46e..1773c718074e 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -1,8 +1,8 @@
+@@ -1,7 +1,7 @@
  # SPDX-License-Identifier: GPL-2.0
  VERSION = 4
  PATCHLEVEL = 16
 -SUBLEVEL = 0
--EXTRAVERSION =
 +SUBLEVEL = 1
-+EXTRAVERSION = -rc1
+ EXTRAVERSION =
  NAME = Fearless Coyote
  
- # *DOCUMENTATION*
 diff --git a/arch/arm/crypto/Makefile b/arch/arm/crypto/Makefile
 index 30ef8e291271..c9919c2b7ad1 100644
 --- a/arch/arm/crypto/Makefile

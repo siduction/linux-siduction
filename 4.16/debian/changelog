@@ -1,3 +1,24 @@
+linux-siduction (4.16-6) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.16.2-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 11 Apr 2018 07:43:56 +0200
+
+linux-siduction (4.16-5) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.16.1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 09 Apr 2018 09:36:01 +0200
+
+linux-siduction (4.16-4) unstable; urgency=medium
+
+  * set ABI to towo.3
+  * add bugfix/v4l2-dev-fix.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 07 Apr 2018 14:26:01 +0200
+
 linux-siduction (4.16-3) unstable; urgency=medium
 
   * set ABI to towo.2

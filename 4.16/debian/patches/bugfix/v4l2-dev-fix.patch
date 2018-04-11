@@ -1,0 +1,45 @@
+diff --git a/drivers/media/v4l2-core/v4l2-dev.c b/drivers/media/v4l2-core/v4l2-dev.c
+index 0301fe4..1d0b220 100644
+--- a/drivers/media/v4l2-core/v4l2-dev.c
++++ b/drivers/media/v4l2-core/v4l2-dev.c
+@@ -939,10 +939,14 @@ int __video_register_device(struct video_device *vdev,
+ #endif
+ 	vdev->minor = i + minor_offset;
+ 	vdev->num = nr;
+-	devnode_set(vdev);
+ 
+ 	/* Should not happen since we thought this minor was free */
+-	WARN_ON(video_device[vdev->minor] != NULL);
++	if (WARN_ON(video_device[vdev->minor])) {
++		mutex_unlock(&videodev_lock);
++		printk(KERN_ERR "video_device not empty!\n");
++		return -ENFILE;
++	}
++	devnode_set(vdev);
+ 	vdev->index = get_index(vdev);
+ 	video_device[vdev->minor] = vdev;
+ 	mutex_unlock(&videodev_lock);
+diff --git a/include/media/v4l2-dev.h b/include/media/v4l2-dev.h
+index 27634e8..f60cf9c 100644
+--- a/include/media/v4l2-dev.h
++++ b/include/media/v4l2-dev.h
+@@ -33,13 +33,13 @@
+  */
+ enum vfl_devnode_type {
+ 	VFL_TYPE_GRABBER	= 0,
+-	VFL_TYPE_VBI		= 1,
+-	VFL_TYPE_RADIO		= 2,
+-	VFL_TYPE_SUBDEV		= 3,
+-	VFL_TYPE_SDR		= 4,
+-	VFL_TYPE_TOUCH		= 5,
++	VFL_TYPE_VBI,
++	VFL_TYPE_RADIO,
++	VFL_TYPE_SUBDEV,
++	VFL_TYPE_SDR,
++	VFL_TYPE_TOUCH,
++	VFL_TYPE_MAX /* Shall be the last one */
+ };
+-#define VFL_TYPE_MAX VFL_TYPE_TOUCH
+ 
+ /**
+  * enum  vfl_direction - Identifies if a &struct video_device corresponds
