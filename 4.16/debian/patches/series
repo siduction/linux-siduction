@@ -1,6 +1,6 @@
 # upstream changes
-upstream/patch-4.16.1
-upstream/patch-4.16.2-rc1
+upstream/patch-4.16.2
+#upstream/patch-4.16.3-rc1
 
 # Changes to support package build system
 debian/version.patch
@@ -75,6 +75,8 @@ debian/revert-objtool-fix-config_stack_validation-y-warning.patch
 bugfix/i40e-build-for-64-bit-targets-only.patch
 
 # Miscellaneous features
+
+features/defaults-fat-utf8.patch
 
 # Security fixes
 debian/i386-686-pae-pci-set-pci-nobios-by-default.patch

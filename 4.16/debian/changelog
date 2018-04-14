@@ -1,3 +1,17 @@
+linux-siduction (4.16-8) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * add features/defaults-fat-utf8.patch it was missing
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 14 Apr 2018 16:11:00 +0200
+
+linux-siduction (4.16-7) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.16.2
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 13 Apr 2018 08:32:49 +0200
+
 linux-siduction (4.16-6) unstable; urgency=medium
 
   * set ABI to towo.2
