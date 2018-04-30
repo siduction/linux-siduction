@@ -1,3 +1,41 @@
+linux-siduction (4.16-13) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.16.6
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 30 Apr 2018 14:25:16 +0200
+
+linux-siduction (4.16-12) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.16.5
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 26 Apr 2018 14:19:46 +0200
+
+linux-siduction (4.16-11) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.16.4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 24 Apr 2018 21:01:15 +0200
+
+linux-siduction (4.16-10) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.16.3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 19 Apr 2018 14:29:02 +0200
+
+linux-siduction (4.16-9) unstable; urgency=medium
+
+  * set ABI to towo.3
+  * import patch-4.16.3-rc1
+  * set CONFIG_SND_PCM_OSS=m
+  * set CONFIG_SND_SEQUENCER_OSS=m
+  * removed bugfix/v4l2-dev-fix.patch it's upstream now
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 18 Apr 2018 10:01:45 +0200
+
 linux-siduction (4.16-8) unstable; urgency=medium
 
   * set ABI to towo.2

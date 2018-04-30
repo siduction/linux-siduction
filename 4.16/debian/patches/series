@@ -1,6 +1,6 @@
 # upstream changes
-upstream/patch-4.16.2
-#upstream/patch-4.16.3-rc1
+upstream/patch-4.16.6
+#upstream/patch-4.16.7-rc1
 
 # Changes to support package build system
 debian/version.patch
@@ -95,5 +95,4 @@ bugfix/tools-build-remove-bpf-run-time-check-at-build-time.patch
 bugfix/cpupower-bump-soname-version.patch
 bugfix/cpupower-fix-checks-for-cpu-existence.patch
 bugfix/lockdep-stub-nmi-watchdog-reset.patch
-bugfix/revert-swiotlb-symboles.patch
-bugfix/v4l2-dev-fix.patch
+#bugfix/revert-swiotlb-symboles.patch
