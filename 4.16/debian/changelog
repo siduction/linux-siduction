@@ -1,3 +1,25 @@
+linux-siduction (4.16-16) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.16.9-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 14 May 2018 13:26:50 +0200
+
+linux-siduction (4.16-15) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.16.8
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 09 May 2018 19:24:04 +0200
+
+linux-siduction (4.16-14) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.16.7
+  * set CONFIG_ZSTD_COMPRESS=y
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 02 May 2018 19:21:41 +0200
+
 linux-siduction (4.16-13) unstable; urgency=medium
 
   * set ABI to towo.1

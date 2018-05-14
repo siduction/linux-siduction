@@ -1,6 +1,6 @@
 # upstream changes
-upstream/patch-4.16.6
-#upstream/patch-4.16.7-rc1
+upstream/patch-4.16.8
+upstream/patch-4.16.9-rc1
 
 # Changes to support package build system
 debian/version.patch
@@ -68,7 +68,7 @@ features/x86-make-x32-syscall-support-conditional.patch
 # Miscellaneous bug fixes
 bugfix/kbuild-use-nostdinc-in-compile-tests.patch
 bugfix/disable-some-marvell-phys.patch
-bugfix/fs-add-module_softdep-declarations-for-hard-coded-cr.patch
+#bugfix/fs-add-module_softdep-declarations-for-hard-coded-cr.patch
 bugfix/partially-revert-usb-kconfig-using-select-for-usb_co.patch
 bugfix/kbuild-include-addtree-remove-quotes-before-matching-path.patch
 debian/revert-objtool-fix-config_stack_validation-y-warning.patch
