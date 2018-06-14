@@ -1,93 +1,26 @@
-# upstream changes
-#upstream/patch-4.17.1
-upstream/patch-4.17.1-rc1
+# upstream updates
+upstream/patch-4.17.1
+upstream/patch-4.17.2-rc1
 
-# Changes to support package build system
+# dfsg-ify the binaries
+dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
+
+# stable candidate
+
+# bugfixes
+
+# debian specific patches.
 debian/version.patch
 debian/uname-version-timestamp.patch
 debian/kernelvariables.patch
-debian/gitignore.patch
-debian/modpost-symbol-prefix.patch
-debian/tools-perf-version.patch
-debian/tools-perf-install.patch
-#debian/wireless-add-debian-wireless-regdb-certificates.patch
 
-# Fixes/improvements to firmware loading
-features/drivers-media-dvb-usb-af9005-request_firmware.patch
-debian/iwlwifi-do-not-request-unreleased-firmware.patch
-bugfix/firmware_class-log-every-success-and-failure.patch
-bugfix/firmware-remove-redundant-log-messages-from-drivers.patch
-bugfix/radeon-amdgpu-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
-debian/firmware_class-refer-to-debian-wiki-firmware-page.patch
-
-# Change some defaults for security reasons
-debian/af_802154-Disable-auto-loading-as-mitigation-against.patch
-debian/rds-Disable-auto-loading-as-mitigation-against-local.patch
-debian/decnet-Disable-auto-loading-as-mitigation-against-lo.patch
-debian/dccp-disable-auto-loading-as-mitigation-against-local-exploits.patch
-debian/fs-enable-link-security-restrictions-by-default.patch
-
-# Set various features runtime-disabled by default
-#debian/sched-autogroup-disabled.patch
-debian/yama-disable-by-default.patch
-debian/add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by-default.patch
-features/security-perf-allow-further-restriction-of-perf_event_open.patch
-
-# Disable autoloading/probing of various drivers by default
-debian/cdc_ncm-cdc_mbim-use-ncm-by-default.patch
-debian/snd-pcsp-disable-autoload.patch
-bugfix/viafb-autoload-on-olpc-xo1.5-only.patch
-debian/fjes-disable-autoload.patch
-
-# Taint if dangerous features are used
-debian/fanotify-taint-on-use-of-fanotify_access_permissions.patch
-debian/btrfs-warn-about-raid5-6-being-experimental-at-mount.patch
-
-# Arch bug fixes
-bugfix/platform-x86-ideapad-laptop-add-ideapad-310-15ikb-to.patch
-bugfix/platform-x86-ideapad-laptop-add-ideapad-v310-15isk-t.patch
-bugfix/platform-x86-ideapad-laptop-add-y520-15ikbn-to-no_hw.patch
-bugfix/platform-x86-ideapad-laptop-add-y720-15ikbn-to-no_hw.patch
-bugfix/platform-x86-ideapad-laptop-add-ideapad-v510-15ikb-t.patch
-bugfix/platform-x86-ideapad-laptop-add-several-models-to-no.patch
-debian/revert-gpu-host1x-add-iommu-support.patch
-bugfix/perf-tools-fix-unwind-build-on-i386.patch
-bugfix/mmap-remember-the-map_fixed-flag-as-vm_fixed.patch
-bugfix/mmap-add-an-exception-to-the-stack-gap-for-hotspot-jvm.patch
-
-# Arch features
-features/x86-memtest-WARN-if-bad-RAM-found.patch
-features/x86-make-x32-syscall-support-conditional.patch
-
-# Miscellaneous bug fixes
-bugfix/kbuild-use-nostdinc-in-compile-tests.patch
-bugfix/disable-some-marvell-phys.patch
-bugfix/fs-add-module_softdep-declarations-for-hard-coded-cr.patch
-bugfix/partially-revert-usb-kconfig-using-select-for-usb_co.patch
-bugfix/kbuild-include-addtree-remove-quotes-before-matching-path.patch
-debian/revert-objtool-fix-config_stack_validation-y-warning.patch
-bugfix/i40e-build-for-64-bit-targets-only.patch
-
-# Miscellaneous features
-
-# Security fixes
-
-# Fix exported symbol versions
-bugfix/module-disable-matching-missing-version-crc.patch
-
-# Tools bug fixes
-bugfix/usbip-document-tcp-wrappers.patch
-bugfix/kbuild-fix-recordmcount-dependency.patch
-bugfix/tools-perf-man-date.patch
-bugfix/tools-perf-remove-shebangs.patch
-bugfix/tools-lib-traceevent-use-ldflags.patch
-bugfix/revert-perf-build-fix-libunwind-feature-detection-on.patch
-bugfix/tools-build-remove-bpf-run-time-check-at-build-time.patch
-bugfix/cpupower-bump-soname-version.patch
-bugfix/cpupower-fix-checks-for-cpu-existence.patch
-bugfix/lockdep-stub-nmi-watchdog-reset.patch
-
-# wireless: Disable regulatory.db direct loading (until we sort out signing)
-#debian/wireless-disable-regulatory.db-direct-loading.patch
-
+# features
 features/defaults-fat-utf8.patch
+features/ath_override-eeprom-countrycode.patch
+features/kvm_intel_enabled-nested-on-default.patch
+features/radeon-amdgpu-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
+features/fs-enable-link-security-restrictions-by-default.patch
+features/net_increase-IPV6_MAX_ADDRESSES-to-64.patch
+features/enable-schedstats.patch
+features/die-floppy-die.patch
+
