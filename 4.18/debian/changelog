@@ -1,3 +1,10 @@
+linux-siduction (4.18~rc3-1~exp1) experimental; urgency=medium
+
+  * start linux 4.18 packaging
+  * linux-4.18-rc3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 02 Jul 2018 08:54:50 +0200
+
 linux-siduction (4.17~rc7-1~exp1) experimental; urgency=medium
 
   * linux-4.17-rc7

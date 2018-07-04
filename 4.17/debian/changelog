@@ -1,3 +1,46 @@
+linux-siduction (4.17-12) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.17.4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 04 Jul 2018 13:16:43 +0200
+
+linux-siduction (4.17-11) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.17.4-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 02 Jul 2018 11:25:28 +0200
+
+linux-siduction (4.17-10) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.17.3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 27 Jun 2018 11:38:26 +0200
+
+linux-siduction (4.17-9) unstable; urgency=medium
+
+  * set ABI to towo.3
+  * import patch-4.17.3-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 25 Jun 2018 13:55:10 +0200
+
+linux-siduction (4.17-8) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * fix config for cert handling
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 18 Jun 2018 16:58:08 +0200
+
+linux-siduction (4.17-7) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.17.2
+  * use kernelconfig from 4.17-rc3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 18 Jun 2018 15:35:37 +0200
+
 linux-siduction (4.17-6) unstable; urgency=medium
 
   * set ABI to towo.4
