@@ -1,44 +1,21 @@
-linux-siduction (4.18-13) unstable; urgency=medium
+linux-siduction (4.19~rc5-1~exp1) experimental; urgency=medium
 
-  * set ABI to towo.1
-  * import patch-4.18.11
+  * linux-4.19-rc5
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sat, 29 Sep 2018 18:05:25 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 23 Sep 2018 21:11:06 +0200
 
-linux-siduction (4.18-12) unstable; urgency=medium
+linux-siduction (4.19~rc4-1~exp1) experimental; urgency=medium
 
-  * set ABI to towo.2
-  * import patch-4.18.11-rc1
+  * linux-4.19-rc4
 
- -- Torsten Wohlfarth <towo@siduction.org>  Thu, 27 Sep 2018 13:19:32 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 17 Sep 2018 07:18:26 +0200
 
-linux-siduction (4.18-11) unstable; urgency=medium
+linux-siduction (4.19~rc3-1~exp1) experimental; urgency=medium
 
-  * set ABI to towo.1
-  * import patch-4.18.10
+  * start 4.19 packaging
+  * CONFIG_RANDOM_TRUST_CPU is not set for now
 
- -- Torsten Wohlfarth <towo@siduction.org>  Wed, 26 Sep 2018 12:40:17 +0200
-
-linux-siduction (4.18-10) unstable; urgency=medium
-
-  * set ABI to towo.1
-  * import patch-4.18.9
-
- -- Torsten Wohlfarth <towo@siduction.org>  Thu, 20 Sep 2018 07:33:08 +0200
-
-linux-siduction (4.18-9) unstable; urgency=medium
-
-  * set ABI to towo.1
-  * import patch-4.18.8
-
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 17 Sep 2018 21:08:05 +0200
-
-linux-siduction (4.18-8) unstable; urgency=medium
-
-  * set ABI to towo.2
-  * import patch-4.18.8-rc1
-
- -- Torsten Wohlfarth <towo@siduction.org>  Thu, 13 Sep 2018 17:40:15 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 10 Sep 2018 06:44:04 +0200
 
 linux-siduction (4.18-7) unstable; urgency=medium
 
