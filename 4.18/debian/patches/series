@@ -1,6 +1,6 @@
 # upstream updates
-upstream/patch-4.18.14
-#upstream/patch-4.18.15-rc1
+upstream/patch-4.18.15
+#upstream/patch-4.18.16-rc1
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
