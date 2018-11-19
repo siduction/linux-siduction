@@ -1,3 +1,34 @@
+linux-siduction (4.19-12) unstable; urgency=medium
+
+  * put arch/x86/kernel/macros.s to the header package, it's needed for some 3rd party kernel modules in 4.20
+  * set ABI to towo.2
+  * import patch-4.19.3-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Nov 2018 17:47:29 +0100
+
+linux-siduction (4.19-10) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.19.2
+  * switvh to gcc-8
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 14 Nov 2018 19:42:11 +0100
+
+linux-siduction (4.19-9) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.19.2-rc1
+  * reenable can devices (https://forum.siduction.org/index.php?topic=7437.msg60388#msg60388)
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 12 Nov 2018 21:27:01 +0100
+
+linux-siduction (4.19-8) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.19.1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 04 Nov 2018 16:48:47 +0100
+
 linux-siduction (4.19-7) unstable; urgency=medium
 
   * set ABI to towo.6

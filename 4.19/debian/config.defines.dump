@@ -14,7 +14,7 @@ tp5
 (dp6
 Vabiname
 p7
-Vtowo.6
+Vtowo.2
 p8
 ss(Vbase
 p9
@@ -27,7 +27,7 @@ Vamd64
 p14
 asVcompiler
 p15
-Vgcc-7
+Vgcc-8
 p16
 sVfeaturesets
 p17
@@ -61,9 +61,9 @@ ass(Vrelations
 p34
 tp35
 (dp36
-Vgcc-7
+Vgcc-8
 p37
-Vgcc-7
+Vgcc-8
 p38
 sVinitramfs-fallback
 p39
@@ -176,7 +176,7 @@ tp96
 (dp97
 Vsource
 p98
-V4.19-7
+V4.19-12
 p99
 sVupstream
 p100
@@ -184,11 +184,11 @@ V4.19
 p101
 sVabiname_base
 p102
-V4.19.0
+V4.19.2
 p103
 sVabiname
 p104
-V4.19.0-towo.6
+V4.19.2-towo.2
 p105
 sstp106
 Rp107
