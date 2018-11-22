@@ -1,3 +1,23 @@
+linux-siduction (4.19-16) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.19.4-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 22 Nov 2018 08:38:02 +0100
+
+linux-siduction (4.19-15) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.19.3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 21 Nov 2018 13:55:03 +0100
+
+linux-siduction (4.19-13) unstable; urgency=medium
+
+  * fix debian/rules for upcomming kernel 4.20
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Nov 2018 18:34:43 +0100
+
 linux-siduction (4.19-12) unstable; urgency=medium
 
   * put arch/x86/kernel/macros.s to the header package, it's needed for some 3rd party kernel modules in 4.20

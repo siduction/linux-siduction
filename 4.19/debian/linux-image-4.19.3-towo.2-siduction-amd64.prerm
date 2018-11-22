@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-version=4.19.2-towo.2-siduction-amd64
+version=4.19.3-towo.2-siduction-amd64
 image_path=/boot/vmlinuz-$version
 
 if [ "$1" != remove ]; then
