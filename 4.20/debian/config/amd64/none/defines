@@ -1,0 +1,6 @@
+[base]
+flavours:
+ siduction-amd64
+
+[siduction-amd64_description]
+parts: xen

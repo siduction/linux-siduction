@@ -1,0 +1,20 @@
+[base]
+featuresets:
+ none
+flavours:
+ siduction-amd64
+kernel-arch: x86
+
+[build]
+debug-info: false
+image-file: arch/x86/boot/bzImage
+
+[image]
+bootloaders: grub-pc extlinux grub-efi-amd64
+install-stem: vmlinuz
+suggests: crda
+breaks: xserver-xorg-input-vmmouse (<< 1:13.0.99)
+
+[siduction-amd64_description]
+hardware: 64-bit PCs
+hardware-long: PCs with AMD64 or Intel 64 processors

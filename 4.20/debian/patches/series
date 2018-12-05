@@ -1,6 +1,6 @@
 # upstream updates
-upstream/patch-4.19.7
-#upstream/patch-4.19.8-rc1
+#upstream/patch-4.18.7
+#upstream/patch-4.18.8-rc1
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
@@ -17,10 +17,11 @@ debian/kernelvariables.patch
 # features
 features/defaults-fat-utf8.patch
 #features/ath_override-eeprom-countrycode.patch
-features/kvm_intel_enabled-nested-on-default.patch
-features/radeon-amdgpu-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
-features/fs-enable-link-security-restrictions-by-default.patch
-features/net_increase-IPV6_MAX_ADDRESSES-to-64.patch
+#features/kvm_intel_enabled-nested-on-default.patch
+#features/radeon-amdgpu-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
+#features/fs-enable-link-security-restrictions-by-default.patch
+#features/net_increase-IPV6_MAX_ADDRESSES-to-64.patch
 features/enable-schedstats.patch
 features/die-floppy-die.patch
 features/elan-i2c-ideapad.patch
+
