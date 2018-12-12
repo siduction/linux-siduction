@@ -1,3 +1,25 @@
+linux-siduction (4.19-28) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.19.9-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 12 Dec 2018 14:44:28 +0100
+
+linux-siduction (4.19-27) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.19.8
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 08 Dec 2018 13:32:45 +0100
+
+linux-siduction (4.19-26) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.19.8-rc1
+  * remove features/elan-i2c-ideapad.patch, it's upstream now
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 06 Dec 2018 17:14:49 +0100
+
 linux-siduction (4.19-25) unstable; urgency=medium
 
   * set ABI to towo.1
