@@ -1,3 +1,33 @@
+linux-siduction (4.20-5) UNRELEASED; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.20.1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 09 Jan 2019 18:14:40 +0100
+
+linux-siduction (4.20-4) unstable; urgency=medium
+
+  * set ABI to towo.4
+  * import patch-4.20.1-rc2
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 08 Jan 2019 13:50:12 +0100
+
+linux-siduction (4.20-3) unstable; urgency=medium
+
+  * set ABI to towo.3
+  * remove features/optpolines.patch it does not work yet
+  * add pending patches from the stable queue
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 06 Jan 2019 22:29:22 +0100
+
+linux-siduction (4.20-2) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * add features/optpolines.patch
+  * add the pending patches fron stable-queue
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 31 Dec 2018 16:02:02 +0100
+
 linux-siduction (4.20-1) unstable; urgency=medium
 
   * set ABI to towo.1
