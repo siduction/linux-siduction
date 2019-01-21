@@ -1,9 +1,30 @@
-linux-siduction (4.20-5) UNRELEASED; urgency=medium
+linux-siduction (4.20-8) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.20.3 https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.20.3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 16 Jan 2019 22:49:52 +0100
+
+linux-siduction (4.20-7) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.20.2
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 13 Jan 2019 12:39:56 +0100
+
+linux-siduction (4.20-6) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.20.2-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 11 Jan 2019 22:52:20 +0100
+
+linux-siduction (4.20-5) unstable; urgency=medium
 
   * set ABI to towo.1
   * import patch-4.20.1
 
- -- Torsten Wohlfarth <towo@siduction.org>  Wed, 09 Jan 2019 18:14:40 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 09 Jan 2019 18:17:21 +0100
 
 linux-siduction (4.20-4) unstable; urgency=medium
 
