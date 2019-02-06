@@ -1,6 +1,6 @@
 # upstream updates
-upstream/patch-4.20.3
-#upstream/patch-4.20.4-rc1
+upstream/patch-4.20.7
+#upstream/patch-4.20.8-rc1
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
@@ -23,3 +23,4 @@ debian/kbuild-include-addtree-remove-quotes-before-matching-path.patch
 debian/kbuild-fix-recordmcount-dependency.patch
 debian/snd-pcsp-disable-autoload.patch
 
+bugfix/rtl8821ce_bt_fix.diff
