@@ -1,94 +1,39 @@
-linux-siduction (4.20-22) unstable; urgency=medium
+linux-siduction (5.0~rc7-1~exp1) experimental; urgency=medium
 
-  * set ABI to towo.2
-  * import patch-4.20.12-rc1
+  * linux-5.0-rc7
 
- -- Torsten Wohlfarth <towo@siduction.org>  Fri, 22 Feb 2019 08:47:41 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 18 Feb 2019 07:34:00 +0100
 
-linux-siduction (4.20-21) unstable; urgency=medium
+linux-siduction (5.0~rc6-1~exp1) experimental; urgency=medium
 
-  * set ABI to towo.1
-  * import patch-4.20.11
+  * linux-5.0-rc6
 
- -- Torsten Wohlfarth <towo@siduction.org>  Wed, 20 Feb 2019 19:43:19 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 11 Feb 2019 09:20:27 +0100
 
-linux-siduction (4.20-20) unstable; urgency=medium
+linux-siduction (5.0~rc5-1~exp1) experimental; urgency=medium
 
-  * set ABI to towo.2
-  * import patch-4.20.11-rc1
+  * linux-5.0-rc5
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 18 Feb 2019 17:24:34 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 04 Feb 2019 06:55:25 +0100
 
-linux-siduction (4.20-19) unstable; urgency=medium
+linux-siduction (5.0~rc4-1~exp1) experimental; urgency=medium
 
-  * set ABI to towo.1
-  * import patch-4.20.10
+  * linux-5.0-rc4
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sun, 17 Feb 2019 13:23:35 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 28 Jan 2019 09:26:52 +0100
 
-linux-siduction (4.20-18) unstable; urgency=medium
+linux-siduction (5.0~rc3-1~exp2) experimental; urgency=medium
 
-  * set ABI to towo.1
-  * import patch-4.20.9
-
- -- Torsten Wohlfarth <towo@siduction.org>  Fri, 15 Feb 2019 09:45:46 +0100
-
-linux-siduction (4.20-17) unstable; urgency=medium
-
-  * set ABI to towo.2
-  * import patch-4.20.9-rc1
-
- -- Torsten Wohlfarth <towo@siduction.org>  Wed, 13 Feb 2019 21:03:55 +0100
-
-linux-siduction (4.20-16) unstable; urgency=medium
-
-  * set ABI to towo.1
-  * import patch-4.20.8
-
- -- Torsten Wohlfarth <towo@siduction.org>  Wed, 13 Feb 2019 13:15:21 +0100
-
-linux-siduction (4.20-15) unstable; urgency=medium
-
-  * set ABI to towo.2
-  * import patch-4.20.8-rc1
-
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 11 Feb 2019 18:46:12 +0100
-
-linux-siduction (4.20-14) unstable; urgency=medium
-
-  * set ABI to towo.1
-  * import patch-4.20.7
-
- -- Torsten Wohlfarth <towo@siduction.org>  Wed, 06 Feb 2019 20:54:13 +0100
-
-linux-siduction (4.20-13) unstable; urgency=medium
-
-  * set ABI to towo.2
-  * import patch-4.20.7-rc1
-
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 04 Feb 2019 11:56:12 +0100
-
-linux-siduction (4.20-12) unstable; urgency=medium
-
-  * set ABI to towo.1
-  * import patch-4.20.6
-
- -- Torsten Wohlfarth <towo@siduction.org>  Thu, 31 Jan 2019 09:49:35 +0100
-
-linux-siduction (4.20-11) unstable; urgency=medium
-
-  * set ABI to towo.1
-  * import patch-4.20.5
-
- -- Torsten Wohlfarth <towo@siduction.org>  Sat, 26 Jan 2019 21:23:22 +0100
-
-linux-siduction (4.20-10) unstable; urgency=medium
-
-  * set ABI to towo.1
-  * import patch-4.20.4
   * add bugfix/rtl8821ce_bt_fix.diff
 
- -- Torsten Wohlfarth <towo@siduction.org>  Tue, 22 Jan 2019 22:01:46 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 22 Jan 2019 20:42:17 +0100
+
+linux-siduction (5.0~rc3-1~exp1) experimental; urgency=medium
+
+  * set ABI to towo.1
+  * start linux 5.0 packaging
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 22 Jan 2019 18:05:32 +0100
 
 linux-siduction (4.20-9) unstable; urgency=medium
 
