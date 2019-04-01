@@ -1,3 +1,15 @@
+linux-siduction (5.1~rc3-1~exp1) experimental; urgency=medium
+
+  * linux-5.1-rc3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 01 Apr 2019 07:16:29 +0200
+
+linux-siduction (5.1~rc2-1~exp1) experimental; urgency=medium
+
+  * linux-5.1-rc2
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 25 Mar 2019 07:42:03 +0100
+
 linux-siduction (5.1~rc1-1~exp1) experimental; urgency=medium
 
   * linux 5.1 packaging

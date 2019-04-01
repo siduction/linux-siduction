@@ -1,72 +1,167 @@
-linux-siduction (5.0-4~exp1) experimental; urgency=medium
+linux-siduction (5.0-8) unstable; urgency=medium
 
-  * set ABI to towo1
-  * import patch-5.0.2
+  * set ABI to towo.1
+  * import patch-5.0.5
 
- -- Torsten Wohlfarth <towo@siduction.org>  Wed, 13 Mar 2019 22:52:41 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 27 Mar 2019 13:41:32 +0100
 
-linux-siduction (5.0-3~exp1) experimental; urgency=medium
+linux-siduction (5.0-7) unstable; urgency=medium
 
   * set ABI to towo.2
-  * import patch-5.0.2-rc1
+  * import patch-5.0.5-rc1
 
- -- Torsten Wohlfarth <towo@siduction.org>  Tue, 12 Mar 2019 18:54:49 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 26 Mar 2019 07:41:37 +0100
 
-linux-siduction (5.0-2~exp1) experimental; urgency=medium
+linux-siduction (5.0-6) unstable; urgency=medium
 
   * set ABI to towo.1
-  * import patch-5.0.1
+  * import patch-5.0.4
+    - https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.0.4
+  * now upload to unstable
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 11 Mar 2019 08:36:22 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 23 Mar 2019 20:26:38 +0100
 
-linux-siduction (5.0-1~exp1) experimental; urgency=medium
+linux-siduction (4.20-29) unstable; urgency=medium
 
-  * Linux-5.0 mainline
+  * set ABI to towo.1
+  * import patch-4.20.17
+    - https://cdn.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.20.17
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 04 Mar 2019 11:31:34 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 19 Mar 2019 13:44:21 +0100
 
-linux-siduction (5.0~rc8-1~exp1) experimental; urgency=medium
+linux-siduction (4.20-28) unstable; urgency=medium
 
-  * linux-5.0-rc8
+  * set ABI to towo.1
+  * import patch-4.20.16
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 25 Feb 2019 07:25:13 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 13 Mar 2019 22:56:20 +0100
 
-linux-siduction (5.0~rc7-1~exp1) experimental; urgency=medium
+linux-siduction (4.20-27) unstable; urgency=medium
 
-  * linux-5.0-rc7
+  * set ABI to towo.1
+  * import patch-4.20.15
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 18 Feb 2019 07:34:00 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 10 Mar 2019 15:58:07 +0100
 
-linux-siduction (5.0~rc6-1~exp1) experimental; urgency=medium
+linux-siduction (4.20-26) unstable; urgency=medium
 
-  * linux-5.0-rc6
+  * set ABI to towo.1
+  * import patch-4.20.14
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 11 Feb 2019 09:20:27 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 05 Mar 2019 21:29:18 +0100
 
-linux-siduction (5.0~rc5-1~exp1) experimental; urgency=medium
+linux-siduction (4.20-25) unstable; urgency=medium
 
-  * linux-5.0-rc5
+  * set ABI to towo.1
+  * import patch-4.20.13
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 04 Feb 2019 06:55:25 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 27 Feb 2019 18:15:18 +0100
 
-linux-siduction (5.0~rc4-1~exp1) experimental; urgency=medium
+linux-siduction (4.20-24) unstable; urgency=medium
 
-  * linux-5.0-rc4
+  * set ABI to towo.2
+  * import patch-4.20.13-rc1
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 28 Jan 2019 09:26:52 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 26 Feb 2019 09:33:53 +0100
 
-linux-siduction (5.0~rc3-1~exp2) experimental; urgency=medium
+linux-siduction (4.20-23) unstable; urgency=medium
 
+  * set ABI to towo.1
+  * import patch-4.20.12
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 23 Feb 2019 12:21:13 +0100
+
+linux-siduction (4.20-22) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.20.12-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 22 Feb 2019 08:47:41 +0100
+
+linux-siduction (4.20-21) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.20.11
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 20 Feb 2019 19:43:19 +0100
+
+linux-siduction (4.20-20) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.20.11-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 18 Feb 2019 17:24:34 +0100
+
+linux-siduction (4.20-19) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.20.10
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 17 Feb 2019 13:23:35 +0100
+
+linux-siduction (4.20-18) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.20.9
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 15 Feb 2019 09:45:46 +0100
+
+linux-siduction (4.20-17) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.20.9-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 13 Feb 2019 21:03:55 +0100
+
+linux-siduction (4.20-16) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.20.8
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 13 Feb 2019 13:15:21 +0100
+
+linux-siduction (4.20-15) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.20.8-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 11 Feb 2019 18:46:12 +0100
+
+linux-siduction (4.20-14) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.20.7
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 06 Feb 2019 20:54:13 +0100
+
+linux-siduction (4.20-13) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-4.20.7-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 04 Feb 2019 11:56:12 +0100
+
+linux-siduction (4.20-12) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.20.6
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 31 Jan 2019 09:49:35 +0100
+
+linux-siduction (4.20-11) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.20.5
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 26 Jan 2019 21:23:22 +0100
+
+linux-siduction (4.20-10) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-4.20.4
   * add bugfix/rtl8821ce_bt_fix.diff
 
- -- Torsten Wohlfarth <towo@siduction.org>  Tue, 22 Jan 2019 20:42:17 +0100
-
-linux-siduction (5.0~rc3-1~exp1) experimental; urgency=medium
-
-  * set ABI to towo.1
-  * start linux 5.0 packaging
-
- -- Torsten Wohlfarth <towo@siduction.org>  Tue, 22 Jan 2019 18:05:32 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 22 Jan 2019 22:01:46 +0100
 
 linux-siduction (4.20-9) unstable; urgency=medium
 
