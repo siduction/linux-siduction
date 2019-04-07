@@ -24,3 +24,4 @@ debian/kbuild-fix-recordmcount-dependency.patch
 debian/snd-pcsp-disable-autoload.patch
 
 bugfix/rtl8821ce_bt_fix.diff
+features/add_realtek_chips.patch

@@ -1,3 +1,19 @@
+linux-siduction (5.1~rc3-1~exp3) experimental; urgency=medium
+
+  * set forgotten config entries
+    -CONFIG_RTL8821CE=m 
+    -CONFIG_RTL8723BU=m 
+    -CONFIG_RTL8723DE=m
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 06 Apr 2019 23:31:18 +0200
+
+linux-siduction (5.1~rc3-1~exp2) experimental; urgency=medium
+
+  * set CONFIG_HID=m
+  * add features/add_realtek_chips.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 06 Apr 2019 22:54:52 +0200
+
 linux-siduction (5.1~rc3-1~exp1) experimental; urgency=medium
 
   * linux-5.1-rc3

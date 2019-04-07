@@ -1,6 +1,6 @@
 # upstream updates
-upstream/patch-5.0.5
-#upstream/patch-5.0.6-rc1
+upstream/patch-5.0.7
+#upstream/patch-5.0.8-rc1
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
@@ -24,3 +24,4 @@ debian/kbuild-fix-recordmcount-dependency.patch
 debian/snd-pcsp-disable-autoload.patch
 
 bugfix/rtl8821ce_bt_fix.diff
+features/add_realtek_chips.patch
