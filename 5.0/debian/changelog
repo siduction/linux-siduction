@@ -1,3 +1,15 @@
+linux-siduction (5.0-14) unstable; urgency=medium
+
+  * fix features/add_realtek_chips.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 10 Apr 2019 08:15:35 +0200
+
+linux-siduction (5.0-13) unstable; urgency=medium
+
+  * fix features/add_realtek_chips.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 10 Apr 2019 07:36:39 +0200
+
 linux-siduction (5.0-12) unstable; urgency=medium
 
   * import changes from rtl8821CE_WiFi_linux_v5.2.5.1_26055.20180108_COEX20170310-1212.tar.gz
