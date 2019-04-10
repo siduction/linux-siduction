@@ -1,3 +1,9 @@
+linux-siduction (5.1~rc4-1~exp5) experimental; urgency=medium
+
+  * geterate needed scripts
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 10 Apr 2019 09:10:52 +0200
+
 linux-siduction (5.1~rc4-1~exp3) experimental; urgency=medium
 
   * fix /features/add_realtek_chips.patch
