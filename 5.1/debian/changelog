@@ -1,3 +1,21 @@
+linux-siduction (5.1~rc7-1~exp1) experimental; urgency=medium
+
+  * linux-5.1-rc7
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 29 Apr 2019 07:07:16 +0200
+
+linux-siduction (5.1~rc6-1~exp1) experimental; urgency=medium
+
+  * linux-5.1-rc6
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 21 Apr 2019 20:45:37 +0200
+
+linux-siduction (5.1~rc5-1~exp1) experimental; urgency=medium
+
+  * linux-5.1-rc5
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 15 Apr 2019 06:56:12 +0200
+
 linux-siduction (5.1~rc4-1~exp5) experimental; urgency=medium
 
   * geterate needed scripts
