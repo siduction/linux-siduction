@@ -1,3 +1,10 @@
+linux-siduction (5.1-0~exp1) experimental; urgency=medium
+
+  * set ABI to towo.1
+  * Linux-5.1.0. changelog https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 06 May 2019 10:16:08 +0200
+
 linux-siduction (5.1~rc7-1~exp1) experimental; urgency=medium
 
   * linux-5.1-rc7
