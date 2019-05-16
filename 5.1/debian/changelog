@@ -1,3 +1,39 @@
+linux-siduction (5.1-3) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.1.3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 16 May 2019 21:13:04 +0200
+
+linux-siduction (5.1-2.1) unstable; urgency=medium
+
+  * seat ABI to towo.2
+  * import patch 5.1.3-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 15 May 2019 20:43:37 +0200
+
+linux-siduction (5.1-2) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.1.2, https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.1.2
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 15 May 2019 06:50:46 +0200
+
+linux-siduction (5.1-1) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.1.1, https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.1.1 
+  * upload to unstable
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 12 May 2019 13:29:44 +0200
+
+linux-siduction (5.1-0~exp2) experimental; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-5.1.1-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 09 May 2019 21:29:48 +0200
+
 linux-siduction (5.1-0~exp1) experimental; urgency=medium
 
   * set ABI to towo.1
