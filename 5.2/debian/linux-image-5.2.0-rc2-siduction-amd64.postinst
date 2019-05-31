@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-version=5.2.0-rc1-siduction-amd64
+version=5.2.0-rc2-siduction-amd64
 image_path=/boot/vmlinuz-$version
 
 if [ "$1" != configure ]; then

@@ -1,3 +1,29 @@
+linux-siduction (5.2~rc2-1~exp2) experimental; urgency=medium
+
+  * change kernel compression mode to xz
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 27 May 2019 15:10:19 +0200
+
+linux-siduction (5.2~rc2-1~exp1) experimental; urgency=medium
+
+  * linux-5.2-rc2
+  * build with solus kernel config
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 25 May 2019 22:01:52 +0200
+
+linux-siduction (5.2~rc1-1~exp4) experimental; urgency=medium
+
+  * removed features/add_realtek_chips.patch
+  * new config
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 22 May 2019 20:46:52 +0200
+
+linux-siduction (5.2~rc1-1~exp3) experimental; urgency=medium
+
+  * test build with config from 5.1.4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 22 May 2019 14:34:52 +0200
+
 linux-siduction (5.2~rc1-1~exp2) experimental; urgency=medium
 
   * test alternative config, since the kernel was not able to boot on my machine
