@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-version=5.1.6-towo.1-siduction-amd64
+version=5.2.0-rc6-siduction-amd64
 image_path=/boot/vmlinuz-$version
 
 rm -f /lib/modules/$version/.fresh-install

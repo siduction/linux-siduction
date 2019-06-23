@@ -1,3 +1,27 @@
+linux-siduction (5.2~rc6-1~exp1) experimental; urgency=medium
+
+  * linux-5.2-rc6
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 23 Jun 2019 13:35:51 +0200
+
+linux-siduction (5.2~rc5-1~exp1) experimental; urgency=medium
+
+  * linux-5.2-rc5
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 16 Jun 2019 21:59:25 +0200
+
+linux-siduction (5.2~rc4-1~exp1) experimental; urgency=medium
+
+  * linux-5.2-rc4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 09 Jun 2019 19:49:06 +0200
+
+linux-siduction (5.2~rc3-1~exp1) experimental; urgency=medium
+
+  * linux-5.2-rc3; http://lkml.iu.edu/hypermail/linux/kernel/1906.0/00679.html
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 03 Jun 2019 06:59:28 +0200
+
 linux-siduction (5.2~rc2-1~exp2) experimental; urgency=medium
 
   * change kernel compression mode to xz
