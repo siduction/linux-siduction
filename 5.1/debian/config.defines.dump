@@ -27,7 +27,7 @@ Vamd64
 p14
 asVcompiler
 p15
-Vgcc-8
+Vgcc-9
 p16
 sVfeaturesets
 p17
@@ -61,9 +61,9 @@ ass(Vrelations
 p34
 tp35
 (dp36
-Vgcc-8
+Vgcc-9
 p37
-Vgcc-8
+Vgcc-9
 p38
 sVinitramfs-fallback
 p39
@@ -176,7 +176,7 @@ tp96
 (dp97
 Vsource
 p98
-V5.1-14
+V5.1-18
 p99
 sVupstream
 p100
@@ -184,11 +184,11 @@ V5.1
 p101
 sVabiname_base
 p102
-V5.1.14
+V5.1.18
 p103
 sVabiname
 p104
-V5.1.14-towo.1
+V5.1.18-towo.1
 p105
 sstp106
 Rp107

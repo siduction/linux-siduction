@@ -1,3 +1,32 @@
+linux-siduction (5.2-1~exp1) experimental; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.2.1
+  * sync patches with debian-git
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 14 Jul 2019 14:11:59 +0200
+
+linux-siduction (5.2-0~exp3) experimental; urgency=medium
+
+  * set ABI to towo.1
+  * change to gcc-9
+  * reenable the usb dvb devices in kernelconfig
+  * import patch-5.2.1-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 12 Jul 2019 16:30:03 +0200
+
+linux-siduction (5.2-0~exp1) experimental; urgency=medium
+
+  * linux-5.2 mainline
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 08 Jul 2019 18:16:44 +0200
+
+linux-siduction (5.2~rc7-1~exp1) experimental; urgency=medium
+
+  * linux-5.2-rc7
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 30 Jun 2019 20:53:26 +0200
+
 linux-siduction (5.2~rc6-1~exp1) experimental; urgency=medium
 
   * linux-5.2-rc6
