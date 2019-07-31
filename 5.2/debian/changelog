@@ -1,3 +1,10 @@
+linux-siduction (5.2-5) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.2.5; https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.2.5
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 31 Jul 2019 08:16:33 +0200
+
 linux-siduction (5.2-4.2) unstable; urgency=medium
 
   * set ABI to towo.3
