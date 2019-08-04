@@ -1,3 +1,39 @@
+linux-siduction (5.2-6) unstable; urgency=medium
+
+  * set ABO to towo.1
+  * import patch-5.2.6
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 04 Aug 2019 13:37:27 +0200
+
+linux-siduction (5.2-5.4) unstable; urgency=medium
+
+  * fix config for RTW88
+  * set ABI to towo.5
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 03 Aug 2019 20:44:28 +0200
+
+linux-siduction (5.2-5.3) unstable; urgency=medium
+
+  * set ABI to towo.4
+  * activate RTW88
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 03 Aug 2019 20:37:34 +0200
+
+linux-siduction (5.2-5.2) unstable; urgency=medium
+
+  * set ABI to towo.3
+  * import patch-5.2.6-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 02 Aug 2019 13:07:35 +0200
+
+linux-siduction (5.2-5.1) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * CONFIG_OVERLAY_FS_REDIRECT_DIR=y
+  * CONFIG_OVERLAY_FS_XINO_AUTO=y
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 31 Jul 2019 20:09:34 +0200
+
 linux-siduction (5.2-5) unstable; urgency=medium
 
   * set ABI to towo.1
