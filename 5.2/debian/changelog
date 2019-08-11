@@ -1,6 +1,34 @@
+linux-siduction (5.2-8.1) unstable; urgency=medium
+
+  * set ABI to towo.3
+  * add features/apparmor-next.patch; https://gitlab.com/apparmor/apparmor-kernel/tree/5.2-outoftree
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 11 Aug 2019 12:23:08 +0200
+
+linux-siduction (5.2-8) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * imoport patch-5.2.8; https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.2.8
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 10 Aug 2019 08:37:36 +0200
+
+linux-siduction (5.2-7.1) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.2.8-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 08 Aug 2019 21:47:26 +0200
+
+linux-siduction (5.2-7) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.2.7
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 07 Aug 2019 10:54:21 +0200
+
 linux-siduction (5.2-6) unstable; urgency=medium
 
-  * set ABO to towo.1
+  * set ABI to towo.1
   * import patch-5.2.6
 
  -- Torsten Wohlfarth <towo@siduction.org>  Sun, 04 Aug 2019 13:37:27 +0200
