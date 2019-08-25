@@ -1,3 +1,22 @@
+linux-siduction (5.3~rc6-1~exp1) experimental; urgency=medium
+
+  * linux-5.3-rc6
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 25 Aug 2019 18:01:44 +0200
+
+linux-siduction (5.3~rc5-2~exp1) experimental; urgency=medium
+
+  * fix typo in debian/config/config
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Aug 2019 14:57:21 +0200
+
+linux-siduction (5.3~rc5-1~exp1) experimental; urgency=medium
+
+  * linux-5.3-rc5
+  * synced some framebuffer and intel settings with debian
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Aug 2019 07:25:31 +0200
+
 linux-siduction (5.3~rc4-1~exp2) experimental; urgency=medium
 
   * linux-5.3-rc4
