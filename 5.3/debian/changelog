@@ -1,51 +1,165 @@
-linux-siduction (5.3~rc6-1~exp1) experimental; urgency=medium
+linux-siduction (5.3-4) unstable; urgency=medium
 
-  * linux-5.3-rc6
+  * set ABI to towo.1
+  * import patch-5.3.4; https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.4
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sun, 25 Aug 2019 18:01:44 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 05 Oct 2019 20:37:00 +0200
 
-linux-siduction (5.3~rc5-2~exp1) experimental; urgency=medium
+linux-siduction (5.3-2.1) unstable; urgency=medium
 
-  * fix typo in debian/config/config
+  * set ABI to towo.2
+  * import patch-5.3.3-rc1
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Aug 2019 14:57:21 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 03 Oct 2019 18:51:27 +0200
 
-linux-siduction (5.3~rc5-1~exp1) experimental; urgency=medium
+linux-siduction (5.3-2) unstable; urgency=medium
 
-  * linux-5.3-rc5
-  * synced some framebuffer and intel settings with debian
+  * set ABI to towo.1
+  * import patch-5.3.2
+  * upload to siduction unstable
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Aug 2019 07:25:31 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 01 Oct 2019 11:58:04 +0200
 
-linux-siduction (5.3~rc4-1~exp2) experimental; urgency=medium
+linux-siduction (5.2-20) unstable; urgency=medium
 
-  * linux-5.3-rc4
+  * set ABI to towo.2
+  * enabled all hwsensor modules
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sat, 10 Aug 2019 17:06:27 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 25 Sep 2019 07:53:11 +0200
 
-linux-siduction (5.3~rc3-5~exp1) experimental; urgency=medium
+linux-siduction (5.2-19) unstable; urgency=medium
 
-  * do a full upload
+  * set ABI to towo.1
+  * import patch-5.2.17; https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.2.17
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 05 Aug 2019 23:48:40 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 21 Sep 2019 17:22:59 +0200
 
-linux-siduction (5.3~rc3-4~exp1) experimental; urgency=medium
+linux-siduction (5.2-18) unstable; urgency=medium
 
-  * fix typo in debian/rules.real
+  * set ABI to towo.1
+  * import patch-5.2.16; https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.2.16
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 05 Aug 2019 15:51:57 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 19 Sep 2019 12:45:39 +0200
 
-linux-siduction (5.3~rc3-2~exp1) experimental; urgency=medium
+linux-siduction (5.2-17) unstable; urgency=medium
 
-  * fix packaging error in linux-image package
+  * set ABI to towo.1
+  * import patch-5.2.15; https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.2.15
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 05 Aug 2019 15:40:29 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 16 Sep 2019 09:56:19 +0200
 
-linux-siduction (5.3~rc3-1~exp1) experimental; urgency=medium
+linux-siduction (5.2-16) unstable; urgency=medium
 
-  * start linux-5.3 testing
+  * set ABI to towo.1
+  * import patch-5.2.14
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sat, 03 Aug 2019 21:51:24 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 11 Sep 2019 08:29:11 +0200
+
+linux-siduction (5.2-15) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-5.2.13
+  * import patch-5.2.14-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 08 Sep 2019 18:46:38 +0200
+
+linux-siduction (5.2-14) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.2.12; https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.2.12
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 06 Sep 2019 11:00:34 +0200
+
+linux-siduction (5.2-13) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * USB_CONFIGFS_F_UVC=m (forgotten sometimes, needed for webcam support)
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 01 Sep 2019 14:46:18 +0200
+
+linux-siduction (5.2-12) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.2.11; https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.2.11
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 29 Aug 2019 11:45:46 +0200
+
+linux-siduction (5.2-11) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-5.2.11-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 27 Aug 2019 11:26:55 +0200
+
+linux-siduction (5.2-10) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.2.10
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 25 Aug 2019 17:58:24 +0200
+
+linux-siduction (5.2-9.2) unstable; urgency=medium
+
+  * set ABI to towo.3
+  * import patch-5.2.10-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 25 Aug 2019 15:04:48 +0200
+
+linux-siduction (5.2-9.1) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * revert apparmor-next.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 17 Aug 2019 13:35:49 +0200
+
+linux-siduction (5.2-9) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.2.9
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 16 Aug 2019 12:05:09 +0200
+
+linux-siduction (5.2-8.2) unstable; urgency=medium
+
+  * set ABI to towo.4
+  * import patch-5.2.9-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 16 Aug 2019 08:56:16 +0200
+
+linux-siduction (5.2-8.1) unstable; urgency=medium
+
+  * set ABI to towo.3
+  * add features/apparmor-next.patch; https://gitlab.com/apparmor/apparmor-kernel/tree/5.2-outoftree
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 11 Aug 2019 12:23:08 +0200
+
+linux-siduction (5.2-8) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * imoport patch-5.2.8; https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.2.8
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 10 Aug 2019 08:37:36 +0200
+
+linux-siduction (5.2-7.1) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.2.8-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 08 Aug 2019 21:47:26 +0200
+
+linux-siduction (5.2-7) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.2.7
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 07 Aug 2019 10:54:21 +0200
+
+linux-siduction (5.2-6) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.2.6
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 04 Aug 2019 13:37:27 +0200
 
 linux-siduction (5.2-5.4) unstable; urgency=medium
 
