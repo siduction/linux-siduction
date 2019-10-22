@@ -1,3 +1,9 @@
+linux-siduction (5.4~rc4-1~exp1) experimental; urgency=medium
+
+  * linux-5.4 packaging
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 22 Oct 2019 07:43:26 +0200
+
 linux-siduction (5.3-7.1) unstable; urgency=medium
 
   * set ABI to towo.2
