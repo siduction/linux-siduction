@@ -26,4 +26,4 @@ bugfix/rtl8821ce_bt_fix.diff
 
 debian/wireless-disable-regulatory.db-direct-loading.patch
 debian/overlayfs-permit-mounts-in-userns.patch
-bugfix/rtlwifi-security.patch
+#bugfix/rtlwifi-security.patch

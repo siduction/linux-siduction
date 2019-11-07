@@ -1,6 +1,6 @@
 # upstream updates
-upstream/patch-5.3.7
-#upstream/patch-5.3.8-rc1
+upstream/patch-5.3.9
+#upstream/patch-5.3.10-rc1
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
@@ -16,7 +16,7 @@ debian/wireless-add-debian-wireless-regdb-certificates.patch
 features/defaults-fat-utf8.patch
 features/firmware_class-log-every-success-and-failure.patch
 features/firmware-remove-redundant-log-messages-from-drivers.patch
-features/radeon-amdgpu-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
+#features/radeon-amdgpu-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
 features/die-floppy-die.patch
 
 debian/kbuild-fix-recordmcount-dependency.patch
@@ -26,4 +26,5 @@ bugfix/rtl8821ce_bt_fix.diff
 
 debian/wireless-disable-regulatory.db-direct-loading.patch
 debian/overlayfs-permit-mounts-in-userns.patch
-bugfix/rtlwifi-security.patch
+
+#queue/stable-queue.patch

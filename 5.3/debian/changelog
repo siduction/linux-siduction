@@ -1,3 +1,32 @@
+linux-siduction (5.3-9) unstable; urgency=medium
+
+  * set AB to towo.1
+  * import patch-5.3.9; https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.8
+  * remove patch bugfix/rtlwifi-security.patch, it's upstream now
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 06 Nov 2019 19:38:36 +0100
+
+linux-siduction (5.3-8) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.3.8; https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.8
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 29 Oct 2019 09:48:51 +0100
+
+linux-siduction (5.3-7.3) unstable; urgency=medium
+
+  * set ABI to towo.4
+  * import patch-5.3.8-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 27 Oct 2019 22:09:23 +0100
+
+linux-siduction (5.3-7.2) unstable; urgency=medium
+
+  * set ABI to towo.3
+  * add patches from the stable wueue
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 27 Oct 2019 21:04:34 +0100
+
 linux-siduction (5.3-7.1) unstable; urgency=medium
 
   * set ABI to towo.2
