@@ -1,3 +1,10 @@
+linux-siduction (5.4~rc7-1~exp1) experimental; urgency=medium
+
+  * linux-5.4-rc7
+  * config: VBOXSF_FS=m
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 11 Nov 2019 06:53:45 +0100
+
 linux-siduction (5.4~rc6-1~exp1) experimental; urgency=medium
 
   * linux-5.4-rc6
