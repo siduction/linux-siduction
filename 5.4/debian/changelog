@@ -1,3 +1,109 @@
+linux-siduction (5.4-6.2) unstable; urgency=medium
+
+  * set ABI to towo.3
+  * import patch-5.4.7-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 29 Dec 2019 18:50:32 +0100
+
+linux-siduction (5.4-6.1) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * add drm-patches from the stable queue
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 23 Dec 2019 10:50:15 +0100
+
+linux-siduction (5.4-6) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * mport patch-5.4.6; https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.6
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 21 Dec 2019 17:12:58 +0100
+
+linux-siduction (5.4-5.1) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-5.4.6-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 19 Dec 2019 20:21:53 +0100
+
+linux-siduction (5.4-5) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.4.5; https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.5
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 18 Dec 2019 17:56:51 +0100
+
+linux-siduction (5.4-4) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.4.4; https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 18 Dec 2019 10:06:15 +0100
+
+linux-siduction (5.4-3.1) unstable; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-5.4.4-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 16 Dec 2019 20:52:59 +0100
+
+linux-siduction (5.4-3) unstable; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.4.3
+  * upload to unstable
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 15 Dec 2019 15:37:21 +0100
+
+linux-siduction (5.4-2~exp2) experimental; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-5.4.3-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 11 Dec 2019 17:58:27 +0100
+
+linux-siduction (5.4-2~exp1) experimental; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.4.2; https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.4.2
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 05 Dec 2019 07:32:37 +0100
+
+linux-siduction (5.4-1~exp2) experimental; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-5.4.2-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 04 Dec 2019 07:31:31 +0100
+
+linux-siduction (5.4-1~exp1) experimental; urgency=medium
+
+  * set ABI to towo.1
+  * import patch-5.4.1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 29 Nov 2019 11:52:20 +0100
+
+linux-siduction (5.4-0~exp2) experimental; urgency=medium
+
+  * set ABI to towo.2
+  * import patch-5.4.1-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 28 Nov 2019 09:37:42 +0100
+
+linux-siduction (5.4-0~exp1) experimental; urgency=medium
+
+  * set ABI to towo.1
+  * linux-5.4.0
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 25 Nov 2019 06:52:22 +0100
+
+linux-siduction (5.4~rc8-1~exp1) experimental; urgency=medium
+
+  * linux-5.4-rc8
+  * VBOXSF_FS was reverted by Linus
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 18 Nov 2019 06:53:18 +0100
+
 linux-siduction (5.4~rc7-1~exp1) experimental; urgency=medium
 
   * linux-5.4-rc7
