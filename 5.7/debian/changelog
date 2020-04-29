@@ -1,9 +1,14 @@
-linux-siduction (5.6-7.1) unstable; urgency=medium
+linux-siduction (5.7~rc3-1~exp1) experimental; urgency=medium
 
-  * set ABI to towo.2
-  * import patch-5.6.8-rc1
+  * linux-5.7-rc3
 
- -- Torsten Wohlfarth <towo@siduction.org>  Wed, 29 Apr 2020 13:43:28 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 27 Apr 2020 08:42:24 +0200
+
+linux-siduction (5.7~rc2-1~exp1) experimental; urgency=medium
+
+  * start kernel 5.7 packaging
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 23 Apr 2020 20:59:13 +0200
 
 linux-siduction (5.6-7) unstable; urgency=medium
 
