@@ -1,0 +1,63 @@
+diff -ruN linux-5.7-rc4/arch/x86/include/asm/stackprotector.h linux-5.7-rc4-patched/arch/x86/include/asm/stackprotector.h
+--- linux-5.7-rc4/arch/x86/include/asm/stackprotector.h	2020-05-03 23:56:04.000000000 +0200
++++ linux-5.7-rc4-patched/arch/x86/include/asm/stackprotector.h	2020-05-08 19:12:18.098502657 +0200
+@@ -55,8 +55,13 @@
+ /*
+  * Initialize the stackprotector canary value.
+  *
+- * NOTE: this must only be called from functions that never return,
++ * NOTE: this must only be called from functions that never return
+  * and it must always be inlined.
++ *
++ * In addition, it should be called from a compilation unit for which
++ * stack protector is disabled. Alternatively, the caller should not end
++ * with a function call which gets tail-call optimized as that would
++ * lead to checking a modified canary value.
+  */
+ static __always_inline void boot_init_stack_canary(void)
+ {
+diff -ruN linux-5.7-rc4/arch/x86/kernel/smpboot.c linux-5.7-rc4-patched/arch/x86/kernel/smpboot.c
+--- linux-5.7-rc4/arch/x86/kernel/smpboot.c	2020-05-03 23:56:04.000000000 +0200
++++ linux-5.7-rc4-patched/arch/x86/kernel/smpboot.c	2020-05-08 19:14:12.731720847 +0200
+@@ -266,7 +266,15 @@
+ 
+ 	wmb();
+ 	cpu_startup_entry(CPUHP_AP_ONLINE_IDLE);
+-}
++
++	/*
++	 * Prevent tail call to cpu_startup_entry() because the stack protector
++	 * guard has been changed a couple of function calls up, in
++	 * boot_init_stack_canary() and must not be checked before tail calling
++	 * another function.
++	 */
++	prevent_tail_call_optimization();
++ }
+ 
+ /**
+  * topology_is_primary_thread - Check whether CPU is the primary SMT thread
+diff -ruN linux-5.7-rc4/arch/x86/xen/smp_pv.c linux-5.7-rc4-patched/arch/x86/xen/smp_pv.c
+--- linux-5.7-rc4/arch/x86/xen/smp_pv.c	2020-05-03 23:56:04.000000000 +0200
++++ linux-5.7-rc4-patched/arch/x86/xen/smp_pv.c	2020-05-08 19:17:18.912239718 +0200
+@@ -93,6 +93,7 @@
+ 	cpu_bringup();
+ 	boot_init_stack_canary();
+ 	cpu_startup_entry(CPUHP_AP_ONLINE_IDLE);
++	prevent_tail_call_optimization();
+ }
+ 
+ void xen_smp_intr_free_pv(unsigned int cpu)
+diff -ruN linux-5.7-rc4/include/linux/compiler.h linux-5.7-rc4-patched/include/linux/compiler.h
+--- linux-5.7-rc4/include/linux/compiler.h	2020-05-03 23:56:04.000000000 +0200
++++ linux-5.7-rc4-patched/include/linux/compiler.h	2020-05-08 19:21:28.781313914 +0200
+@@ -356,4 +356,10 @@
+ /* &a[0] degrades to a pointer: a different type from an array */
+ #define __must_be_array(a)	BUILD_BUG_ON_ZERO(__same_type((a), &(a)[0]))
+ 
++/*
++ * This is needed in functions which generate the stack canary, see
++ * arch/x86/kernel/smpboot.c::start_secondary() for an example.
++ */
++#define prevent_tail_call_optimization() asm("")
++
+ #endif /* __LINUX_COMPILER_H */
