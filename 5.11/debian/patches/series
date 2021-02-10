@@ -34,6 +34,6 @@ bugfix/fix_amd_performance.patch
 
 #bugfix/disable-some-marvell-phys.patch
 #bugfix/fs-add-module_softdep-declarations-for-hard-coded-cr.patch
-features/ntfs3_v16.patch
+features/ntfs3_v19.patch
 features/OpenRGB.patch
 

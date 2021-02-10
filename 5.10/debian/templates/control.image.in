@@ -8,7 +8,7 @@ Description: Linux @upstreamversion@ for @class@
 
 Package: linux-image@localversion@
 Section: metapackages
-Provides: wireguard-modules
+Provides: wireguard-modules (= 1.0.0)
 Priority: extra
 Depends: linux-image-@abiname@@localversion@ (= ${binary:Version}), ${misc:Depends}
 Recommends: linux-headers@localversion@ (= ${binary:Version})

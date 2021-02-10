@@ -1,10 +1,10 @@
-37190d194190bd33f487f813de13274e  debian/bin/gencontrol.py
-805ccda417831447b4bcc60139be69e6  debian/changelog
+cc251840ec1ddbe51f7085a72de3f300  debian/bin/gencontrol.py
+0af5049cc9c89ec804e52a483be812f5  debian/changelog
 d41d8cd98f00b204e9800998ecf8427e  debian/templates/control.main.in
 38004750aa03cea41d5d3aeafff16fcc  debian/templates/image.preinst.in
 afb508873a44a1f196c2a525fec4b415  debian/templates/image.prerm.in
 0d7f6ea42f52d0a6013535a80111ee3e  debian/templates/headers.postinst.in
-d9eae0391f18950d5ecb31e7bdd5d362  debian/templates/control.image.in
+2b36d841bf3fdb8beef2fb2d393b3175  debian/templates/control.image.in
 a4a60fc48b3240e46bbac6a1ddcaad30  debian/templates/image.postrm.in
 72ece843042cbcc9cdb62b3a8c5e3b7a  debian/templates/control.image-dbg.in
 63bb0a508471c7d5a5d4dc49dc079a3c  debian/templates/control.source.in

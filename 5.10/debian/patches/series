@@ -1,6 +1,6 @@
 # upstream updates
-upstream/patch-5.10.11
-#upstream/patch-5.10.12-rc1
+upstream/patch-5.10.15
+#upstream/patch-5.10.16-rc1
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
@@ -34,6 +34,6 @@ debian/overlayfs-permit-mounts-in-userns.patch
 
 bugfix/disable-some-marvell-phys.patch
 bugfix/fs-add-module_softdep-declarations-for-hard-coded-cr.patch
-features/ntfs3_v17.diff
+features/ntfs3_v19.patch
 features/OpenRGB.patch
 
