@@ -1,3 +1,9 @@
+linux-siduction (5.10-16) unstable; urgency=medium
+
+  * import patch-5.10.16, changelog see https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.16
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 14 Feb 2021 14:45:45 +0100
+
 linux-siduction (5.10-15) unstable; urgency=medium
 
   * import patch-5.10.15, changelog see https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.10.15

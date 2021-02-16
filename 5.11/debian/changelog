@@ -1,3 +1,28 @@
+linux-siduction (5.11-0~exp4) experimental; urgency=medium
+
+  * fixed the android binder and ashmem  patches
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 15 Feb 2021 15:48:13 +0100
+
+linux-siduction (5.11-0~exp3) experimental; urgency=medium
+
+  * reenabled ntfs3 patch, it wasn't the culprint
+  * disabled abdroid binder and ashmem patches for how
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 15 Feb 2021 14:43:24 +0100
+
+linux-siduction (5.11-0~exp2) experimental; urgency=medium
+
+  * disabled ntfs3 patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 15 Feb 2021 14:15:41 +0100
+
+linux-siduction (5.11-0~exp1) experimental; urgency=medium
+
+  * linux-5.11.0 release
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 15 Feb 2021 09:28:37 +0100
+
 linux-siduction (5.11~rc7-1~exp1) experimental; urgency=medium
 
   * linux-5.11-rc7

@@ -6,34 +6,31 @@
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
 
 # debian specific patches.
-#debian/version.patch
+debian/version.patch
 debian/uname-version-timestamp.patch
 debian/kernelvariables.patch
-#debian/iwlwifi-do-not-request-unreleased-firmware.patch
-#debian/wireless-add-debian-wireless-regdb-certificates.patch
-#debian/export-symbols-needed-by-android-drivers.patch
-#debian/android-enable-building-ashmem-and-binder-as-modules.patch
+debian/iwlwifi-do-not-request-unreleased-firmware.patch
+debian/wireless-add-debian-wireless-regdb-certificates.patch
+debian/export-symbols-needed-by-android-drivers.patch
+debian/android-enable-building-ashmem-and-binder-as-modules.patch
 
 # features
 features/defaults-fat-utf8.patch
 #features/firmware_class-log-every-success-and-failure.patch
 #features/firmware-remove-redundant-log-messages-from-drivers.patch
-#features/radeon-amdgpu-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
+features/radeon-amdgpu-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
 features/die-floppy-die.patch
-#features/intel-iommu-add-option-to-exclude-integrated-gpu-only.patch
-#features/intel-iommu-add-kconfig-option-to-exclude-igpu-by-default.patch
+features/intel-iommu-add-option-to-exclude-integrated-gpu-only.patch
+features/intel-iommu-add-kconfig-option-to-exclude-igpu-by-default.patch
 #features/seccomp_Implement_syscall_isolation_based_on_memory_areas.patch
 
 #debian/kbuild-fix-recordmcount-dependency.patch
 debian/snd-pcsp-disable-autoload.patch
 
-#bugfix/rtl8821ce_bt_fix.diff
-#bugfix/fix_amdgpu_resume.diff
-bugfix/fix_amd_performance.patch
-#debian/overlayfs-permit-mounts-in-userns.patch
+debian/overlayfs-permit-mounts-in-userns.patch
 
 #bugfix/disable-some-marvell-phys.patch
 #bugfix/fs-add-module_softdep-declarations-for-hard-coded-cr.patch
 features/ntfs3_v19.patch
 features/OpenRGB.patch
-
+features/selinux_disable-by-default.patch

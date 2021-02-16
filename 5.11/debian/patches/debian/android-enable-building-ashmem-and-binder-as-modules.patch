@@ -79,9 +79,9 @@ Index: debian-kernel/drivers/staging/android/Makefile
 ===================================================================
 --- debian-kernel.orig/drivers/staging/android/Makefile
 +++ debian-kernel/drivers/staging/android/Makefile
-@@ -3,4 +3,5 @@ ccflags-y += -I$(src)			# needed for tra
- 
- obj-y					+= ion/
+@@ -1,4 +1,5 @@ ccflags-y += -I$(src)			# needed for tra
+ # SPDX-License-Identifier: GPL-2.0
+ ccflags-y += -I$(src)			# needed for trace events
  
 -obj-$(CONFIG_ASHMEM)			+= ashmem.o
 +obj-$(CONFIG_ASHMEM)			+= ashmem_linux.o
