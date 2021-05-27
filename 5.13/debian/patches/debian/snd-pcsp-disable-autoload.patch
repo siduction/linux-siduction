@@ -1,0 +1,12 @@
+diff -ruN a/sound/drivers/pcsp/pcsp.c b/sound/drivers/pcsp/pcsp.c
+--- a/sound/drivers/pcsp/pcsp.c	2021-03-22 12:31:36.278597915 +0100
++++ b/sound/drivers/pcsp/pcsp.c	2021-03-22 12:32:16.046776782 +0100
+@@ -22,7 +22,7 @@
+ MODULE_AUTHOR("Stas Sergeev <stsp@users.sourceforge.net>");
+ MODULE_DESCRIPTION("PC-Speaker driver");
+ MODULE_LICENSE("GPL");
+-MODULE_ALIAS("platform:pcspkr");
++/*MODULE_ALIAS("platform:pcspkr");*/
+ 
+ static int index = SNDRV_DEFAULT_IDX1;	/* Index 0-MAX */
+ static char *id = SNDRV_DEFAULT_STR1;	/* ID for this card */
