@@ -1,3 +1,9 @@
+linux-siduction (5.13~rc4-1~exp1) experimental; urgency=medium
+
+  * linux-5.13-rc4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 31 May 2021 07:33:35 +0200
+
 linux-siduction (5.13~rc3-1~exp1) experimental; urgency=medium
 
   * linux-5.13-rc3

@@ -1,3 +1,15 @@
+linux-siduction (5.12-9) unstable; urgency=medium
+
+  * import patch-5.12.9, changelog see https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.12.9
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 03 Jun 2021 11:59:37 +0200
+
+linux-siduction (5.12-8) unstable; urgency=medium
+
+  * import patch-5.12.8, changelog see https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.12.8
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 28 May 2021 17:59:01 +0200
+
 linux-siduction (5.12-7) unstable; urgency=medium
 
   * import patch-5.12.7, changelog see https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.12.7
