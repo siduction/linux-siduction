@@ -1,7 +1,7 @@
 diff -ruN a/fs/file.c b/fs/file.c
---- a/fs/file.c	2021-03-14 22:41:02.000000000 +0100
-+++ b/fs/file.c	2021-03-15 14:44:45.017683378 +0100
-@@ -775,6 +775,7 @@
+--- a/fs/file.c	2021-06-07 00:47:27.000000000 +0200
++++ b/fs/file.c	2021-06-07 08:12:28.011120443 +0200
+@@ -788,6 +788,7 @@
  
  	return ret;
  }
@@ -10,20 +10,20 @@ diff -ruN a/fs/file.c b/fs/file.c
  void do_close_on_exec(struct files_struct *files)
  {
 diff -ruN a/kernel/fork.c b/kernel/fork.c
---- a/kernel/fork.c	2021-03-14 22:41:02.000000000 +0100
-+++ b/kernel/fork.c	2021-03-15 14:45:27.765881696 +0100
-@@ -704,6 +704,7 @@
+--- a/kernel/fork.c	2021-06-07 00:47:27.000000000 +0200
++++ b/kernel/fork.c	2021-06-07 08:04:09.183171631 +0200
+@@ -1134,6 +1134,7 @@
  		schedule_work(&mm->async_put_work);
  	}
  }
 +EXPORT_SYMBOL_GPL(mmput_async);
+ #endif
  
- static inline void free_signal_struct(struct signal_struct *sig)
- {
+ /**
 diff -ruN a/kernel/sched/core.c b/kernel/sched/core.c
---- a/kernel/sched/core.c	2021-03-14 22:41:02.000000000 +0100
-+++ b/kernel/sched/core.c	2021-03-15 14:46:31.006175076 +0100
-@@ -5765,6 +5765,7 @@
+--- a/kernel/sched/core.c	2021-06-07 00:47:27.000000000 +0200
++++ b/kernel/sched/core.c	2021-06-07 08:05:19.344293269 +0200
+@@ -5770,6 +5770,7 @@
  	return (nice_rlim <= task_rlimit(p, RLIMIT_NICE) ||
  		capable(CAP_SYS_NICE));
  }
@@ -32,19 +32,19 @@ diff -ruN a/kernel/sched/core.c b/kernel/sched/core.c
  #ifdef __ARCH_WANT_SYS_NICE
  
 diff -ruN a/kernel/task_work.c b/kernel/task_work.c
---- a/kernel/task_work.c	2021-03-14 22:41:02.000000000 +0100
-+++ b/kernel/task_work.c	2021-03-15 14:48:02.382598983 +0100
-@@ -57,6 +57,7 @@
+--- a/kernel/task_work.c	2021-06-07 00:47:27.000000000 +0200
++++ b/kernel/task_work.c	2021-06-07 08:06:31.113446458 +0200
+@@ -60,6 +60,7 @@
  
  	return 0;
  }
 +EXPORT_SYMBOL(task_work_add);
  
  /**
-  * task_work_cancel - cancel a pending work added by task_work_add()
+  * task_work_cancel_match - cancel a pending work added by task_work_add()
 diff -ruN a/mm/memory.c b/mm/memory.c
---- a/mm/memory.c	2021-03-14 22:41:02.000000000 +0100
-+++ b/mm/memory.c	2021-03-15 14:49:28.174996982 +0100
+--- a/mm/memory.c	2021-06-07 00:47:27.000000000 +0200
++++ b/mm/memory.c	2021-06-07 08:07:52.046741082 +0200
 @@ -1548,6 +1548,7 @@
  	mmu_notifier_invalidate_range_end(&range);
  	tlb_finish_mmu(&tlb);
@@ -54,9 +54,9 @@ diff -ruN a/mm/memory.c b/mm/memory.c
  /**
   * zap_page_range_single - remove user pages in a given range
 diff -ruN a/mm/shmem.c b/mm/shmem.c
---- a/mm/shmem.c	2021-03-14 22:41:02.000000000 +0100
-+++ b/mm/shmem.c	2021-03-15 14:50:43.183344940 +0100
-@@ -4233,6 +4233,7 @@
+--- a/mm/shmem.c	2021-06-07 00:47:27.000000000 +0200
++++ b/mm/shmem.c	2021-06-07 08:08:54.663739096 +0200
+@@ -4232,6 +4232,7 @@
  
  	return 0;
  }
@@ -65,9 +65,9 @@ diff -ruN a/mm/shmem.c b/mm/shmem.c
  /**
   * shmem_read_mapping_page_gfp - read into page cache, using specified page allocation flags.
 diff -ruN a/security/security.c b/security/security.c
---- a/security/security.c	2021-03-14 22:41:02.000000000 +0100
-+++ b/security/security.c	2021-03-15 14:53:20.876076467 +0100
-@@ -727,24 +727,28 @@
+--- a/security/security.c	2021-06-07 00:47:27.000000000 +0200
++++ b/security/security.c	2021-06-07 08:10:45.129493164 +0200
+@@ -750,24 +750,28 @@
  {
  	return call_int_hook(binder_set_context_mgr, 0, mgr);
  }

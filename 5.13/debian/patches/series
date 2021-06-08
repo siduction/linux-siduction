@@ -11,8 +11,8 @@ debian/uname-version-timestamp.patch
 debian/kernelvariables.patch
 debian/iwlwifi-do-not-request-unreleased-firmware.patch
 debian/wireless-add-debian-wireless-regdb-certificates.patch
-#debian/export-symbols-needed-by-android-drivers.patch
-#debian/android-enable-building-ashmem-and-binder-as-modules.patch
+debian/export-symbols-needed-by-android-drivers.patch
+debian/android-enable-building-ashmem-and-binder-as-modules.patch
 
 # features
 features/defaults-fat-utf8.patch
@@ -32,4 +32,4 @@ debian/overlayfs-permit-mounts-in-userns.patch
 #bugfix/fs-add-module_softdep-declarations-for-hard-coded-cr.patch
 features/ntfs3_v26.diff
 features/OpenRGB.patch
-#features/selinux_disable-by-default.patch
+features/selinux_disable-by-default.patch
