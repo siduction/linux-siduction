@@ -1,16 +1,16 @@
 diff -ruN a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
---- a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c	2021-06-28 00:21:11.000000000 +0200
-+++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c	2021-07-06 14:37:51.315842678 +0200
-@@ -37,6 +37,8 @@
+--- a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c	2021-07-18 23:13:49.000000000 +0200
++++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c	2021-07-19 14:54:03.944998798 +0200
+@@ -38,6 +38,8 @@
  #include <drm/drm_probe_helper.h>
  #include <linux/mmu_notifier.h>
  #include <linux/suspend.h>
-+#include <linux/namei.h>                                                                                                                          
++#include <linux/namei.h>
 +#include <linux/path.h>
  
  #include "amdgpu.h"
  #include "amdgpu_irq.h"
-@@ -1193,6 +1195,28 @@
+@@ -1216,6 +1218,29 @@
  
  static const struct drm_driver amdgpu_kms_driver;
  
@@ -18,6 +18,7 @@ diff -ruN a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c b/drivers/gpu/drm/amd/amdgpu
 + * directory).  We could try to match the udev search path, but let's
 + * keep it simple.
 + */
++
 +static bool amdgpu_firmware_installed(void)
 +{
 +#if IS_BUILTIN(CONFIG_DRM_AMDGPU)
@@ -39,7 +40,7 @@ diff -ruN a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c b/drivers/gpu/drm/amd/amdgpu
  static int amdgpu_pci_probe(struct pci_dev *pdev,
  			    const struct pci_device_id *ent)
  {
-@@ -1257,6 +1281,11 @@
+@@ -1280,6 +1305,11 @@
  	}
  #endif
  
@@ -49,28 +50,29 @@ diff -ruN a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c b/drivers/gpu/drm/amd/amdgpu
 +	}
 +
  	/* Get rid of things like offb */
- 	ret = drm_fb_helper_remove_conflicting_pci_framebuffers(pdev, "amdgpudrmfb");
+ 	ret = drm_aperture_remove_conflicting_pci_framebuffers(pdev, "amdgpudrmfb");
  	if (ret)
 diff -ruN a/drivers/gpu/drm/radeon/radeon_drv.c b/drivers/gpu/drm/radeon/radeon_drv.c
---- a/drivers/gpu/drm/radeon/radeon_drv.c	2021-06-28 00:21:11.000000000 +0200
-+++ b/drivers/gpu/drm/radeon/radeon_drv.c	2021-07-06 14:44:25.105428848 +0200
+--- a/drivers/gpu/drm/radeon/radeon_drv.c	2021-07-18 23:13:49.000000000 +0200
++++ b/drivers/gpu/drm/radeon/radeon_drv.c	2021-07-19 14:59:42.341013397 +0200
 @@ -49,6 +49,8 @@
  #include <drm/drm_probe_helper.h>
  #include <drm/drm_vblank.h>
  #include <drm/radeon_drm.h>
 +#include <linux/namei.h>
-+#include <linux/path.h> 
++#include <linux/path.h>
  
  #include "radeon_drv.h"
  #include "radeon.h"
-@@ -289,6 +291,28 @@
+@@ -289,6 +291,29 @@
  
  static const struct drm_driver kms_driver;
  
 +/* Test that /lib/firmware/radeon is a directory (or symlink to a
-+ * directory).  We could try to match the udev search path, but let's 
++ * directory).  We could try to match the udev search path, but let's
 + * keep it simple.
 + */
++
 +static bool radeon_firmware_installed(void)
 +{
 +#if IS_BUILTIN(CONFIG_DRM_RADEON)
@@ -92,7 +94,7 @@ diff -ruN a/drivers/gpu/drm/radeon/radeon_drv.c b/drivers/gpu/drm/radeon/radeon_
  static int radeon_pci_probe(struct pci_dev *pdev,
  			    const struct pci_device_id *ent)
  {
-@@ -329,6 +353,12 @@
+@@ -329,6 +354,12 @@
  	if (vga_switcheroo_client_probe_defer(pdev))
  		return -EPROBE_DEFER;
  
@@ -103,5 +105,5 @@ diff -ruN a/drivers/gpu/drm/radeon/radeon_drv.c b/drivers/gpu/drm/radeon/radeon_
 +	}
 +
  	/* Get rid of things like offb */
- 	ret = drm_fb_helper_remove_conflicting_pci_framebuffers(pdev, "radeondrmfb");
+ 	ret = drm_aperture_remove_conflicting_pci_framebuffers(pdev, "radeondrmfb");
  	if (ret)

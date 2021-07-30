@@ -1,62 +1,20 @@
-linux-siduction (5.13-6) unstable; urgency=medium
+linux-siduction (5.14~rc3-1~exp1) experimental; urgency=medium
 
-  * import patch-5.13.6; changelog https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.13.6
+  * linux 5.14-rc3
 
- -- Torsten Wohlfarth <towo@siduction.org>  Wed, 28 Jul 2021 16:00:06 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 21 Jul 2021 23:34:04 +0200
 
-linux-siduction (5.13-5.2) unstable; urgency=medium
+linux-siduction (5.14~rc2-1~exp2) experimental; urgency=medium
 
-  * set CONFIG_NET_TC_SKB_EXT=y, otherwise the kernel won't build (it's an upstream error in patch)
+  * try fixing ntfs3 patch
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 26 Jul 2021 21:21:31 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Jul 2021 15:50:46 +0200
 
-linux-siduction (5.13-5.1) unstable; urgency=medium
+linux-siduction (5.14~rc2-1~exp1) experimental; urgency=medium
 
-  * import patch-5.13.6-rc1
+  * start linux-5.14 packaging
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 26 Jul 2021 20:07:19 +0200
-
-linux-siduction (5.13-5) unstable; urgency=medium
-
-  * import patch-5.13.5; changelog https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.13.5
-
- -- Torsten Wohlfarth <towo@siduction.org>  Sun, 25 Jul 2021 17:16:19 +0200
-
-linux-siduction (5.13-4.3) unstable; urgency=medium
-
-  * import patch-5.13.5-rc1
-
- -- Torsten Wohlfarth <towo@siduction.org>  Fri, 23 Jul 2021 13:37:12 +0200
-
-linux-siduction (5.13-4.2) unstable; urgency=medium
-
-  * fixed a typo in config
-
- -- Torsten Wohlfarth <towo@siduction.org>  Wed, 21 Jul 2021 23:15:40 +0200
-
-linux-siduction (5.13-4.1) unstable; urgency=medium
-
-  * add bugfix/revert_renesas.patch, https://lkml.org/lkml/2021/7/19/83
-
- -- Torsten Wohlfarth <towo@siduction.org>  Tue, 20 Jul 2021 22:38:15 +0200
-
-linux-siduction (5.13-4) unstable; urgency=medium
-
-  * import patch-5.13.4; changelog https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.13.4
-
- -- Torsten Wohlfarth <towo@siduction.org>  Tue, 20 Jul 2021 18:53:00 +0200
-
-linux-siduction (5.13-3.2) unstable; urgency=medium
-
-  * import patch-5.13.4-rc2
-
- -- Torsten Wohlfarth <towo@siduction.org>  Tue, 20 Jul 2021 10:22:21 +0200
-
-linux-siduction (5.13-3.1) unstable; urgency=medium
-
-  * add fix_xhci_renesas_fw.patch; see https://lkml.org/lkml/2021/7/17/327
-
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Jul 2021 17:31:11 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Jul 2021 13:02:04 +0200
 
 linux-siduction (5.13-3) unstable; urgency=medium
 

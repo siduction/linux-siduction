@@ -1,0 +1,69 @@
+diff -ruN linux-5.13~rc2.orig/Makefile linux-5.13~rc2/Makefile
+--- linux-5.13~rc2.orig/Makefile	2021-05-17 00:27:44.000000000 +0200
++++ linux-5.13~rc2/Makefile	2021-05-17 18:38:02.255385828 +0200
+@@ -379,31 +379,6 @@
+ # Note: Some architectures assign CROSS_COMPILE in their arch/*/Makefile
+ ARCH		?= $(SUBARCH)
+ 
+-# Architecture as present in compile.h
+-UTS_MACHINE 	:= $(ARCH)
+-SRCARCH 	:= $(ARCH)
+-
+-# Additional ARCH settings for x86
+-ifeq ($(ARCH),i386)
+-        SRCARCH := x86
+-endif
+-ifeq ($(ARCH),x86_64)
+-        SRCARCH := x86
+-endif
+-
+-# Additional ARCH settings for sparc
+-ifeq ($(ARCH),sparc32)
+-       SRCARCH := sparc
+-endif
+-ifeq ($(ARCH),sparc64)
+-       SRCARCH := sparc
+-endif
+-
+-export cross_compiling :=
+-ifneq ($(SRCARCH),$(SUBARCH))
+-cross_compiling := 1
+-endif
+-
+ KCONFIG_CONFIG	?= .config
+ export KCONFIG_CONFIG
+ 
+@@ -481,6 +456,33 @@
+ AFLAGS_KERNEL	=
+ LDFLAGS_vmlinux =
+ 
++-include .kernelvariables
++
++# Architecture as present in compile.h
++UTS_MACHINE 	:= $(ARCH)
++SRCARCH 	:= $(ARCH)
++
++# Additional ARCH settings for x86
++ifeq ($(ARCH),i386)
++        SRCARCH := x86
++endif
++ifeq ($(ARCH),x86_64)
++        SRCARCH := x86
++endif
++
++# Additional ARCH settings for sparc
++ifeq ($(ARCH),sparc32)
++       SRCARCH := sparc
++endif
++ifeq ($(ARCH),sparc64)
++       SRCARCH := sparc
++endif
++
++export cross_compiling :=
++ifneq ($(SRCARCH),$(SUBARCH))
++cross_compiling := 1
++endif
++
+ # Use USERINCLUDE when you must reference the UAPI directories only.
+ USERINCLUDE    := \
+ 		-I$(srctree)/arch/$(SRCARCH)/include/uapi \

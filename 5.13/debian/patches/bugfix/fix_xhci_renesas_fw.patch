@@ -1,0 +1,16 @@
+diff -ruN a/drivers/usb/host/xhci-pci.c b/drivers/usb/host/xhci-pci.c
+--- a/drivers/usb/host/xhci-pci.c	2021-06-28 00:21:11.000000000 +0200
++++ b/drivers/usb/host/xhci-pci.c	2021-07-19 17:44:08.702458400 +0200
+@@ -379,7 +379,11 @@
+ 	driver_data = (struct xhci_driver_data *)id->driver_data;
+ 	if (driver_data && driver_data->quirks & XHCI_RENESAS_FW_QUIRK) {
+ 		retval = renesas_xhci_check_request_fw(dev, id);
+-		if (retval)
++		/*
++		 * If firmware wasn't found there's still a chance this might work without
++		 * loading firmware on some systems, so let's try at least.
++		 */
++		if (retval && retval != -ENOENT)
+ 			return retval;
+ 	}
+ 
