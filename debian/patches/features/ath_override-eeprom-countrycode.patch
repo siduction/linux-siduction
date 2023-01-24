@@ -1,0 +1,127 @@
+--- a/drivers/net/wireless/ath/ath5k/base.c
++++ b/drivers/net/wireless/ath/ath5k/base.c
+@@ -85,6 +85,9 @@ module_param_named(no_hw_rfkill_switch,
+ 		   bool, 0444);
+ MODULE_PARM_DESC(no_hw_rfkill_switch, "Ignore the GPIO RFKill switch state");
+ 
++static int modparam_override_countrycode = -1;
++module_param_named(override_countrycode, modparam_override_countrycode, int, S_IRUGO);
++MODULE_PARM_DESC(override_countrycode, "Override countrycode hardcoded in EEPROM with this value (DANGEROUS).");
+ 
+ /* Module info */
+ MODULE_AUTHOR("Jiri Slaby");
+@@ -2606,6 +2609,9 @@ ath5k_init_ah(struct ath5k_hw *ah, const
+ 	if (ret)
+ 		goto err_irq;
+ 
++	if (modparam_override_countrycode != -1)
++		ah->ah_capabilities.cap_eeprom.ee_regdomain = modparam_override_countrycode;
++
+ 	/* Set up multi-rate retry capabilities */
+ 	if (ah->ah_capabilities.cap_has_mrr_support) {
+ 		hw->max_rates = 4;
+--- a/drivers/net/wireless/ath/ath9k/htc_drv_init.c
++++ b/drivers/net/wireless/ath/ath9k/htc_drv_init.c
+@@ -42,6 +42,10 @@ int htc_use_dev_fw = 0;
+ module_param_named(use_dev_fw, htc_use_dev_fw, int, 0444);
+ MODULE_PARM_DESC(use_dev_fw, "Use development FW version");
+ 
++static int modparam_override_countrycode = -1;
++module_param_named(override_countrycode, modparam_override_countrycode, int, S_IRUGO);
++MODULE_PARM_DESC(override_countrycode, "Override countrycode hardcoded in EEPROM with this value (DANGEROUS).");
++
+ #ifdef CONFIG_MAC80211_LEDS
+ int ath9k_htc_led_blink = 1;
+ module_param_named(blink, ath9k_htc_led_blink, int, 0444);
+@@ -841,6 +845,10 @@ static int ath9k_init_device(struct ath9
+ 		goto err_init;
+ 
+ 	ah = priv->ah;
++
++	if (modparam_override_countrycode != -1)
++		ath9k_hw_regulatory(ah)->current_rd = modparam_override_countrycode;
++
+ 	common = ath9k_hw_common(ah);
+ 	ath9k_set_hw_capab(priv, hw);
+ 
+--- a/drivers/net/wireless/ath/ath9k/init.c
++++ b/drivers/net/wireless/ath/ath9k/init.c
+@@ -79,6 +79,10 @@ int ath9k_use_msi;
+ module_param_named(use_msi, ath9k_use_msi, int, 0444);
+ MODULE_PARM_DESC(use_msi, "Use MSI instead of INTx if possible");
+ 
++static int modparam_override_countrycode = -1;
++module_param_named(override_countrycode, modparam_override_countrycode, int, S_IRUGO);
++MODULE_PARM_DESC(override_countrycode, "Override countrycode hardcoded in EEPROM with this value (DANGEROUS).");
++
+ bool is_ath9k_unloaded;
+ 
+ #ifdef CONFIG_MAC80211_LEDS
+@@ -1008,6 +1012,10 @@ int ath9k_init_device(u16 devid, struct
+ 		return error;
+ 
+ 	ah = sc->sc_ah;
++
++	if (modparam_override_countrycode != -1)
++		ath9k_hw_regulatory(ah)->current_rd = modparam_override_countrycode;
++
+ 	common = ath9k_hw_common(ah);
+ 	ath9k_set_hw_capab(sc, hw);
+ 
+--- a/drivers/net/wireless/ath/carl9170/main.c
++++ b/drivers/net/wireless/ath/carl9170/main.c
+@@ -55,6 +55,10 @@ int modparam_noht;
+ module_param_named(noht, modparam_noht, int, 0444);
+ MODULE_PARM_DESC(noht, "Disable MPDU aggregation.");
+ 
++static int modparam_override_countrycode = -1;
++module_param_named(override_countrycode, modparam_override_countrycode, int, S_IRUGO);
++MODULE_PARM_DESC(override_countrycode, "Override countrycode hardcoded in EEPROM with this value (DANGEROUS).");
++
+ #define RATE(_bitrate, _hw_rate, _txpidx, _flags) {	\
+ 	.bitrate	= (_bitrate),			\
+ 	.flags		= (_flags),			\
+@@ -1984,6 +1988,9 @@ int carl9170_register(struct ar9170 *ar)
+ 	if (err)
+ 		return err;
+ 
++	if (modparam_override_countrycode != -1)
++		regulatory->current_rd = modparam_override_countrycode;
++
+ 	err = ath_regd_init(regulatory, ar->hw->wiphy,
+ 			    carl9170_reg_notifier);
+ 	if (err)
+--- a/drivers/net/wireless/ath/ath10k/wmi.c
++++ b/drivers/net/wireless/ath/ath10k/wmi.c
+@@ -7,6 +7,7 @@
+ 
+ #include <linux/skbuff.h>
+ #include <linux/ctype.h>
++#include <linux/module.h>
+ 
+ #include "core.h"
+ #include "htc.h"
+@@ -25,6 +26,11 @@
+ #define ATH10K_WMI_BARRIER_TIMEOUT_HZ (3 * HZ)
+ #define ATH10K_WMI_DFS_CONF_TIMEOUT_HZ (HZ / 6)
+ 
++static int modparam_override_countrycode = -1;
++module_param_named(override_countrycode, modparam_override_countrycode, int, S_IRUGO);
++MODULE_PARM_DESC(override_countrycode, "Override countrycode hardcoded in EEPROM with this value (DANGEROUS).");
++
++
+ /* MAIN WMI cmd track */
+ static struct wmi_cmd_map wmi_cmd_map = {
+ 	.init_cmdid = WMI_INIT_CMDID,
+@@ -5568,6 +5574,11 @@ static void ath10k_wmi_event_service_rea
+ 			 ar->fw_version_build);
+ 	}
+ 
++	if ((modparam_override_countrycode != -1) &&
++	    (modparam_override_countrycode != ar->ath_common.regulatory.current_rd)) {
++		ar->ath_common.regulatory.current_rd = modparam_override_countrycode;
++	}
++
+ 	num_mem_reqs = __le32_to_cpu(arg.num_mem_reqs);
+ 	if (num_mem_reqs > WMI_MAX_MEM_REQS) {
+ 		ath10k_warn(ar, "requested memory chunks number (%d) exceeds the limit\n",

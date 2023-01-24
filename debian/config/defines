@@ -1,0 +1,26 @@
+[abi]
+abiname: 2
+
+[base]
+arches:
+ amd64
+compiler: gcc-12
+featuresets:
+ none
+
+[description]
+part-long-up: This kernel is not suitable for SMP (multi-processor,
+ multi-core or hyper-threaded) systems.
+part-long-xen: This kernel also runs on a Xen hypervisor.
+ It supports both privileged (dom0) and unprivileged (domU) operation.
+
+[image]
+initramfs-generators: initramfs-tools initramfs-fallback
+
+[relations]
+# compilers
+gcc-12: gcc-12
+
+# initramfs-generators
+initramfs-fallback: linux-initramfs-tool
+initramfs-tools: initramfs-tools (>= 0.121~)

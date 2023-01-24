@@ -1,0 +1,19 @@
+Section: kernel
+Priority: optional
+Maintainer: Torsten Wohlfarth <towo@siduction.org>
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9.20120115),
+ bc,
+ bison,
+ cpio,
+ flex,
+ libelf-dev,
+ libssl-dev,
+ openssl,
+ python3,
+ libzstd-dev,
+ zstd,
+ xz-utils
+Vcs-git: git.siduction.org:extra/linux-siduction
+Vcs-Browser: https://git.siduction.org/extra/linux-siduction
+Homepage: https://www.kernel.org/

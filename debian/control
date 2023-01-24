@@ -1,0 +1,57 @@
+Source: linux-siduction
+Section: kernel
+Priority: optional
+Maintainer: Torsten Wohlfarth <towo@siduction.org>
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9.20120115), bc, bison, cpio, flex, libelf-dev, libssl-dev, openssl, python3, libzstd-dev, zstd, xz-utils, gcc-12 [amd64]
+Homepage: https://www.kernel.org/
+Vcs-Browser: https://github.com/siduction/linux-siduction
+Vcs-git: https://github.com/siduction/linux-siduction
+
+Package: linux-image-6.1.7-2-siduction-amd64
+Architecture: amd64
+Provides: wireguard-modules (= 1.0.0)
+Depends: kmod, linux-base (>= 4.3~), ${misc:Depends}, initramfs-tools (>= 0.121~) [amd64] | linux-initramfs-tool [amd64]
+Recommends: firmware-linux-free, ${kernel:Recommends}
+Suggests: linux-doc-6.1, crda [amd64], grub-pc [amd64] | extlinux [amd64] | grub-efi-amd64 [amd64]
+Breaks: xserver-xorg-input-vmmouse (<< 1:13.0.99) [amd64], initramfs-tools (<< 0.121~)
+Conflicts: r8168-dkms, hal, rtl8821ce-dkms
+Description: Linux 6.1 for 64-bit PCs
+ The Linux kernel 6.1 and modules for use on PCs with AMD64 or Intel 64
+ processors.
+ .
+ This kernel also runs on a Xen hypervisor.  It supports both privileged
+ (dom0) and unprivileged (domU) operation.
+
+Package: linux-image-siduction-amd64
+Architecture: amd64
+Section: metapackages
+Priority: extra
+Depends: linux-image-6.1.7-2-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
+Recommends: linux-headers-siduction-amd64 (= ${binary:Version})
+Description: Linux image for siduction on 64-bit PCs
+ This metapackage depends on the latest binary image for Linux kernel on
+ PCs with AMD64 or Intel 64 processors machines for siduction.
+
+Package: linux-headers-siduction-amd64
+Architecture: amd64
+Section: metapackages
+Priority: extra
+Provides: linux-headers
+Depends: linux-headers-6.1.7-2-siduction-amd64 (= ${binary:Version}), ${misc:Depends}
+Description: Linux headers for siduction on 64-bit PCs
+ This metapackage depends on the latest binary image for Linux kernel on
+ PCs with AMD64 or Intel 64 processors machines for siduction.
+
+Package: linux-headers-6.1.7-2-siduction-amd64
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, libelf-dev, build-essential, gcc-12
+Conflicts: r8168-dkms, rtl8821ce-dkms
+Description: Header files for Linux 6.1.7-2-siduction-amd64
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.1.7-2-siduction-amd64, generally used for building
+ out-of-tree kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.1.7-2-siduction-amd64, and can be used for
+ building modules that load into the kernel provided by the
+ linux-image-6.1.7-2-siduction-amd64 package.
+
