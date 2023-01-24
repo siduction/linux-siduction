@@ -1,63 +1,26 @@
-linux-siduction (6.1-7.1) unstable; urgency=medium
+linux-siduction (6.2~rc5-1~exp1) experimental; urgency=medium
 
-  * import patch-6.1.8-rc2
+  * linux-6.2-rc5
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 23 Jan 2023 11:00:28 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 22 Jan 2023 18:56:07 +0100
 
-linux-siduction (6.1-7) unstable; urgency=medium
+linux-siduction (6.2~rc4-1~exp1) experimental; urgency=medium
 
-  * import patch-6.1.7; Changelog see https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.1.7
+  * linux-6.2-rc4
 
- -- Torsten Wohlfarth <towo@siduction.org>  Wed, 18 Jan 2023 12:38:21 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 15 Jan 2023 19:14:49 +0100
 
-linux-siduction (6.1-6.2) unstable; urgency=medium
+linux-siduction (6.2~rc3-1~exp1) experimental; urgency=medium
 
-  * import patch-6.1.7-rc2
+  * linux-6.2-rc3
 
- -- Torsten Wohlfarth <towo@siduction.org>  Tue, 17 Jan 2023 18:01:03 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 08 Jan 2023 20:38:16 +0100
 
-linux-siduction (6.1-6.1) unstable; urgency=medium
+linux-siduction (6.2~rc2-1~exp1) experimental; urgency=medium
 
-  * import patch-6.1.7-rc1
+  * start linux-6.2 packaging
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 16 Jan 2023 17:16:16 +0100
-
-linux-siduction (6.1-6) unstable; urgency=medium
-
-  * import patch-6.1.6; Changelog see https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.1.6
-
- -- Torsten Wohlfarth <towo@siduction.org>  Sat, 14 Jan 2023 14:52:44 +0100
-
-linux-siduction (6.1-5.1) unstable; urgency=medium
-
-  * import patch-6.1.6-rc1
-
- -- Torsten Wohlfarth <towo@siduction.org>  Thu, 12 Jan 2023 16:21:57 +0100
-
-linux-siduction (6.1-5) unstable; urgency=medium
-
-  * import patch-6.1.5; Changelog see https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.1.5
-
- -- Torsten Wohlfarth <towo@siduction.org>  Thu, 12 Jan 2023 13:12:00 +0100
-
-linux-siduction (6.1-4) unstable; urgency=medium
-
-  * import patch-6.1.4; Changelog see https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.1.4
-
- -- Torsten Wohlfarth <towo@siduction.org>  Sat, 07 Jan 2023 13:54:55 +0100
-
-linux-siduction (6.1-3.1) unstable; urgency=medium
-
-  * import patch-6.1.4-rc1
-
- -- Torsten Wohlfarth <towo@siduction.org>  Thu, 05 Jan 2023 12:21:51 +0100
-
-linux-siduction (6.1-3) unstable; urgency=medium
-
-  * import patch-6.1.3; Changelog see https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.1.3
-  * revert patch bugfix/amdgpu_hdmi_audio_fix.patch, it's upstream now
-
- -- Torsten Wohlfarth <towo@siduction.org>  Wed, 04 Jan 2023 11:46:43 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 02 Jan 2023 10:38:16 +0100
 
 linux-siduction (6.1-2) unstable; urgency=medium
 
