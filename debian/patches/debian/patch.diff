@@ -1,24 +1,5 @@
-From: Bastian Blank <waldi@debian.org>
-Subject: kbuild: Make the toolchain variables easily overwritable
-Date: Sun, 22 Feb 2009 15:39:35 +0100
-Forwarded: not-needed
-
-Allow make variables to be overridden for each flavour by a file in
-the build tree, .kernelvariables.
-
-We currently use this for ARCH, KERNELRELEASE, CC, and in some cases
-also CROSS_COMPILE, KCFLAGS.
-
-This file can only be read after we establish the build tree, and all
-use of $(ARCH) needs to be moved after this.
-
-[bwh: Updated for 5.3: include .kernelvariables from current directory
- rather than using undefined $(obj).]
----
-Index: linux/Makefile
-===================================================================
---- linux.orig/Makefile
-+++ linux/Makefile
+--- Makefile.orig	2023-01-22 01:27:01.000000000 +0100
++++ Makefile	2023-01-22 19:11:58.342928348 +0100
 @@ -406,36 +406,6 @@
  # Note: Some architectures assign CROSS_COMPILE in their arch/*/Makefile
  ARCH		?= $(SUBARCH)
@@ -63,8 +44,8 @@ Index: linux/Makefile
 +-include .kernelvariables
 +
 +# Architecture as present in compile.h
-+UTS_MACHINE 	:= $(ARCH)
-+SRCARCH 	:= $(ARCH)
++UTS_MACHINE <->:= $(ARCH)
++SRCARCH <----->:= $(ARCH)
 +
 +# Additional ARCH settings for x86
 +ifeq ($(ARCH),i386)

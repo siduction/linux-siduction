@@ -1,6 +1,6 @@
 # upstream updates
-upstream/patch-6.1.7
-upstream/patch-6.1.8-rc2
+#upstream/patch-6.2.1
+#upstream/patch-6.2.1-rc1
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
@@ -29,7 +29,5 @@ features/die-floppy-die.patch
 features/intel-iommu-add-option-to-exclude-integrated-gpu-only.patch
 features/intel-iommu-add-kconfig-option-to-exclude-igpu-by-default.patch
 features/0001-i2c-busses-Add-SMBus-capability-to-work-with-OpenRGB.patch
-#features/selinux_disable-by-default.patch
-#features/0001-futex-Add-entry-point-for-FUTEX_WAIT_MULTIPLE-opcode.patch
-#features/0001-winesync-Introduce-the-winesync-driver-and-character.patch
+features/selinux_disable-by-default.patch
 features/xpad_update.patch
