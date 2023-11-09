@@ -88,7 +88,6 @@ pushd "${TMP_DIR}/linux-${VERSION}" >/dev/null 2>&1
 	# remove individual blobby files throughout the tree
 	rm	Documentation/netlabel/draft-ietf-cipso-ipsecurity-01.txt \
 		drivers/media/usb/dvb-usb/af9005-script.h \
-		drivers/media/i2c/vs6624.c \
 		drivers/net/appletalk/cops.c \
 		drivers/net/appletalk/cops.h \
 		drivers/net/appletalk/cops_ffdrv.h \

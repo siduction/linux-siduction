@@ -5,10 +5,9 @@ Description: <short summary of the patch>
  information below has been extracted from the changelog. Adjust it or drop
  it.
  .
- linux-siduction (6.1-1.1) unstable; urgency=medium
+ linux-siduction (6.3~rc5-1~exp1) experimental; urgency=medium
  .
-   * import patch-6.1.2-rc1
-   * import xpad from https://github.com/paroj/xpad
+   * linux-6.3-rc5
 Author: Torsten Wohlfarth <towo@siduction.org>
 
 ---
@@ -22,10 +21,10 @@ Bug-Debian: https://bugs.debian.org/<bugnumber>
 Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
 Forwarded: <no|not-needed|url proving that it has been forwarded>
 Reviewed-By: <name and email of someone who approved the patch>
-Last-Update: 2022-12-28
+Last-Update: 2023-04-03
 
---- linux-siduction-6.1.orig/drivers/input/joystick/xpad.c
-+++ linux-siduction-6.1/drivers/input/joystick/xpad.c
+--- linux-siduction-6.3~rc5.orig/drivers/input/joystick/xpad.c
++++ linux-siduction-6.3~rc5/drivers/input/joystick/xpad.c
 @@ -60,7 +60,7 @@
   *
   * Later changes can be tracked in SCM.
@@ -139,7 +138,7 @@ Last-Update: 2022-12-28
  	{ 0x15e4, 0x3f00, "Power A Mini Pro Elite", 0, XTYPE_XBOX360 },
  	{ 0x15e4, 0x3f0a, "Xbox Airflo wired controller", 0, XTYPE_XBOX360 },
  	{ 0x15e4, 0x3f10, "Batarang Xbox 360 controller", 0, XTYPE_XBOX360 },
-@@ -352,6 +368,7 @@ static const struct xpad_device {
+@@ -352,14 +368,15 @@ static const struct xpad_device {
  	{ 0x24c6, 0x550e, "Hori Real Arcade Pro V Kai 360", MAP_TRIGGERS_TO_BUTTONS, XTYPE_XBOX360 },
  	{ 0x24c6, 0x551a, "PowerA FUSION Pro Controller", 0, XTYPE_XBOXONE },
  	{ 0x24c6, 0x561a, "PowerA FUSION Controller", 0, XTYPE_XBOXONE },
@@ -147,15 +146,17 @@ Last-Update: 2022-12-28
  	{ 0x24c6, 0x5b00, "ThrustMaster Ferrari 458 Racing Wheel", 0, XTYPE_XBOX360 },
  	{ 0x24c6, 0x5b02, "Thrustmaster, Inc. GPX Controller", 0, XTYPE_XBOX360 },
  	{ 0x24c6, 0x5b03, "Thrustmaster Ferrari 458 Racing Wheel", 0, XTYPE_XBOX360 },
-@@ -359,6 +376,7 @@ static const struct xpad_device {
+ 	{ 0x24c6, 0x5d04, "Razer Sabertooth", 0, XTYPE_XBOX360 },
  	{ 0x24c6, 0xfafe, "Rock Candy Gamepad for Xbox 360", 0, XTYPE_XBOX360 },
  	{ 0x2563, 0x058d, "OneXPlayer Gamepad", 0, XTYPE_XBOX360 },
- 	{ 0x2dc8, 0x2000, "8BitDo Pro 2 Wired Controller fox Xbox", 0, XTYPE_XBOXONE },
-+	{ 0x2dc8, 0x3106, "8BitDo Ultimate Wireless Controller", 0, XTYPE_XBOX360 },
+-	{ 0x2dc8, 0x2000, "8BitDo Pro 2 Wired Controller fox Xbox", 0, XTYPE_XBOXONE },
+-	{ 0x2dc8, 0x3106, "8BitDo Pro 2 Wired Controller", 0, XTYPE_XBOX360 },
++	{ 0x2dc8, 0x2000, "8BitDo Pro 2 Wired Controller for Xbox", MAP_SELECT_BUTTON, XTYPE_XBOXONE },
++	{ 0x2dc8, 0x3106, "8BitDo Ultimate Wireless / Pro 2 Wired Controller", 0, XTYPE_XBOX360 },
  	{ 0x31e3, 0x1100, "Wooting One", 0, XTYPE_XBOX360 },
  	{ 0x31e3, 0x1200, "Wooting Two", 0, XTYPE_XBOX360 },
  	{ 0x31e3, 0x1210, "Wooting Lekker", 0, XTYPE_XBOX360 },
-@@ -366,6 +384,7 @@ static const struct xpad_device {
+@@ -367,6 +384,7 @@ static const struct xpad_device {
  	{ 0x31e3, 0x1300, "Wooting 60HE (AVR)", 0, XTYPE_XBOX360 },
  	{ 0x31e3, 0x1310, "Wooting 60HE (ARM)", 0, XTYPE_XBOX360 },
  	{ 0x3285, 0x0607, "Nacon GC-100", 0, XTYPE_XBOX360 },
@@ -163,7 +164,7 @@ Last-Update: 2022-12-28
  	{ 0x3767, 0x0101, "Fanatec Speedster 3 Forceshock Wheel", 0, XTYPE_XBOX },
  	{ 0xffff, 0xffff, "Chinese-made Xbox Controller", 0, XTYPE_XBOX },
  	{ 0x0000, 0x0000, "Generic X-Box pad", 0, XTYPE_UNKNOWN }
-@@ -428,6 +447,12 @@ static const signed short xpad_btn_paddl
+@@ -429,6 +447,12 @@ static const signed short xpad_btn_paddl
  	-1						/* terminating entry */
  };
  
@@ -176,7 +177,7 @@ Last-Update: 2022-12-28
  /*
   * Xbox 360 has a vendor-specific class, so we cannot match it with only
   * USB_INTERFACE_INFO (also specifically refused by USB subsystem), so we
-@@ -474,10 +499,12 @@ static const struct usb_device_id xpad_t
+@@ -475,10 +499,12 @@ static const struct usb_device_id xpad_t
  	XPAD_XBOX360_VENDOR(0x0f0d),		/* Hori Controllers */
  	XPAD_XBOXONE_VENDOR(0x0f0d),		/* Hori Controllers */
  	XPAD_XBOX360_VENDOR(0x1038),		/* SteelSeries Controllers */
@@ -189,9 +190,11 @@ Last-Update: 2022-12-28
  	XPAD_XBOX360_VENDOR(0x146b),		/* BigBen Interactive Controllers */
  	XPAD_XBOX360_VENDOR(0x1532),		/* Razer Sabertooth */
  	XPAD_XBOXONE_VENDOR(0x1532),		/* Razer Wildcat */
-@@ -493,10 +520,12 @@ static const struct usb_device_id xpad_t
+@@ -493,12 +519,13 @@ static const struct usb_device_id xpad_t
+ 	XPAD_XBOXONE_VENDOR(0x24c6),		/* PowerA Controllers */
  	XPAD_XBOX360_VENDOR(0x2563),		/* OneXPlayer Gamepad */
  	XPAD_XBOX360_VENDOR(0x260d),		/* Dareu H101 */
+-	XPAD_XBOX360_VENDOR(0x2dc8),            /* 8BitDo Pro 2 Wired Controller */
  	XPAD_XBOXONE_VENDOR(0x2dc8),		/* 8BitDo Pro 2 Wired Controller for Xbox */
 +	XPAD_XBOX360_VENDOR(0x2dc8),		/* 8BitDo Ultimate Wireless Controller */
  	XPAD_XBOXONE_VENDOR(0x2e24),		/* Hyperkin Duke X-Box One pad */
@@ -202,7 +205,7 @@ Last-Update: 2022-12-28
  	{ }
  };
  
-@@ -632,6 +661,11 @@ static const u8 xboxone_rumbleend_init[]
+@@ -634,6 +661,11 @@ static const u8 xboxone_rumbleend_init[]
  	0x00, GIP_MOTOR_ALL, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
  };
  
@@ -214,7 +217,7 @@ Last-Update: 2022-12-28
  /*
   * This specifies the selection of init packets that a gamepad
   * will be sent on init *and* the order in which they will be
-@@ -641,12 +675,15 @@ static const u8 xboxone_rumbleend_init[]
+@@ -643,12 +675,15 @@ static const u8 xboxone_rumbleend_init[]
  static const struct xboxone_init_packet xboxone_init_packets[] = {
  	XBOXONE_INIT_PKT(0x0e6f, 0x0165, xboxone_hori_ack_id),
  	XBOXONE_INIT_PKT(0x0f0d, 0x0067, xboxone_hori_ack_id),
@@ -230,7 +233,7 @@ Last-Update: 2022-12-28
  	XBOXONE_INIT_PKT(0x24c6, 0x541a, xboxone_rumblebegin_init),
  	XBOXONE_INIT_PKT(0x24c6, 0x542a, xboxone_rumblebegin_init),
  	XBOXONE_INIT_PKT(0x24c6, 0x543a, xboxone_rumblebegin_init),
-@@ -703,9 +740,13 @@ struct usb_xpad {
+@@ -705,9 +740,13 @@ struct usb_xpad {
  	int xtype;			/* type of xbox device */
  	int packet_type;		/* type of the extended packet */
  	int pad_nr;			/* the order x360 pads were attached */
@@ -244,7 +247,7 @@ Last-Update: 2022-12-28
  };
  
  static int xpad_init_input(struct usb_xpad *xpad);
-@@ -714,6 +755,63 @@ static void xpadone_ack_mode_report(stru
+@@ -716,6 +755,63 @@ static void xpadone_ack_mode_report(stru
  static void xpad360w_poweroff_controller(struct usb_xpad *xpad);
  
  /*
@@ -308,18 +311,15 @@ Last-Update: 2022-12-28
   *	xpad_process_packet
   *
   *	Completes a request by converting the data into events for the
-@@ -779,10 +877,6 @@ static void xpad_process_packet(struct u
+@@ -781,7 +877,6 @@ static void xpad_process_packet(struct u
  	input_report_key(dev, BTN_C, data[8]);
  	input_report_key(dev, BTN_Z, data[9]);
  
--	/* Profile button has a value of 0-3, so it is reported as an axis */
--	if (xpad->mapping & MAP_PROFILE_BUTTON)
--		input_report_abs(dev, ABS_PROFILE, data[34]);
 -
  	input_sync(dev);
  }
  
-@@ -870,20 +964,29 @@ static void xpad360_process_packet(struc
+@@ -869,20 +964,29 @@ static void xpad360_process_packet(struc
  
  	/* XBOX360W controllers can't be turned off without driver assistance */
  	if (xpad->xtype == XTYPE_XBOX360W) {
@@ -360,7 +360,7 @@ Last-Update: 2022-12-28
  }
  
  static void xpad_presence_work(struct work_struct *work)
-@@ -964,6 +1067,7 @@ static void xpadone_process_packet(struc
+@@ -963,6 +1067,7 @@ static void xpadone_process_packet(struc
  {
  	struct input_dev *dev = xpad->dev;
  	bool do_sync = false;
@@ -368,7 +368,7 @@ Last-Update: 2022-12-28
  
  	/* the xbox button has its own special report */
  	if (data[0] == GIP_CMD_VIRTUAL_KEY) {
-@@ -975,8 +1079,7 @@ static void xpadone_process_packet(struc
+@@ -974,8 +1079,7 @@ static void xpadone_process_packet(struc
  		if (data[1] == (GIP_OPT_ACK | GIP_OPT_INTERNAL))
  			xpadone_ack_mode_report(xpad, data[2]);
  
@@ -378,7 +378,27 @@ Last-Update: 2022-12-28
  
  		do_sync = true;
  	} else if (data[0] == GIP_CMD_FIRMWARE) {
-@@ -1107,6 +1210,48 @@ static void xpadone_process_packet(struc
+@@ -1001,7 +1105,7 @@ static void xpadone_process_packet(struc
+ 		input_report_key(dev, BTN_START,  data[4] & BIT(2));
+ 		input_report_key(dev, BTN_SELECT, data[4] & BIT(3));
+ 		if (xpad->mapping & MAP_SELECT_BUTTON)
+-			input_report_key(dev, KEY_RECORD, data[22] & BIT(0));
++			input_report_key(dev, KEY_RECORD, data[22] & BIT(0) || /* 8BitDo: */ data[18] & BIT(0));
+ 
+ 		/* buttons A,B,X,Y */
+ 		input_report_key(dev, BTN_A,	data[4] & BIT(4));
+@@ -1058,10 +1162,6 @@ static void xpadone_process_packet(struc
+ 					(__u16) le16_to_cpup((__le16 *)(data + 8)));
+ 		}
+ 
+-		/* Profile button has a value of 0-3, so it is reported as an axis */
+-		if (xpad->mapping & MAP_PROFILE_BUTTON)
+-			input_report_abs(dev, ABS_PROFILE, data[34]);
+-
+ 		/* paddle handling */
+ 		/* based on SDL's SDL_hidapi_xboxone.c */
+ 		if (xpad->mapping & MAP_PADDLES) {
+@@ -1110,6 +1210,48 @@ static void xpadone_process_packet(struc
  		}
  
  		do_sync = true;
@@ -427,7 +447,7 @@ Last-Update: 2022-12-28
  	}
  
  	if (do_sync)
-@@ -1138,6 +1283,13 @@ static void xpad_irq_in(struct urb *urb)
+@@ -1141,6 +1283,13 @@ static void xpad_irq_in(struct urb *urb)
  		goto exit;
  	}
  
@@ -441,7 +461,7 @@ Last-Update: 2022-12-28
  	switch (xpad->xtype) {
  	case XTYPE_XBOX360:
  		xpad360_process_packet(xpad, xpad->dev, 0, xpad->idata);
-@@ -1404,6 +1556,98 @@ static int xpad_start_xbox_one(struct us
+@@ -1407,6 +1556,98 @@ static int xpad_start_xbox_one(struct us
  	return retval;
  }
  
@@ -540,7 +560,7 @@ Last-Update: 2022-12-28
  static void xpadone_ack_mode_report(struct usb_xpad *xpad, u8 seq_num)
  {
  	unsigned long flags;
-@@ -1689,6 +1933,12 @@ static int xpad_start_input(struct usb_x
+@@ -1692,6 +1933,12 @@ static int xpad_start_input(struct usb_x
  {
  	int error;
  
@@ -553,7 +573,7 @@ Last-Update: 2022-12-28
  	if (usb_submit_urb(xpad->irq_in, GFP_KERNEL))
  		return -EIO;
  
-@@ -1759,6 +2009,8 @@ static int xpad360w_start_input(struct u
+@@ -1762,6 +2009,8 @@ static int xpad360w_start_input(struct u
  		return error;
  	}
  
@@ -562,7 +582,7 @@ Last-Update: 2022-12-28
  	return 0;
  }
  
-@@ -1768,6 +2020,7 @@ static void xpad360w_stop_input(struct u
+@@ -1771,6 +2020,7 @@ static void xpad360w_stop_input(struct u
  
  	/* Make sure we are done with presence work if it was scheduled */
  	flush_work(&xpad->work);
@@ -570,7 +590,7 @@ Last-Update: 2022-12-28
  }
  
  static int xpad_open(struct input_dev *dev)
-@@ -1791,24 +2044,35 @@ static void xpad_set_up_abs(struct input
+@@ -1794,24 +2044,35 @@ static void xpad_set_up_abs(struct input
  	switch (abs) {
  	case ABS_X:
  	case ABS_Y:
@@ -612,7 +632,7 @@ Last-Update: 2022-12-28
  	default:
  		input_set_abs_params(input_dev, abs, 0, 0, 0, 0);
  		break;
-@@ -1907,10 +2171,6 @@ static int xpad_init_input(struct usb_xp
+@@ -1910,10 +2171,6 @@ static int xpad_init_input(struct usb_xp
  			xpad_set_up_abs(input_dev, xpad_abs_triggers[i]);
  	}
  
@@ -623,7 +643,7 @@ Last-Update: 2022-12-28
  	error = xpad_init_ff(xpad);
  	if (error)
  		goto err_free_input;
-@@ -1976,6 +2236,7 @@ static int xpad_probe(struct usb_interfa
+@@ -1979,6 +2236,7 @@ static int xpad_probe(struct usb_interfa
  	xpad->mapping = xpad_device[i].mapping;
  	xpad->xtype = xpad_device[i].xtype;
  	xpad->name = xpad_device[i].name;
@@ -631,7 +651,7 @@ Last-Update: 2022-12-28
  	xpad->packet_type = PKT_XB;
  	INIT_WORK(&xpad->work, xpad_presence_work);
  
-@@ -2098,6 +2359,21 @@ static int xpad_probe(struct usb_interfa
+@@ -2101,6 +2359,21 @@ static int xpad_probe(struct usb_interfa
  		if (error)
  			goto err_deinit_output;
  	}
@@ -653,7 +673,7 @@ Last-Update: 2022-12-28
  	return 0;
  
  err_deinit_output:
-@@ -2129,6 +2405,12 @@ static void xpad_disconnect(struct usb_i
+@@ -2132,6 +2405,12 @@ static void xpad_disconnect(struct usb_i
  	xpad_deinit_output(xpad);
  
  	usb_free_urb(xpad->irq_in);
@@ -666,7 +686,7 @@ Last-Update: 2022-12-28
  	usb_free_coherent(xpad->udev, XPAD_PKT_LEN,
  			xpad->idata, xpad->idata_dma);
  
-@@ -2160,7 +2442,7 @@ static int xpad_suspend(struct usb_inter
+@@ -2163,7 +2442,7 @@ static int xpad_suspend(struct usb_inter
  			xpad360w_poweroff_controller(xpad);
  	} else {
  		mutex_lock(&input->mutex);
@@ -675,7 +695,7 @@ Last-Update: 2022-12-28
  			xpad_stop_input(xpad);
  		mutex_unlock(&input->mutex);
  	}
-@@ -2180,7 +2462,7 @@ static int xpad_resume(struct usb_interf
+@@ -2183,7 +2462,7 @@ static int xpad_resume(struct usb_interf
  		retval = xpad360w_start_input(xpad);
  	} else {
  		mutex_lock(&input->mutex);

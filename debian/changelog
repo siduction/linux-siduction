@@ -1,3 +1,256 @@
+linux-siduction (6.5-11) unstable; urgency=medium
+
+  * import patch-6.5.11; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.5.11
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 08 Nov 2023 22:05:20 +0100
+
+linux-siduction (6.5-10) unstable; urgency=medium
+
+  * import patch-6.5.10; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.5.10
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 02 Nov 2023 11:27:44 +0100
+
+linux-siduction (6.5-9) unstable; urgency=medium
+
+  * import patch-6.5.9; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.5.9
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 25 Oct 2023 23:01:28 +0200
+
+linux-siduction (6.5-8) unstable; urgency=medium
+
+  * import patch-6.5.8; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.5.8
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 20 Oct 2023 08:21:15 +0200
+
+linux-siduction (6.5-7) unstable; urgency=medium
+
+  * import patch-6.5.7; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.5.7
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 15 Oct 2023 22:58:41 +0200
+
+linux-siduction (6.5-6.1) unstable; urgency=medium
+
+  * add features/tuxedo_tongfang.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 11 Oct 2023 07:48:36 +0200
+
+linux-siduction (6.5-6) unstable; urgency=medium
+
+  * import patch-6.5.6; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.5.6
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 06 Oct 2023 14:03:37 +0200
+
+linux-siduction (6.5-5) unstable; urgency=medium
+
+  * import patch-6.5.5; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.5.5
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 24 Sep 2023 17:28:40 +0200
+
+linux-siduction (6.5-4.1) unstable; urgency=medium
+
+  * add bugfix/drm-amdgpu-set-completion-status-as-preempted-for-the-resubmission.patch
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 22 Sep 2023 12:03:13 +0200
+
+linux-siduction (6.5-4) unstable; urgency=medium
+
+  * import patch-6.5.4; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.5.4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 19 Sep 2023 14:08:14 +0200
+
+linux-siduction (6.5-3) unstable; urgency=medium
+
+  * import patch-6.5.3; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.5.3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 13 Sep 2023 10:10:33 +0200
+
+linux-siduction (6.5-2) unstable; urgency=medium
+
+  * import patch-6.5.2; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.5.2
+  * upöoad to unstable
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 06 Sep 2023 22:43:45 +0200
+
+linux-siduction (6.5-1.1~exp1) experimental; urgency=medium
+
+  * import patch-6.5.2-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 04 Sep 2023 20:55:58 +0200
+
+linux-siduction (6.5-1~exp1) experimental; urgency=medium
+
+  * import patch-6.5.1; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.5.1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 02 Sep 2023 20:30:49 +0200
+
+linux-siduction (6.5-0~exp2) experimental; urgency=medium
+
+  * import patch-6.5.1-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 31 Aug 2023 15:30:23 +0200
+
+linux-siduction (6.5-0~exp1) experimental; urgency=medium
+
+  * linux 6.5 release
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 28 Aug 2023 12:12:11 +0200
+
+linux-siduction (6.5~rc7-1~exp1) experimental; urgency=medium
+
+  * linux-6.5-rc7
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 20 Aug 2023 15:28:53 +0200
+
+linux-siduction (6.5~rc6-1~exp1) experimental; urgency=medium
+
+  * linux-6.5-rc6
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 13 Aug 2023 21:14:51 +0200
+
+linux-siduction (6.5~rc5-1~exp1) experimental; urgency=medium
+
+  * linux-6.5-rc5
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 07 Aug 2023 08:01:14 +0200
+
+linux-siduction (6.5~rc4-1~exp1) experimental; urgency=medium
+
+  * linux-6.5-rc4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 30 Jul 2023 14:03:03 +0200
+
+linux-siduction (6.5~rc3-1~exp2) experimental; urgency=medium
+
+  * switch to gcc-13
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 27 Jul 2023 11:12:19 +0200
+
+linux-siduction (6.5~rc3-1~exp1) experimental; urgency=medium
+
+  * linux-6.5-rc3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 24 Jul 2023 08:46:32 +0200
+
+linux-siduction (6.5~rc2-1~exp1) experimental; urgency=medium
+
+  * linux-6.5-rc2
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 17 Jul 2023 08:51:59 +0200
+
+linux-siduction (6.5~rc1-1~exp1) experimental; urgency=medium
+
+  * start linux-6.5 packaging
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 13 Jul 2023 09:45:23 +0200
+
+linux-siduction (6.4-2~exp1) experimental; urgency=medium
+
+  * import patch-6.4.2; Changelog https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.4.2
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 05 Jul 2023 22:44:28 +0200
+
+linux-siduction (6.4-1~exp1) experimental; urgency=medium
+
+  * import patch-6.4.1; Changelog https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.4.1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 01 Jul 2023 16:19:15 +0200
+
+linux-siduction (6.4-0~exp3) experimental; urgency=medium
+
+  * import patch-6.4.1-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 30 Jun 2023 08:22:24 +0200
+
+linux-siduction (6.4-0~exp2) experimental; urgency=medium
+
+  * import patch-6.4.1-rc1
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 29 Jun 2023 21:28:12 +0200
+
+linux-siduction (6.4-0~exp1) experimental; urgency=medium
+
+  * linux-6.4.0 release
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 26 Jun 2023 08:33:01 +0200
+
+linux-siduction (6.4~rc7-1~exp1) experimental; urgency=medium
+
+  * linux-6.4-rc7
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 19 Jun 2023 07:49:59 +0200
+
+linux-siduction (6.4~rc6-1~exp1) experimental; urgency=medium
+
+  * linux-6.4-rc6
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 12 Jun 2023 08:11:17 +0200
+
+linux-siduction (6.4~rc5-1~exp1) experimental; urgency=medium
+
+  * linux-6.4-rc5
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 05 Jun 2023 08:09:46 +0200
+
+linux-siduction (6.4~rc4-1~exp1) experimental; urgency=medium
+
+  * start linux-6.4 packaging
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 28 May 2023 18:21:44 +0200
+
+linux-siduction (6.3~rc7-1~exp1) experimental; urgency=medium
+
+  * linux-6.3-rc7
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 17 Apr 2023 20:44:23 +0200
+
+linux-siduction (6.3~rc6-1~exp1) experimental; urgency=medium
+
+  * linux-6.3-rc6
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 09 Apr 2023 21:27:09 +0200
+
+linux-siduction (6.3~rc5-1~exp1) experimental; urgency=medium
+
+  * linux-6.3-rc5
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 02 Apr 2023 22:22:53 +0200
+
+linux-siduction (6.3~rc4-1~exp1) experimental; urgency=medium
+
+  * linux-6.3-rc4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 27 Mar 2023 10:27:13 +0200
+
+linux-siduction (6.3~rc3-1~exp1) experimental; urgency=medium
+
+  * linux-6.3-rc3
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 20 Mar 2023 17:16:56 +0100
+
+linux-siduction (6.3~rc2-1~exp1) experimental; urgency=medium
+
+  * start linux-6.3 packaging
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 19 Mar 2023 18:49:33 +0100
+
+linux-siduction (6.2~rc8-1~exp1) experimental; urgency=medium
+
+  * linux-6.2-rc8
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 12 Feb 2023 23:43:20 +0100
+
+linux-siduction (6.2~rc7-1~exp1) experimental; urgency=medium
+
+  * linux-6.2-rc7
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 06 Feb 2023 09:45:05 +0100
+
+linux-siduction (6.2~rc6-1~exp1) experimental; urgency=medium
+
+  * linux-6.2-rc6
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 29 Jan 2023 17:12:20 +0100
+
 linux-siduction (6.2~rc5-1~exp1) experimental; urgency=medium
 
   * linux-6.2-rc5

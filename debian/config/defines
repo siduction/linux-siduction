@@ -1,10 +1,10 @@
 [abi]
-abiname: 1
+abiname: 11-1
 
 [base]
 arches:
  amd64
-compiler: gcc-12
+compiler: gcc-13
 featuresets:
  none
 
@@ -19,7 +19,7 @@ initramfs-generators: initramfs-tools initramfs-fallback
 
 [relations]
 # compilers
-gcc-12: gcc-12
+gcc-13: gcc-13
 
 # initramfs-generators
 initramfs-fallback: linux-initramfs-tool

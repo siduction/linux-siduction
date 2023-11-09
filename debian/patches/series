@@ -1,6 +1,5 @@
 # upstream updates
-#upstream/patch-6.2.1
-#upstream/patch-6.2.1-rc1
+upstream/patch-6.5.11
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
@@ -19,6 +18,11 @@ debian/fjes-disable-autoload.patch
 #bugfix
 bugfix/kbuild-fix-recordmcount-dependency.patch
 bugfix/module-disable-matching-missing-version-crc.patch
+bugfix/kbuild-look-for-module.lds-under-arch-directory-too.patch
+bugfix/kbuild-abort-build-if-subdirs-used.patch
+#bugfix/Revert-drm-amd-display-edp-do-not-add-non-edid-timin.patch
+#bugfix/amd_fixes_from_queue.patch
+#bugfix/drm-amdgpu-set-completion-status-as-preempted-for-the-resubmission.patch
 
 # features
 features/defaults-fat-utf8.patch
@@ -30,4 +34,6 @@ features/intel-iommu-add-option-to-exclude-integrated-gpu-only.patch
 features/intel-iommu-add-kconfig-option-to-exclude-igpu-by-default.patch
 features/0001-i2c-busses-Add-SMBus-capability-to-work-with-OpenRGB.patch
 features/selinux_disable-by-default.patch
-features/xpad_update.patch
+features/tuxedo_tongfang.patch
+#features/0001-linux6.5.y-bore3.1.4.patch
+#features/0002-constgran-vanilla-max.patch
