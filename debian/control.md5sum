@@ -1,6 +1,6 @@
 915293b711dd73effc0f518ab023da46  debian/bin/gencontrol.py
-2f21bd7cb36043187bdf5e0bfea2cbd1  debian/changelog
-5978abae562dfb355038a1a8a50a7da6  debian/templates/control.headers.in
+1eda07bd383edf32b10fc3308ba7b8aa  debian/changelog
+f35e08d7fdc71ffd50254a868deeecfc  debian/templates/control.headers.in
 72ece843042cbcc9cdb62b3a8c5e3b7a  debian/templates/control.image-dbg.in
 1ed6cea8b4404ce825d13ab5676047db  debian/templates/control.image.in
 d41d8cd98f00b204e9800998ecf8427e  debian/templates/control.main.in
@@ -8,11 +8,11 @@ d41d8cd98f00b204e9800998ecf8427e  debian/templates/control.main.in
 0d7f6ea42f52d0a6013535a80111ee3e  debian/templates/headers.postinst.in
 6bf8fd71accd1530c46f3d6887d1ad4c  debian/templates/image-dbg.lintian-override.in
 0327750d6696dee915a532aec73a0fd6  debian/templates/image.postinst.in
-a4a60fc48b3240e46bbac6a1ddcaad30  debian/templates/image.postrm.in
+51a0e1ddda340bf3acaf59a24bfb7bba  debian/templates/image.postrm.in
 38004750aa03cea41d5d3aeafff16fcc  debian/templates/image.preinst.in
 afb508873a44a1f196c2a525fec4b415  debian/templates/image.prerm.in
-e773647a46a9523eef2226ba7f49a2f3  debian/config/defines
-2d7a66982cd7ea436801b901b4ce7f17  debian/config/amd64/defines
-4e3375e2b9db38fb794acdbcdb77e541  debian/config/i386/defines
+ab7257f3b0413a94d77328505925c344  debian/config/defines
+b70ac5cfcd5c2d258ff1df0def184275  debian/config/amd64/defines
+8830c4b514427fa8172e047f8852179b  debian/config/i386/defines
 61f5bf034220fcc3d0a3d6243bb2bdfd  debian/config/amd64/none/defines
 743dc46f2bc4370e457d46ee3c1d817d  debian/config/i386/none/defines

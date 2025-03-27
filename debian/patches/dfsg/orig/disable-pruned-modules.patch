@@ -42,30 +42,6 @@ Forwarded: not-needed
  	depends on DVB_USB
  	select MEDIA_TUNER_MT2060 if MEDIA_SUBDRV_AUTOSELECT
  	select MEDIA_TUNER_QT1010 if MEDIA_SUBDRV_AUTOSELECT
-diff -ruN a/drivers/net/appletalk/Makefile b/drivers/net/appletalk/Makefile
---- a/drivers/net/appletalk/Makefile	2006-11-29 21:57:37.000000000 +0000
-+++ b/drivers/net/appletalk/Makefile	2007-01-05 15:34:11.000000000 +0000
-@@ -4,4 +4,3 @@
- #
- 
- obj-$(CONFIG_IPDDP) += ipddp.o
--obj-$(CONFIG_COPS) += cops.o
-
-From: Ben Hutchings <ben@decadent.org.uk>
-Date: Sat, 2 Jun 2012 19:53:38 +0100
-Subject: video: Remove nvidiafb and rivafb
-Bug-Debian: https://bugs.debian.org/383481
-Forwarded: no
-
-These drivers contain register programming code provided by the
-hardware vendor that appears to have been deliberately obfuscated.
-This is arguably not the preferred form for modification.
-
-These drivers are also largely redundant with nouveau.  The RIVA 128
-(NV3) is not supported by nouveau but is about 15 years old and
-probably discontinued 10 years ago.
-
----
 --- a/drivers/video/fbdev/Makefile
 +++ b/drivers/video/fbdev/Makefile
 @@ -22,8 +22,6 @@ obj-$(CONFIG_FB_PM3)		  += pm3fb.o

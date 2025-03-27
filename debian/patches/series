@@ -1,5 +1,5 @@
 # upstream updates
-upstream/patch-6.5.11
+#upstream/patch-6.14.1
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
@@ -11,29 +11,23 @@ debian/kernelvariables.patch
 debian/export-symbols-needed-by-android-drivers.patch
 debian/android-enable-building-ashmem-and-binder-as-modules.patch
 debian/iwlwifi-do-not-request-unreleased-firmware.patch
+debian/firmware_loader-log-direct-loading-failures-as-info-for-d-i.patch
 debian/snd-pcsp-disable-autoload.patch
 debian/makefile-make-compiler-version-comparison-optional.patch
 debian/fjes-disable-autoload.patch
 
-#bugfix
+# bugfix
 bugfix/kbuild-fix-recordmcount-dependency.patch
 bugfix/module-disable-matching-missing-version-crc.patch
 bugfix/kbuild-look-for-module.lds-under-arch-directory-too.patch
 bugfix/kbuild-abort-build-if-subdirs-used.patch
-#bugfix/Revert-drm-amd-display-edp-do-not-add-non-edid-timin.patch
-#bugfix/amd_fixes_from_queue.patch
-#bugfix/drm-amdgpu-set-completion-status-as-preempted-for-the-resubmission.patch
+#bugfix/fs-add-module_softdep-declarations-for-hard-coded-cr.patch
 
 # features
-features/defaults-fat-utf8.patch
 features/ath_override-eeprom-countrycode.patch
 features/radeon-amdgpu-firmware-is-required-for-drm-and-kms-on-r600-onward.patch
-features/enable-schedstats.patch
 features/die-floppy-die.patch
 features/intel-iommu-add-option-to-exclude-integrated-gpu-only.patch
 features/intel-iommu-add-kconfig-option-to-exclude-igpu-by-default.patch
-features/0001-i2c-busses-Add-SMBus-capability-to-work-with-OpenRGB.patch
+features/OpenRGB.patch
 features/selinux_disable-by-default.patch
-features/tuxedo_tongfang.patch
-#features/0001-linux6.5.y-bore3.1.4.patch
-#features/0002-constgran-vanilla-max.patch

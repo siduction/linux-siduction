@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-version=6.5.11-1-siduction-amd64
+version=6.14.0-1-siduction-amd64
 image_path=/boot/vmlinuz-$version
 
 rm -f /lib/modules/$version/.fresh-install
@@ -22,7 +22,7 @@ if [ "$1" = purge ]; then
                       modules.alias modules.ccwmap modules.inputmap \
                       modules.symbols modules.ofmap \
                       modules.seriomap modules.\*.bin \
-		      modules.softdep modules.devname; do
+		      modules.softdep modules.weakdep modules.devname; do
 	eval rm -f /lib/modules/$version/$extra_file
     done
     rmdir /lib/modules/$version || true
