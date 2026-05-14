@@ -10,7 +10,7 @@ Description: Linux @upstreamversion@ for @class@
 Package: linux-image@localversion@
 Section: metapackages
 Priority: extra
-Depends: linux-image-@abiname@@localversion@ (= ${binary:Version}), ${misc:Depends}
+Depends: linux-image-@abiname@@localversion@ (= ${binary:Version}), ${misc:Depends}, zstd
 Recommends: linux-headers@localversion@ (= ${binary:Version})
 Description: Linux image for siduction on @class@
  This metapackage depends on the latest binary image for Linux kernel on

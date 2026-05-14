@@ -60,7 +60,7 @@ class Gencontrol(Base):
         makeflags.update({
             'VERSION': self.version.linux_version,
             'UPSTREAMVERSION': self.version.linux_upstream,
-            'ABINAME': self.abiname_version + self.abiname_part,
+            'ABINAME': self.version.linux_upstream + self.abiname_part,
             'SOURCEVERSION': self.version.complete,
         })
 
@@ -118,11 +118,11 @@ class Gencontrol(Base):
 
         if self.version.linux_modifier is None:
             try:
-                abiname_part = '-%s' % self.config['abi', arch]['abiname']
+                abiname_part = '.%s' % self.config['abi', arch]['abiname']
             except KeyError:
                 abiname_part = self.abiname_part
             makeflags['ABINAME'] = vars['abiname'] = \
-                self.abiname_version + abiname_part
+                self.version.linux_upstream + abiname_part
 
         """
         if foreign_kernel:
@@ -435,22 +435,18 @@ class Gencontrol(Base):
         if self.version.linux_modifier is not None:
             self.abiname_part = ''
         else:
-            self.abiname_part = '-%s' % self.config['abi', ]['abiname']
-        # We need to keep at least three version components to avoid
-        # userland breakage (e.g. #742226, #745984).
-        self.abiname_version = re.sub('^(\d+\.\d+)(?=-|$)', r'\1.0',
-                                      self.version.linux_upstream)
+            self.abiname_part = '.%s' % self.config['abi', ]['abiname']
         self.vars = {
             'upstreamversion': self.version.linux_upstream,
             'version': self.version.linux_version,
             'source_upstream': self.version.upstream,
             'source_package': self.changelog[0].source,
-            'abiname': self.abiname_version + self.abiname_part,
+            'abiname': self.version.linux_upstream + self.abiname_part,
         }
         self.config['version', ] = {'source': self.version.complete,
                                     'upstream': self.version.linux_upstream,
-                                    'abiname_base': self.abiname_version,
-                                    'abiname': (self.abiname_version +
+                                    'abiname_base': self.version.linux_version,
+                                    'abiname': (self.version.linux_upstream +
                                                 self.abiname_part)}
 
         distribution = self.changelog[0].distribution
