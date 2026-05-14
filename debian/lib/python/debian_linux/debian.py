@@ -204,7 +204,7 @@ class PackageArchitecture(collections.abc.MutableSet):
 
     def extend(self, value):
         if isinstance(value, str):
-            for i in re.split('\s', value.strip()):
+            for i in re.split(r'\s', value.strip()):
                 self.add(i)
         else:
             raise RuntimeError
@@ -311,7 +311,7 @@ class PackageRelationGroup(list):
 
     def extend(self, value, override_arches=None):
         if isinstance(value, str):
-            value = (j.strip() for j in re.split('\|', value.strip()))
+            value = (j.strip() for j in re.split(r'\|', value.strip()))
         for i in value:
             self.append(i, override_arches)
 
@@ -389,7 +389,7 @@ class PackageRelationEntry(object):
             self.operator = None
         self.version = match[2]
         if match[3] is not None:
-            self.arches = re.split('\s+', match[3])
+            self.arches = re.split(r'\s+', match[3])
         else:
             self.arches = []
 

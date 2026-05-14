@@ -14,12 +14,12 @@ use of $(ARCH) needs to be moved after this.
 
 [bwh: Updated for 5.3: include .kernelvariables from current directory
  rather than using undefined $(obj).]
+
+[carnil: Update for 6.13: Include .kernelvariables from $(objtree).]
 ---
-Index: linux/Makefile
-===================================================================
---- linux.orig/Makefile
-+++ linux/Makefile
-@@ -406,36 +406,6 @@
+--- a/Makefile
++++ b/Makefile
+@@ -406,36 +406,6 @@ include $(srctree)/scripts/subarch.inclu
  # Note: Some architectures assign CROSS_COMPILE in their arch/*/Makefile
  ARCH		?= $(SUBARCH)
  
@@ -56,11 +56,11 @@ Index: linux/Makefile
  KCONFIG_CONFIG	?= .config
  export KCONFIG_CONFIG
  
-@@ -551,6 +521,35 @@
+@@ -551,6 +521,35 @@ RUSTFLAGS_KERNEL =
  AFLAGS_KERNEL	=
  LDFLAGS_vmlinux =
  
-+-include .kernelvariables
++-include $(objtree)/.kernelvariables
 +
 +# Architecture as present in compile.h
 +UTS_MACHINE 	:= $(ARCH)
