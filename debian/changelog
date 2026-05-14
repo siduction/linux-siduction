@@ -1,151 +1,120 @@
-linux-siduction (7.0-7) unstable; urgency=medium
+linux-siduction (6.18-30) unstable; urgency=medium
 
-  * import patch-7.0.7; Changelog: https://cdn.kernel.org/pub/linux/kernel/v7.x/ChangeLog-7.0.7
-  * add bugfix/fragnesia_fix.patch https://github.com/v12-security/pocs/tree/main/fragnesia
+  * import patch-6.18.30; https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.18.30
+  * add bugfix/fragnesia_fix.patch => https://github.com/v12-security/pocs/tree/main/fragnesia
 
- -- Torsten Wohlfarth <towo@siduction.org>  Thu, 14 May 2026 20:14:59 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 14 May 2026 20:24:25 +0200
 
-linux-siduction (7.0-6) unstable; urgency=medium
+linux-siduction (6.18-29) unstable; urgency=medium
 
-  * import patch-7.0.6; Changelog: https://cdn.kernel.org/pub/linux/kernel/v7.x/ChangeLog-7.0.6
-  * remove bugfix/CVE-2026-43500.patch, now upstream
+  * import patch-6.18.29; https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.18.29
+  * remove bugfix/CVE-2026-43500.patch, is now upstream
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 11 May 2026 11:09:14 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 11 May 2026 11:19:47 +0200
 
-linux-siduction (7.0-5.2) unstable; urgency=medium
+linux-siduction (6.18-28.2) unstable; urgency=medium
 
   * add bugfix/CVE-2026-43500.patch
 
- -- Torsten Wohlfarth <towo@siduction.org>  Fri, 08 May 2026 13:22:28 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 08 May 2026 13:50:15 +0200
 
-linux-siduction (7.0-5) unstable; urgency=medium
+linux-siduction (6.18-28) unstable; urgency=medium
 
-  * import patch-7.0.5; Changelog: https://cdn.kernel.org/pub/linux/kernel/v7.x/ChangeLog-7.0.5
-  * Fix for https://dirtyfrag.io/
+  * import patch-6.18.28; https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.18.28
+  * fix for https://dirtyfrag.io/
 
- -- Torsten Wohlfarth <towo@siduction.org>  Fri, 08 May 2026 09:30:09 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 08 May 2026 09:33:02 +0200
 
-linux-siduction (7.0-4) unstable; urgency=medium
+linux-siduction (6.18-27) unstable; urgency=medium
 
-  * import patch-7.0.4; Changelog: https://cdn.kernel.org/pub/linux/kernel/v7.x/ChangeLog-7.0.4
+  * import patch-6.18.27; https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.18.27
 
- -- Torsten Wohlfarth <towo@siduction.org>  Thu, 07 May 2026 16:10:20 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 07 May 2026 16:14:48 +0200
 
-linux-siduction (7.0-3.1) unstable; urgency=medium
+linux-siduction (6.18-26) unstable; urgency=medium
 
-  * activate complete INTEL PINCTRL
+  * import patch-6.18.26; https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.18.26
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 04 May 2026 14:55:43 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 30 Apr 2026 16:20:17 +0200
 
-linux-siduction (7.0-3) unstable; urgency=medium
+linux-siduction (6.18-25) unstable; urgency=medium
 
-  * import patch-7.0.3; Changelog: https://cdn.kernel.org/pub/linux/kernel/v7.x/ChangeLog-7.0.3
+  * import patch-6.18.25
 
- -- Torsten Wohlfarth <towo@siduction.org>  Thu, 30 Apr 2026 16:16:48 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 28 Apr 2026 15:29:44 +0200
 
-linux-siduction (7.0-2) unstable; urgency=medium
+linux-siduction (6.18-24) unstable; urgency=medium
 
-  * import patch-7.0.2; Changelog: https://cdn.kernel.org/pub/linux/kernel/v7.x/ChangeLog-7.0.2
-  * upload to unstable
+  * import patch-6.18.24
+  * enable BPF subsystem
 
- -- Torsten Wohlfarth <towo@siduction.org>  Tue, 28 Apr 2026 00:14:53 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 23 Apr 2026 10:15:50 +0200
 
-linux-siduction (7.0-1~exp1) experimental; urgency=medium
+linux-siduction (6.18-22) unstable; urgency=medium
 
-  * import patch-7.0.1; Changelog: https://cdn.kernel.org/pub/linux/kernel/v7.x/ChangeLog-7.0.1
+  * import patch-6.18.22
 
- -- Torsten Wohlfarth <towo@siduction.org>  Thu, 23 Apr 2026 09:37:46 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 12 Apr 2026 12:20:09 +0200
 
-linux-siduction (7.0-0.1~exp1) experimental; urgency=medium
+linux-siduction (6.18-21) unstable; urgency=medium
 
-  * Test BTF debugging enabled
+  * import patch-6.18.21
 
- -- Torsten Wohlfarth <towo@siduction.org>  Thu, 16 Apr 2026 23:16:29 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 02 Apr 2026 20:11:59 +0200
 
-linux-siduction (7.0-0~exp1) experimental; urgency=medium
+linux-siduction (6.18-20) unstable; urgency=medium
 
-  * Linux 7.0 release
+  * import patch-6.18.20
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 13 Apr 2026 16:12:55 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 26 Mar 2026 15:53:04 +0100
 
-linux-siduction (7.0~rc7-1~exp1) experimental; urgency=medium
+linux-siduction (6.18-18) unstable; urgency=medium
 
-  * linux-7.0-rc7
+  * import patch-6.18.18
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 06 Apr 2026 13:10:47 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 14 Mar 2026 17:35:32 +0100
 
-linux-siduction (7.0~rc6-1~exp1) experimental; urgency=medium
+linux-siduction (6.18-16) unstable; urgency=medium
 
-  * linux-7.0-rc6
+  * import patch-6.18.16
 
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 30 Mar 2026 15:18:07 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 04 Mar 2026 23:04:24 +0100
 
-linux-siduction (7.0~rc5-1~exp1) experimental; urgency=medium
+linux-siduction (6.18-15) unstable; urgency=medium
 
-  * start linux 7.0 packaging
+  * import patch-6.18.15; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.18.15
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sun, 29 Mar 2026 10:51:18 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 02 Mar 2026 13:28:32 +0100
 
-linux-siduction (6.19-10) unstable; urgency=medium
+linux-siduction (6.18-13) unstable; urgency=medium
 
-  * import patch-6.19.10; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.19.10
+  * import patch-6.18.13; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.18.13
 
- -- Torsten Wohlfarth <towo@siduction.org>  Wed, 25 Mar 2026 19:13:51 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 19 Feb 2026 22:41:27 +0100
 
-linux-siduction (6.19-8) unstable; urgency=medium
+linux-siduction (6.18-11) unstable; urgency=medium
 
-  * import patch-6.19.8; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.19.8
+  * import patch-6.18.11; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.18.11
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sat, 14 Mar 2026 13:59:30 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 16 Feb 2026 11:56:44 +0100
 
-linux-siduction (6.19-7) unstable; urgency=medium
+linux-siduction (6.18-10) unstable; urgency=medium
 
-  * import patch-6.19.7; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.19.7
+  * import patch-6.18.10; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.18.10
 
- -- Torsten Wohlfarth <towo@siduction.org>  Thu, 12 Mar 2026 20:42:26 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 13 Feb 2026 08:41:47 +0100
 
-linux-siduction (6.19-6) unstable; urgency=medium
+linux-siduction (6.18-9) unstable; urgency=medium
 
-  * import patch-6.19.6; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.19.6
+  * import patch-6.18.9; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.18.9
 
- -- Torsten Wohlfarth <towo@siduction.org>  Wed, 04 Mar 2026 23:06:34 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 06 Feb 2026 21:51:19 +0100
 
-linux-siduction (6.19-5) unstable; urgency=medium
+linux-siduction (6.18-8) unstable; urgency=medium
 
-  * import patch-6.19.5; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.19.5
-  * upload to unstable
+  * import patch-6.18.8; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.18.8
 
- -- Torsten Wohlfarth <towo@siduction.org>  Sat, 28 Feb 2026 19:25:14 +0100
-
-linux-siduction (6.19-3~exp1) experimental; urgency=medium
-
-  * import patch-6.19.3; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.19.3
-
- -- Torsten Wohlfarth <towo@siduction.org>  Thu, 19 Feb 2026 22:42:59 +0100
-
-linux-siduction (6.19-1~exp1) experimental; urgency=medium
-
-  * import patch-6.19.1; Changelog: https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.19.1
-
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 16 Feb 2026 11:55:01 +0100
-
-linux-siduction (6.19-0~exp1) experimental; urgency=medium
-
-  * linux-6.19.0 release
-
- -- Torsten Wohlfarth <towo@siduction.org>  Sun, 15 Feb 2026 12:24:38 +0100
-
-linux-siduction (6.19~rc8-1~exp1) experimental; urgency=medium
-
-  * linux-6.19-rc8
-
- -- Torsten Wohlfarth <towo@siduction.org>  Mon, 02 Feb 2026 09:51:16 +0100
-
-linux-siduction (6.19~rc7-1~exp1) experimental; urgency=medium
-
-  * linux-6.19 packaging
-
- -- Torsten Wohlfarth <towo@siduction.org>  Tue, 27 Jan 2026 23:44:29 +0100
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 30 Jan 2026 21:41:13 +0100
 
 linux-siduction (6.18-7) unstable; urgency=medium
 

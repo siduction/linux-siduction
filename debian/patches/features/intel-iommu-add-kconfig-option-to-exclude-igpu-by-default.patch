@@ -1,21 +1,32 @@
-From: Ben Hutchings <ben@decadent.org.uk>
-Date: Wed, 21 Aug 2019 00:32:16 +0100
-Subject: intel-iommu: Add Kconfig option to exclude iGPU by default
-Bug-Debian: https://bugs.debian.org/935270
-Bug-Kali: https://bugs.kali.org/view.php?id=5644
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ linux-siduction (6.17~rc5-1~exp1) experimentaal; urgency=medium
+ .
+   * start linux 6.17 packaging
+Author: Torsten Wohlfarth <towo@siduction.org>
 
-There is still laptop firmware that touches the integrated GPU behind
-the operating system's back, and doesn't say so in the RMRR table.
-Enabling the IOMMU for all devices causes breakage.
-
-Replace CONFIG_INTEL_IOMMU_DEFAULT_ON with a 3-way choice
-corresponding to "on", "off", and "on,intgpu_off".
-
-Signed-off-by: Ben Hutchings <ben@decadent.org.uk>
 ---
---- a/drivers/iommu/intel/Kconfig
-+++ b/drivers/iommu/intel/Kconfig
-@@ -57,13 +57,24 @@ config INTEL_IOMMU_SVM
+The information above should follow the Patch Tagging Guidelines, please
+checkout https://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: (upstream|backport|vendor|other), (<patch-url>|commit:<commit-id>)
+Bug: <upstream-bugtracker-url>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: (no|not-needed|<patch-forwarded-url>)
+Applied-Upstream: <version>, (<commit-url>|commit:<commid-id>)
+Reviewed-By: <name and email of someone who approved/reviewed the patch>
+Last-Update: 2025-09-08
+
+--- linux-siduction-6.17~rc5.orig/drivers/iommu/intel/Kconfig
++++ linux-siduction-6.17~rc5/drivers/iommu/intel/Kconfig
+@@ -56,13 +56,24 @@ config INTEL_IOMMU_SVM
  	  to access DMA resources through process address space by
  	  means of a Process Address Space ID (PASID).
  
@@ -29,9 +40,9 @@ Signed-off-by: Ben Hutchings <ben@decadent.org.uk>
 -	  Selecting this option will enable a DMAR device at boot time if
 -	  one is found. If this option is not selected, DMAR support can
 -	  be enabled by passing intel_iommu=on to the kernel.
-+	  Choose whether Intel DMA Remapping Devices should be enabled
-+	  by default. This can be overridden at boot time using the
-+	  intel_iommu= kernel parameter.
++	 Choose whether Intel DMA Remapping Devices should be enabled
++	 by default. This can be overridden at boot time using the
++	 intel_iommu= kernel parameter.
 +
 +config INTEL_IOMMU_DEFAULT_ON
 +	bool "Enable"
@@ -46,9 +57,9 @@ Signed-off-by: Ben Hutchings <ben@decadent.org.uk>
  
  config INTEL_IOMMU_FLOPPY_WA
  	def_bool y
---- a/drivers/iommu/intel/iommu.c
-+++ b/drivers/iommu/intel/iommu.c
-@@ -218,13 +218,13 @@ static LIST_HEAD(dmar_satc_units);
+--- linux-siduction-6.17~rc5.orig/drivers/iommu/intel/iommu.c
++++ linux-siduction-6.17~rc5/drivers/iommu/intel/iommu.c
+@@ -206,13 +206,13 @@ static LIST_HEAD(dmar_satc_units);
  
  static void intel_iommu_domain_free(struct iommu_domain *domain);
  
@@ -64,7 +75,7 @@ Signed-off-by: Ben Hutchings <ben@decadent.org.uk>
  static int intel_iommu_superpage = 1;
  static int iommu_identity_mapping;
  static int iommu_skip_te_disable;
-@@ -263,6 +263,7 @@ static int __init intel_iommu_setup(char
+@@ -251,6 +251,7 @@ static int __init intel_iommu_setup(char
  	while (*str) {
  		if (!strncmp(str, "on", 2)) {
  			dmar_disabled = 0;
