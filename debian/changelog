@@ -1,3 +1,28 @@
+linux-siduction (7.0-10.1) unstable; urgency=medium
+
+  * Add bugfix/cifswitch_fix.patch, see https://heyitsas.im/posts/cifswitch/ for m,ore information.
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 29 May 2026 09:47:44 +0200
+
+linux-siduction (7.0-10) unstable; urgency=medium
+
+  * import patch-7.0.10; Changelog: https://cdn.kernel.org/pub/linux/kernel/v7.x/ChangeLog-7.0.10
+  * remove bugfix/fragnesia_fix.patch it's upstream now
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 23 May 2026 14:16:31 +0200
+
+linux-siduction (7.0-9) unstable; urgency=medium
+
+  * import patch-7.0.9; Changelog: https://cdn.kernel.org/pub/linux/kernel/v7.x/ChangeLog-7.0.9
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 17 May 2026 18:45:09 +0200
+
+linux-siduction (7.0-8) unstable; urgency=medium
+
+  * import patch-7.0.8; Changelog: https://cdn.kernel.org/pub/linux/kernel/v7.x/ChangeLog-7.0.8
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 15 May 2026 19:50:28 +0200
+
 linux-siduction (7.0-7) unstable; urgency=medium
 
   * import patch-7.0.7; Changelog: https://cdn.kernel.org/pub/linux/kernel/v7.x/ChangeLog-7.0.7

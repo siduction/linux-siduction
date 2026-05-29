@@ -1,5 +1,5 @@
 # upstream updates
-upstream/patch-7.0.7
+upstream/patch-7.0.10
 
 # dfsg-ify the binaries
 dfsg/drivers-media-dvb-usb-af9005-request_firmware.patch
@@ -34,4 +34,4 @@ features/selinux_disable-by-default.patch
 features/x86-memtest-WARN-if-bad-RAM-found.patch
 features/x86-make-x32-syscall-support-conditional.patch
 
-bugfix/fragnesia_fix.patch
+bugfix/cifswitch_fix.patch

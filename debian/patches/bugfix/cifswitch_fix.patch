@@ -1,0 +1,65 @@
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ linux-siduction (7.0-10) unstable; urgency=medium
+ .
+   * import patch-7.0.10; Changelog: https://cdn.kernel.org/pub/linux/kernel/v7.x/ChangeLog-7.0.10
+   * remove bugfix/fragnesia_fix.patch it's upstream now
+Author: Torsten Wohlfarth <towo@siduction.org>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout https://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: (upstream|backport|vendor|other), (<patch-url>|commit:<commit-id>)
+Bug: <upstream-bugtracker-url>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: (no|not-needed|<patch-forwarded-url>)
+Applied-Upstream: <version>, (<commit-url>|commit:<commid-id>)
+Reviewed-By: <name and email of someone who approved/reviewed the patch>
+Last-Update: 2026-05-29
+
+--- linux-siduction-7.0.orig/fs/smb/client/cifs_spnego.c
++++ linux-siduction-7.0/fs/smb/client/cifs_spnego.c
+@@ -8,6 +8,7 @@
+  */
+ 
+ #include <linux/list.h>
++#include <linux/cred.h>
+ #include <linux/slab.h>
+ #include <linux/string.h>
+ #include <keys/user-type.h>
+@@ -40,12 +41,27 @@ cifs_spnego_key_destroy(struct key *key)
+ 	kfree(key->payload.data[0]);
+ }
+ 
++static int
++cifs_spnego_key_vet_description(const char *description)
++{
++    /*
++     * cifs.spnego descriptions are authority-bearing inputs to cifs.upcall.
++     * They are only valid when produced by CIFS while using the private
++     * spnego_cred installed below.  Do not let userspace create this type
++     * of key through request_key(2)/add_key(2), since the helper treats
++     * pid/uid/creduid/upcall_target as kernel-originating fields.
++     */
++    if (current_cred() != spnego_cred)
++	return -EPERM;
++    return 0;
++}
+ 
+ /*
+  * keytype for CIFS spnego keys
+  */
+ struct key_type cifs_spnego_key_type = {
+ 	.name		= "cifs.spnego",
++	.vet_description = cifs_spnego_key_vet_description,
+ 	.instantiate	= cifs_spnego_key_instantiate,
+ 	.destroy	= cifs_spnego_key_destroy,
+ 	.describe	= user_describe,
