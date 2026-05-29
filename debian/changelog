@@ -1,3 +1,15 @@
+linux-siduction (7.1~rc5-1~exp1) experimental; urgency=medium
+
+  * linux-7.1-rc5
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 25 May 2026 09:21:05 +0200
+
+linux-siduction (7.1~rc4-1~exp1) experimental; urgency=medium
+
+  * linux-7.1-rc4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 18 May 2026 08:47:54 +0200
+
 linux-siduction (7.1~rc3-1~exp1) experimental; urgency=medium
 
   * start linux 7.1 packaging
